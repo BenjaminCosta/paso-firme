@@ -8,6 +8,7 @@ import PricingSection from "@/components/PricingSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FinalCTASection from "@/components/FinalCTASection";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 const Index = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -27,6 +28,7 @@ const Index = () => {
       <PricingSection />
       <TestimonialsSection />
       <FinalCTASection onScrollToSection={scrollToSection} />
+      <Footer />
     </div>
   );
 };

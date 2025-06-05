@@ -1,32 +1,44 @@
+import { Instagram, Facebook, Music2 } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="py-8 px-4 bg-text-dark text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-text-dark via-brand-purple/20 to-text-dark"></div>
-      <div className="container mx-auto max-w-6xl text-center relative z-10">
-        <div className="mb-4 flex justify-center items-center gap-8">
-          <img 
-            src="/lovable-uploads/d93ed4ab-9c23-4e56-8a19-e4ca0784924f.png" 
-            alt="Paso Firme a Secundaria" 
-            className="h-16 w-auto opacity-80"
-          />
-          <img 
-            src="/lovable-uploads/c505e395-9f13-4699-a5f1-901271122054.png" 
-            alt="Familia y Formación" 
-            className="h-12 w-auto opacity-80"
-          />
+    <footer className="bg-brand-coral text-white py-16 px-6 md:px-20">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center gap-10">
+        
+        {/* Logo o título */}
+        <div className="text-3xl font-bold tracking-wide">
+          <h1 className="leading-none">
+            FAM<span className="inline-block -mb-1">I</span>LIA Y{" "}
+            <span className="ml-1">FORMACI<span className="inline-block -mb-1">Ó</span>N</span>
+          </h1>
         </div>
-        <div className="mb-4">
-          <h3 className="text-xl font-semibold mb-2">
-            <em>Paso Firme a Secundaria</em>
-          </h3>
-          <p className="text-white/70">Fortaleciendo lo que no enseña la escuela</p>
+
+        {/* Contacto */}
+        <div>
+          <p className="font-semibold uppercase mb-2">Contáctanos</p>
+          <p className="mb-1 underline">+52 811 413 1165</p>
+          <p className="underline break-all">familiayformacion@gmail.com</p>
         </div>
-        <div className="border-t border-white/20 pt-4">
-          <p className="text-white/60">
-            © 2024 Olivia Rodríguez. Todos los derechos reservados.
-          </p>
+
+        {/* Redes + Enlaces */}
+        <div className="flex flex-col items-center gap-4">
+          <div className="flex justify-center gap-4 text-2xl">
+            <a href="#" aria-label="Instagram">
+              <Instagram className="w-6 h-6" />
+            </a>
+            <a href="#" aria-label="Facebook">
+              <Facebook className="w-6 h-6" />
+            </a>
+            <a href="#" aria-label="TikTok">
+              <Music2 className="w-6 h-6" />
+            </a>
+          </div>
+          <div>
+            <p className="underline">Blog</p>
+            <p className="underline">Preguntas Frecuentes</p>
+          </div>
         </div>
+
       </div>
     </footer>
   );
