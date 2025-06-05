@@ -34,13 +34,27 @@ const WhyWorkshopSection = () => {
 
   return (
     <section className="py-20 px-4 bg-brand-beige/40 relative overflow-hidden">
+      {/* Imagen de fondo con transparencia */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1729575846509-0ed233b0c2b0?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          opacity: 0.2,  // Baja opacidad para que pase desapercibida
+          zIndex: 0,
+        }}
+      ></div>
+
       {/* Efectos sutiles de fondo */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden z-10">
         <div className="absolute -right-20 -top-20 w-64 h-64 rounded-full bg-brand-purple/5 blur-3xl"></div>
         <div className="absolute -left-20 -bottom-20 w-64 h-64 rounded-full bg-brand-teal/5 blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto max-w-6xl relative z-10">
+      <div className="container mx-auto max-w-6xl relative z-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
             ¿Por qué{" "}
@@ -82,13 +96,6 @@ const WhyWorkshopSection = () => {
               "brand-yellow": "group-hover:bg-brand-yellow/20",
               "brand-teal": "group-hover:bg-brand-teal/20",
               "brand-coral": "group-hover:bg-brand-coral/20",
-            }[item.color];
-
-            const textColor = {
-              "brand-purple": "text-brand-purple",
-              "brand-yellow": "text-brand-yellow",
-              "brand-teal": "text-brand-teal",
-              "brand-coral": "text-brand-coral",
             }[item.color];
 
             const badgeColor = {

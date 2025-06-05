@@ -62,10 +62,10 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
                   backgroundPosition: 'center'
                 }}
               />
-              {/* Overlay negro suave */}
-              <div className="absolute inset-0 bg-black/10" />
-              {/* Overlay con degradado suave */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-brand-teal/20 to-brand-purple/15" />
+              {/* Overlay negro más oscuro para mejor contraste */}
+              <div className="absolute inset-0 bg-black/30" />
+              {/* Overlay con degradado más pronunciado */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-brand-teal/30 to-brand-purple/25" />
             </div>
           ))}
         </div>
@@ -82,14 +82,14 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
             }}
           />
 
-          {/* Overlay negro suave */}
-          <div className="absolute inset-0 bg-black/10" />
+          {/* Overlay negro más oscuro */}
+          <div className="absolute inset-0 bg-black/30" />
           
-          {/* Overlay de color principal */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white/15 to-transparent" />
+          {/* Overlay de color principal más intenso */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white/25 to-transparent" />
           
-          {/* Segundo overlay de color complementario */}
-          <div className="absolute inset-0 bg-gradient-to-br from-brand-teal/15 via-brand-yellow/5 to-brand-coral/15" />
+          {/* Segundo overlay de color más pronunciado */}
+          <div className="absolute inset-0 bg-gradient-to-br from-brand-teal/25 via-brand-yellow/15 to-brand-coral/25" />
 
           {/* Logo familia */}
           <div
@@ -104,7 +104,7 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
       </div>
 
       {/* Galería flotante (solo en pantallas grandes) */}
-      <div className="hidden lg:block absolute top-[20%] right-4 md:right-40 z-20">
+      <div className="hidden lg:block absolute top-[30%] right-4 md:right-32 z-20">
         <div className="relative w-56 md:w-64 h-80">
           {galleryImages.map((img, index) => (
             <div
@@ -131,35 +131,35 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
       {/* Contenido principal - alineado a la izquierda */}
       <div className="container mx-auto h-full flex flex-col justify-center items-start text-left px-4 pt-20 relative z-30">
         <div className="max-w-4xl animate-fade-in ml-0 md:ml-8 lg:ml-16">
-          {/* Título */}
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight [text-shadow:_0_2px_8px_rgba(0,0,0,0.6)]">
+          {/* Título con sombra más pronunciada */}
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 leading-tight [text-shadow:_0_3px_12px_rgba(0,0,0,0.8)]">
             Paso Firme a
             <span 
-              className="block italic font-light text-white text-4xl md:text-6xl font-dancing [text-shadow:_0_3px_10px_rgba(0,0,0,0.8)]"
+              className="block italic font-light text-white text-5xl md:text-7xl font-dancing [text-shadow:_0_4px_15px_rgba(0,0,0,0.9)]"
               style={{ fontFamily: "'Dancing Script', cursive" }}
             >
               Secundaria
             </span>
           </h1>
 
-          {/* Subtítulos */}
+          {/* Subtítulos con texto más grande y sombra más marcada */}
           <p
-            className="text-lg md:text-xl text-white mb-3 font-medium [text-shadow:_0_1px_4px_rgba(0,0,0,0.5)]"
+            className="text-lg md:text-xl text-white mb-4 font-medium [text-shadow:_0_2px_6px_rgba(0,0,0,0.7)]"
             style={{ animationDelay: '0.2s' }}
           >
             <em>El taller internacional que fortalece lo que no enseña la escuela.</em>
           </p>
 
           <p
-            className="text-base md:text-lg text-brand-beige mb-5 [text-shadow:_0_1px_3px_rgba(0,0,0,0.4)]"
+            className="text-lg md:text-xl text-brand-beige mb-6 [text-shadow:_0_2px_5px_rgba(0,0,0,0.6)]"
             style={{ animationDelay: '0.3s' }}
           >
             <em>Para preadolescentes de 11 a 13 años que están por comenzar secundaria.</em>
           </p>
 
-          {/* Destacado */}
-          <div className="bg-white/20 rounded-xl p-4 mb-6 inline-block border border-white/30 shadow-lg backdrop-blur-md">
-            <p className="text-white font-medium">
+          {/* Destacado con fondo más opaco */}
+          <div className="bg-white/30 rounded-xl p-4 mb-8 inline-block border border-white/40 shadow-xl backdrop-blur-md">
+            <p className="text-white font-semibold text-base">
               📍 Presencial en Monterrey, México | 🌐 Online desde cualquier parte del mundo
             </p>
           </div>
@@ -167,7 +167,7 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
           {/* Botón CTA */}
           <Button
             size="lg"
-            className="relative overflow-hidden bg-gradient-to-r from-[#e97052] to-[#c0bb48] text-white px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl group"
+            className="relative overflow-hidden bg-gradient-to-r from-[#e97052] to-[#c0bb48] text-white px-10 py-6 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-3xl group"
             onClick={() => onScrollToSection('pricing')}
           >
             <span className="relative z-10">Quiero inscribir a mi hijo</span>
@@ -177,8 +177,8 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
       </div>
 
       {/* Efectos de iluminación suaves */}
-      <div className="absolute top-1/4 -left-20 w-64 h-64 rounded-full bg-[#6bafb2]/30 z-0"></div>
-      <div className="absolute bottom-1/4 -right-20 w-64 h-64 rounded-full bg-[#885fae]/30 z-0"></div>
+      <div className="absolute top-1/4 -left-20 w-64 h-64 rounded-full bg-[#6bafb2]/40 z-0"></div>
+      <div className="absolute bottom-1/4 -right-20 w-64 h-64 rounded-full bg-[#885fae]/40 z-0"></div>
     </section>
   );
 };
