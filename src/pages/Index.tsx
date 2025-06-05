@@ -7,8 +7,7 @@ import FacilitatorSection from "@/components/FacilitatorSection";
 import PricingSection from "@/components/PricingSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FinalCTASection from "@/components/FinalCTASection";
-import Footer from "@/components/Footer";
-
+import Navbar from "@/components/Navbar";
 const Index = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -19,6 +18,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white font-poppins text-text-dark">
+      <Navbar />
       <HeroSection onScrollToSection={scrollToSection} />
       <ContextSection />
       <WhyWorkshopSection />
