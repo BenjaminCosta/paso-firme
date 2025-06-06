@@ -2,15 +2,13 @@ import { Instagram, Facebook, Music2 } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-brand-coral text-white py-16 px-6 md:px-20">
+    <footer className="bg-brand-coral text-white py-[72px] py- px-6 md:px-32">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center gap-10">
         
         {/* Logo o título */}
-        <div className="text-3xl font-bold tracking-wide">
-          <h1 className="leading-none">
-            FAM<span className="inline-block -mb-1">I</span>LIA Y{" "}
-            <span className="ml-1">FORMACI<span className="inline-block -mb-1">Ó</span>N</span>
-          </h1>
+        <div className="tracking-wide">
+          <img className="h-8 w-auto" src="/logos/logofooter.png" alt="Familia y Formacion" />
+          
         </div>
 
         {/* Contacto */}

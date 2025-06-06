@@ -23,6 +23,7 @@ export default {
 				poppins: ["Poppins", "sans-serif"],
 				sans: ["Poppins", "sans-serif"],
 				dancing: ['"Dancing Script"', 'cursive'],
+				pacifico: ["Pacifico, cursive"]
 			},
 			colors: {
 				border: "hsl(var(--border))",
