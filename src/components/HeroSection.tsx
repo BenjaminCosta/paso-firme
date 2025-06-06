@@ -83,17 +83,17 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
           />
 
           {/* Overlay negro más oscuro */}
-          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 bg-black/70" />
           
           {/* Overlay de color principal más intenso */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white/25 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-l from-white/40 to-transparent" />
           
           {/* Segundo overlay de color más pronunciado */}
           <div className="absolute inset-0 bg-gradient-to-br from-brand-teal/25 via-brand-yellow/15 to-brand-coral/25" />
 
           {/* Logo familia */}
           <div
-            className="absolute inset-0 opacity-60 bg-center bg-no-repeat bg-contain mix-blend-soft-light"
+            className="absolute inset-0 opacity-40 bg-center bg-no-repeat bg-contain mix-blend-soft-light"
             style={{
               backgroundImage: "url('/logos/familia2.png')",
               backgroundSize: '120%',
@@ -132,33 +132,27 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
       <div className="container mx-auto h-full flex flex-col justify-center items-start text-left px-4 pt-20 relative z-30">
         <div className="max-w-4xl animate-fade-in ml-0 md:ml-8 lg:ml-16">
           {/* Título con sombra más pronunciada */}
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 leading-tight [text-shadow:_0_3px_12px_rgba(0,0,0,0.8)]">
-            Paso Firme a
-            <span 
-              className="block italic font-light text-white text-5xl md:text-7xl font-dancing [text-shadow:_0_4px_15px_rgba(0,0,0,0.9)]"
-              style={{ fontFamily: "'Dancing Script', cursive" }}
-            >
-              Secundaria
-            </span>
-          </h1>
+          <h1 className="text-4xl md:text-7xl font-bold text-white mb-4 leading-tight [text-shadow:_0_3px_12px_rgba(0,0,0,0.8)]">
+  Paso Firme <span 
+    className="italic font-light text-white text-5xl md:text-7xl font-dancing [text-shadow:_0_4px_15px_rgba(0,0,0,0.9)]"
+    style={{ fontFamily: "'Dancing Script', cursive" }}
+  >
+    a Secundaria
+  </span>
+</h1>
+
 
           {/* Subtítulos con texto más grande y sombra más marcada */}
           <p
             className="text-lg md:text-xl text-white mb-4 font-medium [text-shadow:_0_2px_6px_rgba(0,0,0,0.7)]"
             style={{ animationDelay: '0.2s' }}
           >
-            <em>El taller internacional que fortalece lo que no enseña la escuela.</em>
-          </p>
-
-          <p
-            className="text-lg md:text-xl text-brand-beige mb-6 [text-shadow:_0_2px_5px_rgba(0,0,0,0.6)]"
-            style={{ animationDelay: '0.3s' }}
-          >
-            <em>Para preadolescentes de 11 a 13 años que están por comenzar secundaria.</em>
+            <span>El taller internacional que fortalece lo que no enseña la escuela.</span><br />
+             <em className="text-brand-beige">Para preadolescentes de 11 a 13 años que están por comenzar secundaria.</em>
           </p>
 
           {/* Destacado con fondo más opaco */}
-          <div className="bg-white/30 rounded-xl p-4 mb-8 inline-block border border-white/40 shadow-xl backdrop-blur-md">
+          <div className="bg-white/30 rounded-xl p-4 mb-8 inline-block shadow-xl backdrop-blur-md">
             <p className="text-white font-semibold text-base">
               📍 Presencial en Monterrey, México | 🌐 Online desde cualquier parte del mundo
             </p>
