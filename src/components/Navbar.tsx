@@ -11,7 +11,7 @@ export default function Navbar() {
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(() => {
         setIsScrolling(false);
-      }, 300); // Se considera "detenido" si no hay scroll en 150ms
+      }, 200); // Se considera "detenido" si no hay scroll en 150ms
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -23,7 +23,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full flex justify-between items-center py-3 px-6 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 w-full flex justify-between items-center py-3 px-3 sm:px-12 z-50 transition-all duration-500 ${
         isScrolling
           ? 'bg-black bg-opacity-30 backdrop-blur-sm shadow-md'
           : 'bg-transparent'
@@ -40,18 +40,18 @@ export default function Navbar() {
           src="logos/familia2.png"
           alt="Logo Izquierdo"
           className={`select-none transition-all duration-500 ${
-            isScrolling ? 'h-20' : 'h-24'
+            isScrolling ? 'h-20 md:h-24' : 'h-24 md:h-28'
           }`}
         />
       </a>
 
       {/* Logo Derecho */}
-      <a href="#ancla" className="cursor-pointer">
+      <a href="#" className="cursor-pointer">
         <img
           src="logos/pasofirme2.png"
           alt="Logo Derecho"
           className={`select-none transition-all duration-500 ${
-            isScrolling ? 'h-20' : 'h-24'
+            isScrolling ? 'h-20 md:h-24' : 'h-24 md:h-28'
           }`}
         />
       </a>

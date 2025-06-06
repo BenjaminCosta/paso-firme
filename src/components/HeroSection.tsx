@@ -10,15 +10,15 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
 
   const carouselImages = [
     {
-      url: 'https://images.unsplash.com/photo-1588072432836-e10032774350?w=1200&h=800&fit=crop',
+      url: 'https://images.unsplash.com/photo-1517164850305-99a3e65bb47e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fHNjaG9vbCUyMGtpZHN8ZW58MHx8MHx8fDI%3D',
       alt: 'Grupo de adolescentes colaborando'
     },
     {
-      url: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&h=800&fit-crop',
+      url: 'https://images.unsplash.com/photo-1636740106158-d630d506e2cb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fHByZSUyMGFkb2xlc2NlbmNlc3xlbnwwfDB8MHx8fDI%3D',
       alt: 'Estudiante recibiendo orientación'
     },
     {
-      url: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=800&fit-crop',
+      url: 'https://images.unsplash.com/photo-1746937107789-895b1d2f5c3a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fHByZSUyMGFkb2xlc2NlbmNlcyUyMHNjaG9vbHxlbnwwfDB8MHx8fDI%3D',
       alt: 'Equipo de estudiantes trabajando juntos'
     }
   ];
@@ -104,15 +104,15 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
       </div>
 
       {/* Galería flotante (solo en pantallas grandes) */}
-      <div className="hidden xl:block absolute top-[30%] right-4 md:right-28 z-20">
+      <div className="hidden xl:block absolute top-[30%] right-4 md:right-24 z-20">
         <div className="relative w-56 md:w-64 h-80">
           {galleryImages.map((img, index) => (
             <div
               key={index}
               className="absolute bg-white/90 p-1 shadow-lg rounded-md overflow-hidden transition-all duration-300 hover:z-10 hover:scale-105 border border-white/30"
               style={{
-                width: '180px',
-                height: '130px',
+                width: '210px',
+                height: '160px',
                 transform: `rotate(${index % 2 === 0 ? -5 : 5}deg) translateX(${index % 2 === 0 ? 10 : -10}px) translateY(${index * 40}px)`,
                 zIndex: index,
                 right: `${index * 15}px`
@@ -132,19 +132,19 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
       <div className="container mx-auto h-full flex flex-col justify-center items-start text-left px-4 pt-20 relative z-30">
         <div className="max-w-4xl animate-fade-in ml-0 md:ml-8 lg:ml-16">
           {/* Título con sombra más pronunciada */}
-          <h1 className="text-4xl md:text-7xl font-bold text-white mb-4 leading-tight [text-shadow:_0_3px_12px_rgba(0,0,0,0.8)]">
-  Paso Firme <span 
-    className="italic font-light text-white text-5xl md:text-7xl font-dancing [text-shadow:_0_4px_15px_rgba(0,0,0,0.9)]"
-    style={{ fontFamily: "'Dancing Script', cursive" }}
-  >
-    a Secundaria
-  </span>
-</h1>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight [text-shadow:_0_3px_12px_rgba(0,0,0,0.8)]">
+            Paso Firme <span 
+              className="italic font-light text-white text-5xl md:text-7xl font-dancing [text-shadow:_0_4px_15px_rgba(0,0,0,0.9)]"
+              style={{ fontFamily: "'Dancing Script', cursive" }}
+            >
+              a Secundaria
+            </span>
+          </h1>
 
 
           {/* Subtítulos con texto más grande y sombra más marcada */}
           <p
-            className="text-lg md:text-xl text-white mb-4 font-medium [text-shadow:_0_2px_6px_rgba(0,0,0,0.7)]"
+            className="text-base md:text-xl text-white mb-4 font-medium [text-shadow:_0_2px_6px_rgba(0,0,0,0.7)]"
             style={{ animationDelay: '0.2s' }}
           >
             <span>El taller internacional que fortalece lo que no enseña la escuela.</span><br />
@@ -152,8 +152,8 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
           </p>
 
           {/* Destacado con fondo más opaco */}
-          <div className="bg-white/30 rounded-xl p-4 mb-8 inline-block shadow-xl backdrop-blur-md">
-            <p className="text-white font-semibold text-base">
+          <div className="bg-white/30 rounded-xl p-2 md:p-4 mb-8 inline-block shadow-xl backdrop-blur-lg">
+            <p className="text-white font-semibold text-sm md:text-base">
               📍 Presencial en Monterrey, México | 🌐 Online desde cualquier parte del mundo
             </p>
           </div>

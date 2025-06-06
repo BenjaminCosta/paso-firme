@@ -30,7 +30,7 @@ const SkillsSection = () => {
         {/* Encabezado moderno */}
         <div className="text-center mb-16">
           <span className="inline-block px-5 py-2 bg-brand-teal/20 text-brand-teal rounded-full text-sm font-bold mb-6 border border-brand-teal/30 backdrop-blur-sm">
-            TRANSFORMACIÓN EMOCIONAL
+            Tranformacion Emocional
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-5 leading-tight">
             Habilidades que <span className="bg-gradient-to-r from-brand-teal to-brand-yellow bg-clip-text text-transparent">desarrollarán</span>
