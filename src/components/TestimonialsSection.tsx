@@ -31,7 +31,7 @@ const TestimonialsSection = () => {
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.85), rgba(227, 216, 204, 0.4)), url('https://images.unsplash.com/photo-1629360035258-2ccb13aa3679?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
+          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.5), rgba(227, 216, 204, 0.1)), url('https://images.unsplash.com/photo-1636740106158-d630d506e2cb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fHByZSUyMGFkb2xlc2NlbmNlc3xlbnwwfDB8MHx8fDI%3D')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed'

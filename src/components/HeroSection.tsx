@@ -24,10 +24,10 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
   ];
 
   const galleryImages = [
-    'https://images.unsplash.com/photo-1541178735493-479c1a27ed24?w=400&h=400&fit-crop',
+    'https://images.unsplash.com/photo-1636740106158-d630d506e2cb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fHByZSUyMGFkb2xlc2NlbmNlc3xlbnwwfDB8MHx8fDI%3D',
     'https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?w=400&h=400&fit-crop',
-    'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&h=800&fit-crop',
-    'https://images.unsplash.com/photo-1588072432904-843af37f03ed?w=400&h=400&fit-crop'
+    'https://images.unsplash.com/photo-1746937107789-895b1d2f5c3a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fHByZSUyMGFkb2xlc2NlbmNlcyUyMHNjaG9vbHxlbnwwfDB8MHx8fDI%3D',
+    'https://images.unsplash.com/photo-1543729232-05ab73949532?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHByZSUyMGFkb2xlc2NlbmNlcyUyMHBhcmVudHN8ZW58MHwwfDB8fHwy'
   ];
 
   const rightSideImage = 'https://images.unsplash.com/photo-1592738721506-c64f5689167d?q=80&w=1974&auto=format&fit=crop';
@@ -47,7 +47,7 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
       {/* Estructura de fondo */}
       <div className="absolute inset-0 flex">
         {/* Carrusel izquierdo */}
-        <div className="w-full md:w-[70%] h-full relative overflow-hidden">
+        <div className="w-full md:w-[75%] h-full relative overflow-hidden">
           {carouselImages.map((image, index) => (
             <div
               key={index}
@@ -104,7 +104,7 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
       </div>
 
       {/* Galería flotante (solo en pantallas grandes) */}
-      <div className="hidden lg:block absolute top-[30%] right-4 md:right-32 z-20">
+      <div className="hidden xl:block absolute top-[30%] right-4 md:right-28 z-20">
         <div className="relative w-56 md:w-64 h-80">
           {galleryImages.map((img, index) => (
             <div
