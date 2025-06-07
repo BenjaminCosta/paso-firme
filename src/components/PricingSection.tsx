@@ -4,7 +4,8 @@ import { MapPin, Calendar, Clock, Users, Video, Download, Zap, ArrowRight,AlertO
 
 const PricingSection = () => {
   return (
-    <section id="pricing" className="py-20 px-4 relative overflow-hidden bg-gradient-to-br from-brand-beige/30 to-white">
+    <section id="pricing" className="py-20 px-0 relative overflow-hidden bg-gradient-to-br from-brand-beige/30 to-white">
+
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 right-0 w-80 h-80 bg-brand-purple/5 rounded-full blur-[100px] animate-float"></div>
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-brand-coral/5 rounded-full blur-[100px] animate-float-delay"></div>
@@ -27,8 +28,9 @@ const PricingSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Presencial */}
+<div className="grid md:grid-cols-2 gap-8">
+
+        {/* Presencial */}
           <div className="relative group h-full">
             <div className="absolute -inset-1 bg-gradient-to-r from-brand-teal/30 to-brand-teal/10 rounded-3xl blur opacity-70 group-hover:opacity-90 transition duration-500"></div>
             <Card className="relative h-full bg-white/95 backdrop-blur-sm border-2 border-brand-teal/20 shadow-xl hover:shadow-2xl transition-all duration-300 group-hover:-translate-y-1.5">
