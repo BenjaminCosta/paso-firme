@@ -134,8 +134,7 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
           {/* Título con sombra más pronunciada */}
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight [text-shadow:_0_3px_12px_rgba(0,0,0,0.8)]">
             Paso Firme <span 
-              className="italic font-light text-white text-5xl md:text-7xl font-dancing [text-shadow:_0_4px_15px_rgba(0,0,0,0.9)]"
-              style={{ fontFamily: "'Dancing Script', cursive" }}
+              className="italic font-light text-white text-5xl md:text-7xl font-pacifico [text-shadow:_0_4px_15px_rgba(0,0,0,0.9)]"
             >
               a Secundaria
             </span>

@@ -13,21 +13,21 @@ const ContextSection = () => {
 
       <div className="container mx-auto max-w-6xl relative z-10">
         {/* Encabezado */}
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-16 animate-fade-in max-w-4xl mx-auto">
           <span className="inline-block px-4 py-2 bg-brand-beige/40 text-brand-purple rounded-full text-sm font-medium mb-4">
             Transición importante
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            El gran salto de primaria a <span className="text-brand-purple">secundaria</span>
+            El gran salto de {" "}
+            <span className="text-brand-purple font-pacifico">Primaria a Secundaria</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Este cambio representa mucho más que un nuevo nivel académico. Es una transformación 
-            emocional, social y personal que marca el inicio de la adolescencia.
+          <p className="text-xl text-gray-600 leading-relaxed">
+            Este cambio representa mucho más que un nuevo nivel académico. <br /> Es una transformación <strong> emocional, social y personal </strong> que marca el inicio de una etapa clave en <strong>la adolescencia.</strong>
           </p>
         </div>
-        
+
         {/* Tarjetas comparativas */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-10">
           {/* Columna de desafíos */}
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-brand-coral/40 to-brand-purple/40 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-500"></div>
@@ -42,7 +42,7 @@ const ContextSection = () => {
                   </h3>
                   <p className="text-gray-500">Lo que enfrentan sin preparación</p>
                 </div>
-                <ul className="space-y-4">
+                <ul className="space-y-5">
                   <li className="flex items-start gap-4">
                     <div className="flex-shrink-0 mt-1">
                       <div className="w-6 h-6 rounded-full bg-brand-coral/10 flex items-center justify-center">
@@ -94,7 +94,7 @@ const ContextSection = () => {
                   </h3>
                   <p className="text-gray-500">Resultados con nuestro programa</p>
                 </div>
-                <ul className="space-y-4">
+                <ul className="space-y-5">
                   <li className="flex items-start gap-4">
                     <div className="flex-shrink-0 mt-1">
                       <CheckCircle className="w-6 h-6 text-brand-teal" />
@@ -117,7 +117,7 @@ const ContextSection = () => {
                     <div className="flex-shrink-0 mt-1">
                       <CheckCircle className="w-6 h-6 text-brand-teal" />
                     </div>
-                    <span className="text-gray-700">Estrategias de organización y gestión emocional</span>
+                    <span className="text-gray-700">Estrategias efectivas de organización y gestión emocional</span>
                   </li>
                 </ul>
               </CardContent>
