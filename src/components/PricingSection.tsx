@@ -12,7 +12,7 @@ const PricingSection = () => {
         <div className="absolute inset-0 bg-[url('https://uploads-ssl.webflow.com/627a1044a798e6627445c8d1/62b7f330aef06a1f8e40e8e7_noise-pattern.png')] opacity-5 mix-blend-overlay"></div>
       </div>
 
-      <div className="container mx-auto max-w-5xl relative z-10">
+     <div className="container mx-auto px-2 md:px-4 max-w-5xl relative z-10">
         <div className="text-center mb-14">
           <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-yellow/90 text-gray-900 rounded-full text-sm font-bold mb-5 shadow-md">
             <Zap className="w-4 h-4" fill="currentColor" />
