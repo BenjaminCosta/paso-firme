@@ -10,11 +10,11 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
 
   const carouselImages = [
     {
-      url: 'https://images.unsplash.com/photo-1517164850305-99a3e65bb47e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fHNjaG9vbCUyMGtpZHN8ZW58MHx8MHx8fDI%3D',
+      url: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       alt: 'Grupo de adolescentes colaborando'
     },
     {
-      url: 'https://images.unsplash.com/photo-1636740106158-d630d506e2cb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fHByZSUyMGFkb2xlc2NlbmNlc3xlbnwwfDB8MHx8fDI%3D',
+      url: 'https://images.unsplash.com/photo-1517164850305-99a3e65bb47e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fHNjaG9vbCUyMGtpZHN8ZW58MHx8MHx8fDI%3D',
       alt: 'Estudiante recibiendo orientación'
     },
     {

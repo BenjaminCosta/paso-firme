@@ -32,7 +32,6 @@ export default function Navbar() {
       {/* Logo Izquierdo */}
       <a
         href="https://www.familiayformacion.com/"
-        target="_blank"
         rel="noopener noreferrer"
         className="cursor-pointer"
       >
