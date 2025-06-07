@@ -34,12 +34,12 @@ const TestimonialsSection = () => {
   return (
     <section className="relative overflow-hidden py-24 px-4">
       <div
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 md:bg-fixed"
         style={{
-          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.5), rgba(227, 216, 204, 0.1)), url('https://images.unsplash.com/photo-1636740106158-d630d506e2cb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fHByZSUyMGFkb2xlc2NlbmNlc3xlbnwwfDB8MHx8fDI%3D')`,
+          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.3), rgba(227, 216, 204, 0.1)), url('https://images.unsplash.com/photo-1636740106158-d630d506e2cb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fHByZSUyMGFkb2xlc2NlbmNlc3xlbnwwfDB8MHx8fDI%3D')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          backgroundAttachment: "fixed",
+
         }}
       ></div>
 
@@ -58,9 +58,9 @@ const TestimonialsSection = () => {
           </span>
         </h2>
 
-          <p className="text-xl text-gray-800 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-800 max-w-3xl mx-auto font-semibold">
             Testimonios reales de padres que han visto la transformación en sus hijos y una
-            <span className="font-semibold"> conexión familiar </span>
+            <span className="font-bold"> conexión familiar </span>
             más sólida
           </p>
         </div>
