@@ -14,12 +14,11 @@ const SkillsSection = () => {
     <section className="relative overflow-hidden py-24 px-4">
       {/* Fondo mejorado */}
       <div
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 md:bg-fixed"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1629360035258-2ccb13aa3679?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          backgroundAttachment: "fixed",
         }}
       ></div>
       
