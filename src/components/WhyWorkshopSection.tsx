@@ -1,4 +1,5 @@
-import { Brain, Star, Users, Heart, Globe, BookOpen } from "lucide-react";
+import { Brain, Star, Users, Heart, Globe, BookOpen, ArrowRight } from "lucide-react";
+import { Button } from "./ui/button";
 
 const WhyWorkshopSection = () => {
   const features = [
@@ -145,10 +146,10 @@ const WhyWorkshopSection = () => {
                   </div>
                 </div>
 
-                <h3 className="font-bold text-xl text-gray-900 mb-2 group-hover:text-brand-purple transition-colors duration-300">
+                <h3 className="font-bold text-center text-xl text-gray-900 mb-2 group-hover:text-brand-purple transition-colors duration-300">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 text-base leading-relaxed">{item.desc}</p>
+                <p className="text-gray-600 text-base text-center leading-relaxed">{item.desc}</p>
 
                 <div
                   className={`absolute bottom-0 left-0 right-0 h-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r ${gradient}`}
@@ -156,6 +157,16 @@ const WhyWorkshopSection = () => {
               </div>
             );
           })}
+        </div>
+        {/* Botón de urgencia discreto */}
+        <div className="text-center mt-16">
+          <Button className="bg-gradient-to-r from-brand-coral to-brand-purple text-white hover:from-brand-coral/90 hover:to-brand-purple/90 transition-all duration-300 shadow-lg hover:shadow-xl">
+             Esto es lo que mi hijo necesita
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+          <p className="text-sm text-gray-500 mt-2">
+            Cupos limitados - Inscripciones abiertas
+          </p>
         </div>
       </div>
     </section>

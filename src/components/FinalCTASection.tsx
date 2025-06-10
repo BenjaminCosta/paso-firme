@@ -15,13 +15,17 @@ const FinalCTASection = ({ onScrollToSection }: FinalCTASectionProps) => {
       </div>
 
       <div className="container mx-auto max-w-4xl relative z-10">
-        <div className="bg-white border border-gray-100 rounded-2xl p-8 shadow-lg overflow-hidden">
+        <div className="bg-white border-2 border-brand-teal/20 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300 overflow-hidden relative">
+          {/* Sello de urgencia */}
+          <div className="absolute -top-2 -right-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full rotate-12 shadow-md animate-pulse">
+            ¡ÚLTIMOS CUPOS!
+          </div>
           {/* Contenido compacto */}
           <div className="text-center space-y-6">
             {/* Badge de urgencia */}
             <div className="inline-flex items-center gap-2 bg-brand-yellow/10 text-brand-yellow px-4 py-1.5 rounded-full border border-brand-yellow/20">
               <Zap className="w-4 h-4 fill-brand-yellow" />
-              <span className="font-bold text-xs tracking-wide">ÚLTIMOS CUPOS</span>
+              <span className="font-bold text-xs tracking-wide">ÚLTIMA OPORTUNIDAD</span>
             </div>
 
             {/* Título impactante */}

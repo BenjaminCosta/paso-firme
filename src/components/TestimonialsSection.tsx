@@ -49,20 +49,22 @@ const TestimonialsSection = () => {
         <div className="text-center mb-16">
           
           <h2 className="text-4xl md:text-5xl font-bold text-text-dark mb-5 leading-tight text-center break-words">
-          <span className="relative">
-            Lo que dicen{" "}
-            <span className="relative z-10 bg-gradient-to-r from-brand-purple to-brand-coral bg-clip-text font-pacifico text-transparent">
-              las familias
-            </span>
-            <span className="absolute bottom-1 left-0 right-0 h-2 bg-brand-yellow/30 -z-0"></span>
-          </span>
-        </h2>
+  Lo que cuentan{" "}
+  <span className="relative inline-block">
+    <span className="relative z-10 bg-gradient-to-r from-brand-purple to-brand-coral bg-clip-text font-pacifico text-transparent">
+      las familias
+    </span>
+    <span className="absolute bottom-1 left-0 right-0 h-2 bg-brand-yellow/30 -z-0"></span>
+  </span>
+</h2>
 
-          <p className="text-xl text-gray-800 max-w-3xl mx-auto font-semibold">
-            Testimonios reales de padres que han visto la transformación en sus hijos y una
-            <span className="font-bold"> conexión familiar </span>
-            más sólida
-          </p>
+
+
+         <p className="text-xl text-gray-800 max-w-3xl mx-auto font-semibold">
+  Padres que vieron un cambio real en sus hijos… y una{" "}
+  <span className="font-bold">conexión familiar</span> más fuerte que nunca
+</p>
+
         </div>
 
         <div className="px-8 md:px-12 lg:px-16">

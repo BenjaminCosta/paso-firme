@@ -66,9 +66,12 @@ const PricingSection = () => {
                 </div>
 
                 <div className="mt-auto">
-                  <div className="bg-gradient-to-r from-brand-teal/5 to-brand-teal/10 p-5 rounded-xl mb-6 border border-brand-teal/10">
+                  <div className="bg-gradient-to-r from-brand-teal/5 to-brand-teal/10 p-5 rounded-xl mb-6 border border-brand-teal/10 relative">
+                    <div className="absolute -top-3 -right-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full animate-bounce">
+                      ¡ÚLTIMOS!
+                    </div>
                     <div className="text-4xl font-extrabold text-brand-teal mb-1">$1,200 MXN</div>
-                    <p className="text-sm text-gray-600 font-medium">Precio final</p>
+                     <p className="text-sm text-gray-600 font-medium">Precio <span className="font-bold text-brand-coral">Final</span></p>
                   </div>
 
                   <Button className="w-full py-5 bg-gradient-to-r from-brand-teal to-brand-teal-dark hover:from-brand-teal-dark hover:to-brand-teal text-white font-bold shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2">
@@ -110,10 +113,15 @@ const PricingSection = () => {
                   </div>
                 </div>
 
-                <div className="mt-auto">
-                  <div className="bg-gradient-to-r from-brand-purple/5 to-brand-purple/10 p-5 rounded-xl mb-6 border border-brand-purple/10">
-                    <div className="text-4xl font-extrabold text-brand-purple mb-1">$1,100 MXN</div>
-                    <p className="text-sm text-gray-600 font-medium">Preventa: $990 MXN</p>
+                 <div className="mt-auto">
+                  <div className="bg-gradient-to-r from-brand-purple/5 to-brand-purple/10 p-5 rounded-xl mb-6 border border-brand-purple/10 relative">
+                    <div className="absolute -top-3 -right-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full animate-bounce">
+                      ¡APROVECHA!
+                    </div>
+                    <div className="flex items-end gap-2">
+                      <div className="text-4xl font-extrabold text-brand-purple mb-1">$1,100 MXN</div>
+                    </div>
+                    <p className="text-sm text-gray-600 font-medium"> Preventa en: <span className="font-bold text-brand-coral">900 MXN</span></p>
                   </div>
 
                   <Button className="w-full py-5 bg-gradient-to-r from-brand-purple to-brand-purple-dark hover:from-brand-purple-dark hover:to-brand-purple text-white font-bold shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2">

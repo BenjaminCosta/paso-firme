@@ -14,7 +14,7 @@ const ContextSection = () => {
       <div className="container mx-auto max-w-6xl relative z-10">
         {/* Encabezado */}
         <div className="text-center mb-16 animate-fade-in max-w-4xl mx-auto">
-          <span className="inline-block px-4 py-2 bg-brand-beige/40 text-brand-purple rounded-full text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-2 bg-brand-beige/40 text-brand-purple rounded-full backdrop-blur-md text-sm font-medium mb-4">
             Transición importante
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">

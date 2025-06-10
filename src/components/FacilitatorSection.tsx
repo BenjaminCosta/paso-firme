@@ -69,13 +69,13 @@ const FacilitatorSection = () => {
               {/* Contenedor de la imagen */}
               <div className="relative rounded-2xl overflow-hidden bg-white shadow-xl border border-gray-100 transform group-hover:-translate-y-1 transition-transform duration-300">
                 <img
-                  src="imagenes/facilitadora.jpg"
+                  src="imagenes/facilitadora2.jpg"
                   alt="Facilitadora Olivia Rodríguez"
                   className="w-full h-full object-cover aspect-square"
                 />
 
                 {/* Badge de experiencia */}
-                <div className="absolute -bottom-2 -right-2 px-4 py-2 bg-white/30 backdrop-blur-md text-brand-teal font-semibold rounded-lg shadow-md">
+                <div className="absolute -bottom-2 -right-2 px-4 py-2 bg-white/30 backdrop-blur-lg text-brand-purple font-semibold rounded-lg shadow-lg">
                   15+ años
                 </div>
               </div>

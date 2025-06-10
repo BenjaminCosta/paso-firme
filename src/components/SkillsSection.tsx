@@ -63,9 +63,9 @@ const SkillsSection = () => {
 
         {/* Frase destacada mejorada */}
         <div className="mt-16 text-center px-4">
-          <div className="inline-block bg-gradient-to-r from-brand-teal/10 to-brand-yellow/10 p-3 rounded-full mb-6">
-            <div className="bg-gray-900/80 backdrop-blur-sm rounded-full px-6 py-3">
-              <p className="text-lg md:text-xl text-white font-medium leading-relaxed max-w-4xl mx-auto">
+          <div className="inline-block bg-gradient-to-r from-brand-teal/10 to-brand-yellow/10 p-3  rounded-full mb-6">
+            <div className="bg-gray-900/80 backdrop-blur-sm rounded-full p-10  md:px-6 md:py-3">
+              <p className="text-lg md:text-xl text-white  font-medium leading-relaxed max-w-5xl mx-auto">
                 Estas no son <span className="italic text-brand-yellow font-semibold">"habilidades bonitas"</span>, 
                 sino herramientas <span className="text-brand-teal font-medium">esenciales</span> para que tu hijo enfrente la secundaria con:
               </p>
