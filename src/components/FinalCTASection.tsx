@@ -117,7 +117,7 @@ const FinalCTASection = ({ onScrollToSection }: FinalCTASectionProps) => {
               <div className="flex items-center justify-center gap-3 mt-4 text-sm">
                 <div className="flex items-center gap-1 bg-white/70 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/30 shadow-inner">
                   <CheckCircle className="w-4 h-4 text-brand-teal" />
-                  <span className="text-gray-600">Garantía de 7 días</span>
+                  <span className="text-gray-600">Inscripciones Abiertas</span>
                 </div>
               </div>
             </div>
