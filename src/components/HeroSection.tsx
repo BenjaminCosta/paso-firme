@@ -133,12 +133,12 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
       <div className="container mx-auto h-full flex flex-col justify-center items-start text-left px-4 pt-20 relative z-30">
         <div className="max-w-4xl animate-fade-in ml-0 md:ml-8 lg:ml-16">
           {/* Título o logo responsive */}
-<div className="mb-4">
+<div className="mb-6">
   {/* Logo solo visible en mobile */}
   <img 
     src="/logos/logo5.png" 
     alt="Logo Paso Firme" 
-    className="block md:hidden w-auto h-58 mx-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]"
+    className="block md:hidden w-auto h-24 mx-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]"
   />
 
   {/* Título visible en pantallas md o mayores */}
