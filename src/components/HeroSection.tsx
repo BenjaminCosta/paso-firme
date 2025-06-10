@@ -8,29 +8,30 @@ interface HeroSectionProps {
 const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const carouselImages = [
-    {
-      url: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      alt: 'Grupo de adolescentes colaborando'
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1517164850305-99a3e65bb47e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fHNjaG9vbCUyMGtpZHN8ZW58MHx8MHx8fDI%3D',
-      alt: 'Estudiante recibiendo orientación'
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1746937107789-895b1d2f5c3a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fHByZSUyMGFkb2xlc2NlbmNlcyUyMHNjaG9vbHxlbnwwfDB8MHx8fDI%3D',
-      alt: 'Equipo de estudiantes trabajando juntos'
-    }
-  ];
+ const carouselImages = [
+  {
+    url: '/imagenes/car1.avif',
+    alt: 'Grupo de adolescentes colaborando'
+  },
+  {
+    url: '/imagenes/car2.avif',
+    alt: 'Estudiante recibiendo orientación'
+  },
+  {
+    url: '/imagenes/car3.avif',
+    alt: 'Equipo de estudiantes trabajando juntos'
+  }
+];
 
   const galleryImages = [
-    'https://images.unsplash.com/photo-1636740106158-d630d506e2cb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fHByZSUyMGFkb2xlc2NlbmNlc3xlbnwwfDB8MHx8fDI%3D',
-    'https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?w=400&h=400&fit-crop',
-    'https://images.unsplash.com/photo-1746937107789-895b1d2f5c3a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fHByZSUyMGFkb2xlc2NlbmNlcyUyMHNjaG9vbHxlbnwwfDB8MHx8fDI%3D',
-    'https://images.unsplash.com/photo-1543729232-05ab73949532?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHByZSUyMGFkb2xlc2NlbmNlcyUyMHBhcmVudHN8ZW58MHwwfDB8fHwy'
-  ];
+  '/imagenes/gal1.avif',
+  '/imagenes/gal2.jpg',
+  '/imagenes/gal3.avif',
+  '/imagenes/gal4.avif'
+];
 
-  const rightSideImage = 'https://images.unsplash.com/photo-1592738721506-c64f5689167d?q=80&w=1974&auto=format&fit=crop';
+
+  const rightSideImage = '/imagenes/right.avif';
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -47,7 +48,7 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
       {/* Estructura de fondo */}
       <div className="absolute inset-0 flex">
         {/* Carrusel izquierdo */}
-        <div className="w-full md:w-[75%] h-full relative overflow-hidden">
+        <div className="w-full xl:w-[75%] h-full relative overflow-hidden">
           {carouselImages.map((image, index) => (
             <div
               key={index}
@@ -71,7 +72,7 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
         </div>
 
         {/* Lado derecho con múltiples overlays */}
-        <div className="hidden md:block w-[40%] h-full relative">
+        <div className="hidden xl:block w-[40%] h-full relative">
           {/* Imagen base */}
           <div
             className="absolute inset-0"
