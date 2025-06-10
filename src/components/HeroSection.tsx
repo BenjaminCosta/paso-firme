@@ -44,7 +44,7 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
   }, []);
 
   return (
-    <section className="relative h-[72vh] min-h-[650px] overflow-hidden">
+    <section className="relative h-[72vh] min-h-[720px] md:min-h-[650px] ] overflow-hidden">
       {/* Estructura de fondo */}
       <div className="absolute inset-0 flex">
         {/* Carrusel izquierdo */}
@@ -132,21 +132,24 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
       {/* Contenido principal - alineado a la izquierda */}
       <div className="container mx-auto h-full flex flex-col justify-center items-start text-left px-4 pt-20 relative z-30">
         <div className="max-w-4xl animate-fade-in ml-0 md:ml-8 lg:ml-16">
-          {/* Título con sombra más pronunciada */}
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight [text-shadow:_0_3px_12px_rgba(0,0,0,0.8)]">
-  <span className="block md:hidden">
-    Paso Firme <br />
-    <span className="italic font-light font-pacifico [text-shadow:_0_4px_15px_rgba(0,0,0,0.9)]">
-      a Secundaria
-    </span>
-  </span>
-  <span className="hidden md:inline">
+          {/* Título o logo responsive */}
+<div className="mb-4">
+  {/* Logo solo visible en mobile */}
+  <img 
+    src="/logos/logo4.png" 
+    alt="Logo Paso Firme" 
+    className="block md:hidden w-auto h-54 mx-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]"
+  />
+
+  {/* Título visible en pantallas md o mayores */}
+  <h1 className="hidden md:block text-7xl font-bold text-white leading-tight [text-shadow:_0_3px_12px_rgba(0,0,0,0.8)]">
     Paso Firme{" "}
     <span className="italic font-light font-pacifico [text-shadow:_0_4px_15px_rgba(0,0,0,0.9)]">
       a Secundaria
     </span>
-  </span>
-</h1>
+  </h1>
+</div>
+
 
 
 
