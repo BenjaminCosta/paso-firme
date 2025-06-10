@@ -42,7 +42,7 @@ export default function Navbar() {
           src="logos/familia2.png"
           alt="Logo Izquierdo"
           className={`select-none transition-all duration-500 ${
-            isScrolling ? 'h-20 md:h-24' : 'h-24 md:h-28'
+            isScrolling ? 'h-16 md:h-20' : 'h-20 md:h-24'
           } ${isHovered ? 'drop-shadow-[0_0_15px_rgba(16,185,129,0.4)]' : ''}`}
         />
       </a>
@@ -58,7 +58,7 @@ export default function Navbar() {
           src="logos/pasofirme2.png"
           alt="Logo Derecho"
           className={`select-none transition-all duration-500 ${
-            isScrolling ? 'h-20 md:h-24' : 'h-24 md:h-28'
+            isScrolling ? 'h-16 md:h-20' : 'h-20 md:h-24'
           } ${isHovered ? 'drop-shadow-[0_0_15px_rgba(168,85,247,0.4)]' : ''}`}
         />
       </a>

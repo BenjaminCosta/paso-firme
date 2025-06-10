@@ -136,9 +136,9 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
 <div className="mb-4">
   {/* Logo solo visible en mobile */}
   <img 
-    src="/logos/logo4.png" 
+    src="/logos/logo5.png" 
     alt="Logo Paso Firme" 
-    className="block md:hidden w-auto h-54 mx-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]"
+    className="block md:hidden w-auto h-58 mx-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]"
   />
 
   {/* Título visible en pantallas md o mayores */}
@@ -164,7 +164,7 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
           </p>
 
           {/* Destacado con fondo más opaco */}
-          <div className="bg-white/30 rounded-xl p-2 md:p-4 mb-8 inline-block shadow-xl backdrop-blur-lg">
+          <div className="bg-white/30 rounded-xl p-2 md:p-4 mb-8 inline-block shadow-xl backdrop-blur-lg border border-white">
             <p className="text-white font-semibold text-sm md:text-base">
               📍 Presencial en Monterrey, México | 🌐 Online desde cualquier parte del mundo
             </p>
