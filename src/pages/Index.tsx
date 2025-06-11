@@ -22,7 +22,7 @@ const Index = () => {
       <Navbar />
       <HeroSection onScrollToSection={scrollToSection} />
       <ContextSection />
-      <WhyWorkshopSection />
+      <WhyWorkshopSection onScrollToSection={scrollToSection} />
       <SkillsSection />
       <FacilitatorSection />
       <PricingSection />

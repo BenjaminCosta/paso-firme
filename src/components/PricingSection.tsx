@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Calendar, Clock, Users, Video, Download, Zap, ArrowRight,AlertOctagonIcon, AlertCircleIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const PricingSection = () => {
   return (
@@ -73,11 +74,12 @@ const PricingSection = () => {
                     <div className="text-4xl font-extrabold text-brand-teal mb-1">$1,200 MXN</div>
                      <p className="text-sm text-gray-600 font-medium">Precio <span className="font-bold text-brand-coral">Final</span></p>
                   </div>
-
+                  <Link to={'https://www.familiayformacion.com/tienda/p/paso-firme-a-secundaria'}>
                   <Button className="w-full py-5 bg-gradient-to-r from-brand-teal to-brand-teal-dark hover:from-brand-teal-dark hover:to-brand-teal text-white font-bold shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2">
                     <span>Reservar ahora</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
@@ -123,11 +125,12 @@ const PricingSection = () => {
                     </div>
                     <p className="text-sm text-gray-600 font-medium"> Preventa en: <span className="font-bold text-brand-coral">900 MXN</span></p>
                   </div>
-
+                  <Link to={'https://www.familiayformacion.com/tienda/p/paso-firme-a-secundaria-virtual'} >
                   <Button className="w-full py-5 bg-gradient-to-r from-brand-purple to-brand-purple-dark hover:from-brand-purple-dark hover:to-brand-purple text-white font-bold shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2">
                     <span>Inscribirme ahora</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>

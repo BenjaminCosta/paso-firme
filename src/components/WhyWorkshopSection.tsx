@@ -1,7 +1,14 @@
 import { Brain, Star, Users, Heart, Globe, BookOpen, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
+import { useState } from "react";
 
-const WhyWorkshopSection = () => {
+interface WhyWorkshopSectionProps {
+  onScrollToSection: (id: string) => void;
+}
+
+const WhyWorkshopSection = ({ onScrollToSection }: WhyWorkshopSectionProps) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   const features = [
     {
       icon: Brain,
@@ -38,7 +45,7 @@ const WhyWorkshopSection = () => {
       desc: "Para México y cualquier país del mundo",
       badge: "Accesibilidad",
     },
-     {
+    {
       icon: BookOpen,
       color: "brand-teal",
       title: "Contenido práctico",
@@ -158,10 +165,14 @@ const WhyWorkshopSection = () => {
             );
           })}
         </div>
+
         {/* Botón de urgencia discreto */}
         <div className="text-center mt-16">
-          <Button className="bg-gradient-to-r from-brand-coral to-brand-purple text-white hover:from-brand-coral/90 hover:to-brand-purple/90 transition-all duration-300 shadow-lg hover:shadow-xl">
-             Esto es lo que mi hijo necesita
+          <Button
+             onClick={() => onScrollToSection('pricing')}
+            className="bg-gradient-to-r from-brand-coral to-brand-purple text-white hover:from-brand-coral/90 hover:to-brand-purple/90 transition-all duration-300 shadow-lg hover:shadow-xl"
+          >
+            Esto es lo que mi hijo necesita
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
           <p className="text-sm text-gray-500 mt-2">

@@ -36,8 +36,8 @@ const FacilitatorSection = () => {
               <div className="space-y-5 text-gray-700 leading-relaxed text-lg">
                <p className="text-lg text-gray-700 leading-relaxed">
   <strong>Asesora familiar</strong>, <strong>coach de adolescentes</strong>, <strong>educadora emocional</strong> y especialista en neurociencia. <br /> <br />
-  Con más de <strong>950,000 familias conectadas</strong> a través de sus redes, podcast, talleres y programas, ha transformado la manera en que padres e hijos se relacionan en la etapa más compleja:{" "}
-  <span className="font-semibold text-brand-purple italic" >
+  Con más de <strong>un millón de familias conectadas</strong> a través de sus redes, podcast, talleres y programas, ha transformado la manera en que padres e hijos se relacionan en la etapa más compleja:{" "}
+  <span className="font-semibold text-brand-purple italic">
     la adolescencia.
   </span>
 </p>
