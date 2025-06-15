@@ -26,6 +26,15 @@ const PricingSection = () => {
   // Tasa de conversión aproximada
   const exchangeRate = 0.06; // 1 MXN = 0.06 USD (ejemplo)
 
+  // Datos de ubicación
+  const ubicacion = {
+    nombre: "Club Alera",
+    direccion: "Paseo de la Sierra 105, Zona la Alianza",
+    cp: "CP 66259",
+    ciudad: "San Pedro Garza García, NL.",
+    mapsUrl: "https://maps.app.goo.gl/gRCSJz7wKRsN9CNp7?g_st=com.google.maps.preview.copy" // Reemplaza con tu enlace real de Google Maps
+  };
+
   return (
     <section id="pricing" className="py-12 md:py-20 px-4 sm:px-0 relative overflow-hidden bg-gradient-to-br from-brand-beige/30 to-white">
       <div className="absolute inset-0 overflow-hidden">
@@ -78,6 +87,32 @@ const PricingSection = () => {
                     <InfoBlock icon={<Calendar className="w-5 h-5 sm:w-6 sm:h-6 text-brand-teal" />} text={presencial.fecha} />
                     <InfoBlock icon={<Clock className="w-5 h-5 sm:w-6 sm:h-6 text-brand-teal" />} text={presencial.horario} />
                     <InfoBlock icon={<Download className="w-5 h-5 sm:w-6 sm:h-6 text-brand-teal" />} text={presencial.detalles} />
+                    
+                    {/* Sección de ubicación presencial */}
+                    <div className="pt-2">
+                      <a 
+                        href={ubicacion.mapsUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="group/ubicacion"
+                      >
+                        <div className="flex items-start gap-3">
+                          <div className="flex-shrink-0 mt-0.5">
+                            <MapPin className="w-4 h-4 text-brand-teal/80 group-hover/ubicacion:text-brand-teal" />
+                          </div>
+                          <div>
+                            <p className="text-xs sm:text-sm font-medium text-gray-700 group-hover/ubicacion:text-brand-teal transition-colors">
+                              {ubicacion.nombre}
+                            </p>
+                            <p className="text-xs text-gray-500 group-hover/ubicacion:text-gray-700 transition-colors">
+                              {ubicacion.direccion}<br />
+                              {ubicacion.cp}<br />
+                              {ubicacion.ciudad}
+                            </p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
                   </div>
 
                   <div className="mt-auto">
@@ -125,6 +160,27 @@ const PricingSection = () => {
                     <InfoBlock icon={<Calendar className="w-5 h-5 sm:w-6 sm:h-6 text-brand-purple" />} text={online.fecha} />
                     <InfoBlock icon={<Clock className="w-5 h-5 sm:w-6 sm:h-6 text-brand-purple" />} text={online.horario} />
                     <InfoBlock icon={<Download className="w-5 h-5 sm:w-6 sm:h-6 text-brand-purple" />} text={online.detalles} />
+                    
+                    {/* Sección de plataforma virtual */}
+                    <div className="pt-2">
+                      <div className="group/plataforma">
+                        <div className="flex items-start gap-3">
+                          <div className="flex-shrink-0 mt-0.5">
+                            <Video className="w-4 h-4 text-brand-purple/80 group-hover/plataforma:text-brand-purple" />
+                          </div>
+                          <div>
+                            <p className="text-xs sm:text-sm font-medium text-gray-700 group-hover/plataforma:text-brand-purple transition-colors">
+                              Vía virtual
+                            </p>
+                            <p className="text-xs text-gray-500 group-hover/plataforma:text-gray-700 transition-colors">
+                              Plataforma Zoom<br />
+                              Acceso desde cualquier dispositivo<br />
+                              Grabaciones disponibles
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
                   <div className="mt-auto">
