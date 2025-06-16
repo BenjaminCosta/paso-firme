@@ -196,7 +196,7 @@ const PricingSection = () => {
                         Precio original: <span className="line-through text-gray-500 font-semibold">$1200 MXN</span><span className="font-bold text-brand-coral"> - ¡Precio de preventa!</span>
                       </p>
                     </div>
-                    <Link to={'https://www.familiayformacion.com/tienda/p/paso-firme-online'}>
+                    <Link to={'https://www.familiayformacion.com/tienda/p/paso-firme-a-secundaria-virtual'}>
                       <Button className="w-full py-4 sm:py-5 bg-gradient-to-r from-brand-purple to-brand-purple-dark hover:from-brand-purple-dark hover:to-brand-purple text-white font-bold shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2">
                         <span className="text-sm sm:text-base">Reservar ahora</span>
                         <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
