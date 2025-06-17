@@ -42,7 +42,7 @@ export const TargetAudience = () => {
   ];
 
   return (
-    <section className="relative py-20 overflow-hidden bg-gradient-to-br from-white via-brand-teal/30 to-brand-purple/40 px-4">
+    <section className="relative py-20 overflow-hidden px-4">
       {/* Fondo con efecto de partículas sutiles */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-brand-teal/20 to-brand-coral/10 backdrop-blur-[2px]" />

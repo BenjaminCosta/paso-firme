@@ -18,7 +18,7 @@ const Pasofirme = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white font-poppins text-text-dark">
+    <div className="min-h-screen font-poppins text-text-dark">
       <Navbar />
       <HeroSection onScrollToSection={scrollToSection} />
       <ContextSection />

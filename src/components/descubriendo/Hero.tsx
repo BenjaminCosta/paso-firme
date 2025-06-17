@@ -92,10 +92,10 @@ const Hero = ({ onScrollToSection }: HeroSectionProps) => {
           <div className="absolute inset-0 bg-gradient-to-br from-brand-teal/30 via-brand-purple/25 to-brand-coral/20" />
 
           {/* Logo potencial */}
-          <div
+           <div
             className="absolute inset-0 opacity-40 bg-center bg-no-repeat bg-contain mix-blend-soft-light"
             style={{
-              backgroundImage: "url('/logos/potencial.png')",
+              backgroundImage: "url('/logos/familia2.png')",
               backgroundSize: '120%',
               backgroundPosition: 'center'
             }}
@@ -136,7 +136,8 @@ const Hero = ({ onScrollToSection }: HeroSectionProps) => {
             
             {/* Título visible en pantallas md o mayores */}
             <h1 className=" md:text-6xl text-5xl font-bold text-white [text-shadow:_0_3px_12px_rgba(0,0,0,0.8)]">
-              DESCUBRIENDO MI POTENCIAL{" "}
+              Descubriendo mi{" "} <span className="font-pacifico">Potencial</span>
+  
             </h1>
           </div>
 
@@ -152,7 +153,7 @@ const Hero = ({ onScrollToSection }: HeroSectionProps) => {
           {/* Destacado con fondo más opaco */}
           <div className="bg-white/30 rounded-xl p-2 md:p-4 mb-8 inline-block shadow-xl backdrop-blur-lg border border-white">
             <p className="text-white font-semibold text-sm md:text-base">
-              ✅ Disponible en vivo vía online y diseñado para adolescentes de cualquier parte del mundo
+              ✅Disponible en vivo online y diseñado para adolescentes de cualquier parte del mundo
             </p>
           </div>
 

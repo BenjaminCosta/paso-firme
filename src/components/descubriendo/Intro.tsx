@@ -104,7 +104,8 @@ const Intro = ({ onScrollToSection }: IntroProps) => {
   {/* Imagen de fondo + overlays degradados */}
   <div className="absolute inset-0 -z-10">
     <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1722970913865-14852ea8c1c6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTR8fHRlZW4lMjB3aXRoJTIwcGhvbmUlMjBhZGRpY3Rpb258ZW58MHwwfDB8fHwy')] bg-cover bg-center opacity-40" />
-    <div className="absolute inset-0 bg-gradient-to-br from-white/70 via-brand-teal/30 to-brand-purple/50 " />
+    <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-brand-teal/50 to-brand-purple/60 " />
+    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-purple/30 " />
   </div>
 
   {/* Elementos decorativos */}
@@ -152,13 +153,13 @@ const Intro = ({ onScrollToSection }: IntroProps) => {
     <div className="text-center">
       <Button
         size="lg"
-        className="relative overflow-hidden bg-gradient-to-r from-brand-purple to-brand-teal text-white px-8 py-6 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-xl group"
+        className="relative overflow-hidden bg-gradient-to-r from-brand-coral/70 to-brand-teal text-white px-8 py-6 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-xl group"
         onClick={() => onScrollToSection('pricing')}
       >
         <span className="relative z-10 flex items-center justify-center">
           Transformar esta situación <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
         </span>
-        <span className="absolute inset-0 bg-gradient-to-r from-brand-teal to-brand-purple opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+        <span className="absolute inset-0 bg-gradient-to-r from-brand-teal to-brand-coral/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
       </Button>
     </div>
   </div>

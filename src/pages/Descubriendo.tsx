@@ -19,7 +19,7 @@ const Descubriendo = () => {
   };
 
   return (
-    <div className="min-h-screen font-poppins bg-white text-text-dark">
+    <div className="min-h-screen font-poppins text-text-dark">
       <Nav1 />
       <Hero onScrollToSection={scrollToSection} />
       <Intro onScrollToSection={scrollToSection}/>
