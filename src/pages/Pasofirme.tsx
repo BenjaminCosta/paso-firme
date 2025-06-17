@@ -1,15 +1,15 @@
 
-import HeroSection from "@/components/HeroSection";
-import ContextSection from "@/components/ContextSection";
-import WhyWorkshopSection from "@/components/WhyWorkshopSection";
-import SkillsSection from "@/components/SkillsSection";
-import FacilitatorSection from "@/components/FacilitatorSection";
-import PricingSection from "@/components/PricingSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import FinalCTASection from "@/components/FinalCTASection";
+import HeroSection from "@/components/pasofirme/HeroSection";
+import ContextSection from "@/components/pasofirme/ContextSection";
+import WhyWorkshopSection from "@/components/pasofirme/WhyWorkshopSection";
+import SkillsSection from "@/components/pasofirme/SkillsSection";
+import FacilitatorSection from "@/components/pasofirme/FacilitatorSection";
+import PricingSection from "@/components/pasofirme/PricingSection";
+import TestimonialsSection from "@/components/pasofirme/TestimonialsSection";
+import FinalCTASection from "@/components/pasofirme/FinalCTASection";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-const Index = () => {
+const Pasofirme = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -33,4 +33,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Pasofirme;

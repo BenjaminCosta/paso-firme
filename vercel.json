@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/pasofirme" },
+    { "source": "/descubriendo", "destination": "/descubriendo" }
+  ]
+}

@@ -1,5 +1,5 @@
 import { Brain, Star, Users, Heart, Globe, BookOpen, ArrowRight } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import { useState } from "react";
 
 interface WhyWorkshopSectionProps {

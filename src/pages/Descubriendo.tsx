@@ -1,0 +1,35 @@
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Hero from "@/components/descubriendo/Hero";
+import Intro from "@/components/descubriendo/Intro";
+import Testimonials from "@/components/descubriendo/Testimonials";
+import { TargetAudience } from "@/components/descubriendo/TargetAudience";
+import FAQ from "@/components/descubriendo/FAQ";
+import { Pricing } from "@/components/descubriendo/Pricing";
+import Nav1 from "@/components/descubriendo/Nav1";
+
+
+
+const Descubriendo = () => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return (
+    <div className="min-h-screen font-poppins bg-white text-text-dark">
+      <Nav1 />
+      <Hero onScrollToSection={scrollToSection} />
+      <Intro onScrollToSection={scrollToSection}/>
+      <TargetAudience />
+      <Testimonials />
+      <Pricing />
+      <FAQ />
+      <Footer />
+    </div>
+  );
+};
+
+export default Descubriendo;
