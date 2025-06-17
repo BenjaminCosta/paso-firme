@@ -1,6 +1,18 @@
 {
   "rewrites": [
-    { "source": "/", "destination": "/pasofirme" },
-    { "source": "/descubriendo", "destination": "/descubriendo" }
+    {
+      "source": "/(.*)",
+      "destination": "/descubriendo/$1",
+      "has": [
+        {
+          "type": "host",
+          "value": "descubriendo.tusitio.com"
+        }
+      ]
+    },
+    {
+      "source": "/",
+      "destination": "/pasofirme"
+    }
   ]
 }
