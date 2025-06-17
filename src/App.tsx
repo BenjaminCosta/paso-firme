@@ -9,20 +9,35 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Pasofirme />} />
-          <Route path="/descubriendo" element={<Descubriendo />} /> {/* 👈 nueva ruta */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+const App = () => {
+  const host = window.location.hostname;
+  const isDescubriendo = host.startsWith("descubriendo");
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            {isDescubriendo ? (
+              <>
+                <Route path="*" element={<Descubriendo />} />
+              </>
+            ) : (
+              <>
+                <Route path="/" element={<Pasofirme />} />
+                <Route path="/descubriendo" element={<Descubriendo />} />
+                <Route path="*" element={<NotFound />} />
+              </>
+            )}
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
+
+
