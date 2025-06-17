@@ -57,6 +57,9 @@ const Intro = ({ onScrollToSection }: IntroProps) => {
         <div className="max-w-5xl mx-auto">
           {/* Título moderno */}
           <div className="text-center mb-16">
+             <span className="inline-block bg-brand-teal/10 text-brand-teal text-sm font-semibold px-5 py-2 rounded-full mb-4">
+            TRANSFORMACIÓN DIGITAL
+          </span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               ¿Reconoces esta situación?
             </h2>

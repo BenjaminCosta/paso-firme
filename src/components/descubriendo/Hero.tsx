@@ -14,11 +14,11 @@ const Hero = ({ onScrollToSection }: HeroSectionProps) => {
       alt: 'Adolescente concentrado usando tecnología'
     },
     {
-      url: 'https://images.unsplash.com/photo-1610269373215-0b733db966f9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHRlZW4lMjB3aXRoJTIwZnJpZW5kc3xlbnwwfDB8MHx8fDI%3D',
+      url: 'https://images.unsplash.com/photo-1680729369987-f8fbdf58f01d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTZ8fHRlZW4lMjB3aXRoJTIwZnJpZW5kc3xlbnwwfDJ8MHx8fDI%3D',
       alt: 'Joven descubriendo sus habilidades'
     },
     {
-      url: 'https://images.unsplash.com/photo-1548964643-0765c5d29abe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGVlbiUyMHdpdGglMjBmcmllbmRzfGVufDB8MHwwfHx8Mg%3D%3D',
+      url: 'https://images.unsplash.com/photo-1468022536934-b938a806e490?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE1fHx0ZWVuJTIwd2l0aCUyMGZyaWVuZHN8ZW58MHwyfDB8fHwy',
       alt: 'Grupo de adolescentes aprendiendo juntos'
     }
   ];

@@ -107,8 +107,9 @@ export const TargetAudience = () => {
         <div className="max-w-4xl mx-auto px-6 py-10 bg-gradient-to-r from-brand-teal/20 to-brand-purple/20 rounded-2xl border border-white/30 backdrop-blur-sm relative overflow-hidden group">
           {/* Fondo animado */}
           <div 
-            className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=1470&auto=format&fit=crop')] bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity duration-500"
+            className="absolute inset-0 bg-[url('https://images.unsplash.com/uploads/1412273646059cc129bb5/eae0a1da?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE0fHxmcmllbmRzaGlwfGVufDB8MHwwfHx8Mg%3D%3D')] bg-cover bg-center opacity-40 group-hover:opacity-30 transition-opacity duration-500"
           />
+           <div className="absolute inset-0 bg-black/50" />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-teal/30 to-brand-purple/30 opacity-70" />
           
           <div className="relative z-10 flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8">

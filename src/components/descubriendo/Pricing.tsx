@@ -71,6 +71,9 @@ export const Pricing = () => {
       <div className="container mx-auto px-4 max-w-5xl relative z-10">
         {/* Encabezado */}
         <div className="text-center mb-12">
+          <span className="inline-block bg-brand-teal/10 text-brand-teal text-sm font-semibold px-5 py-2 rounded-full mb-4">
+            TRANSFORMACIÓN DIGITAL
+          </span>
           <h2 className="text-4xl font-bold text-gray-900 mb-3">
             <span className="bg-gradient-to-r from-brand-teal to-brand-purple bg-clip-text text-transparent">
               Todo Incluido
