@@ -56,8 +56,8 @@ const FAQ = () => {
             <div className="container mx-auto relative z-10">
               {/* Encabezado */}
               <div className="max-w-3xl mx-auto text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                  <span className="bg-gradient-to-r from-brand-teal to-brand-purple bg-clip-text text-transparent">
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 ">
+                  <span className="bg-gradient-to-r from-brand-teal via-brand-teal to-brand-coral bg-clip-text text-transparent">
                     Preguntas frecuentes
                   </span>
                 </h2>
