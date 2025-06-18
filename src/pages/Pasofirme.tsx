@@ -9,6 +9,7 @@ import TestimonialsSection from "@/components/pasofirme/TestimonialsSection";
 import FinalCTASection from "@/components/pasofirme/FinalCTASection";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { DynamicHead } from "@/components/DynamicHead";
 const Pasofirme = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -18,6 +19,8 @@ const Pasofirme = () => {
   };
 
   return (
+    <>
+    <DynamicHead taller="pasofirme" />
     <div className="min-h-screen font-poppins text-text-dark">
       <Navbar />
       <HeroSection onScrollToSection={scrollToSection} />
@@ -30,6 +33,7 @@ const Pasofirme = () => {
       <FinalCTASection onScrollToSection={scrollToSection} />
       <Footer />
     </div>
+    </>
   );
 };
 

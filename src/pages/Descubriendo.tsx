@@ -7,6 +7,7 @@ import TargetAudience  from "@/components/descubriendo/TargetAudience";
 import FAQ from "@/components/descubriendo/FAQ";
 import { Pricing } from "@/components/descubriendo/Pricing";
 import Nav1 from "@/components/descubriendo/Nav1";
+import { DynamicHead } from "@/components/DynamicHead";
 
 
 
@@ -19,6 +20,8 @@ const Descubriendo = () => {
   };
 
   return (
+    <>
+    <DynamicHead taller="descubriendo" />
     <div className="min-h-screen font-poppins text-text-dark">
       <Nav1 />
       <Hero onScrollToSection={scrollToSection} />
@@ -29,6 +32,7 @@ const Descubriendo = () => {
       <FAQ  />
       <Footer />
     </div>
+    </>
   );
 };
 

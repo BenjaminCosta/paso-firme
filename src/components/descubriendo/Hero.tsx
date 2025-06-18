@@ -135,7 +135,7 @@ const Hero = ({ onScrollToSection }: HeroSectionProps) => {
           <div className="mb-6">
             
             {/* Título visible en pantallas md o mayores */}
-            <h1 className=" md:text-6xl text-5xl font-bold text-white [text-shadow:_0_3px_12px_rgba(0,0,0,0.8)]">
+            <h1 className=" md:text-7xl text-5xl font-bold text-white [text-shadow:_0_3px_12px_rgba(0,0,0,0.8)]">
               Descubriendo mi{" "} <span className="font-pacifico">Potencial</span>
   
             </h1>

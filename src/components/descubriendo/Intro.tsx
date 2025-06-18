@@ -60,9 +60,12 @@ const Intro = ({ onScrollToSection }: IntroProps) => {
              <span className="inline-block bg-brand-teal/10 text-brand-teal text-sm font-semibold px-5 py-2 rounded-full mb-4">
             TRANSFORMACIÓN DIGITAL
           </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              ¿Reconoces esta situación?
-            </h2>
+           <h2 className="text-4xl md:text-5xl text-black font-bold mb-5 leading-tight">
+            ¿Reconoces esta{" "}
+            <span className=" bg-gradient-to-r from-brand-purple to-brand-coral bg-clip-text text-transparent">
+              situación?
+            </span>
+          </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-brand-teal to-brand-purple mx-auto"></div>
           </div>
           
@@ -94,7 +97,7 @@ const Intro = ({ onScrollToSection }: IntroProps) => {
         <span className="font-pacifico block text-3xl">No es flojera</span>
         Es el cerebro sin dirección clara
       </h3>
-      <p className="text-white/90 text-base mt-4">
+      <p className="text-gray-200 text-base mt-4">
         La neurociencia explica este comportamiento y cómo podemos modificarlo.
       </p>
     </div>
@@ -126,7 +129,7 @@ const Intro = ({ onScrollToSection }: IntroProps) => {
           <div className="bg-brand-teal/20 p-1 rounded-full mr-3 mt-1">
             <div className="w-2 h-2 bg-brand-teal rounded-full"></div>
           </div>
-          <span className="text-gray-700">{item}</span>
+          <span className="text-gray-700 text-lg">{item}</span>
         </li>
       ))}
     </ul>
@@ -146,7 +149,7 @@ const Intro = ({ onScrollToSection }: IntroProps) => {
             <div className="bg-brand-teal/10 p-1 rounded-full mr-3">
               <ArrowRight className="w-4 h-4 text-brand-teal" />
             </div>
-            <span className="text-gray-700">{item}</span>
+            <span className="text-gray-700 font-semibold">{item}</span>
           </div>
         ))}
       </div>

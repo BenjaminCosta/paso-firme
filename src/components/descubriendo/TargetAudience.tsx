@@ -78,7 +78,8 @@ const TargetAudience = ({ onScrollToSection }: IntroProps) => {
   />
   {/* Overlay oscuro + degradado desde abajo */}
   <div className="absolute inset-0 bg-black/40 z-0" />
-  <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-white/40 to-white/30 z-0" />
+  <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-white/20 to-white/30 z-0" />
+  <div className="absolute inset-0 bg-gradient-to-t from-brand-coral/10 via-brand-coral/20 to-brand-coral/5 z-0" />
 
   <div className="flex flex-col-reverse lg:flex-row gap-8 items-center justify-between relative z-10 bg-white/20 p-6 sm:p-8">
     {/* Lista de señales más compacta */}
@@ -91,7 +92,7 @@ const TargetAudience = ({ onScrollToSection }: IntroProps) => {
           <div className="absolute inset-0 rounded-2xl p-px bg-gradient-to-br from-brand-teal/30 to-brand-coral/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
           
           <div className="flex items-start gap-4">
-            <div className={`p-2 rounded-xl bg-gradient-to-br ${index % 2 === 0 ? 'from-brand-teal/20 to-brand-purple/20' : 'from-brand-purple/20 to-brand-coral/20'} shadow-inner border border-white/80 flex-shrink-0`}>
+            <div className={`p-2 rounded-xl bg-gradient-to-br from-brand-purple/20 to-brand-coral/20 shadow-inner border border-white/80 flex-shrink-0`}>
               {item.icon}
             </div>
             <div>
@@ -115,7 +116,7 @@ const TargetAudience = ({ onScrollToSection }: IntroProps) => {
         />
         {/* Overlays de oscurecimiento y degradado */}
         <div className="absolute inset-0 bg-black/40 z-10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-purple/80 via-brand-teal/30 to-transparent z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-purple/80 via-brand-teal/30 to-brand-purple/5 z-10" />
 
         {/* Contenido sobre imagen */}
         <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 text-white z-20">
