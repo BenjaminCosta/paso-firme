@@ -2,6 +2,7 @@ import { ChevronDown, User, Video, HelpCircle, CreditCard, Users, ArrowRight} fr
 import { useState } from 'react';
 import { Button } from "@/components/ui/button"
 
+
 const FAQ = () => {
      const [activeIndex, setActiveIndex] = useState<number | null>(null);
 

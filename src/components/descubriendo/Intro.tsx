@@ -153,18 +153,31 @@ const Intro = ({ onScrollToSection }: IntroProps) => {
     </div>
 
     {/* Botón CTA moderno */}
-    <div className="text-center">
-      <Button
-        size="lg"
-        className="relative overflow-hidden bg-gradient-to-r from-brand-coral/70 to-brand-teal text-white px-8 py-6 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-xl group"
-        onClick={() => onScrollToSection('pricing')}
-      >
-        <span className="relative z-10 flex items-center justify-center">
-          Transformar esta situación <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-        </span>
-        <span className="absolute inset-0 bg-gradient-to-r from-brand-teal to-brand-coral/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-      </Button>
-    </div>
+    <div className="text-center px-4">
+  <Button
+    size="lg"
+    className="relative overflow-hidden w-full sm:w-auto 
+               bg-gradient-to-r from-brand-coral/70 to-brand-teal 
+               text-white px-6 py-5 sm:px-8 sm:py-6 
+               text-base sm:text-lg font-semibold 
+               rounded-xl sm:rounded-2xl 
+               transition-all duration-300 
+               hover:scale-[1.02] active:scale-[0.98]
+               shadow-lg hover:shadow-xl group"
+    onClick={() => onScrollToSection('pricing')}
+  >
+    <span className="relative z-10 flex items-center justify-center">
+      Transformar esta situación 
+      <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
+    </span>
+    {/* Efecto hover con gradiente inverso */}
+    <span className="absolute inset-0 bg-gradient-to-r from-brand-teal to-brand-coral/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+    
+    {/* Efecto de brillo al hacer hover */}
+    <span className="absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-20 transition-opacity duration-700">
+    </span>
+  </Button>
+</div>
   </div>
 </div>
 

@@ -1,7 +1,11 @@
 import { User, Smartphone, Zap, Target, Shield, Heart, BrainCircuit } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
-export const TargetAudience = () => {
+interface IntroProps {
+  onScrollToSection: (id: string) => void;
+}
+
+const TargetAudience = ({ onScrollToSection }: IntroProps) => {
   const audienceItems = [
     {
       icon: <User className="w-6 h-6" />,
@@ -102,6 +106,7 @@ export const TargetAudience = () => {
                 <Button
                   variant="default"
                   className="bg-white text-brand-purple hover:bg-white/90 shadow-lg hover:shadow-brand-purple/30"
+                  onClick={() => onScrollToSection('pricing')}
                 >
                   Quiero más información
                 </Button>
@@ -140,3 +145,4 @@ export const TargetAudience = () => {
     </section>
   );
 };
+export default TargetAudience;

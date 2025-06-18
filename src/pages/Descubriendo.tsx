@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/descubriendo/Hero";
 import Intro from "@/components/descubriendo/Intro";
 import Testimonials from "@/components/descubriendo/Testimonials";
-import { TargetAudience } from "@/components/descubriendo/TargetAudience";
+import TargetAudience  from "@/components/descubriendo/TargetAudience";
 import FAQ from "@/components/descubriendo/FAQ";
 import { Pricing } from "@/components/descubriendo/Pricing";
 import Nav1 from "@/components/descubriendo/Nav1";
@@ -23,10 +23,10 @@ const Descubriendo = () => {
       <Nav1 />
       <Hero onScrollToSection={scrollToSection} />
       <Intro onScrollToSection={scrollToSection}/>
-      <TargetAudience />
+      <TargetAudience onScrollToSection={scrollToSection}/>
       <Testimonials />
       <Pricing />
-      <FAQ />
+      <FAQ  />
       <Footer />
     </div>
   );

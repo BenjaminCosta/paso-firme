@@ -60,7 +60,7 @@ export const Pricing = () => {
   ];
 
   return (
-    <section className="relative py-16 overflow-hidden bg-white">
+    <section id="pricing"  className="relative py-16 overflow-hidden bg-white">
       {/* Efectos de fondo */}
       <div className="absolute inset-0 overflow-hidden -z-10">
         <div className="absolute top-0 right-0 w-60 h-60 bg-brand-purple/5 rounded-full blur-[80px] animate-float"></div>
@@ -72,11 +72,11 @@ export const Pricing = () => {
         {/* Encabezado */}
         <div className="text-center mb-12">
           <span className="inline-block bg-brand-teal/10 text-brand-teal text-sm font-semibold px-5 py-2 rounded-full mb-4">
-            TRANSFORMACIÓN DIGITAL
+            TALLER PARA ADOLESCENTES
           </span>
           <h2 className="text-4xl font-bold text-gray-900 mb-3">
             <span className="bg-gradient-to-r from-brand-teal to-brand-purple bg-clip-text text-transparent">
-              Todo Incluido
+              Impulsa su crecimiento hoy
             </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -201,19 +201,16 @@ export const Pricing = () => {
         </div>
 
         {/* CTA principal */}
-        <div className="mt-12 text-center">
-          <Button className="bg-gradient-to-r from-brand-purple to-brand-teal hover:from-brand-purple/90 hover:to-brand-teal/90 text-white py-6 px-10 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] group">
-            <span className="flex items-center justify-center gap-3">
-              <Zap className="w-5 h-5" />
-              Reservar ahora - Últimos cupos disponibles
-              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-            </span>
-          </Button>
-          <p className="text-sm text-gray-500 mt-4 flex items-center justify-center gap-2">
-            <ShieldCheck className="w-4 h-4 text-brand-teal" />
-            Garantía de satisfacción del 100% o tu dinero de vuelta
-          </p>
-        </div>
+<div className="mt-12 text-center px-4">
+  <Button className="w-full sm:w-auto bg-gradient-to-r from-brand-purple to-brand-teal hover:from-brand-purple/90 hover:to-brand-teal/90 text-white py-4 sm:py-5 px-6 sm:px-10 text-base sm:text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] group">
+    <span className="flex items-center justify-center gap-2 sm:gap-3">
+      <Zap className="w-5 h-5" />
+      Reservar ahora - Últimos cupos disponibles
+      <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+    </span>
+  </Button>
+</div>
+
       </div>
     </section>
   );
