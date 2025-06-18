@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import useSheetData from "@/hooks/useSheetData";
 import useSheetDataDescubriendo from '@/hooks/useSheetData2';
+import { Link } from 'react-router-dom';
 
 export const Pricing = () => {
   const { data, loading, error } = useSheetDataDescubriendo();
@@ -165,6 +166,7 @@ export const Pricing = () => {
               </div>
 
               <div className="mt-6">
+                <Link to={"https://www.familiayformacion.com/tienda/p/descubriendo-mi-potencial"}>
                 <Button
                   variant="outline"
                   className="w-full border-2 border-brand-purple/40 text-brand-purple hover:bg-brand-purple/10 hover:border-brand-purple/60 hover:text-brand-purple py-5 text-base transition-all duration-300 group"
@@ -174,6 +176,7 @@ export const Pricing = () => {
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </span>
                 </Button>
+                </Link>
               </div>
 
               <div className="mt-4 p-3 bg-yellow-50/80 border border-yellow-200 rounded-lg flex items-start gap-2">
@@ -187,6 +190,7 @@ export const Pricing = () => {
         </div>
 
         <div className="mt-12 text-center px-4">
+          <Link to={"https://www.familiayformacion.com/tienda/p/descubriendo-mi-potencial"}>
           <Button className="w-full sm:w-auto bg-gradient-to-r from-brand-purple to-brand-teal hover:from-brand-purple/90 hover:to-brand-teal/90 text-white py-4 sm:py-5 px-6 sm:px-10 text-sm sm:text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] group">
             <span className="flex items-center justify-center gap-2 sm:gap-3">
               <Zap className="w-5 h-5" />
@@ -194,6 +198,7 @@ export const Pricing = () => {
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </span>
           </Button>
+          </Link>
         </div>
       </div>
     </section>

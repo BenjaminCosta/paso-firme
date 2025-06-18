@@ -66,54 +66,76 @@ const TargetAudience = ({ onScrollToSection }: IntroProps) => {
         </div>
 
         {/* Cuerpo principal: ítems y foto */}
-        <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-12 items-center justify-between bg-white/30 backdrop-blur-lg rounded-3xl p-6 sm:p-8 border border-white/40 shadow-xl">
-          {/* Lista de señales */}
-          <div className="w-full lg:w-1/2 space-y-4">
-            {audienceItems.map((item, index) => (
-              <div
-                key={index}
-                className="group relative p-5 sm:p-6 rounded-2xl bg-white/70 backdrop-blur-md border border-white/80 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="absolute inset-0 rounded-2xl p-px bg-gradient-to-br from-white via-brand-teal/30 to-brand-purple/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-gradient-to-br from-brand-teal/20 to-brand-purple/20 text-brand-teal shadow-inner border border-white">
-                    {item.icon}
-                  </div>
-                  <div>
-                    <p className="text-base sm:text-lg font-semibold text-gray-800">{item.text}</p>
-                    <p className="text-sm text-brand-purple mt-1 font-medium">{item.highlight}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+<div className="relative overflow-hidden rounded-3xl shadow-2xl">
+  {/* Fondo con imagen + overlays fuertes */}
+  <div 
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: "url('https://images.unsplash.com/photo-1522441815192-d9f04eb0615c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dGV4dHVyZXxlbnwwfHwwfHx8Mg%3D%3D')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
+  />
+  {/* Overlay oscuro + degradado desde abajo */}
+  <div className="absolute inset-0 bg-black/40 z-0" />
+  <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-white/40 to-white/30 z-0" />
 
-          {/* Imagen ilustrativa */}
-          <div className="w-full lg:w-1/2 relative">
-            <div className="relative  min-h-[300px] md:min-h-[690px] rounded-2xl overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1746971506615-a2f5093fc297?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fHRlZW4lMjB3aXRoJTIwcGhvbmUlMjBhZGRjaXRpb258ZW58MHwxfDB8fHwy"
-                alt="Adolescente con tecnología"
-                className="w-full h-full object-cover absolute inset-0"
-              />
-               <div className="absolute inset-0 bg-black/50" />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-purple/80 via-brand-teal/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 text-white">
-                <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">¿Reconoces alguna de estas situaciones?</h3>
-                <p className="text-white/90 text-sm sm:text-base mb-3">
-                  Este taller está diseñado específicamente para ayudar a jóvenes con estos desafíos modernos
-                </p>
-                <Button
-                  variant="default"
-                  className="bg-white text-brand-purple hover:bg-white/90 shadow-lg hover:shadow-brand-purple/30"
-                  onClick={() => onScrollToSection('pricing')}
-                >
-                  Quiero más información
-                </Button>
-              </div>
+  <div className="flex flex-col-reverse lg:flex-row gap-8 items-center justify-between relative z-10 bg-white/20 p-6 sm:p-8">
+    {/* Lista de señales más compacta */}
+    <div className="w-full lg:w-1/2 space-y-4">
+      {audienceItems.map((item, index) => (
+        <div
+          key={index}
+          className="group relative p-4 sm:p-[19px] rounded-2xl bg-white/50 backdrop-blur-lg border border-white/90 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+        >
+          <div className="absolute inset-0 rounded-2xl p-px bg-gradient-to-br from-brand-teal/30 to-brand-coral/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
+          
+          <div className="flex items-start gap-4">
+            <div className={`p-2 rounded-xl bg-gradient-to-br ${index % 2 === 0 ? 'from-brand-teal/20 to-brand-purple/20' : 'from-brand-purple/20 to-brand-coral/20'} shadow-inner border border-white/80 flex-shrink-0`}>
+              {item.icon}
+            </div>
+            <div>
+              <p className="text-base sm:text-lg font-semibold text-gray-800">{item.text}</p>
+              <p className="text-xs sm:text-sm text-brand-purple mt-2 font-medium bg-brand-purple/10 px-3 py-1 rounded-full inline-block">
+                {item.highlight}
+              </p>
             </div>
           </div>
         </div>
+      ))}
+    </div>
+
+    {/* Imagen con overlays fuertes y contenido abajo */}
+    <div className="w-full lg:w-1/2 relative">
+      <div className="relative min-h-[300px] md:min-h-[700px] rounded-2xl overflow-hidden shadow-xl">
+        <img
+          src="https://images.unsplash.com/photo-1746971506615-a2f5093fc297?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fHRlZW4lMjB3aXRoJTIwcGhvbmUlMjBhZGRjaXRpb258ZW58MHwxfDB8fHwy"
+          alt="Adolescente con tecnología"
+          className="w-full h-full object-cover absolute inset-0"
+        />
+        {/* Overlays de oscurecimiento y degradado */}
+        <div className="absolute inset-0 bg-black/40 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-purple/80 via-brand-teal/30 to-transparent z-10" />
+
+        {/* Contenido sobre imagen */}
+        <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 text-white z-20">
+          <h3 className="text-lg sm:text-2xl font-bold mb-2 sm:mb-3">¿Reconoces alguna de estas situaciones?</h3>
+          <p className="text-white/90 text-sm sm:text-lg mb-3">
+            Este taller está diseñado específicamente para ayudar a jóvenes con estos desafíos modernos
+          </p>
+          <Button
+            variant="default"
+            className="bg-white text-brand-purple hover:bg-white/90 shadow-lg hover:shadow-brand-purple/30 font-medium sm:font-semibold"
+            onClick={() => onScrollToSection('pricing')}
+          >
+            Quiero más información
+          </Button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
         {/* Frase destacada con ícono */}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 mt-14 bg-gradient-to-r from-brand-teal/20 to-brand-purple/20 rounded-2xl border border-white/30 backdrop-blur-sm relative overflow-hidden group">

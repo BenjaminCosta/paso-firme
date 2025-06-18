@@ -1,6 +1,7 @@
 import { ChevronDown, User, Video, HelpCircle, CreditCard, Users, ArrowRight} from 'lucide-react';
 import { useState } from 'react';
 import { Button } from "@/components/ui/button"
+import { Link } from 'react-router-dom';
 
 
 const FAQ = () => {
@@ -99,6 +100,7 @@ const FAQ = () => {
       
               {/* CTA final */}
               <div className="text-center">
+                <Link to={"https://www.familiayformacion.com/tienda/p/descubriendo-mi-potencial"}>
                 <Button
                   size="lg"
                   className="relative overflow-hidden bg-gradient-to-r from-brand-purple to-brand-teal text-white px-8 py-6 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-xl group"
@@ -108,6 +110,7 @@ const FAQ = () => {
                   </span>
                   <span className="absolute inset-0 bg-gradient-to-r from-brand-teal to-brand-purple opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
                 </Button>
+                </Link>
               </div>
             </div>
     </section>
