@@ -4,137 +4,139 @@ import { Button } from "@/components/ui/button";
 export const TargetAudience = () => {
   const audienceItems = [
     {
-      icon: <User className="w-5 h-5 text-white" />,
+      icon: <User className="w-6 h-6" />,
       text: "Adolescentes de 12 a 21 años",
-      bg: "bg-gradient-to-br from-brand-purple/80 to-brand-teal/80",
-      border: "border-white/20"
+      highlight: "¿Tu hijo está en esta edad?"
     },
     {
-      icon: <Smartphone className="w-5 h-5 text-white" />,
+      icon: <Smartphone className="w-6 h-6" />,
       text: "Demasiado tiempo en pantallas",
-      bg: "bg-gradient-to-br from-brand-teal/80 to-brand-coral/80",
-      border: "border-white/20"
+      highlight: "¿Peleas por limitar su tiempo digital?"
     },
     {
-      icon: <Zap className="w-5 h-5 text-white" />,
+      icon: <Zap className="w-6 h-6" />,
       text: "Falta de motivación constante",
-      bg: "bg-gradient-to-br from-brand-coral/80 to-brand-purple/80",
-      border: "border-white/20"
+      highlight: "¿Notas que le cuesta mantenerse enfocado?"
     },
     {
-      icon: <Target className="w-5 h-5 text-white" />,
+      icon: <Target className="w-6 h-6" />,
       text: "Metas grandes sin plan de acción",
-      bg: "bg-gradient-to-br from-brand-purple/80 to-brand-teal/80",
-      border: "border-white/20"
+      highlight: "¿Tiene sueños pero no sabe cómo alcanzarlos?"
     },
     {
-      icon: <Shield className="w-5 h-5 text-white" />,
+      icon: <Shield className="w-6 h-6" />,
       text: "Comparación constante con otros",
-      bg: "bg-gradient-to-br from-brand-teal/80 to-brand-coral/80",
-      border: "border-white/20"
+      highlight: "¿Sufre por compararse en redes sociales?"
     },
     {
-      icon: <Heart className="w-5 h-5 text-white" />,
+      icon: <Heart className="w-6 h-6" />,
       text: "Mamás que buscan herramientas nuevas",
-      bg: "bg-gradient-to-br from-brand-coral/80 to-brand-purple/80",
-      border: "border-white/20"
+      highlight: "¿Quieres ayudarle pero no sabes cómo?"
     }
   ];
 
   return (
-    <section className="relative py-20 overflow-hidden px-4">
-      {/* Fondo con efecto de partículas sutiles */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-teal/20 to-brand-coral/10 backdrop-blur-[2px]" />
-        
-        {/* Efecto de partículas */}
-        <div className="absolute inset-0 opacity-10">
-          {[...Array(20)].map((_, i) => (
-            <div 
-              key={i}
-              className="absolute rounded-full bg-brand-purple/30"
-              style={{
-                width: `${Math.random() * 10 + 5}px`,
-                height: `${Math.random() * 10 + 5}px`,
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                opacity: Math.random() * 0.5 + 0.3
-              }}
-            />
-          ))}
-        </div>
+    <section className="relative py-20 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Fondo decorativo */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-50/60 to-brand-teal/20 backdrop-blur-[120px]" />
+        <div className="absolute -top-40 left-0 w-80 h-80 rounded-full bg-brand-teal/30 blur-[90px] opacity-70" />
+        <div className="absolute bottom-20 right-0 w-96 h-96 rounded-full bg-brand-purple/30 blur-[90px] opacity-70" />
       </div>
-      
-      {/* Contenedor principal */}
-      <div className="container mx-auto relative z-10">
-        {/* Encabezado */}
-        <div className="max-w-3xl mx-auto text-center mb-16 px-4">
-          <span className="inline-block bg-brand-purple/10 text-brand-purple text-sm font-semibold px-5 py-2 rounded-full mb-4">
-            TRANSFORMACIÓN DIGITAL
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        {/* Título y subtítulo */}
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <span className="inline-block bg-white text-brand-purple text-sm font-semibold px-5 py-2 rounded-full mb-4 border border-brand-purple/20 shadow-sm">
+            ¿ES ESTE TALLER PARA TU HIJO?
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             <span className="bg-gradient-to-r from-brand-teal to-brand-purple bg-clip-text text-transparent">
-              ¿Para quién es este taller?
+              Identifica si necesita este cambio
             </span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-brand-teal via-brand-purple to-brand-teal mx-auto rounded-full mb-8" />
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Un programa diseñado para transformar la mentalidad y hábitos de jóvenes y sus familias
+          <p className="text-base sm:text-lg text-gray-600">
+            Revisa estas señales que indican que tu hijo podría beneficiarse enormemente de este programa
           </p>
         </div>
 
-        {/* Grid de items - versión más compacta */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 px-4">
-          {audienceItems.map((item, index) => (
-            <div 
-              key={index}
-              className={`${item.bg} ${item.border} backdrop-blur-sm p-6 rounded-2xl border shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden group`}
-            >
-              {/* Efecto de brillo al hover */}
-              <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-all duration-500" />
-              
-              <div className="relative z-10 flex items-start space-x-4">
-                <div className={`bg-white/20 p-2.5 rounded-lg flex-shrink-0 backdrop-blur-sm border ${item.border}`}>
-                  {item.icon}
+        {/* Cuerpo principal: ítems y foto */}
+        <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-12 items-center justify-between bg-white/30 backdrop-blur-lg rounded-3xl p-6 sm:p-8 border border-white/40 shadow-xl">
+          {/* Lista de señales */}
+          <div className="w-full lg:w-1/2 space-y-4">
+            {audienceItems.map((item, index) => (
+              <div
+                key={index}
+                className="group relative p-5 sm:p-6 rounded-2xl bg-white/70 backdrop-blur-md border border-white/80 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
+              >
+                <div className="absolute inset-0 rounded-2xl p-px bg-gradient-to-br from-white via-brand-teal/30 to-brand-purple/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-xl bg-gradient-to-br from-brand-teal/20 to-brand-purple/20 text-brand-teal shadow-inner border border-white">
+                    {item.icon}
+                  </div>
+                  <div>
+                    <p className="text-base sm:text-lg font-semibold text-gray-800">{item.text}</p>
+                    <p className="text-sm text-brand-purple mt-1 font-medium">{item.highlight}</p>
+                  </div>
                 </div>
-                <p className="text-lg font-semibold text-white leading-snug">{item.text}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Imagen ilustrativa */}
+          <div className="w-full lg:w-1/2 relative">
+            <div className="relative  min-h-[300px] md:min-h-[690px] rounded-2xl overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1746971506615-a2f5093fc297?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fHRlZW4lMjB3aXRoJTIwcGhvbmUlMjBhZGRjaXRpb258ZW58MHwxfDB8fHwy"
+                alt="Adolescente con tecnología"
+                className="w-full h-full object-cover absolute inset-0"
+              />
+               <div className="absolute inset-0 bg-black/50" />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-purple/80 via-brand-teal/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 text-white">
+                <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">¿Reconoces alguna de estas situaciones?</h3>
+                <p className="text-white/90 text-sm sm:text-base mb-3">
+                  Este taller está diseñado específicamente para ayudar a jóvenes con estos desafíos modernos
+                </p>
+                <Button
+                  variant="default"
+                  className="bg-white text-brand-purple hover:bg-white/90 shadow-lg hover:shadow-brand-purple/30"
+                >
+                  Quiero más información
+                </Button>
               </div>
             </div>
-          ))}
+          </div>
         </div>
 
-        {/* Sección destacada - versión más moderna */}
-        <div className="max-w-4xl mx-auto px-6 py-10 bg-gradient-to-r from-brand-teal/20 to-brand-purple/20 rounded-2xl border border-white/30 backdrop-blur-sm relative overflow-hidden group">
-          {/* Fondo animado */}
-          <div 
-            className="absolute inset-0 bg-[url('https://images.unsplash.com/uploads/1412273646059cc129bb5/eae0a1da?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE0fHxmcmllbmRzaGlwfGVufDB8MHwwfHx8Mg%3D%3D')] bg-cover bg-center opacity-40 group-hover:opacity-30 transition-opacity duration-500"
-          />
-           <div className="absolute inset-0 bg-black/50" />
+        {/* Frase destacada con ícono */}
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 mt-14 bg-gradient-to-r from-brand-teal/20 to-brand-purple/20 rounded-2xl border border-white/30 backdrop-blur-sm relative overflow-hidden group">
+          {/* Fondo de fondo */}
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/uploads/1412273646059cc129bb5/eae0a1da?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE0fHxmcmllbmRzaGlwfGVufDB8MHwwfHx8Mg%3D%3D')] bg-cover bg-center opacity-40 group-hover:opacity-30 transition-opacity duration-500" />
+          <div className="absolute inset-0 bg-black/50" />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-teal/30 to-brand-purple/30 opacity-70" />
-          
+
+          {/* Contenido principal */}
           <div className="relative z-10 flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8">
             <div className="bg-white/20 p-3 rounded-xl backdrop-blur-sm border border-white/30 shadow-lg transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
               <BrainCircuit className="w-8 h-8 text-white" />
             </div>
             <div className="text-center md:text-left">
-              <blockquote className="text-xl md:text-2xl font-medium text-white mb-4 leading-tight">
+              <blockquote className="text-lg sm:text-xl md:text-2xl font-medium text-white mb-4 leading-tight">
                 "El cerebro adolescente no está roto...
                 <br />
                 <span className="font-bold text-white/90">
                   solo necesita el manual de instrucciones correcto.
                 </span>"
               </blockquote>
-              <p className="text-lg text-white/80 font-medium">
+              <p className="text-base sm:text-lg text-white/80 font-medium">
                 Este taller provee ese manual.
               </p>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Efectos decorativos mejorados */}
-      <div className="absolute -top-40 left-0 w-80 h-80 rounded-full bg-brand-teal/20 blur-[90px] -z-10 opacity-70" />
-      <div className="absolute bottom-20 right-0 w-96 h-96 rounded-full bg-brand-purple/20 blur-[90px] -z-10 opacity-70" />
     </section>
   );
 };
