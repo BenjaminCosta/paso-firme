@@ -81,7 +81,7 @@ const Modules = () => {
                 alt="" 
                 className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-brand-purple/85 to-brand-purple/60"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-brand-purple/75 to-brand-purple/50"></div>
               <div className="absolute inset-0 bg-[linear-gradient(120deg,_rgba(136,95,174,0.3)_0%,_transparent_50%)]"></div>
             </div>
             
@@ -125,29 +125,6 @@ const Modules = () => {
             <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-brand-coral to-brand-purple opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
         ))}
-      </div>
-
-      {/* CTA Final mejorado */}
-      <div
-        className="max-w-4xl mx-auto px-8 pt-24 text-center"
-      >
-        <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
-          <h3 className="text-3xl font-bold text-gray-900 mb-6">
-            ¿Listo para transformar la experiencia adolescente?
-          </h3>
-          <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-            Inscríbelo hoy mismo y dale las herramientas que necesitará para navegar esta etapa con confianza.
-          </p>
-          <Button
-            className="mx-auto py-6 px-12 bg-gradient-to-r from-brand-purple to-brand-coral hover:from-brand-purple/90 hover:to-brand-coral/90 text-white text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] relative overflow-hidden"
-          >
-            <span className="relative z-10">INSCRIBIR AHORA - ÚLTIMOS CUPOS</span>
-            <span className="absolute inset-0 bg-gradient-to-r from-brand-coral to-brand-purple opacity-0 hover:opacity-100 transition-opacity duration-500"></span>
-          </Button>
-          <p className="text-sm text-gray-500 mt-4">
-            Garantía de satisfacción de 7 días
-          </p>
-        </div>
       </div>
     </div>
   );

@@ -106,7 +106,8 @@ const Section1 = ({ onScrollToSection }: IntroProps) => {
               alt="Grupo de adolescentes"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-brand-purple/80 to-brand-coral/60"></div>
+            <div className="absolute inset-0 bg-black/30"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-brand-purple/40 to-brand-coral/40"></div>
           </div>
 
           <div className="p-8 md:p-12 text-white">
