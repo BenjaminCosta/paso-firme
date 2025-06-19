@@ -131,13 +131,6 @@ const Section1 = ({ onScrollToSection }: IntroProps) => {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
                 <Button 
-                  className="bg-white text-brand-purple hover:bg-white/90 px-8 py-6 font-semibold"
-                  onClick={() => onScrollToSection('inscripcion')}
-                >
-                  Quiero inscribir a mi adolescente
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button 
                   variant="outline" 
                   className="bg-transparent border-white text-white hover:bg-white/10 px-8 py-6 font-semibold"
                 >

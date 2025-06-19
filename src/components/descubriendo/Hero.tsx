@@ -8,20 +8,21 @@ interface HeroSectionProps {
 const Hero = ({ onScrollToSection }: HeroSectionProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const carouselImages = [
-    {
-      url: 'https://images.unsplash.com/photo-1539755743684-a6b3b2f88d1e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      alt: 'Adolescente concentrado usando tecnología'
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1680729369987-f8fbdf58f01d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTZ8fHRlZW4lMjB3aXRoJTIwZnJpZW5kc3xlbnwwfDJ8MHx8fDI%3D',
-      alt: 'Joven descubriendo sus habilidades'
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1468022536934-b938a806e490?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE1fHx0ZWVuJTIwd2l0aCUyMGZyaWVuZHN8ZW58MHwyfDB8fHwy',
-      alt: 'Grupo de adolescentes aprendiendo juntos'
-    }
-  ];
+ const carouselImages = [
+  {
+    url: 'https://images.unsplash.com/photo-1539755743684-a6b3b2f88d1e?w=1800&dpr=2&q=85&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    alt: 'Adolescente concentrado usando tecnología'
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1680729369987-f8fbdf58f01d?w=1800&dpr=2&q=85&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTZ8fHRlZW4lMjB3aXRoJTIwZnJpZW5kc3xlbnwwfDJ8MHx8fDI%3D',
+    alt: 'Joven descubriendo sus habilidades'
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1468022536934-b938a806e490?w=1800&dpr=2&q=85&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE1fHx0ZWVuJTIwd2l0aCUyMGZyaWVuZHN8ZW58MHwyfDB8fHwy',
+    alt: 'Grupo de adolescentes aprendiendo juntos'
+  }
+];
+
 
   const galleryImages = [
     'https://images.unsplash.com/photo-1548964643-0765c5d29abe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGVlbiUyMHdpdGglMjBmcmllbmRzfGVufDB8MHwwfHx8Mg%3D%3D',

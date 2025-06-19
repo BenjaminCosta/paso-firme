@@ -9,25 +9,26 @@ const Hero2 = ({ onScrollToSection }: HeroSectionProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const carouselImages = [
-    {
-      url: 'https://images.unsplash.com/photo-1542816417-0983675acc3d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      alt: 'Adolescente pensativo'
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      alt: 'Joven desconectado de su familia'
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      alt: 'Adolescente con problemas emocionales'
-    }
-  ];
+  {
+    url: 'https://images.unsplash.com/photo-1470286084930-1df42b2b99e9?w=1800&dpr=2&q=85&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fHRlZW5hZ2UlMjBmcmllbmRncm91cHxlbnwwfHw0fHx8Mg%3D%3D',
+    alt: 'Adolescente pensativo'
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=1800&dpr=2&q=85&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    alt: 'Joven desconectado de su familia'
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1536607774613-b287a2f4e698?w=1800&dpr=2&q=85&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTY3fHx0ZWVuYWdlJTIwZnJpZW5kZ3JvdXB8ZW58MHx8NHx8fDI%3D',
+    alt: 'Adolescente con problemas emocionales'
+  }
+];
+
 
   const galleryImages = [
-    'https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    'https://images.unsplash.com/photo-1542816417-0983675acc3d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    'https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=1286&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    'https://images.unsplash.com/photo-1626895684825-03b8655f26b0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fHRlZW5hZ2UlMjBmcmllbmRncm91cHxlbnwwfHw0fHx8Mg%3D%3D',
+    'https://images.unsplash.com/photo-1626895684825-03b8655f26b0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fHRlZW5hZ2UlMjBmcmllbmRncm91cHxlbnwwfHw0fHx8Mg%3D%3D',
+    'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDh8fHRlZW5hZ2UlMjBmcmllbmRncm91cHxlbnwwfHw0fHx8Mg%3D%3D',
+    'https://images.unsplash.com/photo-1626895684825-03b8655f26b0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fHRlZW5hZ2UlMjBmcmllbmRncm91cHxlbnwwfHw0fHx8Mg%3D%3D'
   ];
 
   const rightSideImage = 'https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';

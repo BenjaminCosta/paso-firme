@@ -81,7 +81,7 @@ const Modules = () => {
                 alt="" 
                 className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-brand-purple/75 to-brand-purple/50"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-beige/40 via-brand-purple/60 to-brand-purple/80"></div>
               <div className="absolute inset-0 bg-[linear-gradient(120deg,_rgba(136,95,174,0.3)_0%,_transparent_50%)]"></div>
             </div>
             
