@@ -67,11 +67,11 @@ const Modules = () => {
       </div>
 
       {/* Módulos mejorados */}
-      <div className="space-y-2 max-w-7xl mx-auto">
+      <div className="space-y-4 max-w-7xl mx-auto">
         {modules.map((module, index) => (
           <div
             key={index}
-            className="relative h-auto min-h-[480px] w-full overflow-hidden group"
+            className="relative h-auto min-h-[400px] w-full overflow-hidden group"
             style={{ transform: "none", opacity: 1 }}
           >
             {/* Fondo con efectos */}
@@ -86,7 +86,7 @@ const Modules = () => {
             </div>
             
             {/* Contenido */}
-            <div className="relative h-full flex flex-col justify-center px-12 py-16 md:px-24">
+            <div className="relative h-full flex flex-col justify-center px-12 py-12 md:px-24">
               <div className="max-w-2xl">
                 <span className="inline-block text-brand-beige font-bold text-lg mb-4 tracking-widest">
                   {module.day}

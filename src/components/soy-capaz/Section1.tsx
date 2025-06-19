@@ -1,5 +1,6 @@
 import { Smartphone, HeartPulse, Users, Brain, Shield, MessageSquare, ArrowRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import Testimonials2 from './Testimonials2';
 
 interface IntroProps {
   onScrollToSection: (id: string) => void;
@@ -146,6 +147,9 @@ const Section1 = ({ onScrollToSection }: IntroProps) => {
             </div>
           </div>
         </div>
+      </div>
+      <div className='bg-white'>
+      <Testimonials2/>
       </div>
     </section>
   );

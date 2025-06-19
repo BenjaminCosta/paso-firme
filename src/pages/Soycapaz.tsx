@@ -3,6 +3,7 @@ import EmotionalSection from "@/components/soy-capaz/EmotionalSection";
 import Hero2 from "@/components/soy-capaz/Hero2";
 import Modules from "@/components/soy-capaz/Modules";
 import Nav2 from "@/components/soy-capaz/Nav2";
+import Pricing2 from "@/components/soy-capaz/Pricing2";
 import Section1 from "@/components/soy-capaz/Section1";
 
 
@@ -21,6 +22,7 @@ const SoyCapaz = () => {
       <Section1 onScrollToSection={scrollToSection} />
       <EmotionalSection />
       <Modules />
+      <Pricing2 />
       <Footer />
     </div>
   );

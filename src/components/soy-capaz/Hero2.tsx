@@ -124,7 +124,7 @@ const Hero2 = ({ onScrollToSection }: HeroSectionProps) => {
           {/* Título o logo responsive */}
           <div className="mb-6">
             <h1 className="md:text-7xl text-5xl font-bold text-white [text-shadow:_0_3px_12px_rgba(0,0,0,0.8)]">
-              <span className="">¡Soy capaz!</span><br />
+              <span className="">¡Soy Capaz!</span><br />
             </h1>
           </div>
 
