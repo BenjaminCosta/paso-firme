@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import EmotionalSection from "@/components/soy-capaz/EmotionalSection";
+import FAQSection from "@/components/soy-capaz/FAQsection";
 import Hero2 from "@/components/soy-capaz/Hero2";
 import Modules from "@/components/soy-capaz/Modules";
 import Nav2 from "@/components/soy-capaz/Nav2";
@@ -23,6 +24,7 @@ const SoyCapaz = () => {
       <EmotionalSection />
       <Modules />
       <Pricing2 />
+      <FAQSection />
       <Footer />
     </div>
   );

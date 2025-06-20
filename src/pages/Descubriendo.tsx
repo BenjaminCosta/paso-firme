@@ -8,6 +8,7 @@ import FAQ from "@/components/descubriendo/FAQ";
 import { Pricing } from "@/components/descubriendo/Pricing";
 import Nav1 from "@/components/descubriendo/Nav1";
 import { DynamicHead } from "@/components/DynamicHead";
+import FacilitatorSection from "@/components/pasofirme/FacilitatorSection";
 
 
 
@@ -27,6 +28,7 @@ const Descubriendo = () => {
       <Hero onScrollToSection={scrollToSection} />
       <Intro onScrollToSection={scrollToSection}/>
       <TargetAudience onScrollToSection={scrollToSection}/>
+      <FacilitatorSection />
       <Testimonials />
       <Pricing />
       <FAQ  />

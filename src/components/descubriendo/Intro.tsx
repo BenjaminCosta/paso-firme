@@ -94,7 +94,7 @@ const Intro = ({ onScrollToSection }: IntroProps) => {
     </div>
     <div>
       <h3 className="text-2xl font-semibold leading-snug">
-        <span className="font-pacifico block text-3xl">No es flojera</span>
+        <span className="font-dancing block text-3xl">No es flojera</span>
         Es el cerebro sin dirección clara
       </h3>
       <p className="text-gray-200 text-base mt-4">
@@ -134,27 +134,36 @@ const Intro = ({ onScrollToSection }: IntroProps) => {
       ))}
     </ul>
 
-    <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-gray-200 mb-8">
-      <p className="text-lg font-medium text-gray-800 mb-4">
-        En <span className="font-pacifico text-brand-purple">Descubriendo Mi Potencial</span>, tu adolescente aprenderá a:
-      </p>
-      <div className="grid md:grid-cols-2 gap-4">
-        {[
-          "Usar el celular con estrategia",
-          "Entender cómo funciona su cerebro",
-          "Recuperar el enfoque perdido",
-          "Generar motivación sostenible"
-        ].map((item, index) => (
-          <div key={index} className="flex items-center">
-            <div className="bg-brand-teal/10 p-1 rounded-full mr-3">
-              <ArrowRight className="w-4 h-4 text-brand-teal" />
-            </div>
-            <span className="text-gray-700 font-semibold">{item}</span>
-          </div>
-        ))}
-      </div>
-    </div>
+    <div className="bg-gradient-to-br from-white/40 to-white/30 backdrop-blur-sm rounded-xl p-6 shadow-md border border-gray-200/60 mb-8">
+  <p className="text-lg font-bold text-gray-800 mb-5 relative">
+    En <span className="font-dancing text-brand-purple text-xl relative inline-block px-1">
+      Descubriendo Mi Potencial
+      <span className="absolute inset-0 bg-brand-purple/10 rounded-full scale-x-110 z-10"></span>
+    </span>, tu adolescente aprenderá a:
+  </p>
 
+  <div className="grid md:grid-cols-2 gap-3">
+    {[
+      "Usar el celular con estrategia",
+      "Entender cómo funciona su cerebro",
+      "Recuperar el enfoque perdido",
+      "Generar motivación sostenible"
+    ].map((item, index) => (
+      <div 
+        key={index} 
+        className="flex items-center bg-white/70 backdrop-blur-xs p-5 rounded-lg border border-gray-200/70 shadow-sm hover:border-brand-teal/40 transition-colors"
+      >
+        <div className="bg-gradient-to-br from-brand-teal/15 to-brand-teal/25 p-1.5 rounded-lg mr-3 shadow-inner">
+          <ArrowRight className="w-4 h-4 text-brand-teal drop-shadow-sm" />
+        </div>
+        <span className="text-gray-800 font-semibold relative">
+          {item}
+          <span className="absolute bottom-0 left-0 w-full h-0.5 bg-brand-teal/40 rounded-full"></span>
+        </span>
+      </div>
+    ))}
+  </div>
+</div>
     {/* Botón CTA moderno */}
     <div className="text-center px-4">
   <Button

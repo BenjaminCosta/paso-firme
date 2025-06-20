@@ -18,7 +18,7 @@ const EmotionalSection = () => {
       <div
         className="absolute inset-0 z-0 md:bg-fixed"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1541996206728-9e1c3466a148?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRlZW5hZ2VycyUyMGVtb3Rpb25hbCUyMGxhbmRzY2FwZXxlbnwwfHw0fHx8Mg%3D%3D')`,
+          backgroundImage: `url('https://images.unsplash.com/photo-1541996206728-9e1c3466a148?w=1800&dpr=2&q=85&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRlZW5hZ2VycyUyMGVtb3Rpb25hbCUyMGxhbmRzY2FwZXxlbnwwfHw0fHx8Mg%3D%3D')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

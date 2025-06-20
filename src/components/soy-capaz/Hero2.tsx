@@ -31,7 +31,7 @@ const Hero2 = ({ onScrollToSection }: HeroSectionProps) => {
     'https://images.unsplash.com/photo-1626895684825-03b8655f26b0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fHRlZW5hZ2UlMjBmcmllbmRncm91cHxlbnwwfHw0fHx8Mg%3D%3D'
   ];
 
-  const rightSideImage = 'https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
+  const rightSideImage = 'https://images.unsplash.com/photo-1684083125679-890a980599a7?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -82,12 +82,19 @@ const Hero2 = ({ onScrollToSection }: HeroSectionProps) => {
               backgroundPosition: 'center'
             }}
           />
-
           {/* Overlay negro más oscuro */}
-          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute inset-0 bg-black/30" />
           
           {/* Overlay de color principal más intenso */}
           <div className="absolute inset-0 bg-gradient-to-l from-white/40 to-transparent" />
+          <div
+            className="absolute inset-0 opacity-40 bg-center bg-no-repeat bg-contain mix-blend-soft-light"
+            style={{
+              backgroundImage: "url('/logos/familia2.png')",
+              backgroundSize: '120%',
+              backgroundPosition: 'center'
+            }}
+          />
           
           {/* Segundo overlay de color más pronunciado */}
           <div className="absolute inset-0 bg-gradient-to-br from-brand-purple/30 via-brand-coral/25 to-brand-beige/20" />

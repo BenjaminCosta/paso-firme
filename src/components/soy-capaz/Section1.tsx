@@ -107,7 +107,7 @@ const Section1 = ({ onScrollToSection }: IntroProps) => {
               alt="Grupo de adolescentes"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black/30"></div>
+            <div className="absolute inset-0 bg-black/50"></div>
             <div className="absolute inset-0 bg-gradient-to-br from-brand-purple/40 to-brand-coral/40"></div>
           </div>
 
@@ -117,7 +117,7 @@ const Section1 = ({ onScrollToSection }: IntroProps) => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {solutions.map((item, index) => (
-                  <div key={index} className="bg-white/10 rounded-xl p-5 flex items-start gap-4 border border-white/20 shadow-md hover:scale-[1.015] transition backdrop-blur-md">
+                  <div key={index} className="bg-white/5 rounded-xl p-5 flex items-start gap-4 border border-white/20 shadow-md hover:scale-[1.015] transition backdrop-blur-md">
                     <div className="bg-brand-purple p-2 rounded-lg">
                       {item.icon}
                     </div>
