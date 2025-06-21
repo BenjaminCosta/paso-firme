@@ -10,6 +10,11 @@ const metaData = {
     title: "Descubriendo Mi Potencial | El taller que transforma distracción en enfoque",
     description: "Una experiencia práctica y en vivo donde los adolescentes aprenden a enfocarse, dejar de postergar y usar el celular con estrategia. Diseñado especialmente para jóvenes entre 12 y 21 años que necesitan dirección y motivación.",
   },
+   soycapaz: {
+  title: "¡Soy Capaz! | Taller habilidades para la vida",
+  description: "¿Tu hijo adolescente está cada vez más desconectado de sus emociones, su motivación y de ti? Este curso online es ese empujón que necesita para reconectarse con lo que importa y afrontar la adolescencia con confianza y herramientas emocionales reales."
+}
+
 };
 
 export const DynamicHead = ({ taller = "pasofirme" }: { taller?: string }) => {

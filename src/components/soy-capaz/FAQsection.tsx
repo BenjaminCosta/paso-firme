@@ -97,7 +97,7 @@ const FAQSection = () => {
       <section
         className="relative py-20 w-full"
         style={{
-          background: `linear-gradient(rgba(255,255,255,0.95), rgba(253,245,240,0.8)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1740&q=80')`,
+          background: `linear-gradient(rgba(255,255,255,0.6), rgba(253,245,240,0.8)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1740&q=80')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

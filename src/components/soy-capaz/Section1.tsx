@@ -81,6 +81,17 @@ const Section1 = ({ onScrollToSection }: IntroProps) => {
           <div className="w-24 h-1.5 bg-gradient-to-r from-brand-beige to-brand-purple mx-auto rounded-full"></div>
         </div>
 
+         {/* Subtítulo con diseño orgánico y fluido */}
+  <div className="relative group mb-10">
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-800 font-dancing text-center px-6 pb-2">
+      <span className="relative inline-block">
+        ¿Reconoces alguno de estos desafíos en tu hijo?
+        <span className="absolute left-0 -bottom-1 w-full h-1.5 bg-gradient-to-r from-brand-beige/60 via-brand-coral to-brand-purple/60 rounded-full opacity-80 group-hover:opacity-100 transition-opacity duration-300"></span>
+      </span>
+    </h2>
+    <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-brand-purple/20 to-transparent"></div>
+  </div>
+
         {/* Grid de problemas */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
           {painPoints.map((item, index) => (
@@ -142,7 +153,7 @@ const Section1 = ({ onScrollToSection }: IntroProps) => {
         </div>
       </div>
       <div className='bg-white'>
-      <Testimonials2/>
+        <Testimonials2/>
       </div>
     </section>
   );

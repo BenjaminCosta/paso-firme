@@ -1,3 +1,4 @@
+import { DynamicHead } from "@/components/DynamicHead";
 import Footer from "@/components/Footer";
 import EmotionalSection from "@/components/soy-capaz/EmotionalSection";
 import FAQSection from "@/components/soy-capaz/FAQsection";
@@ -17,6 +18,8 @@ const SoyCapaz = () => {
     }
   };
   return (
+    <>
+    <DynamicHead taller="soycapaz" />
     <div className="min-h-screen font-poppins text-text-dark">
       <Nav2 />
       <Hero2 onScrollToSection={scrollToSection} />
@@ -27,6 +30,7 @@ const SoyCapaz = () => {
       <FAQSection />
       <Footer />
     </div>
+    </>
   );
 };
 
