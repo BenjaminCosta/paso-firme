@@ -82,7 +82,7 @@ export const Pricing = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-brand-purple/70 to-brand-teal/70 opacity-90"></div>
             <div className="absolute inset-0 bg-black/20 opacity-90"></div>
             <div
-              className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1685590950596-a5dcc682e9e6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjF8fHRlZW4lMjB3aXRoJTIwZnJyaWVuZHN8ZW58MHwxfDB8fHwy')] 
+              className="absolute inset-0 bg-[url('/imagenes/pricing.avif')] 
               bg-cover bg-center mix-blend-overlay opacity-30"
             ></div>
 

@@ -43,7 +43,7 @@ const FAQ = () => {
       <div
   className="absolute inset-0 z-0 md:bg-fixed"
   style={{
-    backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.5)), url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
+    backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.5)), url('/imagenes/faq.avif')`,
     backgroundSize: "cover",
     backgroundPosition: "center",
   }}

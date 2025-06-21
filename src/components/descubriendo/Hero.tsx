@@ -9,29 +9,29 @@ const Hero = ({ onScrollToSection }: HeroSectionProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
  const carouselImages = [
-  {
-    url: 'https://images.unsplash.com/photo-1539755743684-a6b3b2f88d1e?w=1800&dpr=2&q=85&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Adolescente concentrado usando tecnología'
+ {
+    url: '/imagenes/car10.avif',
+    alt: 'Grupo de adolescentes colaborando'
   },
   {
-    url: 'https://images.unsplash.com/photo-1680729369987-f8fbdf58f01d?w=1800&dpr=2&q=85&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTZ8fHRlZW4lMjB3aXRoJTIwZnJpZW5kc3xlbnwwfDJ8MHx8fDI%3D',
-    alt: 'Joven descubriendo sus habilidades'
+    url: '/imagenes/car20.avif',
+    alt: 'Estudiante recibiendo orientación'
   },
   {
-    url: 'https://images.unsplash.com/photo-1468022536934-b938a806e490?w=1800&dpr=2&q=85&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE1fHx0ZWVuJTIwd2l0aCUyMGZyaWVuZHN8ZW58MHwyfDB8fHwy',
-    alt: 'Grupo de adolescentes aprendiendo juntos'
+    url: '/imagenes/car30.avif',
+    alt: 'Equipo de estudiantes trabajando juntos'
   }
 ];
 
 
   const galleryImages = [
-    'https://images.unsplash.com/photo-1548964643-0765c5d29abe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGVlbiUyMHdpdGglMjBmcmllbmRzfGVufDB8MHwwfHx8Mg%3D%3D',
-    'https://images.unsplash.com/photo-1524601500432-1e1a4c71d692?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dGVlbiUyMHdpdGglMjBmcmllbmRzfGVufDB8MHwwfHx8Mg%3D%3D',
-    'https://images.unsplash.com/photo-1529180979161-06b8b6d6f2be?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTZ8fHRlZW4lMjB3aXRoJTIwJTIwZmFtaWx5fGVufDB8MHwwfHx8Mg%3D%3D',
-    'https://images.unsplash.com/photo-1585577517704-f3d6f8023665?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGVlbiUyMHdpdGglMjBwaG9uZSUyMGFkZGljdGlvbnN8ZW58MHwwfDB8fHwy'
+    '/imagenes/gal10.avif',
+  '/imagenes/gal20.avif',
+  '/imagenes/gal30.avif',
+  '/imagenes/gal40.avif'
   ];
 
-  const rightSideImage = 'https://images.unsplash.com/photo-1653763744247-894cffcf796c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fHRlZW4lMjB3aXRoJTIwcGhvbmUlMjBhZGRpY3Rpb258ZW58MHx8MHx8fDA%3D';
+  const rightSideImage = '/imagenes/right2.avif';
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -137,7 +137,7 @@ const Hero = ({ onScrollToSection }: HeroSectionProps) => {
             
             {/* Título visible en pantallas md o mayores */}
             <h1 className=" md:text-7xl text-5xl font-bold text-white [text-shadow:_0_3px_12px_rgba(0,0,0,0.8)]">
-              Descubriendo mi{" "} <span className="font-pacifico">Potencial</span>
+              Descubriendo mi{" "} <span className="italic font-light font-pacifico">Potencial</span>
   
             </h1>
           </div>

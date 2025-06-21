@@ -115,7 +115,7 @@ const TargetAudience = ({ onScrollToSection }: IntroProps) => {
             <div className="w-full lg:w-1/2 relative">
               <div className="relative min-h-[300px] md:min-h-[700px] rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1746971506615-a2f5093fc297?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fHRlZW4lMjB3aXRoJTIwcGhvbmUlMjBhZGRjaXRpb258ZW58MHwxfDB8fHwy"
+                  src="/imagenes/target.avif"
                   alt="Adolescente con tecnología"
                   className="w-full h-full object-cover absolute inset-0"
                 />
@@ -147,7 +147,7 @@ const TargetAudience = ({ onScrollToSection }: IntroProps) => {
         {/* Frase destacada con ícono */}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 mt-14 bg-gradient-to-r from-brand-teal/20 to-brand-purple/20 rounded-2xl border border-white/30 backdrop-blur-sm relative overflow-hidden group">
           {/* Fondo de fondo */}
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/uploads/1412273646059cc129bb5/eae0a1da?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE0fHxmcmllbmRzaGlwfGVufDB8MHwwfHx8Mg%3D%3D')] bg-cover bg-center opacity-70 group-hover:opacity-40 transition-opacity duration-500" />
+          <div className="absolute inset-0 bg-[url('/imagenes/target2.avif')] bg-cover bg-center opacity-70 group-hover:opacity-40 transition-opacity duration-500" />
           <div className="absolute inset-0 bg-black/50" />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-teal/10 to-brand-purple/10" />
 

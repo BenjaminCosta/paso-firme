@@ -23,7 +23,7 @@ const EmotionalSection = () => {
           backgroundPosition: "center",
         }}
       ></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-transparent" />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="absolute inset-0 bg-gradient-to-r from-brand-purple/20 via-transparent to-brand-coral/15" />
 
       <div className="container mx-auto px-6 relative z-10">

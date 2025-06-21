@@ -109,9 +109,9 @@ const Intro = ({ onScrollToSection }: IntroProps) => {
 <div className="relative rounded-3xl p-8 md:p-12 shadow-inner overflow-hidden">
   {/* Imagen de fondo + overlays degradados */}
   <div className="absolute inset-0 -z-10">
-    <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1722970913865-14852ea8c1c6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTR8fHRlZW4lMjB3aXRoJTIwcGhvbmUlMjBhZGRpY3Rpb258ZW58MHwwfDB8fHwy')] bg-cover bg-center opacity-40" />
-    <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-brand-teal/50 to-brand-purple/60 " />
-    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-purple/30 " />
+    <div className="absolute inset-0 bg-[url('/imagenes/intro.avif')] bg-cover bg-center opacity-50" />
+    <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-brand-teal/30 to-brand-purple/40 " />
+    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-purple/50 " />
   </div>
 
   {/* Elementos decorativos */}
@@ -135,7 +135,7 @@ const Intro = ({ onScrollToSection }: IntroProps) => {
     </ul>
 
     <div className="bg-gradient-to-br from-white/40 to-white/30 backdrop-blur-sm rounded-xl p-6 shadow-md border border-gray-200/60 mb-8">
-  <p className="text-lg font-bold text-gray-800 mb-5 relative">
+  <p className="text-xl font-bold text-gray-800 mb-5 relative">
     En <span className="font-dancing text-brand-purple text-xl relative inline-block px-1">
       Descubriendo Mi Potencial
       <span className="absolute inset-0 bg-brand-purple/10 rounded-full scale-x-110 z-10"></span>
@@ -151,8 +151,10 @@ const Intro = ({ onScrollToSection }: IntroProps) => {
     ].map((item, index) => (
       <div 
         key={index} 
-        className="flex items-center bg-white/70 backdrop-blur-xs p-5 rounded-lg border border-gray-200/70 shadow-sm hover:border-brand-teal/40 transition-colors"
+        className="flex items-center bg-white bg-gradient-to-r from-brand-purple/10 via-brand-teal/10 to-brand-purple/10 backdrop-blur-xs p-5 rounded-lg border border-gray-200/70 shadow-sm hover:border-brand-teal/40 transition-colors"
+        
       >
+        
         <div className="bg-gradient-to-br from-brand-teal/15 to-brand-teal/25 p-1.5 rounded-lg mr-3 shadow-inner">
           <ArrowRight className="w-4 h-4 text-brand-teal drop-shadow-sm" />
         </div>
