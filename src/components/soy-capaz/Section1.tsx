@@ -71,9 +71,8 @@ const Section1 = ({ onScrollToSection }: IntroProps) => {
           </span>
           <h1 className="text-4xl md:text-5xl font-bold mb-5 leading-tight">
             <span className="bg-gradient-to-r from-brand-purple to-brand-coral bg-clip-text text-transparent">
-              ¡Soy Capaz!
-            </span><br />
-            Habilidades para la vida
+              Habilidades 
+            </span> para la vida
           </h1>
           <p className="text-lg text-gray-700 mb-6">
             Un curso online que enseña las herramientas emocionales más importantes para navegar la adolescencia con confianza.
@@ -86,7 +85,7 @@ const Section1 = ({ onScrollToSection }: IntroProps) => {
     <h2 className="text-3xl md:text-4xl font-bold text-gray-800 font-dancing text-center px-6 pb-2">
       <span className="relative inline-block">
         ¿Reconoces alguno de estos desafíos en tu hijo?
-        <span className="absolute left-0 -bottom-1 w-full h-1.5 bg-gradient-to-r from-brand-beige/60 via-brand-coral to-brand-purple/60 rounded-full opacity-80 group-hover:opacity-100 transition-opacity duration-300"></span>
+        <span className="absolute left-0 -bottom-1 w-full h-1.5 bg-gradient-to-r from-brand-beige/70 via-brand-coral/40 to-brand-beige/70 rounded-full opacity-80 group-hover:opacity-100 transition-opacity duration-300"></span>
       </span>
     </h2>
     <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-brand-purple/20 to-transparent"></div>

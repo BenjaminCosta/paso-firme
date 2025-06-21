@@ -31,10 +31,10 @@ const EmotionalSection = () => {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
             <span className="bg-gradient-to-r from-brand-beige to-white bg-clip-text text-transparent">
-              ¿Reconoces estas señales
+              ¿Te identificas con varias de las 
+
             </span>{" "}
-            en tu adolescente?
-          </h2>
+            siguientes afirmaciones?                      </h2>
           <p className="text-xl text-brand-beige/90 mb-6">
             La <span className="font-pacifico text-white">adolescencia</span> no es el problema, es la falta de herramientas emocionales
           </p>
@@ -67,7 +67,7 @@ const EmotionalSection = () => {
       <div>
         <h3 className="text-3xl md:text-4xl font-bold leading-tight mb-2  text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.3)]">
           Transforma la{" "}
-          <span className="font-pacifico bg-gradient-to-r from-brand-coral to-brand-yellow bg-clip-text text-transparent">
+          <span className="font-pacificos bg-gradient-to-r from-brand-coral to-brand-yellow bg-clip-text text-transparent">
             crisis
           </span>{" "}
           en{" "}
