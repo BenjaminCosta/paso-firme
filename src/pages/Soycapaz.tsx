@@ -20,7 +20,8 @@ const SoyCapaz = () => {
   return (
     <>
     <DynamicHead taller="soycapaz" />
-    <div className="min-h-screen font-poppins text-text-dark">
+    <div className="min-h-screen font-poppins text-text-dark overflow-x-hidden">
+
       <Nav2 />
       <Hero2 onScrollToSection={scrollToSection} />
       <Section1 onScrollToSection={scrollToSection} />
