@@ -36,7 +36,7 @@ const EmotionalSection = () => {
             </span>{" "}
             siguientes afirmaciones?                      </h2>
           <p className="text-xl text-brand-beige/90 mb-6">
-            La <span className="font-pacifico text-white">adolescencia</span> no es el problema, es la falta de herramientas emocionales
+            La <span className="font-dancing font-bold text-white">adolescencia</span> no es el problema, es la falta de herramientas emocionales
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-brand-purple to-brand-coral mx-auto" />
         </div>
@@ -67,18 +67,18 @@ const EmotionalSection = () => {
       <div>
         <h3 className="text-3xl md:text-4xl font-bold leading-tight mb-2  text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.3)]">
           Transforma la{" "}
-          <span className="font-pacificos bg-gradient-to-r from-brand-coral to-brand-yellow bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-brand-coral to-brand-yellow bg-clip-text text-transparent">
             crisis
           </span>{" "}
           en{" "}
-          <span className="font-pacifico bg-gradient-to-r from-brand-purple to-brand-coral bg-clip-text text-transparent">
+          <span className="font-pacifico font-bold bg-gradient-to-r from-brand-purple to-brand-coral bg-clip-text text-transparent">
             crecimiento
           </span>
         </h3>
         <div className="w-16 h-1 bg-gradient-to-r from-brand-purple to-brand-coral mb-3 rounded-full" />
         <p className="text-brand-beige text-lg font-medium drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
           No es una fase, es una{" "}
-          <span className="font-pacifico text-white underline decoration-brand-coral underline-offset-4">
+          <span className="font-dancing font-bold text-white underline decoration-brand-coral underline-offset-4">
             oportunidad única
           </span>
         </p>
@@ -95,7 +95,7 @@ const EmotionalSection = () => {
 
         <p className="text-lg leading-relaxed drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
           Sin recursos internos, los jóvenes recurren al celular, al aislamiento o a la frustración.{" "}
-          <span className="text-brand-coral font-semibold font-pacifico drop-shadow-md">
+          <span className="text-brand-coral font-bold font-dancing drop-shadow-md">
             Pero existe un camino diferente.
           </span>
         </p>
@@ -103,8 +103,8 @@ const EmotionalSection = () => {
 
       {/* Destacado */}
       <div className="bg-gradient-to-r from-brand-purple/30 to-brand-coral/20 p-5 rounded-xl border border-white/20 mt-4">
-        <p className="text-center text-xl font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)]">
-          <span className="font-pacifico bg-brand-beige bg-clip-text text-transparent">
+        <p className="text-center text-xl md:text-2xl font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)]">
+          <span className="font-dancing font-bold bg-brand-beige bg-clip-text text-transparent">
             "Este curso es el punto de inflexión que necesitan"
           </span>
         </p>

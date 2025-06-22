@@ -11,91 +11,108 @@ import { Button } from "@/components/ui/button";
 const FAQSection = () => {
   return (
     <div className="w-full">
-      {/* SECCIÓN FAQ - CON FONDO Y MÁS COLOR */}
-      <section
-        className="relative py-16 w-full bg-white border-b border-gray-100"
-        style={{
-          background: `linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(253,245,240,0.85)), url('https://images.unsplash.com/photo-1524179091875-b615987f1618?auto=format&fit=crop&w=1740&q=80')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="container mx-auto px-6 md:px-16">
-          <div className="flex flex-col md:flex-row gap-10 items-start">
-            {/* Encabezado sticky */}
-            <div className="md:sticky top-28 md:w-1/3">
-              <span className="inline-flex items-center gap-2 bg-brand-coral/10 text-brand-purple px-4 py-2 rounded-full text-sm font-medium mb-4">
-                <Zap size={16} /> INFORMACIÓN CLAVE
-              </span>
-              <h2 className="text-4xl font-bold text-gray-900 mb-4 font-dancing">
-                Preguntas frecuentes
-              </h2>
-              <p className="text-gray-700">
-                Todo lo que necesitas saber sobre nuestro programa para adolescentes
-              </p>
-            </div>
+      {/* SECCIÓN FAQ - CON FONDO MODERNO Y ELEGANTE */}
+<section className="relative py-20 w-full overflow-x-hidden">
+  {/* Fondo de Unsplash con overlay degradado */}
+  <div className="absolute inset-0 -z-10">
+    <img 
+      src="https://images.unsplash.com/photo-1707275952362-fbb87150ba88?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHRleHR1cmUlMjBtb2Rlcm58ZW58MHx8MHx8fDI%3Dq=80" 
+      alt="Fondo abstracto moderno"
+      className="w-full h-full object-cover"
+    />
+    <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/90 to-white"></div>
+    <div className="absolute inset-0 bg-gradient-to-r from-white/80 to-transparent md:w-1/3"></div>
+  </div>
 
-            {/* Lista de preguntas */}
-            <div className="md:w-2/3">
-              <div className="grid gap-6">
-                {[
-                  {
-                    question: "¿Para qué edades es el programa?",
-                    answer: "Diseñado específicamente para adolescentes de 11 a 19 años.",
-                    highlight: "Rango de edad",
-                  },
-                  {
-                    question: "¿Las sesiones son grabadas?",
-                    answer: "No, todas las sesiones son en vivo para garantizar privacidad y seguridad.",
-                    highlight: "100% en vivo",
-                  },
-                  {
-                    question: "¿Mi hijo está obligado a participar?",
-                    answer: "Puede elegir participar activamente u observar según su comodidad.",
-                    highlight: "Participación flexible",
-                  },
-                  {
-                    question: "¿Qué métodos de pago aceptan?",
-                    answer: "Aceptamos todas las tarjetas principales y transferencias bancarias.",
-                    highlight: "Pago seguro",
-                  },
-                  {
-                    question: "¿Ofrecen descuentos para hermanos?",
-                    answer: "Sí, aplicamos descuentos progresivos para familias con múltiples participantes.",
-                    highlight: "Beneficio familiar",
-                  },
-                ].map((item, index) => (
-                  <div
-                    key={index}
-                    className="group flex flex-col md:flex-row gap-5 p-6 bg-white/80 backdrop-blur-sm border border-white/30 rounded-xl shadow-md hover:shadow-xl transition"
-                  >
-                    <div className="flex-shrink-0">
-                      <div className="bg-brand-purple/10 text-brand-purple p-3 rounded-lg">
-                        <CheckCircle size={20} />
-                      </div>
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-3 mb-2">
-                        <span className="text-xs font-semibold bg-brand-coral/10 text-brand-purple px-3 py-1 rounded-full">
-                          {item.highlight}
-                        </span>
-                      </div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-1 font-dancing">
-                        {item.question}
-                      </h3>
-                      <p className="text-gray-700">{item.answer}</p>
-                    </div>
-                  </div>
-                ))}
+  <div className="container mx-auto px-6 md:px-16 relative">
+    <div className="flex flex-col md:flex-row gap-12 items-start">
+      {/* Encabezado sticky - con nuevo diseño */}
+      <div className="lg:sticky top-32 md:w-1/3">
+        <span className="inline-flex items-center gap-2 bg-brand-purple/10 text-brand-purple px-4 py-2 rounded-full text-sm font-medium mb-5 tracking-wide">
+          <Zap size={16} className="text-brand-coral" /> INFORMACIÓN CLAVE
+        </span>
+        <h2 className="text-5xl font-bold text-gray-900 mb-5 font-dancing leading-tight">
+          Preguntas <br className="hidden md:block"/>frecuentes
+        </h2>
+        <p className="text-gray-700 text-lg leading-relaxed">
+          Todo lo que necesitas saber sobre nuestro exclusivo programa para adolescentes
+        </p>
+        
+        {/* Elemento decorativo */}
+        <div className="hidden md:block mt-8">
+          <div className="w-20 h-1 bg-gradient-to-r from-brand-purple to-brand-coral rounded-full"></div>
+        </div>
+      </div>
+
+      {/* Lista de preguntas - diseño mejorado */}
+      <div className="md:w-2/3">
+        <div className="grid gap-6">
+          {[
+            {
+              question: "¿Para qué edades es el programa?",
+              answer: "Diseñado específicamente para adolescentes de 11 a 19 años.",
+              highlight: "Rango de edad",
+            },
+            {
+              question: "¿Las sesiones son grabadas?",
+              answer: "No, todas las sesiones son en vivo para garantizar privacidad y seguridad.",
+              highlight: "100% en vivo",
+            },
+            {
+              question: "¿Mi hijo está obligado a participar?",
+              answer: "Puede elegir participar activamente u observar según su comodidad.",
+              highlight: "Participación flexible",
+            },
+            {
+              question: "¿Qué métodos de pago aceptan?",
+              answer: "Aceptamos todas las tarjetas principales y transferencias bancarias.",
+              highlight: "Pago seguro",
+            },
+            {
+              question: "¿Ofrecen descuentos para hermanos?",
+              answer: "Sí, aplicamos descuentos progresivos para familias con múltiples participantes.",
+              highlight: "Beneficio familiar",
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="group relative flex flex-col md:flex-row gap-6 p-7 bg-white/90 backdrop-blur-sm border border-white/30 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            >
+              {/* Efecto de borde hover */}
+              <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-brand-purple/20 pointer-events-none transition-all duration-300"></div>
+              
+              <div className="flex-shrink-0">
+                <div className="bg-gradient-to-br from-brand-purple/10 to-brand-coral/10 text-brand-purple p-3.5 rounded-xl">
+                  <CheckCircle size={22} className="text-brand-purple" />
+                </div>
+              </div>
+              
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-xs font-semibold bg-gradient-to-r from-brand-purple/10 to-brand-coral/10 text-brand-purple px-3 py-1.5 rounded-full">
+                    {item.highlight}
+                  </span>
+                </div>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-2 font-dancing">
+                  {item.question}
+                </h3>
+                <p className="text-gray-700 leading-relaxed">{item.answer}</p>
               </div>
             </div>
-          </div>
+          ))}
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+
+  {/* Elementos decorativos de fondo */}
+  <div className="absolute -right-32 top-0 w-64 h-64 rounded-full bg-brand-purple/5 blur-3xl -z-0"></div>
+  <div className="absolute left-0 bottom-0 w-48 h-48 rounded-full bg-brand-coral/5 blur-3xl -z-0"></div>
+</section>
 
       {/* SECCIÓN CTA - CON FONDO VISUAL */}
       <section
-        className="relative py-20 w-full"
+        className="relative py-20 w-full overflow-x-hidden"
         style={{
           background: `linear-gradient(rgba(255,255,255,0.6), rgba(253,245,240,0.8)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1740&q=80')`,
           backgroundSize: "cover",
@@ -162,8 +179,8 @@ const FAQSection = () => {
               </div>
             </div>
 
-            {/* Círculo decorativo */}
-            <div className="absolute -right-20 -top-20 w-64 h-64 rounded-full bg-brand-purple/10 blur-3xl"></div>
+            {/* Círculo decorativo ajustado */}
+            <div className="absolute right-0 top-0 translate-x-1/2 -translate-y-1/2 w-48 h-48 sm:w-64 sm:h-64 rounded-full bg-brand-purple/10 blur-3xl"></div>
           </div>
         </div>
       </section>

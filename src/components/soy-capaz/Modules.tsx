@@ -11,7 +11,7 @@ const Modules = () => {
         "Reducir la comparación tóxica",
         "Construir autoestima desde lo real"
       ],
-      bgImage: "https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      bgImage: "https://images.unsplash.com/photo-1536607774613-b287a2f4e698?w=1800&dpr=2&q=85&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTY3fHx0ZWVuYWdlJTIwZnJpZW5kZ3JvdXB8ZW58MHx8NHx8fDI%3D"
     },
     {
       day: "DÍA 2",
