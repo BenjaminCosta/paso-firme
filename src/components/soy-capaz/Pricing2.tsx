@@ -1,8 +1,14 @@
-import { Calendar, Clock, Users, Video, Zap, ArrowRight, Shield, Globe } from "lucide-react";
+import { 
+  Calendar, Clock, Users, Video, Zap, ArrowRight, Shield, Globe 
+} from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import useSheetDataSoyCapaz from "@/hooks/useSheetData3";
 
 const Pricing2 = () => {
+  const { data, loading, error } = useSheetDataSoyCapaz();
+  const event = data.length > 0 ? data[0] : null;
+
   return (
     <section id="pricing" className="py-16 md:py-24 px-4 sm:px-0 relative overflow-hidden bg-gradient-to-br from-white to-brand-beige/10">
       {/* Efectos de fondo modernos */}
@@ -63,18 +69,18 @@ const Pricing2 = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">Fecha</h4>
-                      <p className="text-gray-700">21 al 24 de julio de 2025</p>
+                      <p className="text-gray-700">{loading ? 'Cargando...' : error ? 'Error cargando fecha' : (event?.fecha || '—')}</p>
                     </div>
                   </div>
 
-                  {/* Horario (2 líneas) */}
+                  {/* Horario */}
                   <div className="flex items-start gap-4">
                     <div className="p-2 bg-brand-coral/10 rounded-lg shadow-sm">
                       <Clock className="w-5 h-5 text-brand-coral" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">Horario</h4>
-                      <p className="text-gray-700">10:00 a.m. a 11:15 a.m. (CDMX)</p>
+                      <p className="text-gray-700">{loading ? 'Cargando...' : error ? 'Error cargando horario' : (event?.horario || '—')}</p>
                     </div>
                   </div>
 
@@ -85,8 +91,7 @@ const Pricing2 = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">Duración</h4>
-<p className="text-gray-700">4 días, 1h 15min por sesión</p>
-
+                      <p className="text-gray-700">{loading ? 'Cargando...' : error ? 'Error cargando duración' : (event?.duracion || '—')}</p>
                     </div>
                   </div>
 
@@ -97,7 +102,7 @@ const Pricing2 = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">Modalidad</h4>
-                      <p className="text-gray-700">Online en vivo vía Zoom</p>
+                      <p className="text-gray-700">{loading ? 'Cargando...' : error ? 'Error cargando modalidad' : (event?.modalidad || '—')}</p>
                     </div>
                   </div>
                 </div>

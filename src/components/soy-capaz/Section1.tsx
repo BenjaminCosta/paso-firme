@@ -1,4 +1,4 @@
-import { Smartphone, HeartPulse, Users, Brain, Shield, MessageSquare, ArrowRight } from 'lucide-react';
+import { Smartphone, HeartPulse, Users, Brain, Shield, MessageSquare, ArrowRight, AlertCircle } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import Testimonials2 from './Testimonials2';
 
@@ -8,7 +8,7 @@ interface IntroProps {
 
 const Section1 = ({ onScrollToSection }: IntroProps) => {
   const painPoints = [
-    { text: "Ya no muestra interés por casi nada", icon: <HeartPulse className="text-brand-purple w-5 h-5" /> },
+    { text: "Ya no muestra interés por casi nada", icon: <AlertCircle className="text-brand-purple w-5 h-5" /> },
     { text: "Explosiones emocionales frecuentes", icon: <HeartPulse className="text-brand-purple w-5 h-5" /> },
     { text: "Vive pegado al celular", icon: <Smartphone className="text-brand-purple w-5 h-5" /> },
     { text: "Evita conversaciones profundas", icon: <MessageSquare className="text-brand-purple w-5 h-5" /> },
