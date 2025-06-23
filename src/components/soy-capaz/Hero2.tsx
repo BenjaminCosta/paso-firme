@@ -130,9 +130,9 @@ const Hero2 = ({ onScrollToSection }: HeroSectionProps) => {
       <div className="container mx-auto h-full flex flex-col justify-center items-start text-left px-4 pt-20 relative z-30">
         <div className="max-w-4xl animate-fade-in ml-0 md:ml-8 lg:ml-16">
           {/* Título o logo responsive */}
-          <div className="mb-6">
-            <h1 className="md:text-7xl text-5xl font-bold text-white [text-shadow:_0_3px_12px_rgba(0,0,0,0.8)]">
-              <span className="">¡Soy Capaz!</span><br />
+          <div className="mb-8">
+            <h1 className="md:text-8xl text-6xl font-bold text-white [text-shadow:_0_3px_12px_rgba(0,0,0,0.8)]">
+             ¡Soy{""} <span className="font-pacifico italic font-light">Capaz!</span><br />
             </h1>
           </div>
 

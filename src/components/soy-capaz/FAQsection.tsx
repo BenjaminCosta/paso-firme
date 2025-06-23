@@ -20,7 +20,7 @@ const FAQSection = () => {
       alt="Fondo abstracto moderno"
       className="w-full h-full object-cover"
     />
-    <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/90 to-white"></div>
+    <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/80 to-white"></div>
     <div className="absolute inset-0 bg-gradient-to-r from-white/80 to-transparent md:w-1/3"></div>
   </div>
 

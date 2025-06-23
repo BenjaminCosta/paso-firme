@@ -34,6 +34,7 @@ const Pricing2 = () => {
             Desarrolla habilidades esenciales en un entorno seguro y divertido
           </p>
         </div>
+        
 
         {/* Tarjeta de detalles */}
         <div className="relative group">
@@ -56,11 +57,15 @@ const Pricing2 = () => {
                     Curso interactivo online
                   </p>
                 </div>
+                
               </div>
+              
+              
 
               {/* Grid de detalles */}
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 {/* Columna izquierda (coral) */}
+                
                 <div className="space-y-4">
                   {/* Fecha */}
                   <div className="flex items-start gap-4">
@@ -111,6 +116,7 @@ const Pricing2 = () => {
                 <div className="space-y-4">
                   {/* Desde cualquier lugar */}
                   <div className="flex items-start gap-4">
+                    
                     <div className="p-2 bg-brand-purple/10 rounded-lg shadow-sm">
                       <Globe className="w-5 h-5 text-brand-purple" />
                     </div>
@@ -144,9 +150,11 @@ const Pricing2 = () => {
                   </div>
                 </div>
               </div>
+              
 
               {/* Sección de inversión */}
               <div className="bg-gradient-to-r from-brand-purple/5 to-brand-coral/5 p-5 sm:p-6 rounded-xl mb-6 border border-gray-200/70 relative overflow-hidden">
+              
                 <div className="absolute -right-6 -top-6 w-24 h-24 bg-brand-coral/5 rounded-full"></div>
                 <div className="absolute -left-6 -bottom-6 w-24 h-24 bg-brand-purple/5 rounded-full"></div>
                 <div className="relative">
@@ -177,7 +185,7 @@ const Pricing2 = () => {
 
               {/* Nota sutil de urgencia */}
               <p className="text-xs text-center text-gray-500 mt-3">
-                Grupos reducidos para mejor experiencia • Disponibilidad limitada
+                Inscripciones abiertas • Disponibilidad limitada
               </p>
             </CardContent>
           </Card>
