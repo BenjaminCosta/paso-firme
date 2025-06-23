@@ -9,7 +9,7 @@ import Pasofirme from "./pages/Pasofirme";
 import Descubriendo from "./pages/Descubriendo";
 import SoyCapaz from "./pages/Soycapaz"; // ✅ nueva landing
 import NotFound from "./pages/NotFound";
-import CaosConexion from "./pages/CaosConexion";
+import CaosConexion from "./pages/Caosconexion";
 
 const queryClient = new QueryClient();
 
