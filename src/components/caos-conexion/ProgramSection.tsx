@@ -108,7 +108,7 @@ const ProgramSection = () => {
           <div className="text-center">
             <Button
               size="lg"
-              className="relative overflow-hidden bg-gray-900 text-white px-16 py-7 text-xl font-bold rounded-full transition-all duration-500 hover:scale-[1.03] shadow-2xl hover:shadow-3xl group border-2 border-gray-900 hover:bg-black"
+              className="relative overflow-hidden bg-gray-900 text-white px-16 py-7 text-xl font-bold rounded-full transition-all duration-500 hover:scale-[1.03] shadow-2xl hover:shadow-3xl group border border-gray-900 hover:bg-black"
             >
               <span className="relative z-10 flex items-center justify-center gap-3">
                 <span className="bg-gradient-to-r from-brand-teal to-brand-coral bg-clip-text text-transparent">

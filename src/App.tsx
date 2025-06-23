@@ -24,7 +24,7 @@ const App = () => {
     host.startsWith("soy-capaz") || path.startsWith("/soy-capaz");
 
   const isCaosConexion =
-    host.startsWith("soy-capaz") || path.startsWith("/soy-capaz");  
+    host.startsWith("caos-conexion") || path.startsWith("/caos-conexion");  
 
   return (
     <HelmetProvider>
@@ -38,7 +38,7 @@ const App = () => {
               <Route path="*" element={<Descubriendo />} />
             ) : isSoyCapaz ? (
               <Route path="*" element={<SoyCapaz />} />
-            ) : isDescubriendo ? (
+            ) : isCaosConexion ? (
               <Route path="*" element={<CaosConexion />} />
             ) : ( 
               
