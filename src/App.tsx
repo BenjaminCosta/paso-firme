@@ -9,6 +9,7 @@ import Pasofirme from "./pages/Pasofirme";
 import Descubriendo from "./pages/Descubriendo";
 import SoyCapaz from "./pages/Soycapaz"; // ✅ nueva landing
 import NotFound from "./pages/NotFound";
+import CaosConexion from "./pages/CaosConexion";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,9 @@ const App = () => {
   const isSoyCapaz =
     host.startsWith("soy-capaz") || path.startsWith("/soy-capaz");
 
+  const isCaosConexion =
+    host.startsWith("soy-capaz") || path.startsWith("/soy-capaz");  
+
   return (
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
@@ -34,10 +38,14 @@ const App = () => {
               <Route path="*" element={<Descubriendo />} />
             ) : isSoyCapaz ? (
               <Route path="*" element={<SoyCapaz />} />
-            ) : (
+            ) : isDescubriendo ? (
+              <Route path="*" element={<CaosConexion />} />
+            ) : ( 
+              
               <>
                 <Route path="/" element={<Pasofirme />} />
                 <Route path="/descubriendo" element={<Descubriendo />} />
+                <Route path="/conexion" element={<CaosConexion />} />
                 <Route path="/soy-capaz" element={<SoyCapaz />} />
                 <Route path="*" element={<NotFound />} />
               </>

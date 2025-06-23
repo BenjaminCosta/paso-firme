@@ -74,6 +74,7 @@ export default {
 				"brand-purple": "#885fae",
 				"brand-coral": "#e97052",
 				"brand-beige": "#e3d8cc",
+				"brand-grey" : "#4F4F4F",
 				"text-dark": "#333333",
 			},
 			borderRadius: {
