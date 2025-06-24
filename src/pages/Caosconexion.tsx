@@ -4,6 +4,9 @@ import Nav3 from "@/components/caos-conexion/Nav3";
 import Hero3 from "@/components/caos-conexion/Hero3";
 import Intro3 from "@/components/caos-conexion/Intro3";
 import ProgramSection from "@/components/caos-conexion/ProgramSection";
+import ProgramDetails from "@/components/caos-conexion/ProgramDetails";
+import Testimonials from "@/components/descubriendo/Testimonials";
+import Pricing3 from "@/components/caos-conexion/Pricing3";
 
 
 
@@ -23,6 +26,9 @@ const CaosConexion = () => {
       <Hero3 onScrollToSection={scrollToSection} />
       <Intro3 />
       <ProgramSection />
+      <Testimonials />
+      <ProgramDetails />
+      <Pricing3 />
       <Footer />
     </div>
     </>
