@@ -176,20 +176,20 @@ const Pricing3 = () => {
           <div 
             className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80')] bg-cover bg-center"
             style={{
-              maskImage: 'linear-gradient(to right, rgba(0,0,0,0.8) 0%, transparent 100%)',
-              WebkitMaskImage: 'linear-gradient(to right, rgba(0,0,0,0.8) 0%, transparent 100%)'
+              maskImage: 'linear-gradient(to right, rgba(0,0,0,0.5) 0%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,0.5) 0%, transparent 100%)'
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-white/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-white/50 to-white/30"></div>
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 max-w-6xl relative z-10">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             {/* Contenido de texto */}
             <div className="md:w-1/2 space-y-6">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-brand-coral/10 to-brand-teal/10 text-brand-coral rounded-full text-xs font-bold border border-brand-coral/10 shadow-sm">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-brand-coral/10 to-brand-teal/10 text-brand-coral rounded-full text-lg font-bold border border-brand-coral/10 shadow-sm">
                 <AlertTriangle className="w-4 h-4" />
-                🚨 SECCIÓN 8
+                 ¡Aprovecha hoy!
               </div>
 
               <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
@@ -220,13 +220,13 @@ const Pricing3 = () => {
                   <span className="bg-brand-teal/10 p-1.5 rounded-full">
                     <Zap className="w-4 h-4 text-brand-teal" />
                   </span>
-                  📦 Últimos lugares disponibles
+                   Últimos lugares disponibles
                 </div>
                 <div className="flex items-center gap-2 text-sm font-medium text-gray-700">
                   <span className="bg-brand-coral/10 p-1.5 rounded-full">
                     <MessageSquare className="w-4 h-4 text-brand-coral" />
                   </span>
-                  📲 Accede hoy y comienza el cambio
+                   Accede hoy y comienza el cambio
                 </div>
               </div>
             </div>
@@ -248,7 +248,7 @@ const Pricing3 = () => {
                     size="lg"
                   >
                     <span className="flex items-center justify-center gap-2">
-                      👉 Inscribirme ahora y comenzar el cambio
+                      <Zap></Zap> Inscribirme ahora y comenzar el cambio
                       <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                     </span>
                   </Button>

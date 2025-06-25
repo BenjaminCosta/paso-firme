@@ -82,18 +82,18 @@ const FAQSection = () => {
               <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-brand-purple/20 pointer-events-none transition-all duration-300"></div>
               
               <div className="flex-shrink-0">
-                <div className="bg-gradient-to-br from-brand-purple/10 to-brand-coral/10 text-brand-purple p-3.5 rounded-xl">
-                  <CheckCircle size={22} className="text-brand-purple" />
+                <div className="bg-gradient-to-br from-brand-purple/60 to-brand-coral/60 text-brand-purple p-3.5 rounded-xl">
+                  <CheckCircle size={22} className="text-white" />
                 </div>
               </div>
               
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="text-xs font-semibold bg-gradient-to-r from-brand-purple/10 to-brand-coral/10 text-brand-purple px-3 py-1.5 rounded-full">
+                  <span className="text-xs font-semibold bg-gradient-to-r from-brand-purple/10 to-brand-coral/10 text-brand-coral px-3 py-1.5 rounded-full">
                     {item.highlight}
                   </span>
                 </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-2 font-dancing">
+                <h3 className="text-2xl font-semibold text-brand-purple mb-2 ">
                   {item.question}
                 </h3>
                 <p className="text-gray-700 leading-relaxed">{item.answer}</p>

@@ -9,20 +9,19 @@ const Hero2 = ({ onScrollToSection }: HeroSectionProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const carouselImages = [
-  {
-    url: 'https://images.unsplash.com/photo-1470286084930-1df42b2b99e9?w=1800&dpr=2&q=85&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fHRlZW5hZ2UlMjBmcmllbmRncm91cHxlbnwwfHw0fHx8Mg%3D%3D',
-    alt: 'Adolescente pensativo'
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=1800&dpr=2&q=85&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Joven desconectado de su familia'
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1536607774613-b287a2f4e698?w=1800&dpr=2&q=85&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTY3fHx0ZWVuYWdlJTIwZnJpZW5kZ3JvdXB8ZW58MHx8NHx8fDI%3D',
-    alt: 'Adolescente con problemas emocionales'
-  }
-];
-
+    {
+      url: 'https://images.unsplash.com/photo-1470286084930-1df42b2b99e9?w=1800&dpr=2&q=85&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fHRlZW5hZ2UlMjBmcmllbmRncm91cHxlbnwwfHw0fHx8Mg%3D%3D',
+      alt: 'Adolescente pensativo'
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=1800&dpr=2&q=85&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'Joven desconectado de su familia'
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1536607774613-b287a2f4e698?w=1800&dpr=2&q=85&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTY3fHx0ZWVuYWdlJTIwZnJpZW5kZ3JvdXB8ZW58MHx8NHx8fDI%3D',
+      alt: 'Adolescente con problemas emocionales'
+    }
+  ];
 
   const galleryImages = [
     'https://images.unsplash.com/photo-1549057446-9f5c6ac91a04?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGVlbiUyMGZyaWVuZHN8ZW58MHx8MHx8fDI%3D',
@@ -129,13 +128,29 @@ const Hero2 = ({ onScrollToSection }: HeroSectionProps) => {
       {/* Contenido principal - alineado a la izquierda */}
       <div className="container mx-auto h-full flex flex-col justify-center items-start text-left px-4 pt-20 relative z-30">
         <div className="max-w-4xl animate-fade-in ml-0 md:ml-8 lg:ml-16">
-          {/* Título o logo responsive */}
-          <div className="mb-8">
-            <h1 className="md:text-8xl text-6xl font-bold text-white [text-shadow:_0_3px_12px_rgba(0,0,0,0.8)]">
-             ¡Soy{""} <span className="font-pacifico italic font-light">Capaz!</span><br />
-            </h1>
-          </div>
+           {/* Título o logo responsive */}
+    <div className="mb-6 sm:mb-8 relative">
+      {/* Título principal con efecto de gradiente */}
+      <h1 className="text-5xl xs:text-6xl sm:text-7xl md:text-8xl font-bold text-white [text-shadow:_0_3px_12px_rgba(0,0,0,0.8)] relative z-10 leading-tight">
+        ¡Soy Capaz!
+      </h1>
 
+      {/* Subtítulo mejorado */}
+      <div className="mt-3 sm:mt-4 pl-2 relative">
+        {/* Línea decorativa izquierda */}
+        <div className="absolute left-0 top-1/2 h-3/4 w-1 bg-gradient-to-b from-brand-purple to-brand-coral transform -translate-y-1/2 rounded-full"></div>
+        
+        <span className="text-2xl xs:text-3xl sm:text-3xl md:text-4xl font-bold text-white pl-3 sm:pl-4 tracking-wider relative inline-block">
+          <span className="relative italic z-10">Habilidades para la vida</span>
+          {/* Efecto de subrayado decorativo */}
+          <span className="absolute bottom-0 left-3 sm:left-4 h-1 sm:h-2 w-full bg-brand-beige/40 -z-0" style={{transform: 'skewX(-15deg)'}}></span>
+        </span>
+      </div>
+
+      {/* Elementos decorativos */}
+      <div className="absolute -top-4 -left-4 w-16 h-16 rounded-full bg-brand-purple/20 blur-xl z-0"></div>
+      <div className="absolute -bottom-2 -right-4 w-12 h-12 rounded-full bg-brand-coral/20 blur-xl z-0"></div>
+    </div>
           {/* Subtítulos con texto más grande y sombra más marcada */}
           <p
             className="text-base md:text-xl text-white mb-4 font-medium [text-shadow:_0_2px_6px_rgba(0,0,0,0.7)]"

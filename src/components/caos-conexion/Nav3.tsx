@@ -55,7 +55,7 @@ export default function Nav3() {
         onMouseLeave={() => setIsHovered(false)}
       >
         <img
-          src="logos/soy-capaz2.png"
+          src="logos/conexion.png"
           alt="Logo Derecho"
           className={`select-none transition-all duration-500 ${
             isScrolling ? 'h-16 md:h-20' : 'h-20 md:h-24'

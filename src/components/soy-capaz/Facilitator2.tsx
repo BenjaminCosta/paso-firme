@@ -70,7 +70,7 @@ const Facilitator2 = () => {
               {/* Contenedor de la imagen */}
               <div className="relative rounded-2xl overflow-hidden bg-white shadow-xl border border-brand-beige/40 transform group-hover:-translate-y-1 transition-transform duration-300">
                 <img
-                  src="imagenes/facilitadora2.jpg"
+                  src="imagenes/facilitadora3.jpeg"
                   alt="Facilitadora Olivia Rodríguez"
                   className="w-full h-full object-cover aspect-square"
                 />
