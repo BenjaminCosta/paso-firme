@@ -12,7 +12,12 @@ const metaData = {
   },
    soycapaz: {
   title: "¡Soy Capaz! | Taller habilidades para la vida",
-  description: "¿Tu hijo adolescente está cada vez más desconectado de sus emociones, su motivación y de ti? Este curso online es ese empujón que necesita para reconectarse con lo que importa y afrontar la adolescencia con confianza y herramientas emocionales reales."
+  description: "¿Tu hijo adolescente está cada vez más desconectado de sus emociones, su motivación y de ti? Este curso online es ese empujón que necesita para reconectarse con lo que importa y afrontar la adolescencia con confianza y herramientas emocionales reales.",
+   conexion: {
+  title: "Del Caos a la Conexión | Programa para padres de adolescentes",
+  description:
+    "¿Tu hijo adolescente se ha alejado y ya no sabés cómo comunicarte? Este programa online te guía paso a paso para reconectar emocionalmente, recuperar la confianza y transformar tu vínculo familiar con herramientas prácticas, apoyo constante y resultados reales.",
+}
 }
 
 };

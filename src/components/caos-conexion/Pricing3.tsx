@@ -16,7 +16,7 @@ const Pricing3 = () => {
   return (
     <div className="space-y-16">
       {/* Sección principal del programa */}
-      <section id="parent-program" className="py-16 md:py-24 px-4 sm:px-0 relative overflow-hidden bg-gradient-to-br from-white to-brand-beige/10">
+      <section id="pricing" className="py-16 md:py-24 px-4 sm:px-0 relative overflow-hidden bg-gradient-to-br from-white to-brand-beige/10">
         {/* Efectos de fondo modernos */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 right-0 w-60 h-60 md:w-80 md:h-80 bg-brand-teal/5 rounded-full blur-[80px] md:blur-[100px] animate-float"></div>
