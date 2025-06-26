@@ -68,15 +68,15 @@ const Intro3 = () => {
           {/* Destacado central con imagen de degradado */}
           <div className="relative my-12 sm:my-20 rounded-3xl overflow-hidden">
             <div 
-              className="absolute inset-0 bg-cover bg-center opacity-40"
+              className="absolute inset-0 bg-cover bg-center opacity-70"
               style={{
-                backgroundImage: `url(https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-4.1.0&auto=format&fit=crop&w=1800&q=85)`,
+                backgroundImage: `url(imagenes/intro2.avif)`,
               }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-brand-teal/30 via-brand-beige/20 to-brand-coral/40"></div>
             </div>
             
-            <div className="relative bg-white/90 p-8 sm:p-10 text-center border border-gray-200 rounded-3xl">
+            <div className="relative bg-gradient-to-b from-white/50 via-white/80 to-white/50 p-8 sm:p-10 text-center border border-gray-200 rounded-3xl">
               <div className="flex justify-center mb-5 sm:mb-6">
                 <div className="p-3 sm:p-4 bg-brand-beige/10 rounded-full">
                   <Puzzle className="text-brand-beige" size={44} />
