@@ -95,6 +95,11 @@ const Testimonials3 = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
+            {/* Controles del carrusel */}
+            <div className="mt-10 flex justify-center gap-4">
+              <CarouselPrevious className="relative left-0 transform-none -translate-y-0 bg-white/80 hover:bg-brand-teal hover:text-white border border-white/30" />
+              <CarouselNext className="relative right-0 transform-none -translate-y-0 bg-white/80 hover:bg-brand-teal hover:text-white border border-white/30" />
+            </div>
           </Carousel>
         </div>
 

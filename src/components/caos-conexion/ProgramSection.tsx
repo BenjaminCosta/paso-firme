@@ -111,16 +111,19 @@ const ProgramSection = () => {
 
           {/* CTA Elegante mejorado */}
           <div className="text-center">
-            <Button
-              size="lg"
-              className="relative overflow-hidden bg-gradient-to-r from-brand-teal to-brand-coral text-white px-14 py-6 text-lg font-medium tracking-wide rounded-full transition-all duration-300 hover:shadow-xl group"
-            >
-              <span className="relative z-10 flex items-center justify-center gap-3">
-                Iniciar mi transformación familiar
-                <ArrowRight className="transition-all duration-300 group-hover:translate-x-2" size={20} />
-              </span>
-              <span className="absolute inset-0 bg-gradient-to-r from-brand-coral to-brand-teal opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-            </Button>
+           {/* Versión IDÉNTICA al original pero con ajustes mobile-only */}
+<div className="text-center mt-12 sm:mt-16 px-4 sm:px-0">
+  <Button
+    size="lg"
+    className="relative overflow-hidden bg-gradient-to-r from-brand-teal to-brand-coral text-white px-8 sm:px-14 py-5 sm:py-6 text-lg font-medium tracking-wide rounded-full transition-all duration-300 hover:shadow-xl group mx-auto max-w-[90vw] sm:max-w-none"
+  >
+    <span className="relative z-10 flex items-center justify-center gap-3 whitespace-nowrap">
+      Iniciar mi transformación familiar
+      <ArrowRight className="transition-all duration-300 group-hover:translate-x-2" size={20} />
+    </span>
+    <span className="absolute inset-0 bg-gradient-to-r from-brand-coral to-brand-teal opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+  </Button>
+</div>
             
             <p className="mt-6 text-gray-500 text-sm flex items-center justify-center gap-2">
               <span className="inline-flex w-3 h-3 rounded-full bg-gradient-to-r from-brand-teal to-brand-coral animate-pulse"></span>

@@ -12,33 +12,8 @@ const Facilitator3 = () => {
 
       <div className="max-w-7xl mx-auto relative">
         <div className="flex flex-col gap-12 items-center lg:flex-row-reverse">
-          {/* Columna de imagen */}
-          <div className="lg:w-1/2 relative">
-            <div className="relative group">
-              {/* Efecto de borde animado */}
-              <div className="absolute -inset-2 rounded-3xl bg-gradient-to-br from-brand-teal/30 to-brand-coral/20 opacity-70 group-hover:opacity-100 blur-md transition-all duration-500" />
-              
-              {/* Contenedor principal de imagen */}
-              <div className="relative rounded-2xl overflow-hidden border-2 border-white shadow-2xl transform group-hover:-translate-y-2 transition-transform duration-300">
-                <div className="aspect-[4/5] w-full bg-gray-100 flex items-center justify-center">
-                  <img 
-                    src="/imagenes/facilitadora3.jpeg" 
-                    alt="Olivia Rodríguez"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                
-                {/* Badge de experiencia premium */}
-                <div className="absolute -bottom-2 -right-2 bg-gradient-to-r from-brand-teal to-brand-coral text-white px-6 py-3 rounded-xl shadow-lg flex items-center gap-2">
-                  <Sparkles className="h-4 w-4" />
-                  <span className="font-bold">15+ años</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Columna de contenido */}
-          <div className="lg:w-1/2 space-y-8">
+          {/* Columna de contenido - AHORA PRIMERO EN MOBILE */}
+          <div className="lg:w-1/2 space-y-8 order-1 lg:order-2">
             {/* Encabezado */}
             <div className="space-y-4">
               <span className="inline-flex items-center gap-3 px-5 py-2 bg-white rounded-full text-brand-coral text-sm font-bold shadow-sm border border-brand-beige/50">
@@ -115,6 +90,31 @@ const Facilitator3 = () => {
                 </span>
               </span>
             </button>
+          </div>
+
+          {/* Columna de imagen - AHORA DEBAJO EN MOBILE */}
+          <div className="lg:w-1/2 relative order-2 lg:order-1">
+            <div className="relative group">
+              {/* Efecto de borde animado */}
+              <div className="absolute -inset-2 rounded-3xl bg-gradient-to-br from-brand-teal/30 to-brand-coral/20 opacity-70 group-hover:opacity-100 blur-md transition-all duration-500" />
+              
+              {/* Contenedor principal de imagen */}
+              <div className="relative rounded-2xl overflow-hidden border-2 border-white shadow-2xl transform group-hover:-translate-y-2 transition-transform duration-300">
+                <div className="aspect-[4/5] w-full bg-gray-100 flex items-center justify-center">
+                  <img 
+                    src="/imagenes/facilitadora3.jpeg" 
+                    alt="Olivia Rodríguez"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                {/* Badge de experiencia premium */}
+                <div className="absolute -bottom-2 -right-2 bg-gradient-to-r from-brand-teal to-brand-coral text-white px-6 py-3 rounded-xl shadow-lg flex items-center gap-2">
+                  <Sparkles className="h-4 w-4" />
+                  <span className="font-bold">15+ años</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
