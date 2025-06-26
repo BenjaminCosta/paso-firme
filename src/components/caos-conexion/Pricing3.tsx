@@ -172,18 +172,15 @@ const Pricing3 = () => {
   <div className="absolute inset-0 overflow-hidden z-0">
     <div 
       className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1648221350871-e3ae3c8d0f58?w=1600&auto=format&fit=crop&q=85&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fGZhbWlseSUyMHByb2JsZW1zJTIwYWRvbGVzY2VudHxlbnwwfDB8MHx8fDI%3D')] bg-cover bg-center opacity-90"
-      style={{
-        maskImage: 'linear-gradient(to right, rgba(0,0,0,0.8) 30%, transparent 90%)',
-      }}
     />
-    <div className="absolute inset-0 bg-gradient-to-r from-white/60 to-transparent" />
+    <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/50 to-transparent" />
   </div>
 
   <div className="container mx-auto px-4 sm:px-6 max-w-6xl relative z-10">
     <div className="flex flex-col lg:flex-row items-center gap-8">
       
       {/* Contenido principal compacto */}
-      <div className="lg:w-1/2 space-y-6 backdrop-blur-sm bg-white/30 p-8 rounded-2xl border border-white/20 shadow-lg">
+      <div className="lg:w-1/2 space-y-6 backdrop-blur-sm bg-white/50 p-8 rounded-2xl border border-white/20 shadow-lg">
         <div className="inline-flex items-center gap-2 px-4 py-2 bg-white text-brand-coral rounded-full text-lg font-semibold border border-white shadow-sm">
           <AlertTriangle className="w-5 h-5" />
           ¡Última oportunidad!
