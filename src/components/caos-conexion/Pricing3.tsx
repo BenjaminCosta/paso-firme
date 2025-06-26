@@ -160,108 +160,101 @@ const Pricing3 = () => {
 
                 {/* Nota sutil de urgencia */}
                 <p className="text-xs text-center text-gray-500 mt-3">
-                  Sección 7 • Últimos lugares disponibles
+                   Últimos lugares disponibles
                 </p>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
+      <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-br from-white to-brand-beige/10">
+  {/* Fondo con imagen y degradado mejorado */}
+  <div className="absolute inset-0 overflow-hidden z-0">
+    <div 
+      className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1648221350871-e3ae3c8d0f58?w=1600&auto=format&fit=crop&q=85&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fGZhbWlseSUyMHByb2JsZW1zJTIwYWRvbGVzY2VudHxlbnwwfDB8MHx8fDI%3D')] bg-cover bg-center opacity-90"
+      style={{
+        maskImage: 'linear-gradient(to right, rgba(0,0,0,0.8) 30%, transparent 90%)',
+      }}
+    />
+    <div className="absolute inset-0 bg-gradient-to-r from-white/60 to-transparent" />
+  </div>
 
-      {/* Sección CTA de urgencia */}
-      <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-br from-brand-beige/20 to-white">
-        {/* Fondo con imagen de Unsplash y overlay */}
-        <div className="absolute inset-0 overflow-hidden">
-          {/* Imagen de fondo con degradado */}
-          <div 
-            className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80')] bg-cover bg-center"
-            style={{
-              maskImage: 'linear-gradient(to right, rgba(0,0,0,0.5) 0%, transparent 100%)',
-              WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,0.5) 0%, transparent 100%)'
-            }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-white/50 to-white/30"></div>
+  <div className="container mx-auto px-4 sm:px-6 max-w-6xl relative z-10">
+    <div className="flex flex-col lg:flex-row items-center gap-8">
+      
+      {/* Contenido principal compacto */}
+      <div className="lg:w-1/2 space-y-6 backdrop-blur-sm bg-white/30 p-8 rounded-2xl border border-white/20 shadow-lg">
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-white text-brand-coral rounded-full text-lg font-semibold border border-white shadow-sm">
+          <AlertTriangle className="w-5 h-5" />
+          ¡Última oportunidad!
         </div>
 
-        <div className="container mx-auto px-4 sm:px-6 max-w-6xl relative z-10">
-          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-            {/* Contenido de texto */}
-            <div className="md:w-1/2 space-y-6">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-brand-coral/10 to-brand-teal/10 text-brand-coral rounded-full text-lg font-bold border border-brand-coral/10 shadow-sm">
-                <AlertTriangle className="w-4 h-4" />
-                 ¡Aprovecha hoy!
-              </div>
+        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+          <span className="text-brand-coral text-5xl">No</span> esperes más
+        </h2>
 
-              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-                ¡No esperes a que sea demasiado tarde!
-              </h2>
+        <ul className="space-y-3 text-lg font-semibold text-gray-800">
+          <li className="flex items-start gap-3">
+            <span className="text-brand-coral text-2xl mt-1">•</span>
+            <span>Evitá que tu hijo se cierre emocionalmente</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="text-brand-coral text-2xl mt-1">•</span>
+            <span>Dejá de desgastarte sin herramientas claras</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="text-brand-coral text-2xl mt-1">•</span>
+            <span>Transformá completamente la relación</span>
+          </li>
+        </ul>
 
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start gap-2">
-                  <span className="text-brand-coral">•</span>
-                  <span>A que tu hijo se cierre más…</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-brand-coral">•</span>
-                  <span>A que tú te sigas desgastando emocionalmente sin herramientas claras.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-brand-coral">•</span>
-                  <span>Este programa no solo mejora la relación con tu adolescente…</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-brand-coral">•</span>
-                  <span>la puede transformar por completo.</span>
-                </li>
-              </ul>
-
-              <div className="flex flex-col sm:flex-row sm:items-center gap-4 pt-4">
-                <div className="flex items-center gap-2 text-sm font-medium text-gray-700">
-                  <span className="bg-brand-teal/10 p-1.5 rounded-full">
-                    <Zap className="w-4 h-4 text-brand-teal" />
-                  </span>
-                   Últimos lugares disponibles
-                </div>
-                <div className="flex items-center gap-2 text-sm font-medium text-gray-700">
-                  <span className="bg-brand-coral/10 p-1.5 rounded-full">
-                    <MessageSquare className="w-4 h-4 text-brand-coral" />
-                  </span>
-                   Accede hoy y comienza el cambio
-                </div>
-              </div>
-            </div>
-
-            {/* Tarjeta CTA con glassmorphism */}
-            <div className="md:w-1/2">
-              <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-brand-teal/30 to-brand-coral/20 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-500"></div>
-                <div className="relative bg-white/90 backdrop-blur-sm p-8 rounded-xl border border-white shadow-xl hover:shadow-2xl transition-all duration-300">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                    Comienza a recuperar lo más valioso:
-                  </h3>
-                  <p className="text-xl font-semibold text-brand-teal mb-6">
-                    el vínculo con tu hijo o hija.
-                  </p>
-
-                  <Button 
-                    className="w-full py-6 bg-gradient-to-r from-brand-teal to-brand-coral hover:from-brand-teal/90 hover:to-brand-coral/90 text-white font-bold text-lg shadow-lg hover:shadow-xl transition-all group"
-                    size="lg"
-                  >
-                    <span className="flex items-center justify-center gap-2">
-                      <Zap></Zap> Inscribirme ahora y comenzar el cambio
-                      <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                    </span>
-                  </Button>
-
-                  <p className="text-xs text-center text-gray-500 mt-4">
-                    Garantía de satisfacción • Cancelación flexible
-                  </p>
-                </div>
-              </div>
-            </div>
+        <div className="grid grid-cols-2 gap-3 pt-4">
+          <div className="flex items-center gap-2 text-lg font-medium text-gray-700 bg-white/80 p-2 rounded-lg">
+            <Zap className="w-4 h-4 text-brand-teal" />
+            Últimos lugares
+          </div>
+          <div className="flex items-center gap-2 text-lg font-medium text-gray-700 bg-white/80 p-2 rounded-lg">
+            <MessageSquare className="w-4 h-4 text-brand-coral" />
+            Comenzá hoy
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* Tarjeta CTA con glassmorphism */}
+      <div className="lg:w-1/2 mt-6 lg:mt-0">
+        <div className="relative group">
+          <div className="absolute -inset-1 bg-gradient-to-r from-brand-teal/40 to-brand-coral/30 rounded-2xl blur opacity-80 group-hover:opacity-100 transition duration-500"></div>
+          <div className="relative bg-white/80 backdrop-blur-md p-8 rounded-xl border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300">
+            <h3 className="text-2xl font-bold text-gray-900 mb-3">
+              Recuperá lo más valioso:
+            </h3>
+            <p className="font-dancing text-3xl text-brand-coral mb-5">
+              Tu Conexión Familiar
+            </p>
+
+            <Button 
+              className="w-full py-5 bg-gradient-to-r from-brand-teal to-brand-coral hover:from-brand-teal/90 hover:to-brand-coral/90 text-white font-bold text-lg shadow-md hover:shadow-lg transition-all group"
+              size="lg"
+            >
+              <span className="flex items-center justify-center gap-2">
+                <Zap className="w-5 h-5" /> 
+                <span>Iniciar transformación</span>
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+              </span>
+            </Button>
+
+            <p className="text-xs text-center text-gray-500 mt-4">
+              Cupos Limitados • Inscripcion Abierta
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+
     </div>
   );
 };

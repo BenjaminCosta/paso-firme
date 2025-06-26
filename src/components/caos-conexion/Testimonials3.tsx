@@ -95,25 +95,10 @@ const Testimonials3 = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-
-            {/* Controles del carrusel */}
-            <div className="mt-10 flex justify-center gap-4">
-              <CarouselPrevious className="relative left-0 transform-none -translate-y-0 bg-white/80 hover:bg-brand-teal hover:text-white border border-white/30" />
-              <CarouselNext className="relative right-0 transform-none -translate-y-0 bg-white/80 hover:bg-brand-teal hover:text-white border border-white/30" />
-            </div>
           </Carousel>
         </div>
 
-        {/* CTA */}
-        <div className="text-center mt-20">
-          <button className="inline-flex items-center justify-center px-12 py-6 bg-gradient-to-r from-brand-teal to-brand-coral hover:from-brand-teal/90 hover:to-brand-coral/90 text-white font-semibold rounded-xl shadow-2xl hover:shadow-[0_10px_30px_-5px_rgba(6,148,162,0.3)] transition-all group relative overflow-hidden">
-            <span className="absolute inset-0 bg-gradient-to-r from-brand-teal/80 to-brand-coral/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <span className="relative z-10 flex items-center gap-3">
-              <span className="text-lg">Yo también quiero vivir esta transformación</span>
-              <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform duration-200" />
-            </span>
-          </button>
-        </div>
+
       </div>
     </section>
   );

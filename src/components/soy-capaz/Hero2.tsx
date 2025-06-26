@@ -128,29 +128,48 @@ const Hero2 = ({ onScrollToSection }: HeroSectionProps) => {
       {/* Contenido principal - alineado a la izquierda */}
       <div className="container mx-auto h-full flex flex-col justify-center items-start text-left px-4 pt-20 relative z-30">
         <div className="max-w-4xl animate-fade-in ml-0 md:ml-8 lg:ml-16">
-           {/* Título o logo responsive */}
-    <div className="mb-6 sm:mb-8 relative">
-      {/* Título principal con efecto de gradiente */}
-      <h1 className="text-5xl xs:text-6xl sm:text-7xl md:text-8xl font-bold text-white [text-shadow:_0_3px_12px_rgba(0,0,0,0.8)] relative z-10 leading-tight">
-        ¡Soy Capaz!
-      </h1>
+           <div className="mb-6 sm:mb-8 relative">
+  {/* Título principal */}
+  <h1 className="text-5xl xs:text-6xl sm:text-7xl md:text-8xl font-bold text-white [text-shadow:_0_3px_12px_rgba(0,0,0,0.8)] relative z-10 leading-tight">
+    ¡Soy Capaz!
+  </h1>
 
-      {/* Subtítulo mejorado */}
-      <div className="mt-3 sm:mt-4 pl-2 relative">
-        {/* Línea decorativa izquierda */}
-        <div className="absolute left-0 top-1/2 h-3/4 w-1 bg-gradient-to-b from-brand-purple to-brand-coral transform -translate-y-1/2 rounded-full"></div>
-        
-        <span className="text-2xl xs:text-3xl sm:text-3xl md:text-4xl font-bold text-white pl-3 sm:pl-4 tracking-wider relative inline-block">
-          <span className="relative italic z-10">Habilidades para la vida</span>
-          {/* Efecto de subrayado decorativo */}
-          <span className="absolute bottom-0 left-3 sm:left-4 h-1 sm:h-2 w-full bg-brand-beige/40 -z-0" style={{transform: 'skewX(-15deg)'}}></span>
+  {/* Subtítulo en mobile: subrayado palabra por palabra */}
+  <div className="mt-3 sm:mt-4 pl-2 relative flex flex-wrap gap-x-2 lg:hidden">
+    {/* Línea decorativa izquierda */}
+    <div className="absolute left-0 top-1/2 h-3/4 w-1 bg-gradient-to-b from-brand-purple to-brand-coral transform -translate-y-1/2 rounded-full"></div>
+
+    {["Habilidades", "para", "la", "vida", "adolescente"].map((word, index) => (
+      <span key={index} className="relative inline-block">
+        <span className="relative z-10 italic text-xl xs:text-2xl sm:text-3xl font-bold text-white">
+          {word}
         </span>
-      </div>
+        <span
+          className="absolute bottom-0 left-0 h-1 sm:h-1.5 w-full bg-brand-beige/40 -z-0"
+          style={{ transform: 'skewX(-15deg)' }}
+        ></span>
+      </span>
+    ))}
+  </div>
 
-      {/* Elementos decorativos */}
-      <div className="absolute -top-4 -left-4 w-16 h-16 rounded-full bg-brand-purple/20 blur-xl z-0"></div>
-      <div className="absolute -bottom-2 -right-4 w-12 h-12 rounded-full bg-brand-coral/20 blur-xl z-0"></div>
-    </div>
+  {/* Subtítulo en pantallas grandes: subrayado global */}
+  <div className="hidden lg:block mt-4 pl-2 relative">
+    <div className="absolute left-0 top-1/2 h-3/4 w-1 bg-gradient-to-b from-brand-purple to-brand-coral transform -translate-y-1/2 rounded-full"></div>
+    
+    <span className="text-4xl font-bold text-white pl-4 tracking-wider relative inline-block">
+      <span className="relative italic z-10">Habilidades para la vida adolescente</span>
+      <span
+        className="absolute bottom-0 left-0 h-2 w-full bg-brand-beige/40 -z-0"
+        style={{ transform: 'skewX(-15deg)' }}
+      ></span>
+    </span>
+  </div>
+
+  {/* Elementos decorativos */}
+  <div className="absolute -top-4 -left-4 w-16 h-16 rounded-full bg-brand-purple/20 blur-xl z-0"></div>
+  <div className="absolute -bottom-2 -right-4 w-12 h-12 rounded-full bg-brand-coral/20 blur-xl z-0"></div>
+</div>
+
           {/* Subtítulos con texto más grande y sombra más marcada */}
           <p
             className="text-base md:text-xl text-white mb-4 font-medium [text-shadow:_0_2px_6px_rgba(0,0,0,0.7)]"
