@@ -1,35 +1,40 @@
-import { 
-  Calendar, 
-  Clock, 
-  Users, 
-  Video, 
+import {
+  Calendar,
+  Clock,
+  Users,
+  Video,
   MessageSquare,
   Gift,
   AlertTriangle,
   ArrowRight,
-  Zap
+  Zap,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import useSheetData4 from "@/hooks/useSheetData4";
 
 const Pricing3 = () => {
+  const { data, loading, error } = useSheetData4();
+
+  const item = data[0];
+
   return (
     <div className="space-y-16">
-      {/* Sección principal del programa */}
-      <section id="pricing" className="py-16 md:py-24 px-4 sm:px-0 relative overflow-hidden bg-gradient-to-br from-white to-brand-beige/10">
-        {/* Efectos de fondo modernos */}
+      <section
+        id="pricing"
+        className="py-16 md:py-24 px-4 sm:px-0 relative overflow-hidden bg-gradient-to-br from-white to-brand-beige/10"
+      >
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 right-0 w-60 h-60 md:w-80 md:h-80 bg-brand-teal/5 rounded-full blur-[80px] md:blur-[100px] animate-float"></div>
-          <div className="absolute bottom-0 left-0 w-60 h-60 md:w-80 md:h-80 bg-brand-coral/5 rounded-full blur-[80px] md:blur-[100px] animate-float-delay"></div>
-          <div className="absolute top-1/2 left-1/4 w-40 h-40 bg-brand-beige/5 rounded-full blur-[70px] animate-float-rotate"></div>
+          <div className="absolute top-0 right-0 w-60 h-60 md:w-80 md:h-80 bg-brand-teal/5 rounded-full blur-[80px] md:blur-[100px] animate-float" />
+          <div className="absolute bottom-0 left-0 w-60 h-60 md:w-80 md:h-80 bg-brand-coral/5 rounded-full blur-[80px] md:blur-[100px] animate-float-delay" />
+          <div className="absolute top-1/2 left-1/4 w-40 h-40 bg-brand-beige/5 rounded-full blur-[70px] animate-float-rotate" />
         </div>
 
         <div className="container mx-auto px-2 md:px-4 max-w-4xl relative z-10">
-          {/* Encabezado */}
           <div className="text-center mb-12 md:mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 md:px-5 md:py-2.5 bg-gradient-to-r from-brand-teal/10 to-brand-coral/10 text-brand-teal rounded-full text-xs md:text-sm font-bold mb-4 md:mb-5 border border-brand-teal/10 shadow-sm">
               <Zap className="w-3 h-3 md:w-4 md:h-4" />
-              ÚLTIMOS LUGARES DISPONIBLES
+              Últimos lugares disponibles
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-3 md:mb-4">
               <span className="bg-gradient-to-r from-brand-teal to-brand-coral bg-clip-text text-transparent">
@@ -41,32 +46,28 @@ const Pricing3 = () => {
             </p>
           </div>
 
-          {/* Tarjeta de detalles */}
           <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-brand-teal/20 to-brand-coral/15 rounded-3xl blur opacity-70 group-hover:opacity-90 transition duration-500"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-brand-teal/20 to-brand-coral/15 rounded-3xl blur opacity-70 group-hover:opacity-90 transition duration-500" />
             <Card className="relative bg-white/95 backdrop-blur-sm border border-gray-200/80 shadow-xl hover:shadow-2xl transition-all duration-300 group-hover:-translate-y-1.5 overflow-hidden">
-              {/* Banda de urgencia sutil */}
               <div className="absolute top-0 right-0 bg-gradient-to-l from-brand-coral to-brand-teal text-white text-xs font-bold px-3 py-1 transform translate-x-8 translate-y-2 rotate-45 scale-110">
                 INSCRIPCIONES ABIERTAS
               </div>
-              
               <CardContent className="p-6 sm:p-8">
-                {/* Encabezado de la tarjeta */}
                 <div className="flex items-start gap-5 mb-6">
                   <div className="p-3.5 bg-gradient-to-br from-brand-teal/10 to-brand-coral/10 rounded-xl shadow-inner">
                     <Users className="w-7 h-7 text-brand-teal" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900">Programa para Padres de Adolescentes</h3>
+                    <h3 className="text-2xl font-bold text-gray-900">
+                      Programa para Padres de Adolescentes
+                    </h3>
                     <p className="text-gradient bg-gradient-to-r from-brand-teal to-brand-coral bg-clip-text text-transparent font-medium">
                       Modalidad en línea con acompañamiento
                     </p>
                   </div>
                 </div>
 
-                {/* Grid de detalles */}
                 <div className="grid md:grid-cols-2 gap-6 mb-8">
-                  {/* Columna izquierda (teal) */}
                   <div className="space-y-4">
                     <div className="flex items-start gap-4">
                       <div className="p-2 bg-brand-teal/10 rounded-lg shadow-sm">
@@ -74,7 +75,7 @@ const Pricing3 = () => {
                       </div>
                       <div>
                         <h4 className="font-semibold text-gray-900">Fecha de inicio</h4>
-                        <p className="text-gray-700">Jueves 31 de julio de 2025</p>
+                        <p className="text-gray-700">{item?.fecha}</p>
                       </div>
                     </div>
 
@@ -84,7 +85,7 @@ const Pricing3 = () => {
                       </div>
                       <div>
                         <h4 className="font-semibold text-gray-900">Duración</h4>
-                        <p className="text-gray-700">10 semanas (1 sesión por semana)</p>
+                        <p className="text-gray-700">{item?.duracion}</p>
                       </div>
                     </div>
 
@@ -94,12 +95,11 @@ const Pricing3 = () => {
                       </div>
                       <div>
                         <h4 className="font-semibold text-gray-900">Modalidad</h4>
-                        <p className="text-gray-700">En línea (Zoom)</p>
+                        <p className="text-gray-700">{item?.modalidad}</p>
                       </div>
                     </div>
                   </div>
 
-                  {/* Columna derecha (coral) */}
                   <div className="space-y-4">
                     <div className="flex items-start gap-4">
                       <div className="p-2 bg-brand-coral/10 rounded-lg shadow-sm">
@@ -133,7 +133,6 @@ const Pricing3 = () => {
                   </div>
                 </div>
 
-                {/* Sección de inversión */}
                 <div className="mb-6">
                   <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
                     <div>
@@ -149,25 +148,20 @@ const Pricing3 = () => {
                   </div>
                 </div>
 
-                {/* Botón CTA principal */}
-                <Button 
-                  className="w-full py-5 bg-gradient-to-r from-brand-teal to-brand-coral hover:from-brand-teal/90 hover:to-brand-coral/90 text-white font-bold shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 group"
-                  size="lg"
-                >
+                <Button className="w-full py-5 bg-gradient-to-r from-brand-teal to-brand-coral hover:from-brand-teal/90 hover:to-brand-coral/90 text-white font-bold shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 group" size="lg">
                   <span className="text-base">Quiero asegurar mi lugar ahora</span>
                   <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </Button>
 
-                {/* Nota sutil de urgencia */}
                 <p className="text-xs text-center text-gray-500 mt-3">
-                   Últimos lugares disponibles
+                  Últimos lugares disponibles
                 </p>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
-      <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-br from-white to-brand-beige/10">
+       <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-br from-white to-brand-beige/10">
   {/* Fondo con imagen y degradado mejorado */}
   <div className="absolute inset-0 overflow-hidden z-0">
     <div 
@@ -249,8 +243,6 @@ const Pricing3 = () => {
     </div>
   </div>
 </section>
-
-      
 
     </div>
   );

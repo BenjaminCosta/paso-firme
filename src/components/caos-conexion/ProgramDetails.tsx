@@ -85,19 +85,19 @@ const ProgramDetails = () => {
               <p className="text-lg sm:text-xl text-gray-700 mb-6 sm:mb-8 max-w-xl sm:max-w-2xl mx-auto leading-relaxed">
                 Este programa te dará <span className="font-semibold text-brand-teal">herramientas claras</span> para reconectar con tu adolescente, establecer <span className="font-semibold text-brand-coral">límites saludables</span> y construir una relación más fuerte.
               </p>
-             <Button
+           <Button
   size="lg"
-  className="bg-gray-900 text-white px-10 sm:px-14 py-10 sm:py-6 text-lg sm:text-xl font-bold rounded-full hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl"
+  className="bg-gray-900 text-white px-6 sm:px-14 py-5 sm:py-6 text-base sm:text-xl font-bold rounded-full hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl w-full max-w-xs sm:max-w-2xl mx-auto"
 >
-  <span className="flex flex-wrap items-center gap-3 justify-center text-center">
+  <span className="flex flex-wrap items-center justify-center text-center gap-2 leading-tight">
     Quiero transformar mi <wbr />relación familiar
-   <ArrowRight
-  className="hidden sm:inline-block transition-all duration-300 group-hover:translate-x-1"
-  size={20}
-/>
-
+    <ArrowRight
+      className="hidden sm:inline-block transition-all duration-300 group-hover:translate-x-1"
+      size={20}
+    />
   </span>
 </Button>
+
 
             </div>
           </div>
