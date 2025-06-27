@@ -115,7 +115,7 @@ const ProgramSection = () => {
 <div className="text-center mt-12 sm:mt-16 px-4 sm:px-0">
   <Button
     size="lg"
-    className="relative overflow-hidden bg-gradient-to-r from-brand-teal to-brand-coral text-white px-8 sm:px-14 py-5 sm:py-6 text-lg font-medium tracking-wide rounded-full transition-all duration-300 hover:shadow-xl group mx-auto max-w-[90vw] sm:max-w-none"
+    className="relative overflow-hidden bg-gradient-to-r from-brand-teal to-brand-coral text-white px-8 sm:px-14 py-5 sm:py-6 text-base sm:text-lg font-medium tracking-wide rounded-full transition-all duration-300 hover:shadow-xl group mx-auto max-w-[90vw] sm:max-w-none"
   >
     <span className="relative z-10 flex items-center justify-center gap-3 whitespace-nowrap">
       Iniciar mi transformación familiar

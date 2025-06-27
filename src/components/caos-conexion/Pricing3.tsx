@@ -161,7 +161,7 @@ const Pricing3 = () => {
           </div>
         </div>
       </section>
-       <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-br from-white to-brand-beige/10">
+      <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-br from-white to-brand-beige/10">
   {/* Fondo con imagen y degradado mejorado */}
   <div className="absolute inset-0 overflow-hidden z-0">
     <div 
@@ -187,15 +187,15 @@ const Pricing3 = () => {
         <ul className="space-y-3 text-lg font-semibold text-gray-800">
           <li className="flex items-start gap-3">
             <span className="text-brand-coral text-2xl mt-1">•</span>
-            <span>Evitá que tu hijo se cierre emocionalmente</span>
+            <span>Evita que tu hijo se cierre emocionalmente</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-brand-coral text-2xl mt-1">•</span>
-            <span>Dejá de desgastarte sin herramientas claras</span>
+            <span>Deja de agotarte sin herramientas claras</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-brand-coral text-2xl mt-1">•</span>
-            <span>Transformá completamente la relación</span>
+            <span>Transforma por completo la relación</span>
           </li>
         </ul>
 
@@ -206,7 +206,7 @@ const Pricing3 = () => {
           </div>
           <div className="flex items-center gap-2 text-lg font-medium text-gray-700 bg-white/80 p-2 rounded-lg">
             <MessageSquare className="w-4 h-4 text-brand-coral" />
-            Comenzá hoy
+            Comienza hoy
           </div>
         </div>
       </div>
@@ -217,7 +217,7 @@ const Pricing3 = () => {
           <div className="absolute -inset-1 bg-gradient-to-r from-brand-teal/40 to-brand-coral/30 rounded-2xl blur opacity-80 group-hover:opacity-100 transition duration-500"></div>
           <div className="relative bg-white/80 backdrop-blur-md p-8 rounded-xl border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300">
             <h3 className="text-2xl font-bold text-gray-900 mb-3">
-              Recuperá lo más valioso:
+              Recupera lo más valioso:
             </h3>
             <p className="font-dancing text-3xl text-brand-coral mb-5">
               Tu Conexión Familiar
@@ -235,7 +235,7 @@ const Pricing3 = () => {
             </Button>
 
             <p className="text-xs text-center text-gray-500 mt-4">
-              Cupos Limitados • Inscripcion Abierta
+              Cupos limitados • Inscripción abierta
             </p>
           </div>
         </div>
@@ -243,6 +243,7 @@ const Pricing3 = () => {
     </div>
   </div>
 </section>
+
 
     </div>
   );

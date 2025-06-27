@@ -147,7 +147,10 @@ const Hero3 = ({ onScrollToSection }: HeroSectionProps) => {
           {/* Destacado con fondo más opaco */}
           <div className="bg-white/30 rounded-xl p-2 md:p-4 mb-8 inline-block shadow-xl backdrop-blur-lg border border-white">
             <p className="text-white font-semibold text-sm md:text-base">
-              ✅ Si sentís que tu hijo se alejó y ya no sabés cómo comunicarte, este programa es para ti
+
+  🌪️Si sientes que tu hijo se alejó y ya no sabes cómo comunicarte,❤️‍🩹 este programa es para ti
+
+
             </p>
           </div>
 

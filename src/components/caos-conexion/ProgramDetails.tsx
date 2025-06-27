@@ -35,7 +35,7 @@ const ProgramDetails = () => {
             <ModernFeatureCard
               icon={<Calendar className="text-brand-teal" size={28} />}
               title="Sesiones Semanales"
-              description="10 encuentros en vivo via Zoom, los jueves"
+              description="10 encuentros en vivo via Zoom"
               color="teal"
             />
 
@@ -46,12 +46,13 @@ const ProgramDetails = () => {
               color="coral"
             />
 
-            <ModernFeatureCard
-              icon={<Headphones className="text-brand-beige" size={28} />}
-              title="Acceso 24/7"
-              description="Grabaciones disponibles siempre"
-              color="beige"
-            />
+          <ModernFeatureCard
+  icon={<Headphones className="text-brand-beige" size={28} />}
+  title="Acceso Flexible"
+  description="Revisa las sesiones grabadas cuando lo necesites"
+  color="beige"
+/>
+
 
             <ModernFeatureCard
               icon={<Users className="text-brand-teal" size={28} />}
@@ -87,10 +88,10 @@ const ProgramDetails = () => {
               </p>
            <Button
   size="lg"
-  className="bg-gray-900 text-white px-6 sm:px-14 py-5 sm:py-6 text-base sm:text-xl font-bold rounded-full hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl w-full max-w-xs sm:max-w-2xl mx-auto"
+  className="bg-gray-900 text-white px-6 sm:px-14 py-5 sm:py-6 text-sm sm:text-xl font-bold rounded-full hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl w-full max-w-xs sm:max-w-2xl mx-auto"
 >
   <span className="flex flex-wrap items-center justify-center text-center gap-2 leading-tight">
-    Quiero transformar mi <wbr />relación familiar
+    Quiero transformar mi relación familiar
     <ArrowRight
       className="hidden sm:inline-block transition-all duration-300 group-hover:translate-x-1"
       size={20}
