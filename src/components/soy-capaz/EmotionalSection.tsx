@@ -1,6 +1,12 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
-const EmotionalSection = () => {
+interface HeroSectionProps {
+  onScrollToSection: (id: string) => void;
+}
+
+
+const EmotionalSection = ({ onScrollToSection }: HeroSectionProps) => {
   const señales = [
     { text: "“Todo le frustra.”", color: "from-brand-purple/70 to-brand-purple/40" },
     { text: "“Se encierra en su cuarto y no quiere hablar.”", color: "from-brand-coral/70 to-brand-coral/40" },
@@ -104,7 +110,10 @@ const EmotionalSection = () => {
               </div>
 
               <div className="mt-8">
-                <Button className="w-full py-5 bg-gradient-to-r from-brand-purple to-brand-coral hover:from-brand-purple/90 hover:to-brand-coral/90 text-white text-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 group relative overflow-hidden">
+                
+                <Button 
+                onClick={() => onScrollToSection('pricing')}
+                className="w-full py-5 bg-gradient-to-r from-brand-purple to-brand-coral hover:from-brand-purple/90 hover:to-brand-coral/90 text-white text-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 group relative overflow-hidden">
                   <span className="relative z-10">RESERVA SU CUPO AHORA</span>
                   <span className="absolute inset-0 bg-gradient-to-r from-brand-coral to-brand-purple opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[inherit]" />
                 </Button>

@@ -26,11 +26,11 @@ const SoyCapaz = () => {
       <Nav2 />
       <Hero2 onScrollToSection={scrollToSection} />
       <Section1 onScrollToSection={scrollToSection} />
-      <EmotionalSection />
-      <Modules />
+      <EmotionalSection onScrollToSection={scrollToSection} />
+      <Modules onScrollToSection={scrollToSection} />
       <Facilitator2 />
       <Pricing2 />
-      <FAQSection />
+      <FAQSection onScrollToSection={scrollToSection} />
       <Footer />
     </div>
     </>

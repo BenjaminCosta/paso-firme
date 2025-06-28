@@ -12,6 +12,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import useSheetData4 from "@/hooks/useSheetData4";
+import { Link } from "react-router-dom";
 
 const Pricing3 = () => {
   const { data, loading, error } = useSheetData4();
@@ -148,10 +149,39 @@ const Pricing3 = () => {
                   </div>
                 </div>
 
-                <Button className="w-full py-5 bg-gradient-to-r from-brand-teal to-brand-coral hover:from-brand-teal/90 hover:to-brand-coral/90 text-white font-bold shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 group" size="lg">
-                  <span className="text-base">Quiero asegurar mi lugar ahora</span>
-                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                </Button>
+              {/* Contenedor de botones responsivo */}
+<div className="flex flex-col lg:flex-row gap-4 w-full mt-2">
+  {/* Botón principal */}
+  <Link 
+    to="https://www.familiayformacion.com/tienda/p/soy-capaz-habilidades-para-la-vida-adolescente-ebwrr"
+    className="w-full lg:w-1/2"
+  >
+    <Button 
+      className="w-full py-5 bg-gradient-to-r from-brand-purple to-brand-coral hover:from-brand-purple/90 hover:to-brand-coral/90 text-white font-bold shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 group"
+      size="lg"
+    >
+      <span className="text-base">Quiero asegurar mi lugar</span>
+      <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+    </Button>
+  </Link>
+
+  {/* Botón promoción para parejas */}
+  <Link 
+    to="https://www.familiayformacion.com/tienda/p/soy-capaz-habilidades-para-la-vida-adolescente-ebwrr-9rc7y"
+    className="w-full lg:w-1/2"
+  >
+    <Button 
+      variant="outline"
+      className="w-full border-brand-purple text-brand-purple font-semibold hover:bg-brand-purple/10 transition"
+      size="lg"
+    >
+      Usar promoción para parejas
+    </Button>
+  </Link>
+</div>
+
+
+               
 
                 <p className="text-xs text-center text-gray-500 mt-3">
                   Últimos lugares disponibles
@@ -223,6 +253,7 @@ const Pricing3 = () => {
               Tu Conexión Familiar
             </p>
 
+            <Link to="https://www.familiayformacion.com/tienda/p/soy-capaz-habilidades-para-la-vida-adolescente-ebwrr">
             <Button 
               className="w-full py-5 bg-gradient-to-r from-brand-teal to-brand-coral hover:from-brand-teal/90 hover:to-brand-coral/90 text-white font-bold text-lg shadow-md hover:shadow-lg transition-all group"
               size="lg"
@@ -233,6 +264,7 @@ const Pricing3 = () => {
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </span>
             </Button>
+            </Link>
 
             <p className="text-xs text-center text-gray-500 mt-4">
               Cupos limitados • Inscripción abierta

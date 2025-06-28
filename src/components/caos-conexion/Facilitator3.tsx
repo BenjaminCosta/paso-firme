@@ -1,6 +1,12 @@
 import { Quote, Award, Users, MessageSquare, Heart, Sparkles } from "lucide-react";
+import { Button } from "react-day-picker";
+import { Link } from "react-router-dom";
 
-const Facilitator3 = () => {
+interface HeroSectionProps {
+  onScrollToSection: (id: string) => void;
+}
+
+const Facilitator3 = ({ onScrollToSection }: HeroSectionProps) => {
   return (
     <section className="py-24 px-10 bg-white relative overflow-hidden">
       {/* Efectos de fondo modernos */}
@@ -78,6 +84,7 @@ const Facilitator3 = () => {
             </div>
 
             {/* Botón CTA premium */}
+            <Link to={'https://www.familiayformacion.com/tienda/p/soy-capaz-habilidades-para-la-vida-adolescente-ebwrr'}>
             <button className="mt-6 px-10 py-5 bg-gradient-to-r from-brand-teal to-brand-coral hover:from-brand-teal/90 hover:to-brand-coral/90 text-white font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 group relative overflow-hidden">
               <span className="absolute inset-0 bg-gradient-to-r from-brand-teal/80 to-brand-coral/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <span className="relative z-10 flex items-center justify-center gap-3 text-lg">
@@ -90,6 +97,7 @@ const Facilitator3 = () => {
                 </span>
               </span>
             </button>
+            </Link>
           </div>
 
           {/* Columna de imagen - AHORA DEBAJO EN MOBILE */}

@@ -1,7 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { HeartCrack, CircleAlert, Puzzle, ArrowRight } from "lucide-react";
 
-const Intro3 = () => {
+interface HeroSectionProps {
+  onScrollToSection: (id: string) => void;
+}
+
+const Intro3 = ({ onScrollToSection }: HeroSectionProps) => {
   return (
     <section className="relative py-16 sm:py-20 md:py-24 bg-white overflow-hidden">
       {/* Contenido principal */}
@@ -99,6 +103,7 @@ const Intro3 = () => {
   <Button
     size="lg"
     className="relative overflow-hidden bg-white text-gray-900 px-8 sm:px-14 py-8 sm:py-6 text-lg sm:text-xl font-bold rounded-full transition-transform duration-300 hover:scale-[1.03] shadow-lg hover:shadow-xl border-2 border-brand-teal group"
+    onClick={() => onScrollToSection('pricing')}
   >
     <span className="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
       <span className="sm:inline-block">Descubre las herramientas</span>

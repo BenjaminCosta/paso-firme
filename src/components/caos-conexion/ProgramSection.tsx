@@ -1,7 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Check, Heart, MessageSquare, Shield, Eye, HandHeart, ArrowRight } from "lucide-react";
 
-const ProgramSection = () => {
+interface HeroSectionProps {
+  onScrollToSection: (id: string) => void;
+}
+
+const ProgramSection = ({ onScrollToSection }: HeroSectionProps) => {
   return (
     <section className="relative py-20 overflow-hidden bg-white">
       {/* Fondo con textura y gradiente mejorado */}
@@ -116,6 +120,7 @@ const ProgramSection = () => {
   <Button
     size="lg"
     className="relative overflow-hidden bg-gradient-to-r from-brand-teal to-brand-coral text-white px-8 sm:px-14 py-5 sm:py-6 text-base sm:text-lg font-medium tracking-wide rounded-full transition-all duration-300 hover:shadow-xl group mx-auto max-w-[90vw] sm:max-w-none"
+    onClick={() => onScrollToSection('pricing')}
   >
     <span className="relative z-10 flex items-center justify-center gap-3 whitespace-nowrap">
       Iniciar mi transformación familiar

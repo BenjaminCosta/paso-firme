@@ -28,11 +28,11 @@ const CaosConexion = () => {
     <div className="min-h-screen font-poppins text-text-dark">
       <Nav3 />
       <Hero3 onScrollToSection={scrollToSection} />
-      <Intro3 />
-      <ProgramSection />
+      <Intro3 onScrollToSection={scrollToSection}/>
+      <ProgramSection onScrollToSection={scrollToSection} />
       <Testimonials3 />
-      <Facilitator3 />
-      <ProgramDetails />
+      <Facilitator3 onScrollToSection={scrollToSection} />
+      <ProgramDetails onScrollToSection={scrollToSection}/>
       <Pricing3 />
       <Footer />
     </div>

@@ -7,8 +7,12 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+interface HeroSectionProps {
+  onScrollToSection: (id: string) => void;
+}
 
-const FAQSection = () => {
+const FAQSection = ({ onScrollToSection }: HeroSectionProps) => {
   return (
     <div className="w-full">
       {/* SECCIÓN FAQ - CON FONDO MODERNO Y ELEGANTE */}
@@ -160,15 +164,19 @@ const FAQSection = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Link to={'https://www.familiayformacion.com/tienda/p/soy-capaz-habilidades-para-la-vida-adolescente'}>
                 <Button
+                  onClick={() => onScrollToSection('pricing')}
                   className="group relative overflow-hidden bg-gradient-to-r from-brand-purple to-brand-coral hover:from-brand-purple/90 hover:to-brand-coral/90 text-white text-lg font-bold py-7 px-10 rounded-xl transition-all transform hover:scale-[1.02] shadow-lg"
                   size="lg"
                 >
                   <span className="relative z-10">INSCRIBIR AHORA</span>
                   <span className="absolute inset-0 bg-gradient-to-r from-brand-purple/80 to-brand-coral/80 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </Button>
+                </Link>
 
                 <Button
+                  onClick={() => onScrollToSection('pricing')}
                   variant="outline"
                   className="border-brand-purple text-brand-purple hover:bg-brand-purple/5 text-lg font-semibold py-7 px-8 rounded-xl flex items-center gap-2"
                   size="lg"

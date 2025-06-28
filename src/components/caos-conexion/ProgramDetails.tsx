@@ -1,7 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, Brain, Headphones, Users, Download, MessageSquare, ArrowRight } from "lucide-react";
 
-const ProgramDetails = () => {
+interface HeroSectionProps {
+  onScrollToSection: (id: string) => void;
+}
+
+const ProgramDetails = ({ onScrollToSection }: HeroSectionProps) => {
   return (
     <section className="relative py-20 sm:py-28 overflow-hidden bg-gradient-to-br from-white to-gray-50">
       {/* Efectos de fondo modernos */}
@@ -89,6 +93,7 @@ const ProgramDetails = () => {
            <Button
   size="lg"
   className="bg-gray-900 text-white px-6 sm:px-14 py-5 sm:py-6 text-sm sm:text-xl font-bold rounded-full hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl w-full max-w-xs sm:max-w-2xl mx-auto"
+  onClick={() => onScrollToSection('pricing')}
 >
   <span className="flex flex-wrap items-center justify-center text-center gap-2 leading-tight">
     Quiero transformar mi relación familiar

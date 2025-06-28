@@ -1,6 +1,10 @@
 import { Button } from "@/components/ui/button";
 
-const Modules = () => {
+interface HeroSectionProps {
+  onScrollToSection: (id: string) => void;
+}
+
+const Modules = ({ onScrollToSection }: HeroSectionProps) => {
   const modules = [
     {
       day: "DÍA 1",
@@ -143,7 +147,9 @@ const Modules = () => {
     </div>
 
     {/* Botón premium con efecto hover */}
-    <Button className="group relative px-8 py-4 rounded-xl bg-gradient-to-r from-brand-purple to-brand-coral text-white font-semibold tracking-wide overflow-hidden transition-all duration-500 shadow-lg hover:shadow-xl hover:scale-[1.02]">
+    <Button 
+    onClick={() => onScrollToSection('pricing')}
+    className="group relative px-8 py-4 rounded-xl bg-gradient-to-r from-brand-purple to-brand-coral text-white font-semibold tracking-wide overflow-hidden transition-all duration-500 shadow-lg hover:shadow-xl hover:scale-[1.02]">
       <span className="relative z-10 flex items-center">
         Quiero más información
         <svg className="ml-3 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
