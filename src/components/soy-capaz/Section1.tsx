@@ -66,7 +66,7 @@ const Section1 = ({ onScrollToSection }: IntroProps) => {
         {/* Encabezado */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block bg-brand-purple/10 text-brand-purple text-sm font-semibold px-5 py-2 rounded-full mb-4">
-            TALLER PARA ADOLESCENTES
+            CURSO PARA ADOLESCENTES
           </span>
           <h1 className="text-4xl md:text-5xl font-bold mb-5 leading-tight">
             <span className="bg-gradient-to-r from-brand-purple to-brand-coral bg-clip-text text-transparent">
@@ -122,7 +122,7 @@ const Section1 = ({ onScrollToSection }: IntroProps) => {
 
           <div className="p-8 md:p-12 text-white">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl font-bold mb-10 text-center">¿Qué aprenderá en este taller?</h2>
+              <h2 className="text-3xl font-bold mb-10 text-center">¿Qué aprenderá en este curso?</h2>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {solutions.map((item, index) => (

@@ -28,7 +28,7 @@ const Pricing2 = () => {
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-3 md:mb-4">
             <span className="bg-gradient-to-r from-brand-purple to-brand-coral bg-clip-text text-transparent">
-              Programa para Adolescentes
+              Curso para Adolescentes
             </span>
           </h2>
           <p className="text-base md:text-lg text-gray-700 max-w-2xl mx-auto">
