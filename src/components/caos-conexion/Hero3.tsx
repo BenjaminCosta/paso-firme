@@ -10,7 +10,7 @@ const Hero3 = ({ onScrollToSection }: HeroSectionProps) => {
 
   const carouselImages = [
   {
-    url: 'https://images.unsplash.com/photo-1629360046014-c8c91b6c2881?w=1600&auto=format&fit=crop&q=85&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTR8fGZhbWlseSUyMHByb2JsZW1zJTIwYWRvbGVzY2VudHxlbnwwfDB8MHx8fDI%3D',
+    url: 'imagenes/galcaos3.jpeg',
     alt: 'Madre e hija adolescente conversando'
   },
   {
@@ -24,10 +24,10 @@ const Hero3 = ({ onScrollToSection }: HeroSectionProps) => {
 ];
 
   const galleryImages = [
-    'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&auto=format&fit=crop&q=85&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dGVlbiUyMHBhcmVudHxlbnwwfHwwfHx8Mg%3D%3D',
+    'https://images.unsplash.com/photo-1524601500432-1e1a4c71d692?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGVlbiUyMGZyaWVuZHN8ZW58MHx8MHx8fDI%3D',
     'https://images.unsplash.com/photo-1484973768669-7fb6b5451095?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fGZhbWlseSUyMHByb2JsZW1zfGVufDB8MHwwfHx8Mg%3D%3D',
     'https://images.unsplash.com/photo-1566888596782-c7f41cc184c5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRlZW4lMjBwYXJlbnR8ZW58MHx8MHx8fDI%3D',
-    'https://images.unsplash.com/photo-1524601500432-1e1a4c71d692?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGVlbiUyMGZyaWVuZHN8ZW58MHx8MHx8fDI%3D'
+    'imagenes/galcaos1.jpeg'
   ];
 
   const rightSideImage = 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&auto=format&fit=crop&q=85&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dGVlbiUyMHBhcmVudHxlbnwwfHwwfHx8Mg%3D%3D';

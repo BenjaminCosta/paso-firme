@@ -22,175 +22,178 @@ const Pricing3 = () => {
   return (
     <div className="space-y-16">
       <section
-        id="pricing"
-        className="py-16 md:py-24 px-4 sm:px-0 relative overflow-hidden bg-gradient-to-br from-white to-brand-beige/10"
-      >
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 right-0 w-60 h-60 md:w-80 md:h-80 bg-brand-teal/5 rounded-full blur-[80px] md:blur-[100px] animate-float" />
-          <div className="absolute bottom-0 left-0 w-60 h-60 md:w-80 md:h-80 bg-brand-coral/5 rounded-full blur-[80px] md:blur-[100px] animate-float-delay" />
-          <div className="absolute top-1/2 left-1/4 w-40 h-40 bg-brand-beige/5 rounded-full blur-[70px] animate-float-rotate" />
-        </div>
+  id="pricing"
+  className="py-16 md:py-24 px-4 sm:px-0 relative overflow-hidden bg-gradient-to-br from-white to-gray-50"
+>
+  {/* Fondos animados más sutiles */}
+  <div className="absolute inset-0 overflow-hidden">
+    <div className="absolute top-10% right-10% w-72 h-72 bg-brand-teal/5 rounded-full blur-[100px] animate-float" />
+    <div className="absolute bottom-10% left-10% w-80 h-80 bg-brand-coral/5 rounded-full blur-[110px] animate-float-delay" />
+    <div className="absolute top-1/3 left-1/3 w-64 h-64 bg-brand-beige/5 rounded-full blur-[90px] animate-float-rotate" />
+  </div>
 
-        <div className="container mx-auto px-2 md:px-4 max-w-4xl relative z-10">
-          <div className="text-center mb-12 md:mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 md:px-5 md:py-2.5 bg-gradient-to-r from-brand-teal/10 to-brand-coral/10 text-brand-teal rounded-full text-xs md:text-sm font-bold mb-4 md:mb-5 border border-brand-teal/10 shadow-sm">
-              <Zap className="w-3 h-3 md:w-4 md:h-4" />
-              Últimos lugares disponibles
-            </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-3 md:mb-4">
-              <span className="bg-gradient-to-r from-brand-teal to-brand-coral bg-clip-text text-transparent">
-                Transforma tu relación con tu adolescente
-              </span>
-            </h2>
-            <p className="text-base md:text-lg text-gray-700 max-w-2xl mx-auto">
-              Programa de acompañamiento para padres con herramientas prácticas
-            </p>
-          </div>
+  <div className="container mx-auto px-2 md:px-4 max-w-5xl relative z-10">
+    <div className="text-center mb-14 md:mb-20">
+      <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-white border-2 border-brand-coral text-brand-coral rounded-full text-sm md:text-base font-bold mb-5 md:mb-6 shadow-sm hover:scale-105 transition-transform duration-300">
+        <Zap className="w-4 h-4 md:w-5 md:h-5" />
+        <span>ÚLTIMA EDICIÓN · PRECIO ESPECIAL</span>
+      </div>
+      <h2 className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-gray-900 mb-4 md:mb-5 leading-tight">
+        <span className="bg-gradient-to-r from-brand-teal to-brand-coral bg-clip-text text-transparent">
+          Transforma tu relación <br className="hidden md:block" />con tu adolescente
+        </span>
+      </h2>
+      <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto font-medium">
+        Programa de acompañamiento para padres con herramientas prácticas
+        <span className="block mt-3 text-brand-coral font-semibold">¡Última oportunidad con este precio exclusivo!</span>
+      </p>
+    </div>
 
-          <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-brand-teal/20 to-brand-coral/15 rounded-3xl blur opacity-70 group-hover:opacity-90 transition duration-500" />
-            <Card className="relative bg-white/95 backdrop-blur-sm border border-gray-200/80 shadow-xl hover:shadow-2xl transition-all duration-300 group-hover:-translate-y-1.5 overflow-hidden">
-              <div className="absolute top-0 right-0 bg-gradient-to-l from-brand-coral to-brand-teal text-white text-xs font-bold px-3 py-1 transform translate-x-8 translate-y-2 rotate-45 scale-110">
+    <div className="relative group">
+      {/* Efecto de borde gradiente moderno */}
+      <div className="absolute -inset-0.5 bg-gradient-to-r from-brand-teal to-brand-coral rounded-3xl opacity-20 blur-sm group-hover:opacity-30 transition duration-500" />
+      
+      <Card className="relative bg-white/95 backdrop-blur-md border border-gray-100 shadow-2xl hover:shadow-3xl transition-all duration-300 group-hover:-translate-y-2 overflow-hidden">
+        {/* Ribbon moderno */}
+        <div className="absolute top-0 right-0 bg-gradient-to-l from-brand-coral to-brand-teal text-white text-xs font-bold px-3 py-1 transform translate-x-8 translate-y-2 rotate-45 scale-110">
                 INSCRIPCIONES ABIERTAS
               </div>
-              <CardContent className="p-6 sm:p-8">
-                <div className="flex items-start gap-5 mb-6">
-                  <div className="p-3.5 bg-gradient-to-br from-brand-teal/10 to-brand-coral/10 rounded-xl shadow-inner">
-                    <Users className="w-7 h-7 text-brand-teal" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900">
-                      Programa para Padres de Adolescentes
-                    </h3>
-                    <p className="text-gradient bg-gradient-to-r from-brand-teal to-brand-coral bg-clip-text text-transparent font-medium">
-                      Modalidad en línea con acompañamiento
-                    </p>
-                  </div>
-                </div>
 
-                <div className="grid md:grid-cols-2 gap-6 mb-8">
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-4">
-                      <div className="p-2 bg-brand-teal/10 rounded-lg shadow-sm">
-                        <Calendar className="w-5 h-5 text-brand-teal" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900">Fecha de inicio</h4>
-                        <p className="text-gray-700">{item?.fecha}</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-4">
-                      <div className="p-2 bg-brand-teal/10 rounded-lg shadow-sm">
-                        <Clock className="w-5 h-5 text-brand-teal" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900">Duración</h4>
-                        <p className="text-gray-700">{item?.duracion}</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-4">
-                      <div className="p-2 bg-brand-teal/10 rounded-lg shadow-sm">
-                        <Video className="w-5 h-5 text-brand-teal" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900">Modalidad</h4>
-                        <p className="text-gray-700">{item?.modalidad}</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-4">
-                      <div className="p-2 bg-brand-coral/10 rounded-lg shadow-sm">
-                        <Video className="w-5 h-5 text-brand-coral" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900">Grabaciones</h4>
-                        <p className="text-gray-700">Disponibles todas las sesiones</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-4">
-                      <div className="p-2 bg-brand-coral/10 rounded-lg shadow-sm">
-                        <MessageSquare className="w-5 h-5 text-brand-coral" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900">Acompañamiento</h4>
-                        <p className="text-gray-700">Grupo de apoyo incluido</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-4">
-                      <div className="p-2 bg-brand-coral/10 rounded-lg shadow-sm">
-                        <Gift className="w-5 h-5 text-brand-coral" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900">Promoción especial</h4>
-                        <p className="text-gray-700">$2,900 para parejas</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mb-6">
-                  <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2">Inversión</h4>
-                      <div className="flex items-end gap-2">
-                        <div className="text-3xl sm:text-4xl font-extrabold text-brand-teal">$2,500 MXN</div>
-                        <div className="text-sm text-gray-500 mb-1">Promoción pareja: $2,900</div>
-                      </div>
-                    </div>
-                    <div className="bg-gradient-to-r from-brand-coral/10 to-brand-teal/10 text-brand-coral text-xs font-bold px-3 py-1.5 rounded-full self-start sm:self-center border border-brand-coral/20">
-                      CUPOS LIMITADOS
-                    </div>
-                  </div>
-                </div>
-
-              {/* Contenedor de botones responsivo */}
-<div className="flex flex-col lg:flex-row gap-4 w-full mt-2">
-  {/* Botón principal */}
-  <Link 
-    to="https://www.familiayformacion.com/tienda/p/soy-capaz-habilidades-para-la-vida-adolescente-ebwrr"
-    className="w-full lg:w-1/2"
-  >
-    <Button 
-      className="w-full py-5 bg-gradient-to-r from-brand-purple to-brand-coral hover:from-brand-purple/90 hover:to-brand-coral/90 text-white font-bold shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 group"
-      size="lg"
-    >
-      <span className="text-base">Quiero asegurar mi lugar</span>
-      <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-    </Button>
-  </Link>
-
-  {/* Botón promoción para parejas */}
-  <Link 
-    to="https://www.familiayformacion.com/tienda/p/soy-capaz-habilidades-para-la-vida-adolescente-ebwrr-9rc7y"
-    className="w-full lg:w-1/2"
-  >
-    <Button 
-      variant="outline"
-      className="w-full border-brand-purple text-brand-purple font-semibold hover:bg-brand-purple/10 transition"
-      size="lg"
-    >
-      Usar promoción para parejas
-    </Button>
-  </Link>
-</div>
-
-
-               
-
-                <p className="text-xs text-center text-gray-500 mt-3">
-                  Últimos lugares disponibles
-                </p>
-              </CardContent>
-            </Card>
+        <CardContent className="p-8 sm:p-10">
+          <div className="flex items-start gap-6 mb-8">
+            <div className="p-4 bg-gradient-to-br from-brand-teal/5 to-brand-coral/5 rounded-2xl shadow-inner border border-gray-100">
+              <Users className="w-8 h-8 text-brand-teal" />
+            </div>
+            <div>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight">
+                Programa para Padres de Adolescentes
+              </h3>
+              <p className="text-gradient bg-gradient-to-r from-brand-teal to-brand-coral bg-clip-text text-transparent font-medium text-lg">
+                Edición limitada · Modalidad en línea
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-10">
+            <div className="space-y-5">
+              <div className="flex items-start gap-5">
+                <div className="p-2.5 bg-brand-teal/5 rounded-xl border border-gray-100 shadow-sm">
+                  <Calendar className="w-6 h-6 text-brand-teal" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 text-lg">Fecha de inicio</h4>
+                  <p className="text-gray-700">{item?.fecha} <span className="text-red-500 font-medium text-sm"></span></p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-5">
+                <div className="p-2.5 bg-brand-teal/5 rounded-xl border border-gray-100 shadow-sm">
+                  <Clock className="w-6 h-6 text-brand-teal" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 text-lg">Duración</h4>
+                  <p className="text-gray-700">{item?.duracion}</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-5">
+                <div className="p-2.5 bg-brand-teal/5 rounded-xl border border-gray-100 shadow-sm">
+                  <Video className="w-6 h-6 text-brand-teal" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 text-lg">Modalidad</h4>
+                  <p className="text-gray-700">{item?.modalidad}</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-5">
+              <div className="flex items-start gap-5">
+                <div className="p-2.5 bg-brand-coral/5 rounded-xl border border-gray-100 shadow-sm">
+                  <Video className="w-6 h-6 text-brand-coral" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 text-lg">Grabaciones</h4>
+                  <p className="text-gray-700">Acceso ilimitado</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-5">
+                <div className="p-2.5 bg-brand-coral/5 rounded-xl border border-gray-100 shadow-sm">
+                  <MessageSquare className="w-6 h-6 text-brand-coral" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 text-lg">Acompañamiento</h4>
+                  <p className="text-gray-700">Grupo privado incluido</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-5">
+                <div className="p-2.5 bg-brand-coral/5 rounded-xl border border-gray-100 shadow-sm">
+                  <Gift className="w-6 h-6 text-brand-coral" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 text-lg">Promoción especial</h4>
+                  <p className="text-gray-700">Descuento para parejas <span className="text-red-500 font-medium text-sm">· Oferta exclusiva</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mb-8">
+            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5 bg-gradient-to-r from-gray-50 to-white/50 p-5 rounded-xl border border-gray-100">
+              <div>
+                <h4 className="font-bold text-gray-900 text-lg mb-3">Inversión final</h4>
+                <div className="flex items-end gap-3">
+                  <div className="text-4xl sm:text-[2.75rem] font-extrabold text-brand-teal">$2,500 MXN</div>
+                  <div className="text-base text-gray-500 mb-1.5">Promoción pareja: $2,900</div>
+                </div>
+                <p className="text-sm text-red-500 font-medium mt-2">
+                  ⚠️ Precio aumentará en la próxima edición
+                </p>
+              </div>
+              <div className="bg-white border-2 border-red-500 text-red-500 text-sm font-bold px-4 py-2 rounded-full self-start sm:self-center shadow-sm hover:scale-105 transition-transform">
+                ¡CUPOS LIMITADOS!
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col lg:flex-row gap-5 w-full">
+            <Link 
+              to="https://www.familiayformacion.com/tienda/p/soy-capaz-habilidades-para-la-vida-adolescente-ebwrr"
+              className="w-full lg:w-1/2"
+            >
+              <Button 
+                className="w-full py-6 bg-gradient-to-r from-brand-purple to-brand-coral hover:from-brand-purple hover:to-brand-coral/90 text-white font-bold text-lg shadow-xl hover:shadow-2xl transition-all flex items-center justify-center gap-3 group hover:scale-[1.02]"
+                size="lg"
+              >
+                <span>Reservar mi lugar ahora</span>
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1.5" />
+              </Button>
+            </Link>
+
+            <Link 
+              to="https://www.familiayformacion.com/tienda/p/soy-capaz-habilidades-para-la-vida-adolescente-ebwrr-9rc7y"
+              className="w-full lg:w-1/2"
+            >
+              <Button 
+                variant="outline"
+                className="w-full py-6 border-2 border-brand-purple text-brand-purple hover:text-white font-semibold text-lg hover:bg-brand-purple transition-all hover:scale-[1.02]"
+                size="lg"
+              >
+                Acceder promoción pareja
+              </Button>
+            </Link>
+          </div>
+
+          <p className="text-sm text-center text-gray-500 mt-5 font-medium">
+            <span className="text-red-500 animate-pulse">✧</span> Las inscripciones cierran al completar los cupos disponibles <span className="text-red-500 animate-pulse">✧</span>
+          </p>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</section>
       <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-br from-white to-brand-beige/10">
   {/* Fondo con imagen y degradado mejorado */}
   <div className="absolute inset-0 overflow-hidden z-0">
