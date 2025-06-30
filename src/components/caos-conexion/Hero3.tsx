@@ -10,7 +10,7 @@ const Hero3 = ({ onScrollToSection }: HeroSectionProps) => {
 
   const carouselImages = [
   {
-    url: 'imagenes/galcaos3.jpeg',
+    url: 'imagenes/galcaos1.jpeg',
     alt: 'Madre e hija adolescente conversando'
   },
   {
@@ -26,8 +26,8 @@ const Hero3 = ({ onScrollToSection }: HeroSectionProps) => {
   const galleryImages = [
     'https://images.unsplash.com/photo-1524601500432-1e1a4c71d692?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGVlbiUyMGZyaWVuZHN8ZW58MHx8MHx8fDI%3D',
     'https://images.unsplash.com/photo-1484973768669-7fb6b5451095?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fGZhbWlseSUyMHByb2JsZW1zfGVufDB8MHwwfHx8Mg%3D%3D',
-    'https://images.unsplash.com/photo-1566888596782-c7f41cc184c5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRlZW4lMjBwYXJlbnR8ZW58MHx8MHx8fDI%3D',
-    'imagenes/galcaos1.jpeg'
+    'imagenes/galcaos2.jpeg',
+    'imagenes/galcaos3.jpeg'
   ];
 
   const rightSideImage = 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&auto=format&fit=crop&q=85&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dGVlbiUyMHBhcmVudHxlbnwwfHwwfHx8Mg%3D%3D';
@@ -82,7 +82,8 @@ const Hero3 = ({ onScrollToSection }: HeroSectionProps) => {
             }}
           />
           {/* Overlay negro más oscuro */}
-          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 bg-black/50" />
+           <div className="absolute inset-0 bg-gradient-to-tr from-brand-teal/25 to-brand-coral/20" />
           
           {/* Overlay de color principal más intenso */}
           <div className="absolute inset-0 bg-gradient-to-l from-white/40 to-transparent" />
