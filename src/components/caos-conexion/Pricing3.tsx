@@ -140,23 +140,25 @@ const Pricing3 = () => {
             </div>
           </div>
 
-          <div className="mb-8">
-            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5 bg-gradient-to-r from-gray-50 to-white/50 p-5 rounded-xl border border-gray-100">
-              <div>
-                <h4 className="font-bold text-gray-900 text-lg mb-3">Inversión final</h4>
-                <div className="flex items-end gap-3">
-                  <div className="text-4xl sm:text-[2.75rem] font-extrabold text-brand-teal">$2,500 MXN</div>
-                  <div className="text-base text-gray-500 mb-1.5">Promoción pareja: $2,900</div>
-                </div>
-                <p className="text-sm text-red-500 font-medium mt-2">
-                  ⚠️ Precio aumentará en la próxima edición
-                </p>
-              </div>
-              <div className="bg-white border-2 border-red-500 text-red-500 text-sm font-bold px-4 py-2 rounded-full self-start sm:self-center shadow-sm hover:scale-105 transition-transform">
-                ¡CUPOS LIMITADOS!
-              </div>
-            </div>
-          </div>
+         <div className="mb-8">
+  <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5 bg-gradient-to-r from-gray-50 to-white/50 p-5 rounded-xl border border-gray-100">
+    <div>
+      <h4 className="font-bold text-gray-900 text-lg mb-3">Inversión final</h4>
+      <div className="flex items-end gap-3">
+        <div className="text-4xl sm:text-[2.75rem] font-extrabold text-brand-teal">$2,500 MXN</div>
+        <div className="text-sm text-gray-500 mb-1">(~$130 USD)</div>
+      </div>
+      <div className="text-base text-gray-500 mb-1.5">Promoción pareja: $2,900 MXN (~$150 USD)</div>
+      <p className="text-sm text-red-500 font-medium mt-2">
+        ⚠️ Precio aumentará en la próxima edición
+      </p>
+    </div>
+    <div className="bg-white border-2 border-red-500 text-red-500 text-sm font-bold px-4 py-2 rounded-full self-start sm:self-center shadow-sm hover:scale-105 transition-transform">
+      ¡CUPOS LIMITADOS!
+    </div>
+  </div>
+</div>
+
 
           <div className="flex flex-col lg:flex-row gap-5 w-full">
             <Link 
@@ -194,6 +196,9 @@ const Pricing3 = () => {
     </div>
   </div>
 </section>
+
+
+
       <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-br from-white to-brand-beige/10">
   {/* Fondo con imagen y degradado mejorado */}
   <div className="absolute inset-0 overflow-hidden z-0">
