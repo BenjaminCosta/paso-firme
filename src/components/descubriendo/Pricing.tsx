@@ -162,7 +162,16 @@ export const Pricing = () => {
 
                     <span className="text-lg text-gray-600">MXN</span>
                   </div>
-                  <p className="text-xs text-gray-500 mt-1">(~${(parseFloat(event.precio) * exchangeRate).toFixed(0)} USD)</p>
+                  <p className="text-xs text-gray-500 mt-1">
+                 {event?.precio ? (
+  <div className="text-sm text-gray-500 mb-1">
+    (~${(parseFloat(event.precio) * exchangeRate).toFixed(0)} USD)
+  </div>
+) : (
+  <div className="text-sm text-gray-400">Precio no disponible</div>
+)}
+
+                  </p>
                   <div className="flex justify-center mt-2">
                     <span className="bg-brand-teal/20 text-brand-teal text-xs font-medium px-2 py-0.5 rounded-full">
                       🔥 Oferta exclusiva
