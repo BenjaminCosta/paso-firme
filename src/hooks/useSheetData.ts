@@ -6,6 +6,7 @@ export interface EventData {
   fecha: string;
   horario: string;
   detalles: string;
+  precio: string; // <-- agregado
 }
 
 const useSheetData = () => {
@@ -16,18 +17,17 @@ const useSheetData = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Usar la API de publicación web de Google Sheets (formato CSV)
         const response = await fetch(
           "https://docs.google.com/spreadsheets/d/e/2PACX-1vS74s6R-490DkeaLQ9WslFVZPEL_JBS6wmmO8qvps0RRPXKkI4q_ahJuZUSl79jxfcLuG8q2_fEeEWz/pub?output=csv"
         );
-        
+
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
 
         const csvData = await response.text();
         const parsedData = parseCSV(csvData);
-        
+
         setData(parsedData);
         setLoading(false);
       } catch (err) {
@@ -43,11 +43,10 @@ const useSheetData = () => {
   return { data, loading, error };
 };
 
-// Función para parsear CSV básico
 const parseCSV = (csvText: string): EventData[] => {
   const lines = csvText.split('\n');
   const headers = lines[0].split(',').map(h => h.trim());
-  
+
   return lines.slice(1).map(line => {
     const values = line.split(',');
     const entry = headers.reduce((obj, header, index) => {
@@ -57,12 +56,13 @@ const parseCSV = (csvText: string): EventData[] => {
 
     return {
       id: entry.id || Math.random().toString(36).substring(2, 9),
-      modalidad: (entry.modalidad?.toLowerCase() === "presencial" 
-        ? "presencial" 
+      modalidad: (entry.modalidad?.toLowerCase() === "presencial"
+        ? "presencial"
         : "online") as "online" | "presencial",
       fecha: entry.fecha || "Fecha no especificada",
       horario: entry.horario || "Horario no especificado",
-      detalles: entry.detalles || ""
+      detalles: entry.detalles || "",
+      precio: entry.precio || "Precio no especificado", // <-- agregado
     };
   });
 };

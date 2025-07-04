@@ -16,23 +16,21 @@ import useSheetData from "@/hooks/useSheetData";
 
 const PricingSection = () => {
   const { data, loading, error } = useSheetData();
-  
+
   const presencial = data.find((d) => d.modalidad === "presencial");
   const online = data.find((d) => d.modalidad === "online");
 
   if (loading) return <div>Cargando eventos...</div>;
   if (error) return <div>Error: {error}</div>;
 
-  // Tasa de conversión aproximada
-  const exchangeRate = 0.06; // 1 MXN = 0.06 USD (ejemplo)
+  const exchangeRate = 0.06;
 
-  // Datos de ubicación
   const ubicacion = {
     nombre: "Club Alera",
     direccion: "Paseo de la Sierra 105, Zona la Alianza",
     cp: "CP 66259",
     ciudad: "San Pedro Garza García, NL.",
-    mapsUrl: "https://maps.app.goo.gl/gRCSJz7wKRsN9CNp7?g_st=com.google.maps.preview.copy" // Reemplaza con tu enlace real de Google Maps
+    mapsUrl: "https://maps.app.goo.gl/gRCSJz7wKRsN9CNp7?g_st=com.google.maps.preview.copy",
   };
 
   return (
@@ -87,12 +85,11 @@ const PricingSection = () => {
                     <InfoBlock icon={<Calendar className="w-5 h-5 sm:w-6 sm:h-6 text-brand-teal" />} text={presencial.fecha} />
                     <InfoBlock icon={<Clock className="w-5 h-5 sm:w-6 sm:h-6 text-brand-teal" />} text={presencial.horario} />
                     <InfoBlock icon={<Download className="w-5 h-5 sm:w-6 sm:h-6 text-brand-teal" />} text={presencial.detalles} />
-                    
-                    {/* Sección de ubicación presencial */}
+
                     <div className="pt-2">
-                      <a 
-                        href={ubicacion.mapsUrl} 
-                        target="_blank" 
+                      <a
+                        href={ubicacion.mapsUrl}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="group/ubicacion"
                       >
@@ -121,8 +118,12 @@ const PricingSection = () => {
                         ¡ÚLTIMOS!
                       </div>
                       <div className="flex flex-col sm:flex-row sm:items-end gap-1 sm:gap-2">
-                        <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brand-teal">$1,200 MXN</div>
-                        <div className="text-xs sm:text-sm text-gray-500">(~${(1200 * exchangeRate).toFixed(0)} USD)</div>
+                        <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brand-teal">
+                          ${presencial.precio} MXN
+                        </div>
+                        <div className="text-xs sm:text-sm text-gray-500">
+                          (~${(parseFloat(presencial.precio) * exchangeRate).toFixed(0)} USD)
+                        </div>
                       </div>
                       <p className="text-xs sm:text-sm text-gray-600 font-medium mt-1">
                         Precio <span className="font-bold text-brand-coral">Final</span>
@@ -160,8 +161,7 @@ const PricingSection = () => {
                     <InfoBlock icon={<Calendar className="w-5 h-5 sm:w-6 sm:h-6 text-brand-purple" />} text={online.fecha} />
                     <InfoBlock icon={<Clock className="w-5 h-5 sm:w-6 sm:h-6 text-brand-purple" />} text={online.horario} />
                     <InfoBlock icon={<Download className="w-5 h-5 sm:w-6 sm:h-6 text-brand-purple" />} text={online.detalles} />
-                    
-                    {/* Sección de plataforma virtual */}
+
                     <div className="pt-2">
                       <div className="group/plataforma">
                         <div className="flex items-start gap-3">
@@ -189,8 +189,12 @@ const PricingSection = () => {
                         ¡APROVECHA!
                       </div>
                       <div className="flex flex-col sm:flex-row sm:items-end gap-1 sm:gap-2">
-                        <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brand-purple">$900 MXN</div>
-                        <div className="text-xs sm:text-sm text-gray-500">(~${(900 * exchangeRate).toFixed(0)} USD)</div>
+                        <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brand-purple">
+                          ${online.precio} MXN
+                        </div>
+                        <div className="text-xs sm:text-sm text-gray-500">
+                          (~${(parseFloat(online.precio) * exchangeRate).toFixed(0)} USD)
+                        </div>
                       </div>
                       <p className="text-xs sm:text-sm text-gray-600 font-medium mt-1">
                         Precio original: <span className="line-through text-gray-500 font-semibold">$1200 MXN</span><span className="font-bold text-brand-coral"> - ¡Precio de preventa!</span>
