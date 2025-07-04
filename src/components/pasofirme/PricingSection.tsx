@@ -175,7 +175,6 @@ const PricingSection = () => {
                             <p className="text-xs text-gray-500 group-hover/plataforma:text-gray-700 transition-colors">
                               Plataforma Zoom<br />
                               Acceso desde cualquier dispositivo<br />
-                              Grabaciones disponibles
                             </p>
                           </div>
                         </div>
