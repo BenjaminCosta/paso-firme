@@ -196,8 +196,8 @@ const PricingSection = () => {
                           (~${(parseFloat(online.precio) * exchangeRate).toFixed(0)} USD)
                         </div>
                       </div>
-                      <p className="text-xs sm:text-sm text-gray-600 font-medium mt-1">
-                        Precio original: <span className="line-through text-gray-500 font-semibold">$1200 MXN</span><span className="font-bold text-brand-coral"> - ¡Precio de preventa!</span>
+                     <p className="text-xs sm:text-sm text-gray-600 font-medium mt-1">
+                        Precio <span className="font-bold text-brand-coral">Final</span>
                       </p>
                     </div>
                     <Link to={'https://www.familiayformacion.com/tienda/p/paso-firme-a-secundaria-virtual'}>
