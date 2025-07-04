@@ -10,6 +10,8 @@ const Pricing2 = () => {
   const { data, loading, error } = useSheetDataSoyCapaz();
   const event = data.length > 0 ? data[0] : null;
 
+  const exchangeRate = 0.06;
+
   return (
     <section id="pricing" className="py-16 md:py-24 px-4 sm:px-0 relative overflow-hidden bg-gradient-to-br from-white to-brand-beige/10">
       {/* Efectos de fondo modernos */}
@@ -163,8 +165,17 @@ const Pricing2 = () => {
                     <div>
                       <h4 className="font-bold text-gray-900 mb-2">Inversión</h4>
                       <div className="flex items-end gap-2">
-                        <div className="text-3xl sm:text-4xl font-extrabold text-brand-purple">$1,499 MXN</div>
-                        <div className="text-sm text-gray-500 mb-1">(~$90 USD)</div>
+                        <p className="text-4xl font-bold text-brand-purple drop-shadow-md">
+                      ${event?.precio || ""} MXN
+                    </p>
+                        {event?.precio ? (
+  <div className="text-sm text-gray-500 mb-1">
+    (~${(parseFloat(event.precio) * exchangeRate).toFixed(0)} USD)
+  </div>
+) : (
+  <div className="text-sm text-gray-400">Precio no disponible</div>
+)}
+
                       </div>
                       <p className="text-sm text-gray-600 mt-1">Descuento para hermanos: 2 x $2,500 MXN</p>
                     </div>

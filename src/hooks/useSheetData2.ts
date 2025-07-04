@@ -6,6 +6,7 @@ export interface DescubriendoData {
   hora: string;
   duracion: string;
   plataforma: string;
+  precio: string;
 }
 
 const useSheetDataDescubriendo = () => {
@@ -59,7 +60,8 @@ const parseCSV = (csvText: string): DescubriendoData[] => {
       fecha: entry.fecha || "",
       hora: entry.hora || "",
       duracion: entry.duracion || "",
-      plataforma: entry.plataforma || ""
+      plataforma: entry.plataforma || "",
+      precio: entry.precio || "" 
     };
   });
 };

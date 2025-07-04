@@ -6,6 +6,7 @@ export interface SoyCapazData {
   horario: string;
   duracion: string;
   modalidad: string;
+  precio: string;
 }
 
 const useSheetDataSoyCapaz = () => {
@@ -59,7 +60,8 @@ const parseCSV = (csvText: string): SoyCapazData[] => {
       fecha: entry.fecha || "",
       horario: entry.horario || "",
       duracion: entry.duracion || "",
-      modalidad: entry.modalidad || ""
+      modalidad: entry.modalidad || "",
+      precio: entry.precio || ""
     };
   });
 };

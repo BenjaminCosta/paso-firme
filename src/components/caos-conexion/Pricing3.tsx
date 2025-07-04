@@ -16,6 +16,8 @@ import { Link } from "react-router-dom";
 
 const Pricing3 = () => {
   const { data, loading, error } = useSheetData4();
+  
+  const exchangeRate = 0.06;
 
   const item = data[0];
 
@@ -145,10 +147,20 @@ const Pricing3 = () => {
     <div>
       <h4 className="font-bold text-gray-900 text-lg mb-3">Inversión final</h4>
       <div className="flex items-end gap-3">
-        <div className="text-4xl sm:text-[2.75rem] font-extrabold text-brand-teal">$2,500 MXN</div>
-        <div className="text-sm text-gray-500 mb-1">(~$130 USD)</div>
+       <p className="text-4xl font-bold text-brand-teal drop-shadow-md">
+                      ${item?.precio || ""} MXN
+                    </p>
+                        {item?.precio ? (
+  <div className="text-sm text-gray-500 mb-1">
+    (~${(parseFloat(item.precio) * exchangeRate).toFixed(0)} USD)
+  </div>
+) : (
+  <div className="text-sm text-gray-400">Precio no disponible</div>
+)}
+
+                     
       </div>
-      <div className="text-base text-gray-500 mb-1.5">Promoción pareja: $2,900 MXN (~$150 USD)</div>
+      <div className="text-base text-gray-500 mb-1.5">Promoción pareja: $2,900 MXN (~$175 USD)</div>
       <p className="text-sm text-red-500 font-medium mt-2">
         ⚠️ Precio aumentará en la próxima edición
       </p>

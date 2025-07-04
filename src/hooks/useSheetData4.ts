@@ -5,6 +5,7 @@ export interface SheetData4 {
   fecha: string;
   duracion: string;
   modalidad: string;
+  precio: string;
 }
 
 const useSheetData4 = () => {
@@ -58,6 +59,7 @@ const parseCSV = (csvText: string): SheetData4[] => {
       fecha: entry.fecha || "",
       duracion: entry.duracion || "",
       modalidad: entry.modalidad || "",
+      precio: entry.precio || "" // <-- agregado
     };
   });
 };

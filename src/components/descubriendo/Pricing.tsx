@@ -44,6 +44,8 @@ export const Pricing = () => {
       description: "Guía estratégica para uso saludable de pantallas"
     }
   ];
+  
+  const exchangeRate = 0.06;
 
   // Tomamos el primer evento (puedes adaptar para más si quieres)
   const event = data.length > 0 ? data[0] : null;
@@ -54,6 +56,7 @@ export const Pricing = () => {
     { icon: <Clock className="w-5 h-5 text-brand-purple" />, text: `Duración: ${event.duracion}` },
     { icon: <Video className="w-5 h-5 text-brand-purple" />, text: `Plataforma: ${event.plataforma}` },
   ] : [];
+  
 
   return (
     <section id="pricing" className="relative py-16 overflow-hidden bg-white">
@@ -153,10 +156,13 @@ export const Pricing = () => {
                 <div className="relative text-center">
                   <p className="text-sm text-gray-500 mb-1">Inversión única</p>
                   <div className="flex justify-center items-baseline gap-2">
-                    <p className="text-4xl font-bold text-brand-purple drop-shadow-md">$900</p>
+                    <p className="text-4xl font-bold text-brand-purple drop-shadow-md">
+                      {event?.precio || ""}
+                    </p>
+
                     <span className="text-lg text-gray-600">MXN</span>
                   </div>
-                  <p className="text-xs text-gray-500 mt-1">aprox. USD 50</p>
+                  <p className="text-xs text-gray-500 mt-1">(~${(parseFloat(event.precio) * exchangeRate).toFixed(0)} USD)</p>
                   <div className="flex justify-center mt-2">
                     <span className="bg-brand-teal/20 text-brand-teal text-xs font-medium px-2 py-0.5 rounded-full">
                       🔥 Oferta exclusiva
