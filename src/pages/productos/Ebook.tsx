@@ -5,6 +5,7 @@ import Heroe from "@/components/ebook/Heroe";
 import PersonalSection from "@/components/ebook/PersonalSection";
 import GuideInclusions from "@/components/ebook/GuideInclusions";
 import AudienceTestimonials from "@/components/ebook/AudienceTestimonials";
+import PricingFAQ from "@/components/ebook/PricingFAQ";
 
 
 
@@ -26,6 +27,7 @@ const Ebook = () => {
       <PersonalSection/>
       <GuideInclusions/>
       <AudienceTestimonials/>
+      <PricingFAQ />
       <Footer />
     </div>
     </>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Check, X, MessageSquare, Heart, Star, ChevronRight, ChevronLeft } from 'lucide-react';
+import { Check, X, MessageSquare, Heart, Star, ChevronRight, ChevronLeft, ShieldCheck, LockKeyhole, Download, Smartphone } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -132,67 +132,77 @@ const AudienceTestimonials = () => {
 
         {/* Carrusel de testimonios moderno */}
         
-          <Carousel className="w-full">
-
-          <div className="flex items-center justify-between mb-12">
-            <h3 className="text-3xl font-bold text-white">Voces que inspiran</h3>
-            <div className="hidden md:flex space-x-3">
-              <CarouselPrevious className="relative top-0 left-0 right-0 translate-x-0 translate-y-0 w-12 h-12 rounded-full bg-white/5 border-white/20 hover:bg-white/10 hover:border-white/30 text-white">
-                <ChevronLeft className="w-5 h-5" />
-              </CarouselPrevious>
-              <CarouselNext className="relative top-0 left-0 right-0 translate-x-0 translate-y-0 w-12 h-12 rounded-full bg-white/5 border-white/20 hover:bg-white/10 hover:border-white/30 text-white">
-                <ChevronRight className="w-5 h-5" />
-              </CarouselNext>
-            </div>
-          </div>
-          
-            <CarouselContent className="-ml-4">
-              {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                  <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all h-full flex flex-col">
-                    <div className="mb-6 text-white/80 text-lg italic flex-grow">"{testimonial.quote}"</div>
-                    <div>
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <span className="text-white font-medium block">{testimonial.name}</span>
-                          <span className="text-white/60 text-sm">{testimonial.role}</span>
-                        </div>
-                        <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center border border-white/10">
-                          {testimonial.icon}
-                        </div>
-                      </div>
+          <>
+  {/* Sección de Testimonios */}
+  <div className="mb-20">
+    <Carousel className="w-full">
+      {/* Encabezado y controles DEBEN estar dentro de Carousel */}
+      <div className="flex items-center justify-between mb-12">
+        <h3 className="text-3xl font-bold text-white">Lo que dicen padres como tú</h3>
+        <div className="hidden md:flex space-x-3">
+          <CarouselPrevious className="relative top-0 left-0 right-0 translate-x-0 translate-y-0 w-12 h-12 rounded-full bg-white/5 border-white/20 hover:bg-white/10 hover:border-white/30 text-white">
+            <ChevronLeft className="w-5 h-5" />
+          </CarouselPrevious>
+          <CarouselNext className="relative top-0 left-0 right-0 translate-x-0 translate-y-0 w-12 h-12 rounded-full bg-white/5 border-white/20 hover:bg-white/10 hover:border-white/30 text-white">
+            <ChevronRight className="w-5 h-5" />
+          </CarouselNext>
+        </div>
+      </div>
+      
+      <CarouselContent className="-ml-4">
+        {testimonials.map((testimonial, index) => (
+          <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+            {/* Contenido del testimonio estilo Story/DM */}
+            <div className="relative h-full min-h-[400px]">
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl overflow-hidden flex flex-col">
+                {/* Cabecera */}
+                <div className="h-16 bg-gray-800/80 backdrop-blur-sm flex items-center px-4 border-b border-gray-700">
+                  <div className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
+                    {testimonial.icon}
+                  </div>
+                  <div className="ml-3">
+                    <p className="text-white font-medium text-sm">{testimonial.name}</p>
+                    <p className="text-white/50 text-xs">{testimonial.role}</p>
+                  </div>
+                </div>
+                
+                {/* Mensaje */}
+                <div className="flex-1 p-6 flex items-center">
+                  <div className="relative max-w-[80%]">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl rounded-tl-none p-5 border border-white/20">
+                      <p className="text-white/90 italic">"{testimonial.quote}"</p>
+                    </div>
+                    <div className="absolute -left-1.5 top-0 w-3 h-3 overflow-hidden">
+                      <div className="w-3 h-3 bg-white/10 backdrop-blur-sm border-l border-t border-white/20 transform -rotate-45 origin-bottom-right"></div>
                     </div>
                   </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
- 
-
-        {/* CTA mejorado */}
-        <div className="text-center">
-          <Button className="relative overflow-hidden py-6 px-14 bg-gradient-to-r from-brand-teal via-brand-purple to-brand-coral hover:from-brand-coral hover:via-brand-purple hover:to-brand-teal text-white text-lg font-bold rounded-xl shadow-2xl transition-all transform hover:scale-[1.02] group">
-            <span className="relative z-10 flex items-center justify-center">
-              Descubrir la guía completa
-              <ChevronRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
-            </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/0 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
-          </Button>
-          
-          <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
-            {[
-              { icon: "✓", text: "Garantía de 7 días" },
-              { icon: "🔒", text: "Pago 100% seguro" },
-              { icon: "⚡", text: "Acceso inmediato" },
-              { icon: "📱", text: "Dispositivos múltiples" }
-            ].map((item, index) => (
-              <div key={index} className="flex items-center text-white/80 text-sm bg-white/5 px-4 py-2 rounded-full border border-white/10">
-                <span className="mr-2">{item.icon}</span>
-                {item.text}
+                </div>
+                
+                {/* Pie */}
+                <div className="h-14 bg-gray-800/80 backdrop-blur-sm flex items-center justify-between px-4 border-t border-gray-700">
+                  <div className="flex-1 bg-gray-700/50 rounded-full h-10 flex items-center px-4 text-white/50 text-sm">
+                    Escribe un mensaje...
+                  </div>
+                  <button className="ml-2 w-10 h-10 rounded-full bg-brand-teal/90 flex items-center justify-center text-white">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                    </svg>
+                  </button>
+                </div>
               </div>
-            ))}
-          </div>
-        </div>
+              
+              <div className="absolute top-20 left-1/2 transform -translate-x-1/2 text-white/80 text-xs bg-black/30 px-3 py-1 rounded-full">
+                Hace 2 días
+              </div>
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+    </Carousel>
+  </div>
+
+
+</>
       </div>
     </section>
   );
