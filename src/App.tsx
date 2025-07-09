@@ -4,12 +4,12 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-
 import Pasofirme from "./pages/Pasofirme";
 import Descubriendo from "./pages/Descubriendo";
 import SoyCapaz from "./pages/Soycapaz"; // ✅ nueva landing
 import NotFound from "./pages/NotFound";
 import CaosConexion from "./pages/Caosconexion";
+import Ebook from "./pages/productos/Ebook";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +25,9 @@ const App = () => {
 
   const isCaosConexion =
     host.startsWith("caos-conexion") || path.startsWith("/caos-conexion");  
+  
+    const isEbook =
+    host.startsWith("ebook-adolescencia") || path.startsWith("/ebook-adolescencia");  
 
   return (
     <HelmetProvider>
@@ -40,6 +43,8 @@ const App = () => {
               <Route path="*" element={<SoyCapaz />} />
             ) : isCaosConexion ? (
               <Route path="*" element={<CaosConexion />} />
+            ) :  isEbook ? (
+              <Route path="*" element={<Ebook />} />
             ) : ( 
               
               <>
@@ -47,6 +52,7 @@ const App = () => {
                 <Route path="/descubriendo" element={<Descubriendo />} />
                 <Route path="/conexion" element={<CaosConexion />} />
                 <Route path="/soy-capaz" element={<SoyCapaz />} />
+                <Route path="/ebook-adolescencia" element={<Ebook />} />
                 <Route path="*" element={<NotFound />} />
               </>
             )}
