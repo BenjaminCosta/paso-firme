@@ -123,9 +123,6 @@ const PersonalSection = () => {
       <p className="text-xl text-gray-700 leading-relaxed mb-8">
         No es solo otro libro de consejos. Es un <span className="font-medium text-brand-purple">sistema probado</span> que combina neurociencia, psicología adolescente y años de experiencia en terreno.
       </p>
-      <p className="text-xl text-gray-700 leading-relaxed">
-        Cada estrategia ha sido <span className="font-dancing text-brand-coral text-2xl">validada</span> con cientos de familias, asegurando que funcione en la vida real, no solo en teoría.
-      </p>
     </div>
 
     {/* CTA premium */}
