@@ -23,7 +23,7 @@ const Heroe = () => {
   }, []);
 
   return (
-    <section className="relative h-[72vh] min-h-[720px] md:min-h-[650px] w-full overflow-hidden">
+    <section className="relative h-[72vh] min-h-[800px] md:min-h-[650px] w-full overflow-hidden">
       {/* Fondo con efectos mejorados */}
       <div className="absolute inset-0">
         {/* Carrusel de fondo */}
@@ -67,10 +67,10 @@ const Heroe = () => {
       </div>
 
       {/* Contenido principal */}
-      <div className="relative z-10 h-full container mt-4 mx-auto px-16 flex items-center">
+      <div className="relative z-10 h-full container mt-4 mx-auto px-6 md:px-16 flex items-center">
         <div className="w-full lg:w-1/2">
         
-          <h1 className="text-6xl md:text-7xl font-medium text-white leading-tight mb-2">
+          <h1 className="text-5xl md:text-7xl font-medium text-white leading-tight mb-2">
             Límites en la adolescencia...
           </h1>
           

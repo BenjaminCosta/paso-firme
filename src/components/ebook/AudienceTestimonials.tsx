@@ -71,64 +71,72 @@ const AudienceTestimonials = () => {
           </p>
         </div>
 
-        {/* Sección de comparación mejor distribuida */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-24">
-          {/* Columna positiva */}
-          <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-brand-teal/40 transition-all duration-300 h-full">
-            <div className="flex items-center mb-8">
-              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-brand-teal/10 to-brand-teal/20 flex items-center justify-center text-brand-teal mr-5 border border-brand-teal/30">
-                <Check className="w-6 h-6" />
-              </div>
-              <h3 className="text-2xl font-bold text-white">Perfecta para ti si...</h3>
-            </div>
-            
-            <ul className="space-y-4">
-              {[
-                "Tienes hijos entre 10-17 años",
-                "Quieres autoridad sin autoritarismo",
-                "Valoras el respeto mutuo",
-                "Buscas herramientas prácticas",
-                "Prefieres conexión sobre control",
-                "Estás abierto/a a nuevos enfoques"
-              ].map((item, index) => (
-                <li key={index} className="flex items-start">
-                  <div className="flex-shrink-0 mt-1 mr-4 text-brand-teal">
-                    <ChevronRight className="w-5 h-5" />
-                  </div>
-                  <span className="text-white/90 text-lg">{item}</span>
-                </li>
-              ))}
-            </ul>
+        {/* Sección de comparación con fondo oscuro mejorado */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
+  {/* Columna positiva - Versión oscura premium */}
+  <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/90 rounded-2xl p-8 border border-gray-700/30 hover:border-brand-teal/50 transition-all duration-300 h-full group shadow-lg hover:shadow-xl">
+    <div className="flex items-center mb-8">
+      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-teal to-brand-teal/80 flex items-center justify-center text-white mr-6 shadow-lg group-hover:scale-105 transition-transform">
+        <Check className="w-8 h-8" strokeWidth={2.5} />
+      </div>
+      <h3 className="text-2xl font-bold text-white">
+        <span className="bg-gradient-to-r from-brand-teal to-brand-teal/80 bg-clip-text text-transparent">
+          Perfecta para ti si...
+        </span>
+      </h3>
+    </div>
+    
+    <ul className="space-y-5">
+      {[
+        "Tienes hijos entre 10-17 años",
+        "Quieres autoridad sin autoritarismo",
+        "Valoras el respeto mutuo",
+        "Buscas herramientas prácticas",
+        "Prefieres conexión sobre control",
+        "Estás abierto/a a nuevos enfoques"
+      ].map((item, index) => (
+        <li key={index} className="flex items-start">
+          <div className="flex-shrink-0 mt-1 mr-4 text-brand-teal bg-gray-800 p-1.5 rounded-lg border border-gray-700">
+            <ChevronRight className="w-5 h-5" />
           </div>
+          <span className="text-gray-200 text-lg font-medium">{item}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
 
-          {/* Columna negativa */}
-          <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-brand-coral/40 transition-all duration-300 h-full">
-            <div className="flex items-center mb-8">
-              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-brand-coral/10 to-brand-coral/20 flex items-center justify-center text-brand-coral mr-5 border border-brand-coral/30">
-                <X className="w-6 h-6" />
-              </div>
-              <h3 className="text-2xl font-bold text-white">No es para ti si...</h3>
-            </div>
-            
-            <ul className="space-y-4">
-              {[
-                "Buscas soluciones mágicas",
-                "Prefieres castigos severos",
-                "No quieres reflexionar",
-                "Esperas cambios instantáneos",
-                "Crees en 'mi casa, mis reglas' sin diálogo",
-                "No estás dispuesto/a a adaptarte"
-              ].map((item, index) => (
-                <li key={index} className="flex items-start">
-                  <div className="flex-shrink-0 mt-1 mr-4 text-brand-coral">
-                    <ChevronRight className="w-5 h-5" />
-                  </div>
-                  <span className="text-white/90 text-lg">{item}</span>
-                </li>
-              ))}
-            </ul>
+  {/* Columna negativa - Versión oscura premium */}
+  <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/90 rounded-2xl p-8 border border-gray-700/30 hover:border-brand-coral/50 transition-all duration-300 h-full group shadow-lg hover:shadow-xl">
+    <div className="flex items-center mb-8">
+      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-coral to-brand-coral/80 flex items-center justify-center text-white mr-6 shadow-lg group-hover:scale-105 transition-transform">
+        <X className="w-8 h-8" strokeWidth={2.5} />
+      </div>
+      <h3 className="text-2xl font-bold text-white">
+        <span className="bg-gradient-to-r from-brand-coral to-brand-coral/80 bg-clip-text text-transparent">
+          No es para ti si...
+        </span>
+      </h3>
+    </div>
+    
+    <ul className="space-y-5">
+      {[
+        "Buscas soluciones mágicas",
+        "Prefieres castigos severos",
+        "No quieres reflexionar",
+        "Esperas cambios instantáneos",
+        "Crees en 'mi casa, mis reglas' sin diálogo",
+        "No estás dispuesto/a a adaptarte"
+      ].map((item, index) => (
+        <li key={index} className="flex items-start">
+          <div className="flex-shrink-0 mt-1 mr-4 text-brand-coral bg-gray-800 p-1.5 rounded-lg border border-gray-700">
+            <ChevronRight className="w-5 h-5" />
           </div>
-        </div>
+          <span className="text-gray-200 text-lg font-medium">{item}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>
 
         {/* Carrusel de testimonios moderno */}
         

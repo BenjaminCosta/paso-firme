@@ -5,7 +5,7 @@ import Heroe from "@/components/ebook/Heroe";
 import PersonalSection from "@/components/ebook/PersonalSection";
 import GuideInclusions from "@/components/ebook/GuideInclusions";
 import AudienceTestimonials from "@/components/ebook/AudienceTestimonials";
-import PricingGuide from "@/components/ebook/PricingFAQ";
+import PricingGuide from "@/components/ebook/PricinGuia";
 import FAQguide from "@/components/ebook/FAQguide";
 
 
