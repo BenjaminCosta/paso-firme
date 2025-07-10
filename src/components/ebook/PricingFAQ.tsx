@@ -1,6 +1,6 @@
 import { CheckCircle, ArrowRight, ChevronDown, Smartphone, Download, ShieldCheck, LockKeyhole, Mail, MessageCircle } from 'lucide-react'
 
-const PricingFAQ = () => {
+const PricingGuide = () => {
   return (
     <div className="bg-white">
       {/* Sección 6: Precio + Compra */}
@@ -87,74 +87,8 @@ const PricingFAQ = () => {
           </div>
         </div>
       </section>
-
-      {/* Sección 8: FAQ */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-sm font-medium mb-4">
-              Información importante
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-              Preguntas frecuentes
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Resolvemos tus dudas para que tengas toda la información necesaria.
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            {[
-              {
-                question: "¿Qué incluye exactamente la guía?",
-                answer: "Recibirás tres recursos principales: 1) La guía completa en PDF (80+ páginas) con estrategias detalladas, 2) Un audio de emergencia para momentos críticos, y 3) Un kit imprimible que incluye frases clave y el mapa de límites por edades."
-              },
-              {
-                question: "¿Cómo recibo el material después de comprar?",
-                answer: "Inmediatamente después de confirmado tu pago, recibirás un email con acceso a tu área de miembros donde podrás descargar todos los archivos. El email puede llegar a tu bandeja de entrada o spam (recomendamos revisar ambas)."
-              },
-              {
-                question: "¿La guía es compatible con todos los dispositivos?",
-                answer: "Sí, los PDFs están optimizados para verse perfectamente en móviles, tablets y computadoras. Además, el audio está en formato MP3 universal compatible con cualquier reproductor."
-              },
-              {
-                question: "¿Qué métodos de pago aceptan?",
-                answer: "Aceptamos todas las tarjetas de crédito/débito, PayPal y transferencias bancarias en México. Los pagos son procesados de forma segura a través de nuestra plataforma de pagos certificada."
-              },
-              {
-                question: "¿Ofrecen soporte después de la compra?",
-                answer: "Por supuesto. Puedes contactarnos por email a soporte@tuemail.com o por WhatsApp al +52 55 1234 5678. Nuestro equipo está disponible de lunes a viernes de 9am a 6pm para resolver cualquier duda técnica."
-              }
-            ].map((item, index) => (
-              <div key={index} className="group">
-                <details className="bg-gray-50 rounded-xl p-6 hover:bg-brand-teal/5 transition-colors duration-300 open:bg-brand-teal/5 border border-gray-200 open:border-brand-teal/20">
-                  <summary className="flex justify-between items-center cursor-pointer list-none">
-                    <h3 className="text-lg font-semibold text-gray-900 group-hover:text-brand-coral group-open:text-brand-coral">
-                      {item.question}
-                    </h3>
-                    <ChevronDown className="flex-shrink-0 w-5 h-5 text-brand-coral transform group-open:rotate-180 transition-transform" />
-                  </summary>
-                  <div className="mt-4 text-gray-600 pl-2">
-                    {item.answer}
-                  </div>
-                </details>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-16 text-center">
-            <div className="mb-6 text-gray-600">
-              ¿Tienes otra pregunta no resuelta aquí?
-            </div>
-            <button className="inline-flex items-center py-4 px-8 bg-brand-coral hover:bg-brand-coral/90 text-white rounded-xl font-bold text-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]">
-              Contáctanos ahora
-              <ArrowRight className="ml-3 w-5 h-5" />
-            </button>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }
 
-export default PricingFAQ
+export default PricingGuide

@@ -42,9 +42,10 @@ const GuideInclusions = () => {
         <div className="flex flex-col lg:flex-row gap-10 items-stretch">
           {/* Mockup del eBook - Misma altura que el contenido */}
           <div className="w-full lg:w-5/12 flex">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gray-50 border-8 border-white transform rotate-1 flex-1 flex flex-col">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gray-50 border-8 border-white flex-1 flex flex-col">
               <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80')] bg-cover bg-center opacity-90"></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-brand-purple/40 to-brand-teal/30 mix-blend-multiply"></div>
+              <div className="absolute inset-0 bg-black/30"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-purple/60 to-brand-teal/60 mix-blend-multiply"></div>
               
               {/* Contenido del mockup */}
               <div className="relative flex-1 flex flex-col justify-center p-10 text-white">
@@ -56,13 +57,13 @@ const GuideInclusions = () => {
                 
                 <ul className="space-y-4">
                   {[
-                    { icon: <BookOpen className="w-5 h-5" />, text: '10 Límites Clave' },
-                    { icon: <Brain className="w-5 h-5" />, text: 'Bases Neuroemocionales' },
-                    { icon: <MessageSquare className="w-5 h-5" />, text: 'Frases Máster' },
-                    { icon: <Scale className="w-5 h-5" />, text: 'Estrategias Prácticas' }
+                    { icon: <BookOpen className="w-7 h-7" />, text: '10 Límites Clave' },
+                    { icon: <Brain className="w-7 h-7" />, text: 'Bases Neuroemocionales' },
+                    { icon: <MessageSquare className="w-7 h-7" />, text: 'Frases Máster' },
+                    { icon: <Scale className="w-7 h-7" />, text: 'Estrategias Prácticas' }
                   ].map((item, index) => (
                     <li key={index} className="flex items-center text-lg">
-                      <span className="mr-3 text-brand-coral">{item.icon}</span>
+                      <span className="mr-3 text-brand-teal bg-gradient-to-br from-brand-purple/20 to-brand-coral/20 p-2 backdrop-blur-sm rounded-full">{item.icon}</span>
                       <span>{item.text}</span>
                     </li>
                   ))}

@@ -37,8 +37,8 @@ const Heroe = () => {
               alt={img.alt}
               className="w-full h-full object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/50 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-transparent to-gray-900/40" />
+            <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/60 to-gray-900/40" />
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-brand-purple/10 to-brand-beige/20" />
           </div>
         ))}
         
@@ -108,7 +108,7 @@ const Heroe = () => {
     <svg className="flex-shrink-0 w-5 h-5 mr-2 text-brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
     </svg>
-    <span>Pago 100</span>
+    <span>Pago 100% seguro</span>
   </div>
 </div>
         </div>
