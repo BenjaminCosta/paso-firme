@@ -29,80 +29,85 @@ const PersonalSection = () => {
           </p>
         </div>
 
-        {/* Primera fila: Presentación con foto de la facilitadora */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          {/* Foto de la facilitadora */}
-          <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl h-[570px]">
-            <img 
-              src="imagenes/facilitadora2.jpg" 
-              alt="Facilitadora Oli"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent"></div>
-            {/* Badge de experiencia premium */}
-                <div className="absolute -bottom-1 -right-1 bg-gradient-to-r from-brand-teal to-brand-coral text-white px-6 py-3 rounded-xl shadow-lg flex items-center gap-2">
-                  <Sparkles className="h-4 w-4" />
-                  <span className="font-bold">Olivia Rodriguez</span>
-                </div>
+       {/* Primera fila: Presentación con foto de la facilitadora */}
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+  {/* Foto de la facilitadora */}
+  <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl h-[600px] order-2 lg:order-1">
+    <img 
+      src="imagenes/facilitadora2.jpg" 
+      alt="Facilitadora Oli"
+      className="absolute inset-0 w-full h-full object-cover"
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent"></div>
+    {/* Badge de experiencia premium */}
+    <div className="absolute -bottom-1 -right-1 bg-gradient-to-r from-brand-teal to-brand-coral text-white px-6 py-3 rounded-xl shadow-lg flex items-center gap-2">
+      <Sparkles className="h-4 w-4" />
+      <span className="font-bold">Olivia Rodriguez</span>
+    </div>
+  </div>
+
+  {/* Bloque "Soy Oli" */}
+  <div className="relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-xl p-10 rounded-3xl border border-white/40 shadow-2xl overflow-hidden order-1 lg:order-2">
+    {/* Luces decorativas */}
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-purple/5 via-transparent to-transparent opacity-70"></div>
+    <div className="absolute -right-32 -top-32 w-80 h-80 rounded-full bg-brand-purple/10 blur-[100px] animate-pulse-slow"></div>
+    <div className="absolute -left-20 -bottom-20 w-60 h-60 rounded-full bg-brand-coral/10 blur-[80px]"></div>
+
+    {/* Contenido */}
+    <div className="relative z-10">
+      {/* Header con emoji y nombre */}
+      <div className="flex items-start space-x-6 mb-8">
+        <div className="flex-shrink-0 relative">
+          <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-brand-purple/20 to-brand-coral/15 border-2 border-white/40 flex items-center justify-center text-4xl shadow-lg shadow-brand-purple/10 backdrop-blur-sm">
+            👋
           </div>
-
-          {/* Bloque "Soy Oli" - Versión Premium */}
-<div className="relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-xl p-10 rounded-3xl border border-white/40 shadow-2xl overflow-hidden">
-  {/* Efecto de luz dinámico */}
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-purple/5 via-transparent to-transparent opacity-70"></div>
-  
-  {/* Elementos decorativos */}
-  <div className="absolute -right-32 -top-32 w-80 h-80 rounded-full bg-brand-purple/10 blur-[100px] animate-pulse-slow"></div>
-  <div className="absolute -left-20 -bottom-20 w-60 h-60 rounded-full bg-brand-coral/10 blur-[80px]"></div>
-  
-  {/* Contenido principal */}
-  <div className="relative z-10">
-    {/* Encabezado con avatar */}
-    <div className="flex items-start space-x-6 mb-10">
-      <div className="flex-shrink-0 relative">
-        <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-brand-purple/20 to-brand-coral/15 border-2 border-white/40 flex items-center justify-center text-5xl shadow-lg shadow-brand-purple/10 backdrop-blur-sm">
-          👋
+          <div className="absolute -inset-2 rounded-2xl border-2 border-white/20 pointer-events-none"></div>
         </div>
-        <div className="absolute -inset-2 rounded-2xl border-2 border-white/20 pointer-events-none"></div>
-      </div>
-      
-      <div>
-        <h3 className="text-4xl font-bold text-gray-900 mb-2">
-          Soy <span className="font-dancing text-brand-purple text-5xl">Oli</span>, tu guía
-        </h3>
-        <div className="inline-block bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full border border-white/30 shadow-sm">
-          <span className="text-brand-purple font-medium tracking-wide">Especialista en relaciones familiares</span>
+
+        <div>
+          <h3 className="text-3xl font-bold text-gray-900 mb-2">
+            Soy <span className="font-dancing text-brand-purple text-4xl">Oli</span>, tu guía
+          </h3>
+          <div className="inline-block bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full border border-white/30 shadow-sm">
+            <span className="text-brand-purple font-medium tracking-wide">Especialista en relaciones familiares</span>
+          </div>
         </div>
       </div>
-    </div>
 
-    {/* Texto con efecto cristal */}
-    <div className="space-y-6">
-      <div className="bg-white/90 backdrop-blur-md p-6 rounded-2xl border border-white/40 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
-        <p className="text-lg leading-relaxed text-gray-700">
-          He acompañado a cientos de familias a transformar sus dinámicas, encontrando ese <span className="font-bold text-brand-purple">punto justo</span> entre estructura y flexibilidad.
-        </p>
-      </div>
-      
-      <div className="bg-white/90 backdrop-blur-md p-6 rounded-2xl border border-white/40 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 delay-75">
-        <p className="text-lg leading-relaxed text-gray-700">
-          Esta guía condensa <span className="font-dancing text-brand-purple text-2xl font-bold">15 años</span> de experiencia en un método práctico que realmente funciona.
-        </p>
-      </div>
-    </div>
+      {/* Texto dividido en 3 bloques */}
+      <div className="space-y-4">
+        <div className="bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-white/40 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
+          <p className="text-base sm:text-lg leading-relaxed text-gray-700">
+            Acompañé a más de <span className="font-bold text-brand-purple">100 familias</span> a poner límites con <span className="font-semibold text-brand-coral">presencia</span> y sin perder la conexión.
+          </p>
+        </div>
 
-    {/* Elemento decorativo final */}
-    <div className="mt-8 pt-6 border-t border-white/30">
-      <div className="flex items-center space-x-2 text-brand-purple/80">
-        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-        </svg>
-        <span className="font-medium">Método validado por más de 500 familias</span>
+        <div className="bg-white/90 backdrop-blur-md p-5 rounded-2xl border border-white/40 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 delay-75">
+          <p className="text-base sm:text-lg leading-relaxed text-gray-700">
+            Poner <span className="font-semibold text-brand-purple">límites en la adolescencia</span> no es controlar, es sostener tu lugar con <span className="font-semibold text-brand-coral">amor firme</span>.
+          </p>
+        </div>
+
+        <div className="bg-white/90 backdrop-blur-md p-5 rounded-2xl border border-white/40 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 delay-100">
+          <p className="text-base sm:text-lg leading-relaxed text-gray-700">
+            Esta guía no es para padres perfectos, sino para quienes eligen ser <span className="font-bold text-brand-coral">conscientes</span> y confiar en el proceso.
+          </p>
+        </div>
+      </div>
+
+      {/* Cierre */}
+      <div className="mt-5 pt-4 border-t border-white/30">
+        <div className="flex items-center space-x-2 text-brand-purple/80">
+          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+          </svg>
+          <span className="font-medium">Método validado por +100 familias reales</span>
+        </div>
       </div>
     </div>
   </div>
 </div>
-        </div>
+
 
         {/* Segunda fila: Quote + Mockup */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
@@ -221,7 +226,7 @@ const PersonalSection = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-purple/70 to-transparent"></div>
           <div className="absolute bottom-6 left-6 bg-white/90 text-brand-purple px-4 py-2 rounded-full shadow-sm">
-            <span className="text-sm font-medium">+850 familias transformadas</span>
+            <span className="text-sm font-medium">+100 familias transformadas</span>
           </div>
         </div>
       </div>

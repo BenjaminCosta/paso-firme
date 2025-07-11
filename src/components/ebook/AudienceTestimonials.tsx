@@ -11,37 +11,26 @@ import {
 
 const AudienceTestimonials = () => {
   const testimonials = [
-    {
-      quote: "Esta guía transformó cómo veo la paternidad. Ahora tengo herramientas que funcionan sin dañar nuestro vínculo.",
-      name: "Ana, madre de 2",
-      role: "Madre de adolescentes",
-      icon: <Heart className="w-5 h-5 text-brand-coral" />
-    },
-    {
-      quote: "Por fin entiendo cómo poner límites sin sentirme culpable. Mi relación con mi hijo adolescente nunca fue mejor.",
-      name: "Carlos, padre soltero",
-      role: "Padre de 16 años",
-      icon: <Star className="w-5 h-5 text-brand-teal" />
-    },
-    {
-      quote: "De manual teórico a guía práctica. Cada consejo es aplicable y respeta tanto a padres como a hijos.",
-      name: "María, educadora",
-      role: "Especialista en adolescencia",
-      icon: <MessageSquare className="w-5 h-5 text-brand-purple" />
-    },
-    {
-      quote: "Implementamos las estrategias y en 3 semanas vimos cambios significativos en la dinámica familiar.",
-      name: "Laura y Javier",
-      role: "Padres de gemelos",
-      icon: <Heart className="w-5 h-5 text-brand-coral" />
-    },
-    {
-      quote: "Como terapeuta familiar, recomiendo esta guía por su enfoque equilibrado y respetuoso.",
-      name: "Dr. Rodríguez",
-      role: "Terapeuta familiar",
-      icon: <Star className="w-5 h-5 text-brand-teal" />
-    }
-  ];
+  {
+    quote: "Lo que más agradezco de esta guía es que no me hace sentir culpable por poner límites. Me hace sentir mamá con fuerza.",
+    name: "Ana, madre comprometida",
+    role: "Madre responsable",
+    icon: <Heart className="w-5 h-5 text-brand-coral" />
+  },
+  {
+    quote: "Mi hijo no cambió de la noche a la mañana, pero yo sí. Y eso cambió todo.",
+    name: "Carlos, padre dedicado",
+    role: "Padre presente",
+    icon: <Star className="w-5 h-5 text-brand-teal" />
+  },
+  {
+    quote: "Siento que tengo una hoja de ruta emocional. Me sostengo sin perder la cabeza.",
+    name: "María, educadora familiar",
+    role: "Especialista en familia",
+    icon: <MessageSquare className="w-5 h-5 text-brand-purple" />
+  }
+];
+
 
   return (
     <section className="relative py-28 px-4 sm:px-6 lg:px-8 bg-gray-900 overflow-hidden">
@@ -88,12 +77,11 @@ const AudienceTestimonials = () => {
     
     <ul className="space-y-5">
       {[
-        "Tienes hijos entre 10-17 años",
-        "Quieres autoridad sin autoritarismo",
-        "Valoras el respeto mutuo",
-        "Buscas herramientas prácticas",
-        "Prefieres conexión sobre control",
-        "Estás abierto/a a nuevos enfoques"
+        "Tienes un hijo entre 10 y 17 años",
+        "Sientes que estás perdiendo tu voz en casa",
+        "Quieres sostener límites sin gritar ni ceder",
+        "Te importa el vínculo, pero también el respeto",
+        "Estás cansada de repetir todo sin resultado",
       ].map((item, index) => (
         <li key={index} className="flex items-start">
           <div className="flex-shrink-0 mt-1 mr-4 text-brand-teal bg-gray-800 p-1.5 rounded-lg border border-gray-700">
@@ -120,12 +108,11 @@ const AudienceTestimonials = () => {
     
     <ul className="space-y-5">
       {[
-        "Buscas soluciones mágicas",
-        "Prefieres castigos severos",
-        "No quieres reflexionar",
-        "Esperas cambios instantáneos",
-        "Crees en 'mi casa, mis reglas' sin diálogo",
-        "No estás dispuesto/a a adaptarte"
+        "Buscas soluciones mágicas o inmediatas",
+        "Crees que todo se arregla castigando",
+        "No estás dispuesta a revisar tu forma de reaccionar",
+        "Esperas cambios instantáneos sin esfuerzo",
+        "Prefieres castigos severos sin diálogo",
       ].map((item, index) => (
         <li key={index} className="flex items-start">
           <div className="flex-shrink-0 mt-1 mr-4 text-brand-coral bg-gray-800 p-1.5 rounded-lg border border-gray-700">
@@ -137,6 +124,7 @@ const AudienceTestimonials = () => {
     </ul>
   </div>
 </div>
+
 
         {/* Carrusel de testimonios moderno */}
         

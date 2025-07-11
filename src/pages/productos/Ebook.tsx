@@ -7,6 +7,8 @@ import GuideInclusions from "@/components/ebook/GuideInclusions";
 import AudienceTestimonials from "@/components/ebook/AudienceTestimonials";
 import PricingGuide from "@/components/ebook/PricinGuia";
 import FAQguide from "@/components/ebook/FAQguide";
+import { DynamicHead } from "@/components/DynamicHead";
+import NavEbook from "@/components/ebook/NavEbook";
 
 
 
@@ -22,8 +24,9 @@ const Ebook = () => {
 
   return (
     <>
+    <DynamicHead taller="ebook" />
     <div className="min-h-screen font-poppins text-text-dark">
-      <Nav3 />
+      <NavEbook />
       <Heroe />
       <PersonalSection/>
       <GuideInclusions/>

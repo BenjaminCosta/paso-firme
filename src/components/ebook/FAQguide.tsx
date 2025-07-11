@@ -1,4 +1,4 @@
-import { ChevronDown, ArrowRight } from 'lucide-react';
+import { ChevronDown, ArrowRight, Download, Smartphone, FileText } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 
@@ -111,26 +111,40 @@ const FAQguide = () => {
           ))}
         </div>
 
-        {/* CTA final */}
-        <div className="text-center">
-          <div className="inline-flex flex-col items-center bg-white/80 backdrop-blur-sm p-8 rounded-xl border border-white/90 shadow-sm">
-            <p className="text-gray-700 mb-6 text-lg font-medium">
-              ¿Listo para comenzar tu transformación?
-            </p>
-            <Button
-              size="lg"
-              className="relative overflow-hidden bg-gradient-to-r from-brand-purple to-brand-teal text-white px-8 py-6 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-xl group"
-            >
-              <span className="relative z-10 flex items-center justify-center">
-                Obtener la guía ahora <ArrowRight className="ml-3 h-5 w-5 transition-transform group-hover:translate-x-2" />
-              </span>
-              <span className="absolute inset-0 bg-gradient-to-r from-brand-teal to-brand-purple opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-            </Button>
-            <p className="mt-4 text-sm text-gray-500">
-              Acceso inmediato • Garantía de 7 días
-            </p>
-          </div>
-        </div>
+       
+{/* CTA final - Versión premium mejorada */}
+<div className="text-center">
+  <div className="inline-flex flex-col items-center">
+    <Button
+      size="lg"
+      className="relative overflow-hidden bg-gradient-to-r from-brand-purple via-brand-coral to-brand-teal text-white px-10 py-7 text-xl font-bold rounded-xl transition-all duration-300 hover:scale-[1.02] shadow-xl hover:shadow-2xl group"
+    >
+      <span className="relative z-10 flex items-center justify-center">
+        <span className="mr-3 bg-white/20 px-3 py-1 rounded-full text-sm font-medium tracking-wide ">
+          🔥 OFERTA ESPECIAL
+        </span>
+        Descargar Guía Completa
+        <ArrowRight className="ml-4 h-6 w-6 transition-transform group-hover:translate-x-3 duration-200" />
+      </span>
+      <span className="absolute inset-0 bg-gradient-to-r from-brand-teal via-brand-purple to-brand-coral opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+    </Button>
+    
+    <div className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-3">
+      <div className="flex items-center text-sm text-gray-600">
+        <Download className="w-5 h-5 mr-2 text-brand-teal" />
+        Acceso inmediato 24/7
+      </div>
+      <div className="flex items-center text-sm text-gray-600">
+        <Smartphone className="w-5 h-5 mr-2 text-brand-purple" />
+        Multiplataforma
+      </div>
+      <div className="flex items-center text-sm text-gray-600">
+        <FileText className="w-5 h-5 mr-2 text-brand-coral" />
+        PDF + Audios descargables
+      </div>
+    </div>
+  </div>
+</div>
       </div>
     </section>
   );
