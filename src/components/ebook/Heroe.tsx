@@ -78,7 +78,7 @@ const Heroe = ({ onScrollToSection }: HeroSectionProps) => {
    
 
     {/* Elemento de urgencia premium - Versión mejorada */}
-<div className="absolute -top-6 -left-8 bg-gradient-to-br from-brand-teal to-brand-purple text-white px-5 py-3 rounded-xl shadow-2xl z-30 group overflow-hidden">
+<div className="absolute -top-8 -left-8 bg-gradient-to-br from-brand-teal to-brand-purple text-white px-5 py-3 rounded-xl shadow-2xl z-30 group overflow-hidden">
   {/* Efecto de fondo animado */}
   <div className="absolute inset-0 bg-[length:200%_200%] bg-gradient-to-r from-brand-teal/80 via-brand-purple/80 to-brand-teal/80 animate-gradient-shift opacity-90"></div>
   
@@ -108,7 +108,7 @@ const Heroe = ({ onScrollToSection }: HeroSectionProps) => {
   `}</style>
 </div>
  {/* Badge de confianza premium */}
-<div className="absolute -bottom-2 -right-2 bg-white/95 backdrop-blur-sm px-5 py-2.5 rounded-lg shadow-lg border border-gray-100/80 hover:shadow-xl transition-all">
+<div className="absolute -bottom-4 -right-4 bg-white/95 backdrop-blur-sm px-5 py-2.5 rounded-lg shadow-lg border border-gray-100/80 hover:shadow-xl transition-all">
   <div className="flex items-center space-x-2">
     <div className="p-1.5 bg-brand-teal/10 rounded-lg">
       <ShieldCheck className="w-5 h-5 text-brand-teal" />

@@ -49,32 +49,33 @@ const PricingGuide = () => {
             </div>
 
             {/* Contenido textual */}
-            <div className="relative">
-              <div className="absolute -top-10 -left-10 w-40 h-40 bg-brand-purple/5 rounded-full blur-[60px]"></div>
+<div className="relative">
+  <div className="absolute -top-10 -left-10 w-40 h-40 bg-brand-purple/5 rounded-full blur-[60px]"></div>
 
-              <div className="mb-10">
-                <div className="inline-flex items-center justify-center space-x-4 mb-8">
-                  <div className="w-24 h-px bg-gradient-to-r from-transparent via-brand-purple/50 to-transparent"></div>
-                  <span className="text-sm font-semibold tracking-widest text-brand-purple uppercase bg-white/90 px-5 py-2.5 rounded-full backdrop-blur-sm border border-brand-purple/10 shadow-xs hover:shadow-sm transition-all">
-                    Última oportunidad
-                  </span>
-                  <div className="w-24 h-px bg-gradient-to-l from-transparent via-brand-purple/50 to-transparent"></div>
-                </div>
+  <div className="mb-10 text-center">
+    <div className="inline-flex flex-wrap items-center justify-center space-x-4 mb-8">
+      <div className="w-20 h-px bg-gradient-to-r from-transparent via-brand-purple/50 to-transparent"></div>
+      <span className="text-xs sm:text-sm  font-semibold tracking-widest text-brand-purple uppercase bg-white/90 px-4 py-2 rounded-full backdrop-blur-sm border border-brand-purple/10 shadow-xs hover:shadow-sm transition-all">
+        Última oportunidad
+      </span>
+      <div className="w-20 h-px bg-gradient-to-l from-transparent via-brand-purple/50 to-transparent"></div>
+    </div>
 
-                <h2 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">
-Fortalece
-  <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-coral to-brand-purple">
-    {" "}el vínculo
-  </span>
-</h2>
+    <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+      Fortalece
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-coral to-brand-purple">
+        {" "}el vínculo
+      </span>
+    </h2>
+
+    <p className="text-base sm:text-xl text-gray-600 mb-10 leading-relaxed">
+      Transforma la relación con tus adolescentes con herramientas basadas en{" "}
+      <span className="font-medium text-brand-teal">neurociencia</span> y{" "}
+      <span className="font-medium text-brand-purple">psicología positiva</span>.
+    </p>
+  </div>
 
 
-                <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-                  Transforma la relación con tus adolescentes con herramientas basadas en{" "}
-                  <span className="font-medium text-brand-teal">neurociencia</span> y{" "}
-                  <span className="font-medium text-brand-purple">psicología positiva</span>.
-                </p>
-              </div>
 
               {/* Lista de beneficios */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-12">

@@ -45,24 +45,24 @@ const FAQguide = () => {
 
       <div className="container mx-auto relative z-10">
         {/* Encabezado */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <div className="inline-flex items-center justify-center space-x-4 mb-8">
-            <div className="w-20 h-[2px] bg-gradient-to-r from-transparent via-brand-purple/70 to-transparent"></div>
-            <span className="text-sm font-medium tracking-widest text-brand-coral uppercase bg-white/80 px-4 py-2 rounded-full backdrop-blur-sm border border-brand-coral/20">
-             Respuestas Rápidas
-            </span>
-            <div className="w-20 h-[2px] bg-gradient-to-l from-transparent via-brand-purple/70 to-transparent"></div>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            <span className="bg-gradient-to-r from-brand-teal via-brand-teal to-brand-coral bg-clip-text text-transparent">
-              Preguntas frecuentes
-            </span>
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-brand-teal via-brand-purple to-brand-teal mx-auto rounded-full mb-6" />
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-            Hemos recopilado las dudas más comunes para facilitarte la información que necesitas.
-          </p>
-        </div>
+       <div className="max-w-3xl mx-auto text-center mb-16 px-4 sm:px-6 lg:px-0">
+  <div className="inline-flex items-center justify-center space-x-4 mb-8">
+    <div className="w-16 sm:w-20 h-[2px] bg-gradient-to-r from-transparent via-brand-purple/70 to-transparent"></div>
+    <span className="text-xs sm:text-sm font-medium tracking-widest text-brand-coral uppercase bg-white/80 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full backdrop-blur-sm border border-brand-coral/20">
+      Respuestas Rápidas
+    </span>
+    <div className="w-16 sm:w-20 h-[2px] bg-gradient-to-l from-transparent via-brand-purple/70 to-transparent"></div>
+  </div>
+  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 px-2 sm:px-0 leading-tight">
+    <span className="bg-gradient-to-r from-brand-teal via-brand-teal to-brand-coral bg-clip-text text-transparent">
+      Preguntas frecuentes
+    </span>
+  </h2>
+  <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-brand-teal via-brand-purple to-brand-teal mx-auto rounded-full mb-6" />
+  <p className="text-base sm:text-lg text-gray-700 max-w-xl sm:max-w-2xl mx-auto px-2 sm:px-0 leading-relaxed">
+    Hemos recopilado las dudas más comunes para facilitarte la información que necesitas.
+  </p>
+</div>
 
         {/* Acordeón de preguntas */}
         <div className="max-w-4xl mx-auto space-y-4 mb-16">
