@@ -14,14 +14,14 @@ const PricingGuide = () => {
     <div className="bg-white">
       <section
         id="pricing"
-        className="relative py-28 px-6 sm:px-12 lg:px-20 bg-gradient-to-br from-brand-beige/60 via-white to-brand-coral/10 overflow-hidden rounded-t-[3rem]"
+        className="relative py-28 px-6 sm:px-12 lg:px-20 bg-gradient-to-br from-brand-beige/60 via-white to-brand-coral/10 overflow-hidden"
       >
         {/* Fondos decorativos */}
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white/40 to-transparent"></div>
-          <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-r from-brand-purple/10 to-transparent"></div>
-          <div className="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-brand-teal/10 blur-[120px]"></div>
-          <div className="absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-brand-coral/10 blur-[120px]"></div>
+          <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-r from-brand-purple/20 to-transparent"></div>
+          <div className="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-brand-teal/20 blur-[120px]"></div>
+          <div className="absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-brand-coral/20 blur-[120px]"></div>
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
@@ -50,30 +50,33 @@ const PricingGuide = () => {
 
             {/* Contenido textual */}
 <div className="relative">
-  <div className="absolute -top-10 -left-10 w-40 h-40 bg-brand-purple/5 rounded-full blur-[60px]"></div>
+ <div className="absolute -top-10 -left-10 w-40 h-40 bg-brand-purple/5 rounded-full blur-[60px]"></div>
 
-  <div className="mb-10 text-center">
-    <div className="inline-flex flex-wrap items-center justify-center space-x-4 mb-8">
-      <div className="w-20 h-px bg-gradient-to-r from-transparent via-brand-purple/50 to-transparent"></div>
-      <span className="text-xs sm:text-sm  font-semibold tracking-widest text-brand-purple uppercase bg-white/90 px-4 py-2 rounded-full backdrop-blur-sm border border-brand-purple/10 shadow-xs hover:shadow-sm transition-all">
-        Última oportunidad
-      </span>
-      <div className="w-20 h-px bg-gradient-to-l from-transparent via-brand-purple/50 to-transparent"></div>
-    </div>
+<div className="mb-10 text-center px-4">
+  <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 mb-8">
+    <div className="hidden sm:block w-20 h-px bg-gradient-to-r from-transparent via-brand-purple/50 to-transparent"></div>
 
-    <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-      Fortalece
-      <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-coral to-brand-purple">
-        {" "}el vínculo
-      </span>
-    </h2>
+    <span className="text-[11px] sm:text-xs md:text-sm font-semibold tracking-widest text-brand-purple uppercase bg-white/90 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full backdrop-blur-sm border border-brand-purple/10 shadow-xs hover:shadow-sm transition-all whitespace-nowrap">
+      Última oportunidad
+    </span>
 
-    <p className="text-base sm:text-xl text-gray-600 mb-10 leading-relaxed">
-      Transforma la relación con tus adolescentes con herramientas basadas en{" "}
-      <span className="font-medium text-brand-teal">neurociencia</span> y{" "}
-      <span className="font-medium text-brand-purple">psicología positiva</span>.
-    </p>
+    <div className="hidden sm:block w-20 h-px bg-gradient-to-l from-transparent via-brand-purple/50 to-transparent"></div>
   </div>
+
+  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+    Fortalece
+    <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-coral to-brand-purple">
+      {" "}el vínculo
+    </span>
+  </h2>
+
+  <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">
+    Transforma la relación con tus adolescentes con herramientas basadas en{" "}
+    <span className="font-medium text-brand-teal">neurociencia</span> y{" "}
+    <span className="font-medium text-brand-purple">psicología positiva</span>.
+  </p>
+</div>
+
 
 
 
