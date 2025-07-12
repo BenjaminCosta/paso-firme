@@ -27,7 +27,7 @@ const Ebook = () => {
     <DynamicHead taller="ebook" />
     <div className="min-h-screen font-poppins text-text-dark">
       <NavEbook />
-      <Heroe />
+      <Heroe onScrollToSection={scrollToSection} />
       <PersonalSection/>
       <GuideInclusions/>
       <AudienceTestimonials/>

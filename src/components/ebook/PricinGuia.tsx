@@ -12,7 +12,10 @@ import {
 const PricingGuide = () => {
   return (
     <div className="bg-white">
-      <section className="relative py-28 px-6 sm:px-12 lg:px-20 bg-gradient-to-br from-brand-beige/60 via-white to-brand-coral/10 overflow-hidden rounded-t-[3rem]">
+      <section
+        id="pricing"
+        className="relative py-28 px-6 sm:px-12 lg:px-20 bg-gradient-to-br from-brand-beige/60 via-white to-brand-coral/10 overflow-hidden rounded-t-[3rem]"
+      >
         {/* Fondos decorativos */}
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white/40 to-transparent"></div>
@@ -27,8 +30,8 @@ const PricingGuide = () => {
             <div className="relative">
               <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl aspect-[3/4] border-8 border-white">
                 <img
-                  src="/mockup-guia.jpg"
-                  alt="Mockup de la guía completa"
+                  src="imagenes/ebook4.jpg"
+                  alt="Mockup de la guía"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent"></div>
@@ -46,79 +49,104 @@ const PricingGuide = () => {
             </div>
 
             {/* Contenido textual */}
-            <div>
-              <div className="inline-flex items-center justify-center space-x-4 mb-8">
-                <div className="w-20 h-px bg-gradient-to-r from-transparent via-brand-purple/40 to-transparent"></div>
-                <span className="text-sm font-medium tracking-widest text-brand-purple uppercase bg-white/90 px-4 py-2 rounded-full backdrop-blur-sm border border-brand-purple/20 shadow-sm">
-                  Última oportunidad
-                </span>
-                <div className="w-20 h-px bg-gradient-to-l from-transparent via-brand-purple/40 to-transparent"></div>
+            <div className="relative">
+              <div className="absolute -top-10 -left-10 w-40 h-40 bg-brand-purple/5 rounded-full blur-[60px]"></div>
+
+              <div className="mb-10">
+                <div className="inline-flex items-center justify-center space-x-4 mb-8">
+                  <div className="w-24 h-px bg-gradient-to-r from-transparent via-brand-purple/50 to-transparent"></div>
+                  <span className="text-sm font-semibold tracking-widest text-brand-purple uppercase bg-white/90 px-5 py-2.5 rounded-full backdrop-blur-sm border border-brand-purple/10 shadow-xs hover:shadow-sm transition-all">
+                    Última oportunidad
+                  </span>
+                  <div className="w-24 h-px bg-gradient-to-l from-transparent via-brand-purple/50 to-transparent"></div>
+                </div>
+
+                <h2 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">
+Fortalece
+  <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-coral to-brand-purple">
+    {" "}el vínculo
+  </span>
+</h2>
+
+
+                <p className="text-xl text-gray-600 mb-10 leading-relaxed">
+                  Transforma la relación con tus adolescentes con herramientas basadas en{" "}
+                  <span className="font-medium text-brand-teal">neurociencia</span> y{" "}
+                  <span className="font-medium text-brand-purple">psicología positiva</span>.
+                </p>
               </div>
 
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                <span className="block">Guía Completa para</span>
-                <span className="text-brand-coral">Límites con Conexión</span>
-              </h2>
-              <p className="text-lg text-gray-600 mb-10">
-                Todo lo que necesitas para navegar la adolescencia con equilibrio y armonía.
-              </p>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+              {/* Lista de beneficios */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-12">
                 {[
-                  { icon: <Download className="w-5 h-5" />, text: "Acceso inmediato al material digital" },
-                  { icon: <CheckCircle className="w-5 h-5" />, text: "Versión imprimible incluida" },
-                  { icon: <Smartphone className="w-5 h-5" />, text: "Disponible en todos tus dispositivos" },
-                  { icon: <MessageCircle className="w-5 h-5" />, text: "Frases clave para momentos difíciles" }
+                  {
+                    icon: <Download className="w-6 h-6" />,
+                    text: "Acceso inmediato al material digital",
+                  },
+                  {
+                    icon: <CheckCircle className="w-6 h-6" />,
+                    text: "Versión imprimible incluida",
+                  },
+                  {
+                    icon: <Smartphone className="w-6 h-6" />,
+                    text: "Disponible en todos tus dispositivos",
+                  },
+                  {
+                    icon: <MessageCircle className="w-6 h-6" />,
+                    text: "Frases clave para momentos difíciles",
+                  },
                 ].map((item, index) => (
                   <div
                     key={index}
-                    className="flex items-start bg-white rounded-xl shadow-sm p-4 border border-gray-100 hover:shadow-md transition-shadow"
+                    className="flex items-start p-5 rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group"
                   >
-                    <div className="flex-shrink-0 mt-0.5 mr-4 text-brand-teal bg-brand-teal/10 p-2 rounded-lg">
-                      {item.icon}
+                    <div className="flex-shrink-0 mr-4 relative">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-teal to-brand-purple flex items-center justify-center shadow-xs group-hover:shadow-sm transition-shadow">
+                        <div className="relative z-10 text-white">{item.icon}</div>
+                      </div>
+                      <div className="absolute top-0 left-0 w-full h-1/2 bg-white/10 rounded-t-xl"></div>
                     </div>
-                    <span className="text-base text-gray-700 font-medium leading-snug">
-                      {item.text}
-                    </span>
+                    <span className="text-lg text-gray-800 font-medium leading-snug pt-1">{item.text}</span>
                   </div>
                 ))}
               </div>
 
-              {/* CTA */}
-              <div className="space-y-5">
-                <button className="w-full py-5 px-8 bg-brand-coral hover:bg-brand-coral/90 text-white text-xl font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.03] group flex items-center justify-center">
-                  <span className="mr-3">Sí, quiero educar con firmeza y conexión</span>
-                  <ArrowRight className="w-6 h-6 transition-transform group-hover:translate-x-1" />
-                </button>
+              {/* Botón CTA */}
+              <div className="space-y-6">
+               <button className="w-full py-5 px-8 bg-white border-2 border-brand-teal text-brand-teal text-lg font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-300 group relative overflow-hidden">
+  <span className="relative z-10 flex items-center justify-center">
+    <span className="group-hover:text-white transition-colors duration-300">
+      Sí, quiero educar con firmeza y conexión
+    </span>
+    <ArrowRight className="w-5 h-5 ml-3 transition-all duration-300 group-hover:translate-x-2 group-hover:text-white" />
+  </span>
+  <span className="absolute inset-0 bg-gradient-to-r from-brand-teal to-brand-coral opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+</button>
 
-                <div className="flex flex-wrap justify-center gap-3">
+                {/* Garantías */}
+                <div className="flex flex-wrap justify-center gap-4">
                   {[
                     {
-                      icon: <ShieldCheck className="w-4 h-4" />,
-                      text: "Garantía",
-                      color: "bg-brand-teal/10 text-brand-teal border-brand-teal/20"
+                      icon: <ShieldCheck className="w-5 h-5" />,
+                      text: "Resultados comprobados",
+                      color: "bg-white text-brand-teal border-brand-teal/20 hover:bg-brand-teal/5",
                     },
                     {
-                      icon: <LockKeyhole className="w-4 h-4" />,
-                      text: "Pago seguro",
-                      color: "bg-white text-gray-700 border-gray-200"
+                      icon: <LockKeyhole className="w-5 h-5" />,
+                      text: "Pago 100% seguro",
+                      color: "bg-white text-brand-purple border-brand-purple/20 hover:bg-brand-purple/5",
                     },
                     {
-                      icon: <Download className="w-4 h-4" />,
-                      text: "Inmediato",
-                      color: "bg-brand-coral/10 text-brand-coral border-brand-coral/20"
+                      icon: <Download className="w-5 h-5" />,
+                      text: "Acceso inmediato",
+                      color: "bg-white text-brand-coral border-brand-coral/20 hover:bg-brand-coral/5",
                     },
-                    {
-                      icon: <Mail className="w-4 h-4" />,
-                      text: "Soporte",
-                      color: "bg-white text-gray-700 border-gray-200"
-                    }
                   ].map((item, index) => (
                     <div
                       key={index}
-                      className={`flex items-center text-xs px-3 py-1.5 rounded-full border ${item.color}`}
+                      className={`flex items-center text-sm px-4 py-2.5 rounded-lg border ${item.color} shadow-xs hover:shadow-sm transition-all`}
                     >
-                      <span className="mr-1.5">{item.icon}</span>
+                      <span className="mr-2">{item.icon}</span>
                       <span className="font-medium">{item.text}</span>
                     </div>
                   ))}

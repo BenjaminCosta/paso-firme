@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
+import { Gift, ShieldCheck, Star, Zap } from 'lucide-react';
 
-const Heroe = () => {
+
+interface HeroSectionProps {
+  onScrollToSection: (id: string) => void;
+}
+
+const Heroe = ({ onScrollToSection }: HeroSectionProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const carouselImages = [
@@ -47,24 +53,75 @@ const Heroe = () => {
         <div className="absolute bottom-1/3 -right-20 w-72 h-72 rounded-full bg-brand-coral/20 blur-[100px]"></div>
         <div className="absolute top-1/3 right-1/4 w-48 h-48 rounded-full bg-brand-teal/20 blur-[80px]"></div>
       </div>
-
-      {/* Mockup elegante */}
-      <div className="absolute right-[8%] top-1/2 mt-4 transform -translate-y-1/2 hidden lg:block w-[25%] max-w-[380px] z-20">
-        <div className="relative w-full h-[420px] group">
-          <div className="absolute inset-0 rounded-xl overflow-hidden shadow-2xl border-2 border-white/20 backdrop-blur-sm bg-white/5">
-            <div className="absolute inset-0 bg-[url('/path-to-ebook-mockup.png')] bg-contain bg-no-repeat bg-center z-10" />
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-teal-400/10" />
-          </div>
-          
-          {/* Efecto de página */}
-          <div className="absolute top-0 right-0 h-full w-6 bg-gradient-to-l from-white/30 to-transparent transform skew-x-[-12deg] origin-right"></div>
-          
-          {/* Reflexión */}
-          <div className="absolute -bottom-16 left-0 right-0 h-16 bg-gradient-to-t from-white/10 to-transparent backdrop-blur-sm">
-            <div className="absolute inset-0 bg-[url('/path-to-ebook-mockup.png')] bg-contain bg-no-repeat bg-center opacity-20" />
-          </div>
-        </div>
+{/* Mockup Premium con Elementos de Urgencia */}
+<div className="absolute right-[7%] mt-5 top-1/2 transform -translate-y-1/2 hidden lg:block w-[32%] max-w-[450px] z-20">
+  <div className="relative w-full h-[500px]">
+    {/* Base del mockup con profundidad */}
+    <div className="absolute inset-0 rounded-[28px] overflow-hidden shadow-3xl bg-gradient-to-br from-white to-gray-50">
+      {/* Efecto de luz ambiental */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-brand-teal/10 via-brand-purple/5 to-brand-coral/8"></div>
+      
+      {/* Marco del dispositivo */}
+      <div className="absolute inset-3 rounded-2xl border-2 border-white/60 shadow-inner-lg overflow-hidden backdrop-blur-[1px]">
+        {/* Imagen del producto */}
+        <div className="absolute inset-0 bg-[url('/imagenes/ebook2.jpeg')] bg-cover bg-center"></div>
+        
+        {/* Overlays de pantalla */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-white/15"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent w-1/3"></div>
       </div>
+      
+      {/* Efecto de reflexión */}
+      <div className="absolute -bottom-20 left-0 right-0 h-20 bg-gradient-to-t from-white/30 to-transparent backdrop-blur-sm"></div>
+    </div>
+
+   
+
+    {/* Elemento de urgencia premium - Versión mejorada */}
+<div className="absolute -top-6 -left-8 bg-gradient-to-br from-brand-teal to-brand-purple text-white px-5 py-3 rounded-xl shadow-2xl z-30 group overflow-hidden">
+  {/* Efecto de fondo animado */}
+  <div className="absolute inset-0 bg-[length:200%_200%] bg-gradient-to-r from-brand-teal/80 via-brand-purple/80 to-brand-teal/80 animate-gradient-shift opacity-90"></div>
+  
+  {/* Contenido */}
+  <div className="relative z-10 flex items-center space-x-3">
+    <div className="bg-white/20 p-2 rounded-lg">
+      <Zap className="w-5 h-5 text-white animate-bounce" />
+    </div>
+    <div className="text-center">
+      <div className="text-sm font-bold tracking-wide uppercase">¡APROVECHA AHORA!</div>
+      <div className="text-xs font-medium opacity-90 mt-1">ÚLTIMAS UNIDADES DISPONIBLES</div>
+    </div>
+  </div>
+
+  {/* Efecto de destello */}
+  <div className="absolute -inset-4 bg-white/30 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+
+  <style >{`
+    @keyframes gradient-shift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .animate-gradient-shift {
+      animation: gradient-shift 4s ease infinite;
+    }
+  `}</style>
+</div>
+ {/* Badge de confianza premium */}
+<div className="absolute -bottom-2 -right-2 bg-white/95 backdrop-blur-sm px-5 py-2.5 rounded-lg shadow-lg border border-gray-100/80 hover:shadow-xl transition-all">
+  <div className="flex items-center space-x-2">
+    <div className="p-1.5 bg-brand-teal/10 rounded-lg">
+      <ShieldCheck className="w-5 h-5 text-brand-teal" />
+    </div>
+    <div className="text-brand-teal font-semibold text-sm tracking-wide">
+       MÉTODO CERTIFICADO
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+
 
       {/* Contenido principal */}
       <div className="relative z-10 h-full container mt-4 mx-auto px-6 md:px-16 flex items-center">
@@ -94,7 +151,9 @@ const Heroe = () => {
 
           {/* CTA Premium Mejorado */}
 <div className="flex flex-col sm:flex-row gap-4 items-center"> {/* Cambiado a items-center para alinear verticalmente */}
-  <Button className="relative overflow-hidden py-5 px-8 bg-gradient-to-r from-brand-coral to-brand-purple hover:from-brand-purple hover:to-brand-coral text-white text-lg font-bold rounded-full shadow-lg hover:shadow-xl transition-all group flex items-center">
+  <Button 
+  onClick={() => onScrollToSection('pricing')}
+  className="relative overflow-hidden py-5 px-8 bg-gradient-to-r from-brand-coral to-brand-purple hover:from-brand-purple hover:to-brand-coral text-white text-lg font-bold rounded-full shadow-lg hover:shadow-xl transition-all group flex items-center">
     <span className="relative z-10 flex items-center">
       Descargar E-Book
       <svg className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

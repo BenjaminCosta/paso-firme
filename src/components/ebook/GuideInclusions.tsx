@@ -18,6 +18,12 @@ const GuideInclusions = () => {
   return (
     <section className="relative py-28 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
       {/* Fondos decorativos */}
+       <div className="absolute inset-0 overflow-hidden opacity-10">
+        <div
+          className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1536882240095-0379873feb4e?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dq=85')] bg-cover bg-center mix-blend-overlay"
+        ></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-teal/10 via-brand-beige/5 to-brand-coral/10"></div>
+      </div>
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-brand-teal/5 to-transparent -skew-x-12 translate-x-20"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-brand-purple/10 blur-[100px]"></div>
@@ -124,7 +130,7 @@ const GuideInclusions = () => {
               </div>
 
               <div className="space-y-6">
-                <div className="bg-gradient-to-r from-brand-purple/5 to-brand-coral/5 p-8 rounded-3xl border border-gray-100 shadow-lg">
+                <div className="bg-gradient-to-b from-white/80 via-white/60 to-brand-coral/10 backdrop-blur-lg p-8 rounded-3xl border border-gray-100 shadow-lg">
                   <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
                     <ShieldCheck className="w-6 h-6 text-brand-coral mr-3" />
                     <span>Bonus exclusivos</span>
