@@ -1,56 +1,109 @@
 import {
-  CheckCircle,
   ArrowRight,
-  Smartphone,
   Download,
+  Printer,
+  Smartphone,
+  Laptop,
+  Check,
+  Headphones,
+  Map,
+  MessageSquare,
+  Clock,
   ShieldCheck,
-  LockKeyhole,
-  Mail,
-  MessageCircle
+  Zap
 } from 'lucide-react';
 
 const PricingGuide = () => {
   return (
     <div className="bg-white">
-      <section
-        id="pricing"
-        className="relative py-28 px-6 sm:px-12 lg:px-20 bg-gradient-to-br from-brand-beige/60 via-white to-brand-coral/10 overflow-hidden"
-      >
+      <section className="relative py-20 px-6 sm:px-12 bg-gradient-to-br from-brand-beige/30 via-white to-brand-coral/10 overflow-hidden">
         {/* Fondos decorativos */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white/40 to-transparent"></div>
-          <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-r from-brand-purple/20 to-transparent"></div>
-          <div className="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-brand-teal/20 blur-[120px]"></div>
-          <div className="absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-brand-coral/20 blur-[120px]"></div>
+          <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-brand-teal/20 blur-[100px]"></div>
+          <div className="absolute -bottom-20 -left-20 w-72 h-72 rounded-full bg-brand-coral/20 blur-[100px]"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            {/* Mockup visual */}
-            <div className="relative">
-              <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl aspect-[3/4] border-8 border-white">
-                <img
-                  src="imagenes/ebook4.jpg"
-                  alt="Mockup de la guía"
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent"></div>
-              </div>
-              <div className="absolute -bottom-6 -right-6 bg-white px-6 py-4 rounded-2xl shadow-xl border border-brand-coral/30">
-                <div className="flex items-end">
-                  <div className="text-4xl font-bold text-brand-coral">$295</div>
-                  <div className="ml-2 mb-1 text-gray-500">MXN</div>
-                </div>
-                <div className="text-sm text-gray-500 mt-1">≈ $16 USD</div>
-                <div className="text-xs text-brand-coral font-semibold mt-2 bg-brand-coral/10 rounded-lg px-3 py-1 inline-block">
-                  ¡Precio especial por tiempo limitado!
-                </div>
-              </div>
-            </div>
 
-            {/* Contenido textual */}
-<div className="relative">
- <div className="absolute -top-10 -left-10 w-40 h-40 bg-brand-purple/5 rounded-full blur-[60px]"></div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch min-h-[720px]">
+
+          {/* Galería premium con altura sincronizada */}
+<div className="relative h-full self-stretch flex flex-col mt-5 justify-between">
+  <div className="flex flex-col gap-5 flex-grow min-h-0">
+    {/* Ebook grande */}
+    <div className="relative rounded-3xl overflow-hidden shadow-2xl border-[5px] border-white w-full flex-grow aspect-[3/4] max-h-[60vh]">
+      <img 
+        src="imagenes/ebook4.jpg" 
+        alt="Guía PDF" 
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 p-6 text-white bg-gradient-to-t from-black/70 to-transparent">
+        <div className="text-xl font-bold">Guía Definitiva</div>
+        <div className="text-base opacity-90 mt-1.5">PDF + Recursos Bonus</div>
+      </div>
+    </div>
+
+    {/* Miniaturas */}
+    <div className="grid grid-cols-2 gap-5 flex-grow min-h-0">
+      {/* Audio */}
+      <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-square border-[3px] border-white transform hover:-translate-y-1 transition-all">
+        <div className="absolute top-3 left-3 bg-black/60 text-white text-sm px-3 py-1.5 rounded-full z-10">
+          <Headphones className="inline w-4 h-4 mr-1.5" />
+          AUDIO
+        </div>
+        <img 
+          src="imagenes/frases.jpg" 
+          alt="Audio SOS" 
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-center text-sm font-medium">
+          "Cómo poner un alto"
+        </div>
+      </div>
+
+      {/* Mapa */}
+      <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-square border-[3px] border-white transform hover:-translate-y-1 transition-all">
+        <div className="absolute top-3 left-3 bg-black/60 text-white text-sm px-3 py-1.5 rounded-full z-10">
+          <Map className="inline w-4 h-4 mr-1.5" />
+          PLANTILLA
+        </div>
+        <img 
+          src="imagenes/map.jpg" 
+          alt="Mapa Límites" 
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-center text-sm font-medium">
+          Mapa de límites
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Precio flotante */}
+  <div className="absolute bottom-4 -right-4 bg-white px-5 py-3 rounded-2xl shadow-2xl border border-brand-coral/20 transform group-hover:scale-105 transition-all">
+    <div className="text-[1.5rem] font-bold text-brand-coral">$295</div>
+    <div className="text-sm text-gray-500 mt-1.5 flex items-center">
+      <Clock className="w-2 h-2 mr-1.5 text-brand-purple" />
+      <span>Oferta por tiempo limitado</span>
+    </div>
+  </div>
+
+  {/* Sello de garantía */}
+  <div className="absolute -top-4 -left-4 z-10">
+    <div className="bg-brand-teal text-white text-sm font-bold px-4 py-2 rounded-full shadow-lg flex items-center">
+      <ShieldCheck className="w-5 h-5 mr-2" />
+      GARANTÍA 100%
+    </div>
+  </div>
+</div>
+
+
+
+            {/* Contenido compacto */}
+            <div className="space-y-6">
+              <div className="absolute -top-10 -left-10 w-40 h-40 bg-brand-purple/5 rounded-full blur-[60px]"></div>
 
 <div className="mb-10 text-center px-4">
   <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 mb-8">
@@ -69,96 +122,113 @@ const PricingGuide = () => {
       {" "}el vínculo
     </span>
   </h2>
+<div/>
 
-  <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">
-    Transforma la relación con tus adolescentes con herramientas basadas en{" "}
-    <span className="font-medium text-brand-teal">neurociencia</span> y{" "}
-    <span className="font-medium text-brand-purple">psicología positiva</span>.
-  </p>
+           {/* Lista premium con cajas de tamaño uniforme */}
+<div className="space-y-4 w-full max-w-md mx-auto">
+  {/* Item 1 - Guía PDF */}
+  <div className="flex items-start p-4 bg-white/90 rounded-2xl border border-white/30 hover:border-brand-teal/40 transition-all relative overflow-hidden group backdrop-blur-sm h-24">
+    <div className="absolute inset-0 bg-gradient-to-br from-white to-brand-teal/10 opacity-80 group-hover:from-brand-teal/5 group-hover:opacity-100 transition-all"></div>
+    <div className="absolute -right-5 -top-5 w-20 h-20 bg-brand-teal/20 rounded-full blur-xl opacity-0 group-hover:opacity-40 transition-opacity"></div>
+    <div className="relative z-10 flex items-start w-full">
+      <div className="bg-gradient-to-br from-brand-teal/15 to-brand-teal/5 p-2.5 rounded-xl mr-4 border border-white/20 shadow-xs flex-shrink-0">
+        <Check className="w-6 h-6 text-brand-teal" />
+      </div>
+      <div className="flex-1 min-w-0">
+        <h3 className="font-semibold text-gray-900 text-base truncate">Guía Completa (PDF)</h3>
+        <p className="text-sm text-gray-600 mt-1 line-clamp-2">
+          10 límites con base neurocientífica + frases clave + ejercicios prácticos
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {/* Item 2 - Audio */}
+  <div className="flex items-start p-4 bg-white/90 rounded-2xl border border-white/30 hover:border-brand-purple/40 transition-all relative overflow-hidden group backdrop-blur-sm h-24">
+    <div className="absolute inset-0 bg-gradient-to-br from-white to-brand-purple/10 opacity-80 group-hover:from-brand-purple/5 group-hover:opacity-100 transition-all"></div>
+    <div className="absolute -right-5 -top-5 w-20 h-20 bg-brand-purple/20 rounded-full blur-xl opacity-0 group-hover:opacity-40 transition-opacity"></div>
+    <div className="relative z-10 flex items-start w-full">
+      <div className="bg-gradient-to-br from-brand-purple/15 to-brand-purple/5 p-2.5 rounded-xl mr-4 border border-white/20 shadow-xs flex-shrink-0">
+        <Headphones className="w-6 h-6 text-brand-purple" />
+      </div>
+      <div className="flex-1 min-w-0">
+        <h3 className="font-semibold text-gray-900 text-base truncate">Audio de Emergencia</h3>
+        <p className="text-sm text-gray-600 mt-1 line-clamp-2">
+          "Cómo poner un alto sin perder la calma" (8-10 min)
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {/* Item 3 - Mapa */}
+  <div className="flex items-start p-4 bg-white/90 rounded-2xl border border-white/30 hover:border-brand-coral/40 transition-all relative overflow-hidden group backdrop-blur-sm h-24">
+    <div className="absolute inset-0 bg-gradient-to-br from-white to-brand-coral/10 opacity-80 group-hover:from-brand-coral/5 group-hover:opacity-100 transition-all"></div>
+    <div className="absolute -right-5 -top-5 w-20 h-20 bg-brand-coral/20 rounded-full blur-xl opacity-0 group-hover:opacity-40 transition-opacity"></div>
+    <div className="relative z-10 flex items-start w-full">
+      <div className="bg-gradient-to-br from-brand-coral/15 to-brand-coral/5 p-2.5 rounded-xl mr-4 border border-white/20 shadow-xs flex-shrink-0">
+        <Map className="w-6 h-6 text-brand-coral" />
+      </div>
+      <div className="flex-1 min-w-0">
+        <h3 className="font-semibold text-gray-900 text-base truncate">Mapa de Límites</h3>
+        <p className="text-sm text-gray-600 mt-1 line-clamp-2">
+          Plantilla imprimible para definir tus límites
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {/* Item 4 - Frases */}
+  <div className="flex items-start p-4 bg-white/90 rounded-2xl border border-white/30 hover:border-brand-teal/40 transition-all relative overflow-hidden group backdrop-blur-sm h-24">
+    <div className="absolute inset-0 bg-gradient-to-br from-white to-brand-teal/10 opacity-80 group-hover:from-brand-teal/5 group-hover:opacity-100 transition-all"></div>
+    <div className="absolute -right-5 -top-5 w-20 h-20 bg-brand-teal/20 rounded-full blur-xl opacity-0 group-hover:opacity-40 transition-opacity"></div>
+    <div className="relative z-10 flex items-start w-full">
+      <div className="bg-gradient-to-br from-brand-teal/15 to-brand-teal/5 p-2.5 rounded-xl mr-4 border border-white/20 shadow-xs flex-shrink-0">
+        <MessageSquare className="w-6 h-6 text-brand-teal" />
+      </div>
+      <div className="flex-1 min-w-0">
+        <h3 className="font-semibold text-gray-900 text-base truncate">Frases Clave</h3>
+        <p className="text-sm text-gray-600 mt-1 line-clamp-2">
+          10 respuestas para momentos críticos
+        </p>
+      </div>
+    </div>
+  </div>
 </div>
 
-
-
-
-              {/* Lista de beneficios */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-12">
-                {[
-                  {
-                    icon: <Download className="w-6 h-6" />,
-                    text: "Acceso inmediato al material digital",
-                  },
-                  {
-                    icon: <CheckCircle className="w-6 h-6" />,
-                    text: "Versión imprimible incluida",
-                  },
-                  {
-                    icon: <Smartphone className="w-6 h-6" />,
-                    text: "Disponible en todos tus dispositivos",
-                  },
-                  {
-                    icon: <MessageCircle className="w-6 h-6" />,
-                    text: "Frases clave para momentos difíciles",
-                  },
-                ].map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex items-start p-5 rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group"
-                  >
-                    <div className="flex-shrink-0 mr-4 relative">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-teal to-brand-purple flex items-center justify-center shadow-xs group-hover:shadow-sm transition-shadow">
-                        <div className="relative z-10 text-white">{item.icon}</div>
-                      </div>
-                      <div className="absolute top-0 left-0 w-full h-1/2 bg-white/10 rounded-t-xl"></div>
-                    </div>
-                    <span className="text-lg text-gray-800 font-medium leading-snug pt-1">{item.text}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Botón CTA */}
-              <div className="space-y-6">
-               <button className="w-full py-5 px-8 bg-white border-2 border-brand-teal text-brand-teal text-lg font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-300 group relative overflow-hidden">
-  <span className="relative z-10 flex items-center justify-center">
-    <span className="group-hover:text-white transition-colors duration-300">
-      Sí, quiero educar con firmeza y conexión
-    </span>
-    <ArrowRight className="w-5 h-5 ml-3 transition-all duration-300 group-hover:translate-x-2 group-hover:text-white" />
-  </span>
-  <span className="absolute inset-0 bg-gradient-to-r from-brand-teal to-brand-coral opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-</button>
-
-                {/* Garantías */}
-                <div className="flex flex-wrap justify-center gap-4">
-                  {[
-                    {
-                      icon: <ShieldCheck className="w-5 h-5" />,
-                      text: "Resultados comprobados",
-                      color: "bg-white text-brand-teal border-brand-teal/20 hover:bg-brand-teal/5",
-                    },
-                    {
-                      icon: <LockKeyhole className="w-5 h-5" />,
-                      text: "Pago 100% seguro",
-                      color: "bg-white text-brand-purple border-brand-purple/20 hover:bg-brand-purple/5",
-                    },
-                    {
-                      icon: <Download className="w-5 h-5" />,
-                      text: "Acceso inmediato",
-                      color: "bg-white text-brand-coral border-brand-coral/20 hover:bg-brand-coral/5",
-                    },
-                  ].map((item, index) => (
-                    <div
-                      key={index}
-                      className={`flex items-center text-sm px-4 py-2.5 rounded-lg border ${item.color} shadow-xs hover:shadow-sm transition-all`}
-                    >
-                      <span className="mr-2">{item.icon}</span>
-                      <span className="font-medium">{item.text}</span>
-                    </div>
-                  ))}
+{/* Beneficios de formato - Versión mejorada */}
+<div className="grid grid-cols-3 gap-3 mt-8">
+  <div className="flex flex-col items-center p-3 bg-white rounded-xl border border-gray-100 shadow-xs hover:shadow-sm transition-all">
+    <div className="bg-brand-purple/10 p-3 rounded-full mb-2">
+      <Download className="w-5 h-5 text-brand-purple" />
+    </div>
+    <span className="text-sm font-medium text-gray-700">Acceso inmediato</span>
+  </div>
+  
+  <div className="flex flex-col items-center p-3 bg-white rounded-xl border border-gray-100 shadow-xs hover:shadow-sm transition-all">
+    <div className="bg-brand-coral/10 p-3 rounded-full mb-2">
+      <Printer className="w-5 h-5 text-brand-coral" />
+    </div>
+    <span className="text-sm font-medium text-gray-700">Imprimible</span>
+  </div>
+  
+  <div className="flex flex-col items-center p-3 bg-white rounded-xl border border-gray-100 shadow-xs hover:shadow-sm transition-all">
+    <div className="bg-brand-teal/10 p-3 rounded-full mb-2">
+      <Smartphone className="w-5 h-5 text-brand-teal" />
+    </div>
+    <span className="text-sm font-medium text-gray-700">Multiplataforma</span>
+  </div>
+</div>
+              {/* CTA compacto */}
+              <button className="w-full mt-6 py-4 px-6 bg-gradient-to-r from-brand-coral to-brand-purple text-white font-bold rounded-xl shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5">
+                <div className="flex items-center justify-center">
+                  <span>Descargar Ahora</span>
+                  <ArrowRight className="w-5 h-5 ml-3" />
                 </div>
-              </div>
+              </button>
             </div>
           </div>
         </div>
+        
       </section>
     </div>
   );

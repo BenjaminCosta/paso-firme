@@ -1,177 +1,243 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Gift, ShieldCheck, Star, Zap } from 'lucide-react';
-
+import { Download, Zap, ChevronRight } from 'lucide-react';
 
 interface HeroSectionProps {
   onScrollToSection: (id: string) => void;
 }
 
 const Heroe = ({ onScrollToSection }: HeroSectionProps) => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
-  const carouselImages = [
-    {
-      url: 'https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Padre e hija conversando'
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Familia con adolescente'
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev === carouselImages.length - 1 ? 0 : prev + 1));
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <section className="relative h-[72vh] min-h-[800px] md:min-h-[650px] w-full overflow-hidden">
-      {/* Fondo con efectos mejorados */}
-      <div className="absolute inset-0">
-        {/* Carrusel de fondo */}
-        {carouselImages.map((img, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'}`}
-          >
+    <section className="relative w-full h-auto lg:h-[800px] overflow-hidden">
+      {/* Premium Gradient Background System */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Base Image with Darkened Effect */}
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1683803246983-f25c809557cb?q=80&w=1464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Background"
+            className="w-full h-full object-cover opacity-40"
+          />
+        </div>
+        
+        {/* Base Dark Gradient (Bottom to Top) */}
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/30 via-gray-900/10 to-transparent"></div>
+        
+        {/* Color Gradient Overlays - Updated with beige/coral/teal */}
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-beige/20 via-transparent to-brand-teal/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-coral/20 via-transparent to-brand-teal/15"></div>
+        
+        {/* Diagonal Mesh Gradient - Updated colors */}
+        <div className="absolute inset-0 opacity-30" style={{
+          backgroundImage: `
+            linear-gradient(335deg, rgba(245, 228, 203, 0.3) 0%, transparent 25%),
+            linear-gradient(245deg, rgba(13, 148, 136, 0.3) 0%, transparent 25%),
+            linear-gradient(115deg, rgba(239, 108, 108, 0.3) 0%, transparent 20%)
+          `,
+          backgroundBlendMode: 'overlay'
+        }}></div>
+        
+        {/* Subtle Grid Texture */}
+        <div className="absolute inset-0 bg-[length:80px_80px] bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)]"></div>
+        
+        {/* Light Flare Effect (Top) */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-64 bg-gradient-to-b from-white/5 to-transparent"></div>
+        
+        {/* Dark Vignette (Edges) */}
+        <div className="absolute inset-0 bg-radial-gradient(ellipse_at_center, transparent 60%, rgba(0,0,0,0.5) 100%)"></div>
+        
+        {/* Animated Particles */}
+        <div className="absolute inset-0 opacity-5" style={{
+          backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 1000 1000\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.85\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\' opacity=\'0.2\'/%3E%3C/svg%3E")'
+        }}></div>
+      </div>
+
+      {/* Content Container */}
+      <div className="relative z-10 h-full container mx-auto px-4 md:px-16 flex flex-col lg:flex-row items-center pt-12 lg:pt-0 pb-12 lg:pb-0">
+        
+{/* Elegant Title Section - Mobile */}
+<div className="lg:hidden mt-16 mb-10 px-4 text-center">
+  <div className="text-center border-l-4 border-brand-beige pl-4">
+    <h1 className="font-serif text-4xl font-light text-gray-800">
+      <span className="text-brand-coral">Guía Parental</span> Esencial
+      <div className="mt-2 h-0.5 bg-gradient-to-r from-brand-teal to-brand-coral"></div>
+    </h1>
+  </div>
+</div>
+        {/* Mobile Image - Visible only on mobile */}
+        <div className="lg:hidden w-full mb-8 px-4">
+          <div className="w-full aspect-[6/5] bg-gradient-to-br from-brand-beige/10 via-brand-coral/10 to-brand-teal/10 rounded-tl-[60px] rounded-br-[60px] border border-white/30 shadow-2xl backdrop-blur-lg overflow-hidden flex items-center justify-center">
             <img
-              src={img.url}
-              alt={img.alt}
-              className="w-full h-full object-cover object-center"
+              src="imagenes/ecover2.png"
+              alt="Mockup del producto"
+              className="w-full h-auto object-cover relative z-10"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/60 to-gray-900/40" />
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-brand-purple/10 to-brand-beige/20" />
           </div>
-        ))}
-        
-        {/* Círculos de color */}
-        <div className="absolute top-1/4 -left-20 w-64 h-64 rounded-full bg-brand-purple/20 blur-[90px]"></div>
-        <div className="absolute bottom-1/3 -right-20 w-72 h-72 rounded-full bg-brand-coral/20 blur-[100px]"></div>
-        <div className="absolute top-1/3 right-1/4 w-48 h-48 rounded-full bg-brand-teal/20 blur-[80px]"></div>
-      </div>
-{/* Mockup Premium con Elementos de Urgencia */}
-<div className="absolute right-[7%] mt-5 top-1/2 transform -translate-y-1/2 hidden lg:block w-[32%] max-w-[450px] z-20">
-  <div className="relative w-full h-[500px]">
-    {/* Base del mockup con profundidad */}
-    <div className="absolute inset-0 rounded-[28px] overflow-hidden shadow-3xl bg-gradient-to-br from-white to-gray-50">
-      {/* Efecto de luz ambiental */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-brand-teal/10 via-brand-purple/5 to-brand-coral/8"></div>
-      
-      {/* Marco del dispositivo */}
-      <div className="absolute inset-3 rounded-2xl border-2 border-white/60 shadow-inner-lg overflow-hidden backdrop-blur-[1px]">
-        {/* Imagen del producto */}
-        <div className="absolute inset-0 bg-[url('/imagenes/ebook2.jpeg')] bg-cover bg-center"></div>
-        
-        {/* Overlays de pantalla */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-white/15"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent w-1/3"></div>
-      </div>
-      
-      {/* Efecto de reflexión */}
-      <div className="absolute -bottom-20 left-0 right-0 h-20 bg-gradient-to-t from-white/30 to-transparent backdrop-blur-sm"></div>
-    </div>
+        </div>
 
-   
-
-    {/* Elemento de urgencia premium - Versión mejorada */}
-<div className="absolute -top-8 -left-8 bg-gradient-to-br from-brand-teal to-brand-purple text-white px-5 py-3 rounded-xl shadow-2xl z-30 group overflow-hidden">
-  {/* Efecto de fondo animado */}
-  <div className="absolute inset-0 bg-[length:200%_200%] bg-gradient-to-r from-brand-teal/80 via-brand-purple/80 to-brand-teal/80 animate-gradient-shift opacity-90"></div>
-  
-  {/* Contenido */}
-  <div className="relative z-10 flex items-center space-x-3">
-    <div className="bg-white/20 p-2 rounded-lg">
-      <Zap className="w-5 h-5 text-white animate-bounce" />
-    </div>
-    <div className="text-center">
-      <div className="text-sm font-bold tracking-wide uppercase">¡APROVECHA AHORA!</div>
-      <div className="text-xs font-medium opacity-90 mt-1">ÚLTIMAS UNIDADES DISPONIBLES</div>
-    </div>
-  </div>
-
-  {/* Efecto de destello */}
-  <div className="absolute -inset-4 bg-white/30 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-
-  <style >{`
-    @keyframes gradient-shift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    .animate-gradient-shift {
-      animation: gradient-shift 4s ease infinite;
-    }
-  `}</style>
-</div>
- {/* Badge de confianza premium */}
-<div className="absolute -bottom-4 -right-4 bg-white/95 backdrop-blur-sm px-5 py-2.5 rounded-lg shadow-lg border border-gray-100/80 hover:shadow-xl transition-all">
-  <div className="flex items-center space-x-2">
-    <div className="p-1.5 bg-brand-teal/10 rounded-lg">
-      <ShieldCheck className="w-5 h-5 text-brand-teal" />
-    </div>
-    <div className="text-brand-teal font-semibold text-sm tracking-wide">
-       MÉTODO CERTIFICADO
-    </div>
-  </div>
-</div>
-
-  </div>
-</div>
-
-
-      {/* Contenido principal */}
-      <div className="relative z-10 h-full container mt-4 mx-auto px-6 md:px-16 flex items-center">
         <div className="w-full lg:w-1/2">
-        
-          <h1 className="text-5xl md:text-7xl font-medium text-white leading-tight mb-2">
-            Límites en la adolescencia...
-          </h1>
           
-          {/* Subtítulo con diseño mejorado */}
-          <div className="mb-6">
-            <p className="font-dancing font-bold text-brand-coral text-4xl md:text-5xl">
-            Sin perder a tu hijo
-            </p>
-            <div className="w-16 h-0.5 bg-gradient-to-r from-brand-teal to-brand-purple mt-2"></div>
-          </div>
 
-          {/* Descripción con glassmorphism */}
-          <div className="mb-10 max-w-2xl relative">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 shadow-lg">
-              <p className="text-xl text-white/90 italic">
-                "Una guía clara y firme para poner límites sin gritar, ceder ni perder conexión con tu hijo (ni contigo)."
-              </p>
-            </div>
-            <div className="absolute -left-2 top-0 h-full w-1 bg-gradient-to-b from-brand-coral to-brand-purple rounded-full"></div>
-          </div>
-
-          {/* CTA Premium Mejorado */}
-<div className="flex flex-col sm:flex-row gap-4 items-center"> {/* Cambiado a items-center para alinear verticalmente */}
-  <Button 
-  onClick={() => onScrollToSection('pricing')}
-  className="relative overflow-hidden py-5 px-8 bg-gradient-to-r from-brand-coral to-brand-purple hover:from-brand-purple hover:to-brand-coral text-white text-lg font-bold rounded-full shadow-lg hover:shadow-xl transition-all group flex items-center">
-    <span className="relative z-10 flex items-center">
-      Descargar E-Book
-      <svg className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-      </svg>
-    </span>
-    <span className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-  </Button>
-  
-  <div className="flex items-center text-white/80 text-sm bg-white/5 backdrop-blur-sm px-4 py-3 rounded-full border border-white/10 hover:bg-white/10 transition-colors">
-    <svg className="flex-shrink-0 w-5 h-5 mr-2 text-brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-    </svg>
-    <span>Pago 100% seguro</span>
-  </div>
+          {/* Elegant Title Section - Desktop */}
+<div className="hidden lg:block mb-12 pl-6 border-l-4 border-brand-teal">
+  <h1 className="font-serif text-5xl font-light text-gray-800 tracking-tight">
+    <span className="text-brand-coral">Guía Parental</span> Esencial
+    <div className="mt-2 h-0.5 w-3/4 bg-gradient-to-r from-brand-coral via-brand-purple to-brand-coral"></div>
+  </h1>
 </div>
+
+
+          {/* Premium Glassmorphism Benefits Card */}
+          <div className="mb-8 lg:mb-12 max-w-2xl relative group px-4 lg:px-0">
+            {/* Glow Effect - Updated colors */}
+            <div className="absolute -inset-0.5 rounded-2xl lg:rounded-3xl bg-gradient-to-r from-brand-coral/60 via-brand-beige/60 to-brand-teal/60 opacity-70 blur-xl group-hover:opacity-90 transition-all duration-700 animate-glow-pulse"></div>
+            
+            {/* Main Card */}
+            <div className="relative bg-gradient-to-br from-white/95 to-white/90 backdrop-blur-xl rounded-xl lg:rounded-2xl p-4 lg:p-6 border border-white/40 shadow-xl lg:shadow-2xl overflow-hidden">
+              {/* Animated Gradient Orbs - Updated colors */}
+              <div className="absolute -right-8 -top-8 w-32 h-32 lg:w-48 lg:h-48 rounded-full bg-gradient-to-r from-brand-teal/25 to-brand-beige/25 animate-orb-float opacity-80"></div>
+              <div className="absolute -left-6 -bottom-6 w-24 h-24 lg:w-36 lg:h-36 rounded-full bg-gradient-to-r from-brand-beige/20 to-brand-coral/20 animate-orb-float-delay opacity-70"></div>
+              
+              {/* Header with Icon - Updated colors */}
+              <div className="relative z-10 mb-3 lg:mb-4">
+                <div className="inline-flex items-center bg-gradient-to-r from-brand-coral/10 to-brand-teal/10 px-4 py-2 lg:px-5 lg:py-3 rounded-full border border-white/30 shadow-sm">
+                  <Zap className="w-5 h-5 lg:w-6 lg:h-6 text-brand-coral mr-2 lg:mr-3 animate-pulse-fast" />
+                  <h3 className="text-xl lg:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-coral to-brand-teal tracking-tight">
+                    🎁 COMBO COMPLETO
+                  </h3>
+                </div>
+              </div>
+              
+              <ul className="relative z-10 space-y-3 lg:space-y-4">
+                {[
+                  {
+                    icon: "📘",
+                    title: "Guía descargable (PDF)",
+                    highlight: "ACCESO RÁPIDO"
+                  },
+                  {
+                    icon: "🎧",
+                    title: "Audio de emergencia",
+                    highlight: "TRANQUILIDAD INMEDIATA"
+                  },
+                  {
+                    icon: "📝",
+                    title: "Hoja adicional: Mapa de límites",
+                    highlight: "ORIENTACIÓN CLARA"
+                  },
+                  {
+                    icon: "💬",
+                    title: "Frases SOS para momentos críticos",
+                    highlight: "RESPUESTAS ÚTILES"
+                  }
+                ].map((item, index) => (
+                  <li key={index} className="flex items-center group">
+                    {/* Icono */}
+                    <div className="relative mr-3 lg:mr-4 flex-shrink-0">
+                      <div className="absolute inset-0 bg-gradient-to-br from-white to-white/80 rounded-lg transform rotate-6 scale-95 opacity-80"></div>
+                      <div className="relative w-8 h-8 lg:w-10 lg:h-10 flex items-center justify-center bg-gradient-to-br from-brand-teal/15 to-brand-beige/15 rounded-lg border border-white/30 group-hover:from-brand-teal/20 group-hover:to-brand-beige/20 transition-all duration-300">
+                        <span className="text-base lg:text-lg">{item.icon}</span>
+                      </div>
+                    </div>
+
+                    {/* Título + Highlight */}
+                    <div className="flex flex-col sm:flex-row sm:items-baseline justify-between w-full">
+                      <h4 className="text-base lg:text-lg font-semibold text-gray-800 group-hover:text-gray-900 transition-colors text-center sm:text-left">
+                        {item.title}
+                      </h4>
+                      <span className="mt-0.5 lg:mt-1 sm:ml-2 text-xs font-bold bg-gradient-to-r from-brand-coral to-brand-teal text-white px-1.5 py-0.5 lg:px-2 lg:py-0.5 rounded-full whitespace-nowrap">
+                        {item.highlight}
+                      </span>
+                    </div>
+
+                    {/* Flechita */}
+                    <ChevronRight className="w-4 h-4 lg:w-5 lg:h-5 text-brand-teal/60 ml-2 lg:ml-4 group-hover:text-brand-coral group-hover:translate-x-1 transition-all duration-300" />
+                  </li>
+                ))}
+              </ul>
+              
+              {/* Mobile CTA Button - Updated */}
+              <div className="lg:hidden mt-6 flex justify-center">
+                <Button className="bg-gradient-to-r from-brand-coral to-brand-teal hover:from-brand-coral/90 hover:to-brand-teal/90 text-white font-bold py-4 px-6 rounded-lg lg:rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 w-full max-w-xs">
+                  <Download className="w-5 h-5 mr-2" />
+                  Descargar eBook
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Side - Enhanced Graphic Element (Desktop) */}
+        <div className="hidden lg:block absolute right-3 top-0 bottom-0 w-1/2">
+          <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-[90%] aspect-[8/7] bg-gradient-to-br from-brand-beige/10 via-brand-coral/10 to-brand-teal/10 rounded-tl-[120px] rounded-br-[120px] border border-white/30 shadow-2xl backdrop-blur-lg overflow-hidden flex items-center justify-center">
+            <img
+              src="imagenes/ecover2.png"
+              alt="Mockup del producto"
+              className="w-full h-auto object-cover relative z-10"
+            />
+            
+          </div>
         </div>
       </div>
+
+      {/* Desktop CTA Button - Updated */}
+      <div className="hidden lg:flex absolute bottom-20 left-0 right-0 justify-center z-20">
+        <Button className="bg-gradient-to-r from-brand-coral to-brand-teal hover:from-brand-coral/90 hover:to-brand-teal/90 text-white font-bold py-6 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+          <Download className="w-6 h-6 mr-3" />
+          Descargar eBook Completo
+        </Button>
+      </div>
+
+      <style >{`
+        @keyframes glow-pulse {
+          0%, 100% { opacity: 0.7; }
+          50% { opacity: 0.9; }
+        }
+        .animate-glow-pulse {
+          animation: glow-pulse 4s ease infinite;
+        }
+        
+        @keyframes orb-float {
+          0%, 100% { transform: translateY(0) scale(1); }
+          50% { transform: translateY(-15px) scale(1.05); }
+        }
+        .animate-orb-float {
+          animation: orb-float 8s ease-in-out infinite;
+        }
+        .animate-orb-float-delay {
+          animation: orb-float 10s ease-in-out infinite 1s;
+        }
+        
+        @keyframes pulse-fast {
+          0%, 100% { opacity: 1; transform: scale(1); }
+          50% { opacity: 0.8; transform: scale(1.1); }
+        }
+        .animate-pulse-fast {
+          animation: pulse-fast 2s ease infinite;
+        }
+        
+        @keyframes text-shift {
+          0%, 100% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+        }
+        .animate-text-shift {
+          animation: text-shift 8s ease infinite;
+          background-size: 300% 300%;
+        }
+        
+        @keyframes gradient-shift {
+          0%, 100% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+        }
+        .animate-gradient-shift {
+          animation: gradient-shift 6s ease infinite;
+          background-size: 200% 200%;
+        }
+        
+        .backdrop-blur-lg {
+          backdrop-filter: blur(16px);
+        }
+      `}</style>
     </section>
   );
 };
