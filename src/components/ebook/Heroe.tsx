@@ -68,7 +68,7 @@ const Heroe = ({ onScrollToSection }: HeroSectionProps) => {
         <div className="lg:hidden w-full mb-8 px-4">
           <div className="w-full aspect-[6/5] bg-gradient-to-br from-brand-beige/10 via-brand-coral/10 to-brand-teal/10 rounded-tl-[60px] rounded-br-[60px] border border-white/30 shadow-2xl backdrop-blur-lg overflow-hidden flex items-center justify-center">
             <img
-              src="imagenes/ecover2.png"
+              src="imagenes/ecover1.png"
               alt="Mockup del producto"
               className="w-full h-auto object-cover relative z-10"
             />
@@ -171,7 +171,7 @@ const Heroe = ({ onScrollToSection }: HeroSectionProps) => {
         <div className="hidden lg:block absolute right-3 -top-12 bottom-0 w-1/2">
           <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-[90%] aspect-[8/7] bg-gradient-to-br from-brand-beige/10 via-brand-coral/10 to-brand-teal/10 rounded-tl-[120px] rounded-br-[120px] border border-white/30 shadow-2xl backdrop-blur-lg overflow-hidden flex items-center justify-center">
             <img
-              src="imagenes/ecover2.png"
+              src="imagenes/ecover1.png"
               alt="Mockup del producto"
               className="w-full h-auto object-cover relative z-10"
             />
