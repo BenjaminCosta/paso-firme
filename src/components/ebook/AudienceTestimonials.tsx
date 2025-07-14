@@ -33,7 +33,7 @@ const AudienceTestimonials = () => {
 
 
   return (
-    <section className="relative py-28 px-4 sm:px-6 lg:px-8 bg-gray-900 overflow-hidden">
+    <section className="relative py-14 px-4 sm:px-6 lg:px-8 bg-gray-900 overflow-hidden">
       {/* Efectos de fondo mejorados */}
       <div className="absolute inset-0 overflow-hidden z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-brand-purple/20 via-gray-900/90 to-brand-teal/30"></div>
@@ -51,8 +51,8 @@ const AudienceTestimonials = () => {
             <span className="text-sm font-medium tracking-widest text-brand-teal uppercase">Testimonios reales</span>
             <div className="w-16 h-px bg-gradient-to-l from-transparent to-brand-coral/50"></div>
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
-            <span className="block">¿Es esta guía</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+            <span className="block">¿Es esta la guía</span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal via-brand-purple to-brand-coral">para ti?</span>
           </h2>
           <p className="text-xl text-white/80 max-w-2xl mx-auto mt-6">
@@ -61,7 +61,7 @@ const AudienceTestimonials = () => {
         </div>
 
         {/* Sección de comparación con fondo oscuro mejorado */}
-<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
   {/* Columna positiva - Versión oscura premium */}
   <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/90 rounded-2xl p-8 border border-gray-700/30 hover:border-brand-teal/50 transition-all duration-300 h-full group shadow-lg hover:shadow-xl">
     <div className="flex items-center mb-8">
@@ -75,7 +75,7 @@ const AudienceTestimonials = () => {
       </h3>
     </div>
     
-    <ul className="space-y-5">
+    <ul className="space-y-4">
       {[
         "Tienes un hijo entre 10 y 17 años",
         "Sientes que estás perdiendo tu voz en casa",
@@ -130,7 +130,7 @@ const AudienceTestimonials = () => {
         
           <>
   {/* Sección de Testimonios */}
-  <div className="mb-20">
+  <div className="mb-10">
     <Carousel className="w-full">
       {/* Encabezado y controles DEBEN estar dentro de Carousel */}
       <div className="flex items-center justify-between mb-12">

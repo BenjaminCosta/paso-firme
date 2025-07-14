@@ -59,7 +59,7 @@ const Heroe = ({ onScrollToSection }: HeroSectionProps) => {
 <div className="lg:hidden mt-16 mb-10 px-4 text-center">
   <div className="text-center border-l-4 border-brand-beige pl-4">
     <h1 className="font-serif text-4xl font-light text-gray-800">
-      <span className="text-brand-coral">Guía Parental</span> Esencial
+      Guía <span className="text-brand-coral">Parental</span> Esencial
       <div className="mt-2 h-0.5 bg-gradient-to-r from-brand-teal to-brand-coral"></div>
     </h1>
   </div>
@@ -81,7 +81,7 @@ const Heroe = ({ onScrollToSection }: HeroSectionProps) => {
           {/* Elegant Title Section - Desktop */}
 <div className="hidden lg:block mb-12 pl-6 border-l-4 border-brand-teal">
   <h1 className="font-serif text-5xl font-light text-gray-800 tracking-tight">
-    <span className="text-brand-coral">Guía Parental</span> Esencial
+    Guía <span className="text-brand-coral"> Parental </span> Esencial
     <div className="mt-2 h-0.5 w-3/4 bg-gradient-to-r from-brand-coral via-brand-purple to-brand-coral"></div>
   </h1>
 </div>
@@ -135,7 +135,7 @@ const Heroe = ({ onScrollToSection }: HeroSectionProps) => {
                     {/* Icono */}
                     <div className="relative mr-3 lg:mr-4 flex-shrink-0">
                       <div className="absolute inset-0 bg-gradient-to-br from-white to-white/80 rounded-lg transform rotate-6 scale-95 opacity-80"></div>
-                      <div className="relative w-8 h-8 lg:w-10 lg:h-10 flex items-center justify-center bg-gradient-to-br from-brand-teal/15 to-brand-beige/15 rounded-lg border border-white/30 group-hover:from-brand-teal/20 group-hover:to-brand-beige/20 transition-all duration-300">
+                      <div className="relative w-8 h-8 lg:w-10 lg:h-10 flex items-center justify-center bg-gradient-to-br from-brand-teal/15 to-brand-purple/15 rounded-lg border border-white/30 group-hover:from-brand-teal/20 group-hover:to-brand-purple/20 transition-all duration-300">
                         <span className="text-base lg:text-lg">{item.icon}</span>
                       </div>
                     </div>
@@ -145,7 +145,7 @@ const Heroe = ({ onScrollToSection }: HeroSectionProps) => {
                       <h4 className="text-base lg:text-lg font-semibold text-gray-800 group-hover:text-gray-900 transition-colors text-center sm:text-left">
                         {item.title}
                       </h4>
-                      <span className="mt-0.5 lg:mt-1 sm:ml-2 text-xs font-bold bg-gradient-to-r from-brand-coral to-brand-teal text-white px-1.5 py-0.5 lg:px-2 lg:py-0.5 rounded-full whitespace-nowrap">
+                      <span className="mt-0.5 lg:mt-1 sm:ml-2 text-xs font-bold bg-gradient-to-r from-brand-coral to-brand-purple text-white px-1.5 py-0.5 lg:px-2 lg:py-0.5 rounded-full whitespace-nowrap">
                         {item.highlight}
                       </span>
                     </div>
@@ -168,7 +168,7 @@ const Heroe = ({ onScrollToSection }: HeroSectionProps) => {
         </div>
 
         {/* Right Side - Enhanced Graphic Element (Desktop) */}
-        <div className="hidden lg:block absolute right-3 top-0 bottom-0 w-1/2">
+        <div className="hidden lg:block absolute right-3 -top-12 bottom-0 w-1/2">
           <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-[90%] aspect-[8/7] bg-gradient-to-br from-brand-beige/10 via-brand-coral/10 to-brand-teal/10 rounded-tl-[120px] rounded-br-[120px] border border-white/30 shadow-2xl backdrop-blur-lg overflow-hidden flex items-center justify-center">
             <img
               src="imagenes/ecover2.png"
@@ -180,13 +180,17 @@ const Heroe = ({ onScrollToSection }: HeroSectionProps) => {
         </div>
       </div>
 
-      {/* Desktop CTA Button - Updated */}
-      <div className="hidden lg:flex absolute bottom-20 left-0 right-0 justify-center z-20">
-        <Button className="bg-gradient-to-r from-brand-coral to-brand-teal hover:from-brand-coral/90 hover:to-brand-teal/90 text-white font-bold py-6 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-          <Download className="w-6 h-6 mr-3" />
-          Descargar eBook Completo
-        </Button>
-      </div>
+{/* Desktop CTA Button - Premium Design */}
+<div className="hidden lg:flex absolute bottom-20 left-0 right-0 justify-center z-20">
+  <Button className="relative overflow-hidden group bg-gradient-to-r from-brand-coral to-brand-teal hover:from-brand-teal hover:to-brand-coral/80 text-white font-bold py-6 px-10 rounded-2xl shadow-2xl hover:shadow-2xl transition-all duration-500 ease-out hover:-translate-y-1 transform hover:scale-[1.02]">
+    <span className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+    <div className="flex items-center justify-center relative z-10">
+      <Download className="w-6 h-6 mr-3 group-hover:animate-bounce" />
+      <span className="text-lg tracking-wide">Descargar eBook Completo </span>
+    </div>
+    <span className="absolute inset-x-0 bottom-0 h-1 bg-white/50 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-700 ease-in-out"></span>
+  </Button>
+</div>
 
       <style >{`
         @keyframes glow-pulse {

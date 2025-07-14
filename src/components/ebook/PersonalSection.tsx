@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Sparkles } from 'lucide-react';
+import { BookOpen, CheckCircle, Sparkles } from 'lucide-react';
 
 const PersonalSection = () => {
   return (
@@ -29,79 +29,105 @@ const PersonalSection = () => {
           </p>
         </div>
 
-       {/* Primera fila: Presentación con foto de la facilitadora */}
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-  {/* Foto de la facilitadora */}
-  <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl h-[600px] order-2 lg:order-1">
+      {/* Sección Autora - Diseño Premium con Imagen de Fondo */}
+<div className="relative rounded-3xl overflow-hidden shadow-2xl mb-12 border border-white/20">
+  {/* Imagen de fondo con overlay */}
+  <div className="absolute inset-0">
     <img 
-      src="imagenes/facilitadora2.jpg" 
-      alt="Facilitadora Oli"
-      className="absolute inset-0 w-full h-full object-cover"
+      src="https://images.unsplash.com/photo-1528458909336-e7a0adfed0a5?q=80&w=1348&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dq=80" 
+      alt="Fondo abstracto"
+      className="w-full h-full object-cover opacity-30"
     />
-    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent"></div>
-    {/* Badge de experiencia premium */}
-    <div className="absolute -bottom-1 -right-1 bg-gradient-to-r from-brand-teal to-brand-coral text-white px-6 py-3 rounded-xl shadow-lg flex items-center gap-2">
-      <Sparkles className="h-4 w-4" />
-      <span className="font-bold">Olivia Rodriguez</span>
-    </div>
+    <div className="absolute inset-0 bg-gradient-to-r from-brand-coral/10 via-brand-beige/20 to-brand-beige/30"></div>
   </div>
 
-  {/* Bloque "Soy Oli" */}
-  <div className="relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-xl p-10 rounded-3xl border border-white/40 shadow-2xl overflow-hidden order-1 lg:order-2">
-    {/* Luces decorativas */}
-    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-purple/5 via-transparent to-transparent opacity-70"></div>
-    <div className="absolute -right-32 -top-32 w-80 h-80 rounded-full bg-brand-purple/10 blur-[100px] animate-pulse-slow"></div>
-    <div className="absolute -left-20 -bottom-20 w-60 h-60 rounded-full bg-brand-coral/10 blur-[80px]"></div>
-
-    {/* Contenido */}
-    <div className="relative z-10">
-      {/* Header con emoji y nombre */}
-      <div className="flex items-start space-x-6 mb-8">
-        <div className="flex-shrink-0 relative">
-          <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-brand-purple/20 to-brand-coral/15 border-2 border-white/40 flex items-center justify-center text-4xl shadow-lg shadow-brand-purple/10 backdrop-blur-sm">
-            👋
-          </div>
-          <div className="absolute -inset-2 rounded-2xl border-2 border-white/20 pointer-events-none"></div>
+  <div className="relative z-10 p-10 lg:p-10 flex flex-col lg:flex-row items-center gap-20">
+    {/* Columna izquierda - Foto y título */}
+    <div className="flex flex-col items-center lg:items-start">
+      {/* Foto circular con efecto */}
+      <div className="relative mb-8 group">
+        <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-2xl relative z-10 transform transition duration-500 group-hover:scale-105">
+          <img 
+            src="imagenes/facilitadora2.jpg" 
+            alt="Oli - Especialista en relaciones familiares"
+            className="w-full h-full object-cover grayscale-[10%]"
+          />
         </div>
-
-        <div>
-          <h3 className="text-3xl font-bold text-gray-900 mb-2">
-            Soy <span className="font-dancing text-brand-purple text-4xl">Oli</span>, tu guía
-          </h3>
-          <div className="inline-block bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full border border-white/30 shadow-sm">
-            <span className="text-brand-purple font-medium tracking-wide">Especialista en relaciones familiares</span>
-          </div>
+        {/* Efecto decorativo */}
+        <div className="absolute -inset-4 rounded-full border-2 border-brand-purple/30 z-0 animate-pulse-slow group-hover:animate-none group-hover:opacity-70 transition-opacity duration-300"></div>
+        {/* Puntos decorativos */}
+        <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-brand-coral/80 shadow-md"></div>
+        <div className="absolute -bottom-2 -left-2 w-5 h-5 rounded-full bg-brand-teal/80 shadow-md"></div>
+      </div>
+      
+      {/* Nombre y especialidad */}
+      <div className="text-center lg:text-left">
+        <h3 className="text-3xl font-bold text-gray-800 font-dancing tracking-tight">Olivia Rodriguez</h3>
+        <p className="text-brand-coral font-medium mt-2 text-lg">Relaciones Familiares</p>
+        
+        {/* Línea decorativa */}
+        <div className="my-5 w-16 h-0.5 bg-gradient-to-r from-brand-purple to-brand-coral mx-auto lg:mx-0"></div>
+        
+        {/* Badge de experiencia */}
+        <div className="inline-flex items-center bg-white/90 backdrop-blur-sm px-5 py-2.5 rounded-full shadow-sm border border-white/50 gap-2">
+          <Sparkles className="h-5 w-5 text-brand-purple" />
+          <span className="font-medium text-gray-700">+100 familias</span>
         </div>
       </div>
+    </div>
 
-      {/* Texto dividido en 3 bloques */}
-      <div className="space-y-4">
-        <div className="bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-white/40 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
-          <p className="text-base sm:text-lg leading-relaxed text-gray-700">
-            Acompañé a más de <span className="font-bold text-brand-purple">100 familias</span> a poner límites con <span className="font-semibold text-brand-coral">presencia</span> y sin perder la conexión.
+    {/* Columna derecha - Texto */}
+    <div className="flex-1">
+      <div className="space-y-3 text-gray-800">
+        {/* Bloque de presentación */}
+        <div className="text-3xl font-light leading-snug">
+          <span className="font-normal text-brand-purple">Hola, soy Oli.</span><br />
+          <span className="text-2xl">Y si estás aquí es porque ya no quieres seguir dudando si estás haciendo bien tu papel de mamá o papá.</span>
+        </div>
+
+        {/* Texto destacado */}
+        <div className="pl-6 border-l-4 border-brand-purple/50 bg-white/50 p-4 rounded-r-lg backdrop-blur-sm">
+          <p className="text-lg italic">
+            "Poner <span className="font-semibold text-brand-purple">límites en la adolescencia</span> no es lo mismo que hacerlo en la infancia."
           </p>
         </div>
 
-        <div className="bg-white/90 backdrop-blur-md p-5 rounded-2xl border border-white/40 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 delay-75">
-          <p className="text-base sm:text-lg leading-relaxed text-gray-700">
-            Poner <span className="font-semibold text-brand-purple">límites en la adolescencia</span> no es controlar, es sostener tu lugar con <span className="font-semibold text-brand-coral">amor firme</span>.
-          </p>
+        {/* Párrafos con iconos */}
+        <div className="space-y-5">
+          <div className="flex items-start gap-4">
+            <div className="flex-shrink-0 mt-1 text-brand-purple">
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <p className="text-lg leading-relaxed">
+              No se trata de imponer ni controlar, sino de <span className="font-semibold text-brand-coral">sostener tu lugar con amor firme</span>.
+            </p>
+          </div>
+
+          <div className="flex items-start gap-4">
+            <div className="flex-shrink-0 mt-1 text-brand-teal">
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <p className="text-lg leading-relaxed">
+              Decir <span className="italic">"hasta aquí"</span> sin romper la conexión... y sin romperte por dentro.
+            </p>
+          </div>
         </div>
 
-        <div className="bg-white/90 backdrop-blur-md p-5 rounded-2xl border border-white/40 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 delay-100">
-          <p className="text-base sm:text-lg leading-relaxed text-gray-700">
-            Esta guía no es para padres perfectos, sino para quienes eligen ser <span className="font-bold text-brand-coral">conscientes</span> y confiar en el proceso.
+        {/* Cierre */}
+        <div className="pt-6 mt-6 border-t border-gray-200/50">
+          <p className="text-lg">
+            Esta guía nace de acompañar a <span className="font-semibold">cientos de familias</span> como la tuya.
           </p>
-        </div>
-      </div>
-
-      {/* Cierre */}
-      <div className="mt-5 pt-4 border-t border-white/30">
-        <div className="flex items-center space-x-2 text-brand-purple/80">
-          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-          </svg>
-          <span className="font-medium">Método validado por +100 familias reales</span>
+          <p className="text-xl font-medium text-brand-purple mt-4">
+            Para padres <span className="text-brand-coral">conscientes</span>, no perfectos.
+          </p>
+          <p className="mt-6 text-lg italic text-gray-600">
+            Gracias por confiar. Vamos a hacerlo juntas(os).
+          </p>
         </div>
       </div>
     </div>
@@ -147,102 +173,81 @@ const PersonalSection = () => {
   <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/50 to-white/30"></div>
 
   
-{/* Contenido principal */}
 <div className="relative z-10">
-  {/* Encabezado con estilo moderno y elegante */}
-  <div className="text-center mb-16">
-    <div className="inline-flex mb-6">
-      <span className="text-xs font-semibold tracking-wider text-brand-teal uppercase bg-white/90 px-4 py-2 rounded-full border border-brand-teal/10 shadow-sm">
+  {/* Encabezado */}
+  <div className="text-center mb-8">
+    <div className="inline-flex mb-2">
+      <span className="text-xs font-semibold tracking-wider text-brand-teal uppercase bg-white/90 px-3 rounded-full border border-brand-teal/10 shadow-sm">
         Guía Esencial
       </span>
     </div>
-    <h3 className="text-6xl font-dancing font-normal text-gray-900 mb-4">
-      <span className=" text-brand-purple">Conectar</span> con tu adolescente
+    <h3 className="text-5xl font-dancing text-gray-900 mb-3">
+      <span className="text-brand-purple">Conectar</span> con tu adolescente
     </h3>
-    <div className="w-32 h-1.5 bg-gradient-to-r from-brand-teal via-brand-purple to-brand-coral mx-auto rounded-full opacity-80 mb-8"></div>
+    <div className="w-24 h-1 bg-gradient-to-r from-brand-teal via-brand-purple to-brand-coral mx-auto rounded-full opacity-80 mb-6"></div>
   </div>
 
-  {/* Bloque de texto elegante */}
-  <div className="max-w-3xl mx-auto text-center mb-20">
-    <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-sm border border-white">
-      <p className="text-xl text-gray-700 leading-relaxed mb-6">
-        Descubre el <span className=" text-brand-coral">método</span> que combina:
+  {/* Contenido */}
+  <div className="max-w-3xl mx-auto text-center mb-10">
+    <div className="bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-white">
+      <p className="text-lg text-gray-700 mb-4">
+        Descubre el <span className="text-brand-coral">método</span> que combina:
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-white p-5 rounded-xl border border-gray-100 shadow-xs hover:shadow-sm transition-shadow">
-          <div className="bg-brand-teal/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg className="w-6 h-6 text-brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
-            </svg>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {[
+          {icon: "M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z", 
+           color: "teal", title: "Neurociencia", desc: "Entiende el cerebro en desarrollo"},
+          {icon: "M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z", 
+           color: "purple", title: "Comunicación", desc: "Diálogos que realmente funcionan"},
+          {icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z", 
+           color: "coral", title: "Resultados", desc: "Técnicas con garantía comprobada"}
+        ].map((item, i) => (
+          <div key={i} className="bg-white p-4 rounded-lg border border-gray-100 shadow-xs hover:shadow-sm transition-shadow">
+            <div className={`bg-brand-${item.color}/10 w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3`}>
+              <svg className="w-5 h-5 text-brand-${item.color}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={item.icon}/>
+              </svg>
+            </div>
+            <h4 className="font-medium text-gray-800">{item.title}</h4>
+            <p className="text-gray-600 text-xs mt-1">{item.desc}</p>
           </div>
-          <h4 className="font-medium text-gray-800">Neurociencia</h4>
-          <p className="text-gray-600 text-sm mt-2">Entiende el cerebro en desarrollo</p>
-        </div>
-        
-        <div className="bg-white p-5 rounded-xl border border-gray-100 shadow-xs hover:shadow-sm transition-shadow">
-          <div className="bg-brand-purple/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg className="w-6 h-6 text-brand-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-            </svg>
-          </div>
-          <h4 className="font-medium text-gray-800">Comunicación</h4>
-          <p className="text-gray-600 text-sm mt-2">Diálogos que realmente funcionan</p>
-        </div>
-        
-        <div className="bg-white p-5 rounded-xl border border-gray-100 shadow-xs hover:shadow-sm transition-shadow">
-          <div className="bg-brand-coral/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg className="w-6 h-6 text-brand-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-            </svg>
-          </div>
-          <h4 className="font-medium text-gray-800">Resultados</h4>
-          <p className="text-gray-600 text-sm mt-2">Técnicas con garantía comprobada</p>
-        </div>
+        ))}
       </div>
     </div>
   </div>
 
-  {/* CTA premium con imagen de familia */}
-  <div className="bg-gradient-to-br from-brand-purple to-brand-coral p-0 rounded-2xl shadow-2xl relative overflow-hidden">
+  {/* CTA */}
+  <div className="bg-gradient-to-br from-brand-purple to-brand-coral p-0 rounded-xl shadow-xl relative overflow-hidden">
     <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80')] bg-cover bg-center opacity-20"></div>
     <div className="relative z-10 flex flex-col md:flex-row items-center">
-      <div className="md:w-1/2 p-10 md:p-12 text-center md:text-left">
-        <h4 className="text-2xl font-bold text-white mb-4">Transforma tu dinámica familiar hoy</h4>
-        <p className="text-white/90 mb-6">
-          Accede a las herramientas que han ayudado a cientos de familias a reconectar con sus adolescentes.
-        </p>
-        <Button className="py-5 px-8 bg-white text-brand-purple hover:bg-white/90 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
-          <span className="flex items-center gap-3">
+      <div className="md:w-1/2 p-8 text-center md:text-left">
+        <h4 className="text-xl font-bold text-white mb-3">Transforma tu dinámica familiar hoy</h4>
+        <p className="text-white/90 mb-4 text-sm">Accede a las herramientas que han ayudado a cientos de familias a reconectar con sus adolescentes.</p>
+        <Button className="py-3 px-6 bg-white text-brand-purple hover:bg-white/90 font-bold rounded-lg shadow-md hover:shadow-lg transition-all">
+          <span className="flex items-center gap-2 text-sm">
             Comenzar ahora
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
             </svg>
           </span>
         </Button>
       </div>
-      <div className="md:w-1/2 hidden md:block h-full">
-        <div className="relative h-full min-h-[300px]">
-          <img 
-            src="imagenes/galcaos3.jpeg" 
-            alt="Padre e hija sonriendo"
-            className="absolute inset-0 w-full h-full object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-purple/70 to-transparent"></div>
-          <div className="absolute bottom-6 left-6 bg-white/90 text-brand-purple px-4 py-2 rounded-full shadow-sm">
-            <span className="text-sm font-medium">+100 familias transformadas</span>
-          </div>
+      <div className="md:w-1/2 hidden md:block h-full min-h-[250px] relative">
+        <img src="imagenes/galcaos3.jpeg" alt="Padre e hija sonriendo" className="absolute inset-0 w-full h-full object-cover"/>
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-purple/70 to-transparent"></div>
+        <div className="absolute bottom-4 left-4 bg-white/90 text-brand-purple px-3 py-1 rounded-full shadow-sm text-xs">
+          +100 familias transformadas
         </div>
       </div>
     </div>
-   <div className="relative z-10 text-center pb-6 pt-4 bg-white/10">
-  <p className="text-white/90 text-sm flex items-center justify-center gap-2">
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
-    </svg>
-    Acceso inmediato • Contenido 100% descargable
-  </p>
-</div>
-
+    <div className="relative z-10 text-center pb-4 pt-3 bg-white/10">
+      <p className="text-white/90 text-xs flex items-center justify-center gap-1">
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+        </svg>
+        Acceso inmediato • Contenido 100% descargable
+      </p>
+    </div>
   </div>
 </div>
   {/* Elementos decorativos */}
