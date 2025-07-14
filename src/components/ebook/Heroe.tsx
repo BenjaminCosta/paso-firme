@@ -14,17 +14,18 @@ const Heroe = ({ onScrollToSection }: HeroSectionProps) => {
         {/* Base Image with Darkened Effect */}
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1683803246983-f25c809557cb?q=80&w=1464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.unsplash.com/photo-1699062450156-583cc13f2d83?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dq=80"
             alt="Background"
-            className="w-full h-full object-cover opacity-40"
+            className="w-full h-full object-cover opacity-35"
           />
         </div>
         
         {/* Base Dark Gradient (Bottom to Top) */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/20 to-transparent"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/30 via-gray-900/10 to-transparent"></div>
         
         {/* Color Gradient Overlays - Updated with beige/coral/teal */}
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-beige/20 via-transparent to-brand-teal/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-coral/20 via-transparent to-brand-teal/20"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-brand-coral/20 via-transparent to-brand-teal/15"></div>
         
         {/* Diagonal Mesh Gradient - Updated colors */}
