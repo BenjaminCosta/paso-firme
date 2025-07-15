@@ -65,16 +65,53 @@ const Heroe = ({ onScrollToSection }: HeroSectionProps) => {
     </h1>
   </div>
 </div>
-        {/* Mobile Image - Visible only on mobile */}
-        <div className="lg:hidden w-full mb-8 px-4">
-          <div className="w-full aspect-[9/10] bg-gradient-to-br from-brand-beige/10 via-brand-coral/10 to-brand-teal/10 rounded-tl-[60px] rounded-br-[60px] border border-white/30 shadow-2xl backdrop-blur-lg overflow-hidden flex items-center justify-center">
-            <img
-              src="imagenes/ebook2.jpeg"
-              alt="Mockup del producto"
-              className="w-full h-auto object-cover relative z-10"
-            />
-          </div>
-        </div>
+        {/* Mobile Hero - Versión Premium */}
+<div className="lg:hidden w-full mb-12 px-4 relative">
+  <div className="relative w-full aspect-[9/10] bg-gradient-to-br from-brand-beige/15 via-brand-coral/15 to-brand-teal/20 rounded-tl-[70px] rounded-br-[70px] border-2 border-white/40 shadow-3xl-mobile backdrop-blur-md overflow-hidden flex items-center justify-center transform transition-all hover:scale-[1.01] hover:shadow-glow-mobile">
+    
+    {/* Efecto de partículas animadas */}
+    <div className="absolute inset-0 overflow-hidden z-0">
+      {[...Array(12)].map((_, i) => (
+        <div 
+          key={i}
+          className="absolute bg-white rounded-full opacity-20 animate-float-particle"
+          style={{
+            width: `${Math.random() * 8 + 3}px`,
+            height: `${Math.random() * 8 + 3}px`,
+            top: `${Math.random() * 100}%`,
+            left: `${Math.random() * 100}%`,
+            animationDelay: `${Math.random() * 5}s`,
+            animationDuration: `${Math.random() * 10 + 10}s`
+          }}
+        ></div>
+      ))}
+    </div>
+    
+    {/* Marco con efecto neumórfico */}
+    <div className="absolute inset-0 rounded-tl-[68px] rounded-br-[68px] border border-white/20 shadow-inner-mobile"></div>
+    
+    {/* Imagen con efecto de carga suave */}
+    <img
+      src="imagenes/ebook2.jpeg"
+      alt="Mockup del producto"
+      className="w-full h-auto object-cover relative z-10 transform transition-transform hover:scale-105 duration-700"
+      loading="lazy"
+    />
+    
+    {/* Overlay de gradiente sutil */}
+    <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-white/15 z-10"></div>
+    
+    {/* Efecto de reflexión */}
+    <div className="absolute -bottom-12 left-0 right-0 h-24 bg-gradient-to-t from-white/30 to-transparent backdrop-blur-[8px] opacity-70 z-0"></div>
+    
+    {/* Esquina decorativa */}
+    <div className="absolute top-0 left-0 w-16 h-16 border-t-4 border-l-4 border-brand-teal/50 rounded-tl-[70px] z-20"></div>
+    <div className="absolute bottom-0 right-0 w-16 h-16 border-b-4 border-r-4 border-brand-coral/50 rounded-br-[70px] z-20"></div>
+  </div>
+
+  {/* Efecto de sombra dinámica */}
+  <div className="absolute -bottom-4 left-1/4 right-1/4 h-3 bg-black/10 blur-md filter opacity-70"></div>
+</div>
 
         <div className="w-full lg:w-1/2">
           
