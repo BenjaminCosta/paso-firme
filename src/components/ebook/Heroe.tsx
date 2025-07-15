@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Download, Zap, ChevronRight } from 'lucide-react';
+import { Download, Zap, ChevronRight, ShieldCheck } from 'lucide-react';
 
 interface HeroSectionProps {
   onScrollToSection: (id: string) => void;
@@ -60,16 +60,16 @@ const Heroe = ({ onScrollToSection }: HeroSectionProps) => {
 <div className="lg:hidden mt-16 mb-10 px-4 text-center">
   <div className="text-center border-l-4 border-brand-beige pl-4">
     <h1 className="font-serif text-4xl font-light text-gray-800">
-      Guía <span className="text-brand-coral">Parental</span> Esencial
+      Guía Parental Esencial
       <div className="mt-2 h-0.5 bg-gradient-to-r from-brand-teal to-brand-coral"></div>
     </h1>
   </div>
 </div>
         {/* Mobile Image - Visible only on mobile */}
         <div className="lg:hidden w-full mb-8 px-4">
-          <div className="w-full aspect-[6/5] bg-gradient-to-br from-brand-beige/10 via-brand-coral/10 to-brand-teal/10 rounded-tl-[60px] rounded-br-[60px] border border-white/30 shadow-2xl backdrop-blur-lg overflow-hidden flex items-center justify-center">
+          <div className="w-full aspect-[9/10] bg-gradient-to-br from-brand-beige/10 via-brand-coral/10 to-brand-teal/10 rounded-tl-[60px] rounded-br-[60px] border border-white/30 shadow-2xl backdrop-blur-lg overflow-hidden flex items-center justify-center">
             <img
-              src="imagenes/ecover1.png"
+              src="imagenes/ebook2.jpeg"
               alt="Mockup del producto"
               className="w-full h-auto object-cover relative z-10"
             />
@@ -82,7 +82,7 @@ const Heroe = ({ onScrollToSection }: HeroSectionProps) => {
           {/* Elegant Title Section - Desktop */}
 <div className="hidden lg:block mb-12 pl-6 border-l-4 border-brand-teal">
   <h1 className="font-serif text-5xl font-light text-gray-800 tracking-tight">
-    Guía <span className="text-brand-coral"> Parental </span> Esencial
+    Guía Parental Esencial
     <div className="mt-2 h-0.5 w-3/4 bg-gradient-to-r from-brand-coral via-brand-purple to-brand-coral"></div>
   </h1>
 </div>
@@ -168,18 +168,75 @@ const Heroe = ({ onScrollToSection }: HeroSectionProps) => {
           </div>
         </div>
 
-        {/* Right Side - Enhanced Graphic Element (Desktop) */}
-        <div className="hidden lg:block absolute right-3 -top-12 bottom-0 w-1/2">
-          <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-[90%] aspect-[8/7] bg-gradient-to-br from-brand-beige/10 via-brand-coral/10 to-brand-teal/10 rounded-tl-[120px] rounded-br-[120px] border border-white/30 shadow-2xl backdrop-blur-lg overflow-hidden flex items-center justify-center">
-            <img
-              src="imagenes/ecover1.png"
-              alt="Mockup del producto"
-              className="w-full h-auto object-cover relative z-10"
-            />
-            
-          </div>
-        </div>
+       {/* Mockup Premium con Elementos de Urgencia */}
+<div className="absolute right-[7%]  top-[47.5%] transform -translate-y-1/2 hidden lg:block w-[32%] max-w-[450px] z-20">
+  <div className="relative w-full h-[500px]">
+    {/* Base del mockup con profundidad */}
+    <div className="absolute inset-0 rounded-[28px] overflow-hidden shadow-3xl bg-gradient-to-br from-white to-gray-50">
+      {/* Efecto de luz ambiental */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-brand-teal/10 via-brand-purple/5 to-brand-coral/8"></div>
+      
+      {/* Marco del dispositivo */}
+      <div className="absolute inset-3 rounded-2xl border-2 border-white/10 backdrop-blur-md shadow-inner-lg overflow-hidden ">
+        {/* Imagen del producto */}
+        <div className="absolute inset-0 bg-[url('/imagenes/ebook1.jpeg')] bg-cover bg-center"></div>
+        
+        {/* Overlays de pantalla */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-white/15"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent w-1/3"></div>
       </div>
+      
+      {/* Efecto de reflexión */}
+      <div className="absolute -bottom-20 left-0 right-0 h-20 bg-gradient-to-t from-white/30 to-transparent backdrop-blur-sm"></div>
+    </div>
+
+   
+
+    {/* Elemento de urgencia premium - Versión mejorada */}
+<div className="absolute -top-10 -left-10 bg-gradient-to-br from-brand-teal to-brand-purple text-white px-5 py-3 rounded-xl shadow-2xl z-30 group overflow-hidden">
+  {/* Efecto de fondo animado */}
+  <div className="absolute inset-0 bg-[length:200%_200%] bg-gradient-to-r from-brand-teal/80 via-brand-purple/80 to-brand-teal/80 animate-gradient-shift opacity-90"></div>
+  
+  {/* Contenido */}
+  <div className="relative z-10 flex items-center space-x-3">
+    <div className="bg-white/20 p-2 rounded-lg">
+      <Zap className="w-5 h-5 text-white animate-bounce" />
+    </div>
+    <div className="text-center">
+      <div className="text-sm font-bold tracking-wide uppercase">¡APROVECHA AHORA!</div>
+      <div className="text-xs font-medium opacity-90 mt-1">ÚLTIMAS UNIDADES DISPONIBLES</div>
+    </div>
+  </div>
+
+  {/* Efecto de destello */}
+  <div className="absolute -inset-4 bg-white/30 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+
+  <style >{`
+    @keyframes gradient-shift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .animate-gradient-shift {
+      animation: gradient-shift 4s ease infinite;
+    }
+  `}</style>
+</div>
+ {/* Badge de confianza premium */}
+<div className="absolute -bottom-6 -right-6 bg-white/95 backdrop-blur-sm px-5 py-2.5 rounded-lg shadow-lg border border-gray-100/80 hover:shadow-xl transition-all">
+  <div className="flex items-center space-x-2">
+    <div className="p-1.5 bg-brand-teal/10 rounded-lg">
+      <ShieldCheck className="w-5 h-5 text-brand-teal" />
+    </div>
+    <div className="text-brand-teal font-semibold text-sm tracking-wide">
+       MÉTODO CERTIFICADO
+    </div>
+  </div>
+</div>
+</div>
+
+  </div>
+</div>
 
 {/* Desktop CTA Button - Premium Design */}
 <div className="hidden lg:flex absolute bottom-20 left-0 right-0 justify-center z-20">
