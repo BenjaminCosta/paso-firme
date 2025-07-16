@@ -33,7 +33,12 @@ const PersonalSection = () => {
         <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border border-white/20 bg-gradient-to-br from-white/5 via-white/5 to-white/10 backdrop-blur-lg">
           {/* Fondos */}
           <div className="absolute inset-0">
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1528458909336-e7a0adfed0a5?q=80&w=1348&auto=format&fit=crop')] bg-cover opacity-10 mix-blend-overlay"></div>
+            <img 
+      src="https://images.unsplash.com/photo-1528458909336-e7a0adfed0a5?q=80&w=1348&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dq=80" 
+      alt="Fondo abstracto"
+      className="w-full h-full object-cover opacity-30"
+    />
+    <div className="absolute inset-0 bg-gradient-to-r from-brand-coral/10 via-brand-beige/20 to-brand-coral/10"></div>
             <div className="absolute inset-0 bg-gradient-to-br from-brand-purple/15 via-transparent to-brand-coral/10"></div>
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.2)_0%,transparent_40%)]"></div>
           </div>
@@ -100,7 +105,7 @@ const PersonalSection = () => {
                   </div>
 
                   {/* Cita */}
-                  <div className="flex-1 bg-white/20 p-5 rounded-xl border border-white/30 backdrop-blur-md shadow-sm hover:shadow-md transition-all">
+                  <div className="flex-1 bg-gradient-to-br from-brand-purple/10 via-transparent to-brand-coral/10 p-5 rounded-xl border border-white/30 backdrop-blur-md shadow-sm hover:shadow-md transition-all">
                     <p className="italic text-gray-800 mb-3 leading-relaxed">
                       "Poner <span className="font-semibold text-brand-purple">límites en la adolescencia</span> requiere un enfoque completamente diferente."
                     </p>

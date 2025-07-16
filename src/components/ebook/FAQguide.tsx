@@ -1,6 +1,7 @@
 import { ChevronDown, ArrowRight, Download, Smartphone, FileText } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
+import AudienceTestimonials from './AudienceTestimonials';
 
 const FAQguide = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -143,6 +144,7 @@ const FAQguide = () => {
 </div>
 
       </div>
+
     </section>
   );
 };

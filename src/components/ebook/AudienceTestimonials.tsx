@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Check, X, MessageSquare, Heart, Star, ChevronRight, ChevronLeft } from 'lucide-react';
+import { Check, Heart, Star, MessageSquare, ChevronRight, ChevronLeft } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -32,79 +32,80 @@ const AudienceTestimonials = () => {
   ];
 
   return (
-    <section className="relative py-12 px-4 sm:px-6 bg-gray-900 overflow-hidden">
-      {/* Efectos de fondo minimalistas */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-950"></div>
-        <div className="absolute top-0 left-0 w-full h-full opacity-10">
-          <div className="absolute top-1/4 left-1/4 w-48 h-48 rounded-full bg-brand-teal/10 blur-[80px]"></div>
-          <div className="absolute bottom-1/3 right-1/4 w-64 h-64 rounded-full bg-brand-purple/10 blur-[80px]"></div>
-        </div>
-      </div>
-
-      <div className="max-w-5xl mx-auto relative z-10">
-        {/* Encabezado compacto */}
+    <section className="relative py-12 mt-20 px-4 sm:px-6">
+      {/* Contenedor principal con fondo transparente */}
+      <div className="max-w-5xl mx-auto relative">
+       {/* Encabezado compacto */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center justify-center space-x-3 mb-5">
             <div className="w-12 h-px bg-gray-600"></div>
             <span className="text-base font-medium tracking-widest text-brand-teal uppercase">Testimonios reales</span>
             <div className="w-12 h-px bg-gray-600"></div>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-3 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-3 leading-tight">
             <span className="block">¿Es esta la guía</span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal via-brand-purple to-brand-coral">para ti?</span>
           </h2>
-          <p className="text-lg text-gray-300 max-w-xl mx-auto mt-4">
+          <p className="text-lg text-gray-800 max-w-xl mx-auto mt-4">
             Descubre lo que padres como tú están logrando con estas herramientas
           </p>
         </div>
 
-        {/* Carrusel de testimonios compacto */}
+        {/* Carrusel moderno */}
         <div className="mb-8">
           <Carousel className="w-full">
-            <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center justify-between mb-6">
               <div className="hidden md:flex space-x-2">
-                <CarouselPrevious className="relative top-0 w-10 h-10 rounded-full bg-white/5 border-white/20 hover:bg-white/10 text-white">
+                <CarouselPrevious className="relative top-0 w-10 h-10 rounded-full bg-white border border-gray-200 hover:bg-gray-50 text-gray-700 shadow-sm">
                   <ChevronLeft className="w-4 h-4" />
                 </CarouselPrevious>
-                <CarouselNext className="relative top-0 w-10 h-10 rounded-full bg-white/5 border-white/20 hover:bg-white/10 text-white">
+                <CarouselNext className="relative top-0 w-10 h-10 rounded-full bg-white border border-gray-200 hover:bg-gray-50 text-gray-700 shadow-sm">
                   <ChevronRight className="w-4 h-4" />
                 </CarouselNext>
               </div>
             </div>
             
-            <CarouselContent className="-ml-2">
+            <CarouselContent className="-ml-4">
               {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="pl-2 md:basis-1/2 lg:basis-1/3">
-                  <div className="relative h-full min-h-[320px]">
-                    <div className="absolute inset-0 bg-gray-800/80 rounded-2xl overflow-hidden flex flex-col border border-gray-700/50">
-                      {/* Cabecera */}
-                      <div className="h-14 bg-gray-800 flex items-center px-4 border-b border-gray-700">
-                        <div className="w-7 h-7 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
-                          {testimonial.icon}
+                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <div className="relative h-full">
+                    {/* Tarjeta de testimonio - diseño claro */}
+                    <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden h-full flex flex-col">
+                      {/* Cabecera con acento de color */}
+                      <div className={`h-2 ${index % 3 === 0 ? 'bg-brand-teal/20' : index % 3 === 1 ? 'bg-brand-purple/20' : 'bg-brand-coral/20'}`}></div>
+                      
+                      {/* Contenido principal */}
+                      <div className="p-5 flex-1">
+                        <div className="flex items-start mb-4">
+                          <div className={`p-2 rounded-lg mr-3 ${
+                            index % 3 === 0 ? 'bg-brand-teal/10 text-brand-teal' : 
+                            index % 3 === 1 ? 'bg-brand-purple/10 text-brand-purple' : 
+                            'bg-brand-coral/10 text-brand-coral'
+                          }`}>
+                            {testimonial.icon}
+                          </div>
+                          <div>
+                            <p className="font-medium text-gray-800">{testimonial.name}</p>
+                            <p className="text-gray-500 text-sm">{testimonial.role}</p>
+                          </div>
                         </div>
-                        <div className="ml-2">
-                          <p className="text-white font-medium text-sm">{testimonial.name}</p>
-                          <p className="text-white/50 text-xs">{testimonial.role}</p>
+                        
+                        {/* Mensaje con diseño de chat moderno */}
+                        <div className="relative pl-4">
+                          <div className={`absolute left-0 top-2 w-1 h-3/4 rounded-full ${
+                            index % 3 === 0 ? 'bg-brand-teal' : 
+                            index % 3 === 1 ? 'bg-brand-purple' : 
+                            'bg-brand-coral'
+                          }`}></div>
+                          <p className="text-gray-700 italic pl-3">"{testimonial.quote}"</p>
                         </div>
                       </div>
                       
-                      {/* Mensaje */}
-                      <div className="flex-1 p-4 flex items-center">
-                        <div className="relative max-w-[85%]">
-                          <div className="bg-white/10 rounded-xl rounded-tl-none p-4 border border-white/20">
-                            <p className="text-white/90 italic text-sm">"{testimonial.quote}"</p>
-                          </div>
-                          <div className="absolute -left-1.5 top-0 w-3 h-3 overflow-hidden">
-                            <div className="w-3 h-3 bg-white/10 border-l border-t border-white/20 transform -rotate-45 origin-bottom-right"></div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      {/* Pie */}
-                      <div className="h-12 bg-gray-800 flex items-center justify-between px-3 border-t border-gray-700">
-                        <div className="flex-1 bg-gray-700/50 rounded-full h-8 flex items-center px-3 text-white/50 text-xs">
-                          Escribe un mensaje...
+                      {/* Pie de tarjeta sutil */}
+                      <div className="px-5 pb-4">
+                        <div className="flex items-center justify-between text-xs text-gray-400">
+                          <span>Experiencia verificada</span>
+                          <Check className="w-4 h-4 text-brand-teal" />
                         </div>
                       </div>
                     </div>
@@ -113,6 +114,13 @@ const AudienceTestimonials = () => {
               ))}
             </CarouselContent>
           </Carousel>
+        </div>
+
+        {/* CTA discreto */}
+        <div className="text-center">
+          <Button variant="outline" className="border-brand-teal text-brand-teal hover:bg-brand-teal/5 hover:text-brand-teal">
+            Ver más testimonios
+          </Button>
         </div>
       </div>
     </section>

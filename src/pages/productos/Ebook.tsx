@@ -30,7 +30,6 @@ const Ebook = () => {
       <Heroe onScrollToSection={scrollToSection} />
       <PersonalSection/>
       <GuideInclusions/>
-      <AudienceTestimonials/>
       <PricingGuide />
       <FAQguide />
       <Footer />

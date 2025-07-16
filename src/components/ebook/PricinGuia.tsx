@@ -11,6 +11,7 @@ import {
   ShieldCheck,
   BookOpen
 } from 'lucide-react';
+import AudienceTestimonials from './AudienceTestimonials';
 
 const PricingGuide = () => {
   return (
@@ -212,8 +213,10 @@ const PricingGuide = () => {
             </button>
           </div>
         </div>
+        <AudienceTestimonials />
       </section>
     </div>
+    
   );
 };
 
