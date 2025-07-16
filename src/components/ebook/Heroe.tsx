@@ -56,13 +56,26 @@ const Heroe = ({ onScrollToSection }: HeroSectionProps) => {
       {/* Content Container */}
       <div className="relative z-10 h-full container mx-auto px-4 md:px-16 flex flex-col lg:flex-row items-center pt-12 lg:pt-0 pb-12 lg:pb-0">
         
-{/* Elegant Title Section - Mobile */}
-<div className="lg:hidden mt-16 mb-10 px-4 text-center">
-  <div className="text-center border-l-4 border-brand-beige pl-4">
-    <h1 className="font-serif text-4xl font-light text-gray-800">
-      Guía Parental Esencial
-      <div className="mt-2 h-0.5 bg-gradient-to-r from-brand-teal to-brand-coral"></div>
+{/* Elegant Title Section - Mobile - Premium */}
+<div className="lg:hidden mt-14 mb-10 px-6 relative">
+  {/* Mobile-optimized decorative elements */}
+  <div className="absolute left-4 top-0 h-full w-2 bg-gradient-to-b from-transparent via-brand-teal/40 to-transparent"></div>
+  
+  <div className="pl-6">
+    <h1 className="font-serif text-3xl font-light text-gray-800 tracking-tight leading-snug relative">
+      <span className="relative z-10">
+        Una guía clara para poner límites
+        sin gritar, ceder ni perder
+        conexión con tu hijo/a adolescente.
+      </span>
+      <div className="absolute -bottom-2 left-0 h-[3px] w-full bg-gradient-to-r from-transparent via-brand-purple/70 to-transparent"></div>
     </h1>
+    
+    <div className="mt-5 flex justify-center items-center">
+      <div className="h-[2px] w-12 bg-brand-coral/70"></div>
+      <div className="h-2 w-2 rounded-full bg-brand-purple/80 mx-2"></div>
+      <div className="h-[2px] w-12 bg-brand-teal/70"></div>
+    </div>
   </div>
 </div>
         {/* Mobile Hero - Versión Premium */}
@@ -116,13 +129,26 @@ const Heroe = ({ onScrollToSection }: HeroSectionProps) => {
         <div className="w-full lg:w-1/2">
           
 
-          {/* Elegant Title Section - Desktop */}
-<div className="hidden lg:block mb-12 pl-6 border-l-4 border-brand-teal">
-  <h1 className="font-serif text-5xl font-light text-gray-800 tracking-tight">
-    Guía Parental Esencial
-    <div className="mt-2 h-0.5 w-3/4 bg-gradient-to-r from-brand-coral via-brand-purple to-brand-coral"></div>
+         {/* Elegant Title Section - Desktop - Premium */}
+<div className="hidden lg:block mb-8 pl-8 border-l-2 border-brand-teal/60 relative">
+  <div className="absolute -left-8 top-0 h-full w-0.5 bg-gradient-to-b from-transparent via-brand-teal/40 to-transparent"></div>
+  
+  <h1 className="font-serif text-4xl font-light text-gray-800 tracking-tight leading-snug relative">
+    <span className="relative z-10">
+      Una guía clara para poner límites<br />
+      sin gritar, ceder ni perder conexión<br />
+      con tu hijo/a adolescente.
+    </span>
+    <div className="absolute -bottom-3 left-0 h-[2px] w-full bg-gradient-to-r from-transparent via-brand-purple to-transparent"></div>
   </h1>
+  
+  <div className="mt-6 flex items-center">
+    <div className="h-0.5 w-16 bg-brand-coral/80"></div>
+    <div className="h-1 w-1 rounded-full bg-brand-purple mx-2"></div>
+    <div className="h-0.5 w-16 bg-brand-teal/80"></div>
+  </div>
 </div>
+
 
 
           {/* Premium Glassmorphism Benefits Card */}
@@ -131,7 +157,7 @@ const Heroe = ({ onScrollToSection }: HeroSectionProps) => {
             <div className="absolute -inset-0.5 rounded-2xl lg:rounded-3xl bg-gradient-to-r from-brand-coral/60 via-brand-beige/60 to-brand-teal/60 opacity-70 blur-xl group-hover:opacity-90 transition-all duration-700 animate-glow-pulse"></div>
             
             {/* Main Card */}
-            <div className="relative bg-gradient-to-br from-white/95 to-white/90 backdrop-blur-xl rounded-xl lg:rounded-2xl p-4 lg:p-6 border border-white/40 shadow-xl lg:shadow-2xl overflow-hidden">
+            <div className="relative bg-gradient-to-br from-white/95 to-white/90 backdrop-blur-xl rounded-xl lg:rounded-2xl p-4  border border-white/40 shadow-xl lg:shadow-2xl overflow-hidden">
               {/* Animated Gradient Orbs - Updated colors */}
               <div className="absolute -right-8 -top-8 w-32 h-32 lg:w-48 lg:h-48 rounded-full bg-gradient-to-r from-brand-teal/25 to-brand-beige/25 animate-orb-float opacity-80"></div>
               <div className="absolute -left-6 -bottom-6 w-24 h-24 lg:w-36 lg:h-36 rounded-full bg-gradient-to-r from-brand-beige/20 to-brand-coral/20 animate-orb-float-delay opacity-70"></div>
@@ -139,14 +165,14 @@ const Heroe = ({ onScrollToSection }: HeroSectionProps) => {
               {/* Header with Icon - Updated colors */}
               <div className="relative z-10 mb-3 lg:mb-4">
                 <div className="inline-flex items-center bg-gradient-to-r from-brand-coral/10 to-brand-teal/10 px-4 py-2 lg:px-5 lg:py-3 rounded-full border border-white/30 shadow-sm">
-                  <Zap className="w-5 h-5 lg:w-6 lg:h-6 text-brand-coral mr-2 lg:mr-3 animate-pulse-fast" />
-                  <h3 className="text-xl lg:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-coral to-brand-teal tracking-tight">
+                  <Zap className="w-5 h-5 text-brand-coral mr-2 lg:mr-3 animate-pulse-fast" />
+                  <h3 className="text-xl  font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-coral to-brand-teal tracking-tight">
                     🎁 COMBO COMPLETO
                   </h3>
                 </div>
               </div>
               
-              <ul className="relative z-10 space-y-3 lg:space-y-4">
+              <ul className="relative z-10 space-y-3 lg:space-y-3">
                 {[
                   {
                     icon: "📘",

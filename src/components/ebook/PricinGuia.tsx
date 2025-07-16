@@ -25,7 +25,7 @@ const PricingGuide = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-stretch min-h-[500px] md:min-h-[720px]">
           {/* Contenedor de imagen con mejoras mobile */}
-          <div className="relative rounded-3xl  shadow-2xl border-[3px] md:border-[5px] border-white bg-white h-[400px] md:h-auto">
+          <div className="relative rounded-3xl mb-6 lg:mb-0 shadow-2xl border-[3px] md:border-[5px] border-white bg-white h-[400px] md:h-auto">
             <div className="relative w-full h-full">
               <img 
                 src="imagenes/ecombo.jpeg" 
@@ -38,25 +38,8 @@ const PricingGuide = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-brand-purple/20 to-brand-coral/15 mix-blend-overlay"></div>
               
               {/* Contenido superpuesto */}
-              <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-white bg-gradient-to-t from-black/80 via-black/60 to-transparent">
+              <div className="hidden lg:block absolute bottom-0 left-0 right-0 p-4 md:p-6 text-white bg-gradient-to-t from-black/70 via-black/50 to-transparent">
                 <div className="text-xl md:text-2xl font-bold tracking-tight">GUÍA DEFINITIVA</div>
-                <div className="text-base md:text-lg opacity-90 mt-1">Límites Saludables en la Adolescencia</div>
-                
-                {/* Badges de contenido - ajustados para mobile */}
-                <div className="flex flex-wrap gap-2 mt-3 md:mt-4">
-                  <div className="bg-white/20 backdrop-blur-sm px-2 py-1 md:px-3 md:py-1.5 rounded-full text-xs md:text-sm border border-white/30 flex items-center">
-                    <BookOpen className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-1.5" />
-                    PDF Práctico
-                  </div>
-                  <div className="bg-white/20 backdrop-blur-sm px-2 py-1 md:px-3 md:py-1.5 rounded-full text-xs md:text-sm border border-white/30 flex items-center">
-                    <Headphones className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-1.5" />
-                    Audios SOS
-                  </div>
-                  <div className="bg-white/20 backdrop-blur-sm px-2 py-1 md:px-3 md:py-1.5 rounded-full text-xs md:text-sm border border-white/30 flex items-center">
-                    <Map className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-1.5" />
-                    Plantillas
-                  </div>
-                </div>
               </div>
               
               {/* Elementos de urgencia - ajustados para mobile */}
@@ -76,8 +59,8 @@ const PricingGuide = () => {
             </div>
             
             {/* Precio flotante - optimizado para mobile */}
-            <div className="absolute -bottom-4 right-0 transform translate-x-1/2 bg-white px-3 py-2 md:px-5 md:py-3 rounded-xl md:rounded-2xl shadow-xl md:shadow-2xl border border-brand-coral/20 z-30">
-              <div className="text-lg md:text-[1.5rem] font-bold text-brand-coral">$295</div>
+            <div className="absolute -bottom-8 lg:bottom-8 right-20 transform translate-x-1/2 bg-white px-3 py-2 md:px-5 md:py-3 rounded-xl md:rounded-2xl shadow-xl md:shadow-2xl border border-brand-coral/20 z-30">
+              <div className="text-lg md:text-3xl font-bold text-brand-coral">$295</div>
               <div className="text-xs md:text-sm text-gray-500 mt-1 flex items-center">
                 <Clock className="w-2 h-2 md:w-2 md:h-2 mr-1 md:mr-1.5 text-brand-purple" />
                 <span className="hidden sm:inline">Oferta por tiempo limitado</span>

@@ -79,133 +79,134 @@ const GuideInclusions = () => {
           </div>
 
           {/* Contenido principal - Con más información pero compacta */}
-          <div className="w-full lg:w-7/12">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Item 1 - Guía Principal */}
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 group hover:border-brand-teal/40 transition-all h-full">
-                <div className="flex items-start mb-4">
-                  <div className="bg-brand-teal/10 p-2 rounded-lg mr-4 group-hover:bg-brand-teal/20 transition-colors">
-                    <BookOpen className="w-6 h-6 text-brand-teal" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900">Guía Principal (PDF)</h3>
-                </div>
-                <div className="aspect-square bg-gray-50 rounded-lg mb-4 overflow-hidden">
-                  <img 
-                    src="imagenes/ebook4.jpg" 
-                    alt="Preview Guía" 
-                    className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500"
-                  />
-                </div>
-                <ul className="space-y-3 text-gray-600">
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-brand-teal mr-2 mt-0.5 flex-shrink-0" />
-                    <span>10 límites con fundamentos de neurociencia</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-brand-teal mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Frases efectivas para cada límite</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-brand-teal mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Errores comunes que debilitan tu autoridad</span>
-                  </li>
-                </ul>
-              </div>
+<div className="w-full lg:w-7/12">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {/* Item 1 - Guía Principal */}
+    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 group hover:border-brand-teal/40 transition-all h-full">
+      <div className="flex items-start mb-4">
+        <div className="bg-brand-teal/10 p-2 rounded-lg mr-4 group-hover:bg-brand-teal/20 transition-colors">
+          <BookOpen className="w-6 h-6 text-brand-teal" />
+        </div>
+        <h3 className="text-xl font-bold text-gray-900">Guía Principal (PDF)</h3>
+      </div>
+      <div className="aspect-square bg-white rounded-lg mb-4 overflow-hidden flex items-center justify-center p-2">
+        <img 
+          src="imagenes/ebook4.jpg" 
+          alt="Preview Guía" 
+          className="w-full h-full object-contain transition-transform group-hover:scale-105 duration-500"
+        />
+      </div>
+      <ul className="space-y-3 text-gray-600">
+        <li className="flex items-start">
+          <Check className="w-5 h-5 text-brand-teal mr-2 mt-0.5 flex-shrink-0" />
+          <span>10 límites con fundamentos de neurociencia</span>
+        </li>
+        <li className="flex items-start">
+          <Check className="w-5 h-5 text-brand-teal mr-2 mt-0.5 flex-shrink-0" />
+          <span>Frases efectivas para cada límite</span>
+        </li>
+        <li className="flex items-start">
+          <Check className="w-5 h-5 text-brand-teal mr-2 mt-0.5 flex-shrink-0" />
+          <span>Errores comunes que debilitan tu autoridad</span>
+        </li>
+      </ul>
+    </div>
 
-              {/* Item 2 - Audio Guía */}
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 group hover:border-brand-purple/40 transition-all h-full">
-                <div className="flex items-start mb-4">
-                  <div className="bg-brand-purple/10 p-2 rounded-lg mr-4 group-hover:bg-brand-purple/20 transition-colors">
-                    <Headphones className="w-6 h-6 text-brand-purple" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900">Audio de Emergencia</h3>
-                </div>
-                <div className="aspect-square bg-gray-50 rounded-lg mb-4 overflow-hidden">
-                  <img 
-                    src="imagenes/eaudio.jpeg" 
-                    alt="Preview Audio" 
-                    className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500"
-                  />
-                </div>
-                <ul className="space-y-3 text-gray-600">
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-brand-purple mr-2 mt-0.5 flex-shrink-0" />
-                    <span>"Cómo poner un alto sin perder la calma"</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-brand-purple mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Audio de 8-10 minutos para crisis</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-brand-purple mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Con mi voz guiándote paso a paso</span>
-                  </li>
-                </ul>
-              </div>
+    {/* Item 2 - Audio Guía */}
+    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 group hover:border-brand-purple/40 transition-all h-full">
+      <div className="flex items-start mb-4">
+        <div className="bg-brand-purple/10 p-2 rounded-lg mr-4 group-hover:bg-brand-purple/20 transition-colors">
+          <Headphones className="w-6 h-6 text-brand-purple" />
+        </div>
+        <h3 className="text-xl font-bold text-gray-900">Audio de Emergencia</h3>
+      </div>
+      <div className="aspect-square bg-gray-50 rounded-lg mb-4 overflow-hidden flex items-center justify-center p-2">
+        <img 
+          src="imagenes/eaudio.jpeg" 
+          alt="Preview Audio" 
+          className="w-full h-full object-contain transition-transform group-hover:scale-105 duration-500"
+        />
+      </div>
+      <ul className="space-y-3 text-gray-600">
+        <li className="flex items-start">
+          <Check className="w-5 h-5 text-brand-purple mr-2 mt-0.5 flex-shrink-0" />
+          <span>"Cómo poner un alto sin perder la calma"</span>
+        </li>
+        <li className="flex items-start">
+          <Check className="w-5 h-5 text-brand-purple mr-2 mt-0.5 flex-shrink-0" />
+          <span>Audio de 8-10 minutos para crisis</span>
+        </li>
+        <li className="flex items-start">
+          <Check className="w-5 h-5 text-brand-purple mr-2 mt-0.5 flex-shrink-0" />
+          <span>Con mi voz guiándote paso a paso</span>
+        </li>
+      </ul>
+    </div>
 
-              {/* Item 3 - Mapa de Límites */}
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 group hover:border-brand-coral/40 transition-all h-full">
-                <div className="flex items-start mb-4">
-                  <div className="bg-brand-coral/10 p-2 rounded-lg mr-4 group-hover:bg-brand-coral/20 transition-colors">
-                    <Map className="w-6 h-6 text-brand-coral" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900">Mapa de Límites</h3>
-                </div>
-                <div className="aspect-square bg-gray-50 rounded-lg mb-4 overflow-hidden">
-                  <img 
-                    src="imagenes/map.jpg" 
-                    alt="Preview Mapa" 
-                    className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500"
-                  />
-                </div>
-                <ul className="space-y-3 text-gray-600">
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-brand-coral mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Plantilla práctica para definir límites</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-brand-coral mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Anota conductas y cómo responderás</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-brand-coral mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Formato imprimible y editable</span>
-                  </li>
-                </ul>
-              </div>
+    {/* Item 3 - Mapa de Límites */}
+    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 group hover:border-brand-coral/40 transition-all h-full">
+      <div className="flex items-start mb-4">
+        <div className="bg-brand-coral/10 p-2 rounded-lg mr-4 group-hover:bg-brand-coral/20 transition-colors">
+          <Map className="w-6 h-6 text-brand-coral" />
+        </div>
+        <h3 className="text-xl font-bold text-gray-900">Mapa de Límites</h3>
+      </div>
+      <div className="aspect-square bg-brand-beige/50 rounded-lg mb-4 overflow-hidden flex items-center justify-center p-2">
+        <img 
+          src="imagenes/map.jpeg" 
+          alt="Preview Mapa" 
+          className="w-full h-full object-contain transition-transform group-hover:scale-105 duration-500"
+        />
+      </div>
+      <ul className="space-y-3 text-gray-600">
+        <li className="flex items-start">
+          <Check className="w-5 h-5 text-brand-coral mr-2 mt-0.5 flex-shrink-0" />
+          <span>Plantilla práctica para definir límites</span>
+        </li>
+        <li className="flex items-start">
+          <Check className="w-5 h-5 text-brand-coral mr-2 mt-0.5 flex-shrink-0" />
+          <span>Anota conductas y cómo responderás</span>
+        </li>
+        <li className="flex items-start">
+          <Check className="w-5 h-5 text-brand-coral mr-2 mt-0.5 flex-shrink-0" />
+          <span>Formato imprimible y editable</span>
+        </li>
+      </ul>
+    </div>
 
-              {/* Item 4 - Frases Clave */}
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 group hover:border-brand-teal/40 transition-all h-full">
-                <div className="flex items-start mb-4">
-                  <div className="bg-brand-teal/10 p-2 rounded-lg mr-4 group-hover:bg-brand-teal/20 transition-colors">
-                    <MessageCircleWarning className="w-6 h-6 text-brand-teal" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900">Frases SOS (PDF)</h3>
-                </div>
-                <div className="aspect-square bg-gray-50 rounded-lg mb-4 overflow-hidden">
-                  <img 
-                    src="imagenes/frases.jpg" 
-                    alt="Preview Frases" 
-                    className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500"
-                  />
-                </div>
-                <ul className="space-y-3 text-gray-600">
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-brand-teal mr-2 mt-0.5 flex-shrink-0" />
-                    <span>10 frases para momentos difíciles</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-brand-teal mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Para usar con tus hijos y contigo misma</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 text-brand-teal mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Respuestas listas para aplicar</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+    {/* Item 4 - Frases Clave */}
+    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 group hover:border-brand-teal/40 transition-all h-full">
+      <div className="flex items-start mb-4">
+        <div className="bg-brand-teal/10 p-2 rounded-lg mr-4 group-hover:bg-brand-teal/20 transition-colors">
+          <MessageCircleWarning className="w-6 h-6 text-brand-teal" />
+        </div>
+        <h3 className="text-xl font-bold text-gray-900">Frases SOS (PDF)</h3>
+      </div>
+      <div className="aspect-square bg-brand-beige rounded-lg mb-4 overflow-hidden flex items-center justify-center p-2">
+        <img 
+          src="imagenes/frases.jpeg" 
+          alt="Preview Frases" 
+          className="w-full h-full object-contain transition-transform group-hover:scale-105 duration-500"
+        />
+      </div>
+      <ul className="space-y-3 text-gray-600">
+        <li className="flex items-start">
+          <Check className="w-5 h-5 text-brand-teal mr-2 mt-0.5 flex-shrink-0" />
+          <span>10 frases para momentos difíciles</span>
+        </li>
+        <li className="flex items-start">
+          <Check className="w-5 h-5 text-brand-teal mr-2 mt-0.5 flex-shrink-0" />
+          <span>Para usar con tus hijos y contigo misma</span>
+        </li>
+        <li className="flex items-start">
+          <Check className="w-5 h-5 text-brand-teal mr-2 mt-0.5 flex-shrink-0" />
+          <span>Respuestas listas para aplicar</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
         </div>
       </div>
     </section>
