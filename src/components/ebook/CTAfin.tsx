@@ -48,7 +48,7 @@ const CTAfin = () => {
       {/* Fondo optimizado para mobile */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1709216461598-018ae6307dc0?w=1200&q=100&auto=format&fit=crop')] bg-cover bg-center opacity-90" />
-        <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/40 to-white/70 md:bg-gradient-to-r md:from-white/70 md:via-white/50 md:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/50 to-white/60" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 max-w-6xl relative z-10">

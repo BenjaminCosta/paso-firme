@@ -222,7 +222,9 @@ const Heroe = ({ onScrollToSection }: HeroSectionProps) => {
               
               {/* Mobile CTA Button - Updated */}
               <div className="lg:hidden mt-6 flex justify-center">
-                <Button className="bg-gradient-to-r from-brand-coral to-brand-teal hover:from-brand-coral/90 hover:to-brand-teal/90 text-white font-bold py-4 px-6 rounded-lg lg:rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 w-full max-w-xs">
+                <Button 
+                onClick={() => onScrollToSection('pricing')}
+                className="bg-gradient-to-r from-brand-coral to-brand-teal hover:from-brand-coral/90 hover:to-brand-teal/90 text-white font-bold py-4 px-6 rounded-lg lg:rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 w-full max-w-xs">
                   <Download className="w-5 h-5 mr-2" />
                   Descargar eBook
                 </Button>
@@ -303,7 +305,9 @@ const Heroe = ({ onScrollToSection }: HeroSectionProps) => {
 
 {/* Desktop CTA Button - Premium Design */}
 <div className="hidden lg:flex absolute bottom-20 left-0 right-0 justify-center z-20">
-  <Button className="relative overflow-hidden group bg-gradient-to-r from-brand-coral to-brand-teal hover:from-brand-teal hover:to-brand-coral/80 text-white font-bold py-6 px-10 rounded-2xl shadow-2xl hover:shadow-2xl transition-all duration-500 ease-out hover:-translate-y-1 transform hover:scale-[1.02]">
+  <Button
+  onClick={() => onScrollToSection('pricing')} 
+  className="relative overflow-hidden group bg-gradient-to-r from-brand-coral to-brand-teal hover:from-brand-teal hover:to-brand-coral/80 text-white font-bold py-6 px-10 rounded-2xl shadow-2xl hover:shadow-2xl transition-all duration-500 ease-out hover:-translate-y-1 transform hover:scale-[1.02]">
     <span className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
     <div className="flex items-center justify-center relative z-10">
       <Download className="w-6 h-6 mr-3 group-hover:animate-bounce" />

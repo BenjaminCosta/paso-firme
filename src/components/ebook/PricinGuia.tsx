@@ -20,7 +20,9 @@ const PricingGuide = () => {
 
   return (
     <div className="bg-white">
-      <section className="relative py-12 md:py-20 px-4 sm:px-6 md:px-12 bg-gradient-to-br from-brand-beige/30 via-white to-brand-coral/10 overflow-hidden">
+      <section
+      id='pricing'
+       className="relative py-12 md:py-20 px-4 sm:px-6 md:px-12 bg-gradient-to-br from-brand-beige/30 via-white to-brand-coral/10 overflow-hidden">
         {/* Fondos decorativos */}
         <div className="absolute inset-0">
           <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-brand-teal/20 blur-[100px]"></div>
@@ -203,7 +205,6 @@ const PricingGuide = () => {
             </button>
           </div>
         </div>
-        <AudienceTestimonials />
       </section>
     </div>
   );

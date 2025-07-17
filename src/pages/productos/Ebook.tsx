@@ -32,6 +32,7 @@ const Ebook = () => {
       <PersonalSection/>
       <GuideInclusions/>
       <PricingGuide />
+      <AudienceTestimonials />
       <FAQguide />
       <CTAfin />
       <Footer />
