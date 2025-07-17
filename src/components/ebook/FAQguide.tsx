@@ -108,44 +108,10 @@ const FAQguide = () => {
             </div>
           ))}
         </div>
-
-       {/* CTA final */}
-<div className="text-center px-4 sm:px-6">
-  <div className="inline-flex flex-col items-center w-full max-w-xl mx-auto">
-    <Button
-      size="lg"
-      className="relative overflow-hidden bg-gradient-to-r from-brand-purple via-brand-coral to-brand-teal text-white px-6 sm:px-10 py-14 sm:py-7 text-lg sm:text-xl font-bold rounded-xl transition-all duration-300 hover:scale-[1.02] shadow-xl hover:shadow-2xl group w-full"
-    >
-      <span className="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-0 sm:gap-0">
-        <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium tracking-wide mb-1 sm:mb-0 sm:mr-3">
-          🔥 OFERTA ESPECIAL
-        </span>
-        Descargar Guía Completa
-        <ArrowRight className="ml-0 sm:ml-4 h-6 w-6 transition-transform group-hover:translate-x-3 duration-200" />
-      </span>
-      <span className="absolute inset-0 bg-gradient-to-r from-brand-teal via-brand-purple to-brand-coral opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-    </Button>
-
-    <div className="mt-6 flex flex-wrap justify-center gap-4 sm:gap-x-6 sm:gap-y-3 w-full">
-      <div className="flex items-center text-sm text-gray-600">
-        <Download className="w-5 h-5 mr-2 text-brand-teal" />
-        Acceso inmediato 24/7
-      </div>
-      <div className="flex items-center text-sm text-gray-600">
-        <Smartphone className="w-5 h-5 mr-2 text-brand-purple" />
-        Multiplataforma
-      </div>
-      <div className="flex items-center text-sm text-gray-600">
-        <FileText className="w-5 h-5 mr-2 text-brand-coral" />
-        PDF + Audios descargables
-      </div>
-    </div>
-  </div>
-</div>
-
       </div>
 
     </section>
+    
   );
 };
 

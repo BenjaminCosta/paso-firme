@@ -9,6 +9,7 @@ import PricingGuide from "@/components/ebook/PricinGuia";
 import FAQguide from "@/components/ebook/FAQguide";
 import { DynamicHead } from "@/components/DynamicHead";
 import NavEbook from "@/components/ebook/NavEbook";
+import CTAfin from "@/components/ebook/CTAfin";
 
 
 
@@ -32,6 +33,7 @@ const Ebook = () => {
       <GuideInclusions/>
       <PricingGuide />
       <FAQguide />
+      <CTAfin />
       <Footer />
     </div>
     </>

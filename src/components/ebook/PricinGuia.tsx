@@ -14,6 +14,10 @@ import {
 import AudienceTestimonials from './AudienceTestimonials';
 
 const PricingGuide = () => {
+  const priceMXN = 295;
+  const exchangeRate = 0.06;
+  const priceUSD = (priceMXN * exchangeRate).toFixed(2);
+
   return (
     <div className="bg-white">
       <section className="relative py-12 md:py-20 px-4 sm:px-6 md:px-12 bg-gradient-to-br from-brand-beige/30 via-white to-brand-coral/10 overflow-hidden">
@@ -34,12 +38,12 @@ const PricingGuide = () => {
               />
               
               {/* Overlay premium */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/15 to-transparent"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-brand-purple/20 to-brand-coral/15 mix-blend-overlay"></div>
               
               {/* Contenido superpuesto */}
               <div className="hidden lg:block absolute bottom-0 left-0 right-0 p-4 md:p-6 text-white bg-gradient-to-t from-black/70 via-black/50 to-transparent">
-                <div className="text-xl md:text-2xl font-bold tracking-tight">GUÍA DEFINITIVA</div>
+                <div className="text-xl md:text-2xl font-bold tracking-tight">COMBO DEFINITIVO</div>
               </div>
               
               {/* Elementos de urgencia - ajustados para mobile */}
@@ -60,8 +64,11 @@ const PricingGuide = () => {
             
             {/* Precio flotante - optimizado para mobile */}
             <div className="absolute -bottom-8 lg:bottom-8 right-20 transform translate-x-1/2 bg-white px-3 py-2 md:px-5 md:py-3 rounded-xl md:rounded-2xl shadow-xl md:shadow-2xl border border-brand-coral/20 z-30">
-              <div className="text-lg md:text-3xl font-bold text-brand-coral">$295</div>
-              <div className="text-xs md:text-sm text-gray-500 mt-1 flex items-center">
+              <div className="flex items-end justify-center">
+                <div className="text-lg md:text-3xl font-bold text-brand-coral">${priceMXN} MXN</div>
+                <div className="text-xs md:text-sm text-gray-500 ml-2 mb-1">≈ ${priceUSD} USD</div>
+              </div>
+              <div className="text-xs md:text-sm text-gray-500 mt-1 flex items-center justify-center">
                 <Clock className="w-2 h-2 md:w-2 md:h-2 mr-1 md:mr-1.5 text-brand-purple" />
                 <span className="hidden sm:inline">Oferta por tiempo limitado</span>
                 <span className="sm:hidden">Oferta limitada</span>
@@ -103,7 +110,7 @@ const PricingGuide = () => {
                     <Check className="w-5 h-5 md:w-6 md:h-6 text-brand-teal" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-semibold text-gray-900 text-sm md:text-base truncate">Guía Completa (PDF)</h3>
+                    <h3 className="font-semibold text-gray-900 text-sm md:text-base truncate">E-book Descargable (PDF)</h3>
                     <p className="text-xs md:text-sm text-gray-600 mt-0.5 md:mt-1 line-clamp-2">
                       10 límites con base neurocientífica + frases clave + ejercicios prácticos
                     </p>
@@ -139,7 +146,7 @@ const PricingGuide = () => {
                   <div className="flex-1 min-w-0">
                     <h3 className="font-semibold text-gray-900 text-sm md:text-base truncate">Mapa de Límites</h3>
                     <p className="text-xs md:text-sm text-gray-600 mt-0.5 md:mt-1 line-clamp-2">
-                      Plantilla imprimible para definir tus límites
+                      Guía imprimible para definir tus límites
                     </p>
                   </div>
                 </div>
@@ -187,10 +194,10 @@ const PricingGuide = () => {
               </div>
             </div>
 
-            {/* CTA compacto */}
+            {/* CTA compacto con nuevo texto */}
             <button className="w-full mt-4 md:mt-6 py-3 md:py-4 px-4 md:px-6 bg-gradient-to-r from-brand-coral to-brand-purple text-white font-bold rounded-lg md:rounded-xl shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5 active:scale-95">
               <div className="flex items-center justify-center">
-                <span className="text-sm md:text-base">Descargar Ahora</span>
+                <span className="text-sm md:text-base">Sí, quiero empezar a educar con firmeza y conexión</span>
                 <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2 md:ml-3" />
               </div>
             </button>
@@ -199,7 +206,6 @@ const PricingGuide = () => {
         <AudienceTestimonials />
       </section>
     </div>
-    
   );
 };
 

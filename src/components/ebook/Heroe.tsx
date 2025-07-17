@@ -152,7 +152,7 @@ const Heroe = ({ onScrollToSection }: HeroSectionProps) => {
 
 
           {/* Premium Glassmorphism Benefits Card */}
-          <div className="mb-8 lg:mb-12 max-w-2xl relative group px-4 lg:px-0">
+          <div className="mb-8 lg:mb-12 max-w-3xl relative group px-4 lg:px-0">
             {/* Glow Effect - Updated colors */}
             <div className="absolute -inset-0.5 rounded-2xl lg:rounded-3xl bg-gradient-to-r from-brand-coral/60 via-brand-beige/60 to-brand-teal/60 opacity-70 blur-xl group-hover:opacity-90 transition-all duration-700 animate-glow-pulse"></div>
             
@@ -176,7 +176,7 @@ const Heroe = ({ onScrollToSection }: HeroSectionProps) => {
                 {[
                   {
                     icon: "📘",
-                    title: "Guía descargable (PDF)",
+                    title: "E-book descargable (PDF)",
                     highlight: "ACCESO RÁPIDO"
                   },
                   {
@@ -186,7 +186,7 @@ const Heroe = ({ onScrollToSection }: HeroSectionProps) => {
                   },
                   {
                     icon: "📝",
-                    title: "Hoja adicional: Mapa de límites",
+                    title: "Mapa de límites claros (guía descargable)",
                     highlight: "ORIENTACIÓN CLARA"
                   },
                   {
