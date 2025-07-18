@@ -59,8 +59,11 @@ const PricingSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid  gap-6 md:gap-8">
+          {/*ORIGINAL PRESENCIAL Y ONLINE: <div className="grid md:grid-cols-2 gap-6 md:gap-8"></div>*/}
+         
           {/* Presencial */}
+          {/*
           {presencial && (
             <div className="relative group h-full">
               <div className="absolute -inset-1 bg-gradient-to-r from-brand-teal/30 to-brand-teal/10 rounded-3xl blur opacity-70 group-hover:opacity-90 transition duration-500"></div>
@@ -140,6 +143,7 @@ const PricingSection = () => {
               </Card>
             </div>
           )}
+          */}
 
           {/* Online */}
           {online && (
