@@ -1,5 +1,7 @@
 import { Clock, Zap, ChevronRight, AlertTriangle, CheckCircle, ArrowRight, Download, BookAudio, BookOpenText, Mic, Map } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { Button } from '../ui/button';
+import { Link } from 'react-router-dom';
 
 const CTAfin = () => {
   const exchangeRate = 0.06;
@@ -86,16 +88,20 @@ const CTAfin = () => {
 
           {/* Botones CTA con más urgencia */}
           <div className="flex flex-col sm:flex-row justify-center gap-3 md:gap-4">
-            <button className="group relative overflow-hidden bg-gradient-to-r from-brand-teal to-brand-purple hover:from-brand-teal/90 hover:to-brand-purple/90 text-white font-bold py-3 px-4 md:px-6 rounded-xl transition-all transform hover:scale-[1.02] shadow-md hover:shadow-lg text-sm md:text-base">
+            <Link to={'https://www.familiayformacion.com/tienda/p/combo-completo-lmites-en-la-adolescencia'}>
+            <Button className="group relative w-full overflow-hidden bg-gradient-to-r from-brand-teal to-brand-purple hover:from-brand-teal/90 hover:to-brand-purple/90 text-white font-bold py-3 px-4 md:px-6 rounded-xl transition-all transform hover:scale-[1.02] shadow-md hover:shadow-lg text-sm md:text-base">
               <span className="relative z-10 flex items-center justify-center gap-1 md:gap-2">
                 <Zap className="w-4 h-4 md:w-5 md:h-5" />
                 ¡APROVECHA AHORA! 
               </span>
-            </button>
-            <button className="border border-brand-purple text-brand-purple hover:bg-brand-purple/10 font-semibold py-3 px-4 md:px-6 rounded-xl flex items-center justify-center gap-1 md:gap-2 text-sm md:text-base">
+            </Button>
+            </Link>
+            <Link to={'https://www.familiayformacion.com/tienda/p/combo-completo-lmites-en-la-adolescencia'}>
+            <Button className="border border-brand-purple text-brand-purple bg-white hover:bg-brand-purple/10 font-semibold py-3 px-4 md:px-6 rounded-xl flex items-center w-full justify-center gap-1 md:gap-2 text-sm md:text-base">
               Ver detalles
               <ArrowRight size={16} className="md:size-5" />
-            </button>
+            </Button>
+            </Link>
           </div>
 
           {/* Mensaje de urgencia adicional */}

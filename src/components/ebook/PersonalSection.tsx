@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Bookmark, BookOpen, Check, CheckCircle, ChevronRight, Heart, Info, Shield, Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const PersonalSection = () => {
   return (
@@ -195,12 +196,14 @@ const PersonalSection = () => {
                 <div className="relative z-10 text-center w-full">
                   <h4 className="text-xl sm:text-2xl font-bold text-white mb-4">Transforma tu dinámica familiar hoy</h4>
                   <p className="text-white/90 mb-6">Accede a las herramientas comprobadas para reconectar con tu adolescente</p>
+                  <Link to={'https://www.familiayformacion.com/tienda/p/combo-completo-lmites-en-la-adolescencia'}>
                   <Button className="py-4 px-8 bg-white text-brand-purple hover:bg-white/90 font-bold rounded-lg shadow-md hover:shadow-lg transition-all transform hover:scale-105">
                     <span className="flex items-center gap-2">
                       Comenzar ahora
                       <ChevronRight className="w-5 h-5" />
                     </span>
                   </Button>
+                  </Link>
                 </div>
               </div>
             </div>

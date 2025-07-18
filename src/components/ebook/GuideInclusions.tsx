@@ -11,6 +11,7 @@ import {
   MessageSquare,
   Scale
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const GuideInclusions = () => {
   return (
@@ -70,13 +71,16 @@ const GuideInclusions = () => {
               </div>
             </div>
             {/* CTA con diseño anterior - Adaptado para mobile */}
+            <Link to={'https://www.familiayformacion.com/tienda/p/combo-completo-lmites-en-la-adolescencia'}>
             <Button className="mt-4 md:mt-6 group relative overflow-hidden px-5 py-3 md:px-8 md:py-5 bg-white hover:bg-brand-teal text-gray-900 border-2 border-brand-teal rounded-lg md:rounded-xl shadow-md hover:shadow-lg transition-all hover:-translate-y-1">
               <span className="relative z-10 flex items-center justify-center">
                 <span className="mr-2 md:mr-3 font-semibold text-sm md:text-base">Acceder al Material Completo</span>
                 <ArrowRight className="w-4 h-4 md:w-5 md:h-5 transition-transform group-hover:translate-x-1" />
               </span>
             </Button>
+            </Link>
           </div>
+          
 
           {/* Contenido principal - Adaptado para mobile */}
           <div className="w-full lg:w-7/12">

@@ -12,6 +12,8 @@ import {
   BookOpen
 } from 'lucide-react';
 import AudienceTestimonials from './AudienceTestimonials';
+import { Button } from '../ui/button';
+import { Link } from 'react-router-dom';
 
 const PricingGuide = () => {
   const priceMXN = 295;
@@ -30,53 +32,54 @@ const PricingGuide = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-stretch min-h-[500px] md:min-h-[720px]">
-          {/* Contenedor de imagen con mejoras mobile */}
-          <div className="relative rounded-3xl mb-6 lg:mb-0 shadow-2xl border-[3px] md:border-[5px] border-white bg-white h-[400px] md:h-auto">
-            <div className="relative w-full h-full">
-              <img 
-                src="imagenes/ecombo.jpeg" 
-                alt="Guía Definitiva de Límites Saludables" 
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-              
-              {/* Overlay premium */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/15 to-transparent"></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-brand-purple/20 to-brand-coral/15 mix-blend-overlay"></div>
-              
-              {/* Contenido superpuesto */}
-              <div className="hidden lg:block absolute bottom-0 left-0 right-0 p-4 md:p-6 text-white bg-gradient-to-t from-black/70 via-black/50 to-transparent">
-                <div className="text-xl md:text-2xl font-bold tracking-tight">COMBO DEFINITIVO</div>
-              </div>
-              
-              {/* Elementos de urgencia - ajustados para mobile */}
-              <div className="absolute top-3 left-3 md:top-4 md:left-4 z-20">
-                <div className="bg-brand-teal text-white text-xs md:text-sm font-bold px-3 py-1 md:px-4 md:py-2 rounded-full shadow-lg flex items-center ">
-                  <ShieldCheck className="w-4 h-4 md:w-5 md:h-5 mr-1 md:mr-2" />
-                  RESULTADOS REALES
-                </div>
-              </div>
-              
-              <div className="absolute top-3 right-3 md:top-4 md:right-4 z-20">
-                <div className="bg-brand-coral text-white text-xs md:text-sm font-bold px-3 py-1 md:px-4 md:py-2 rounded-full shadow-lg flex items-center">
-                  <Clock className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-1.5" />
-                  OFERTA LIMITADA
-                </div>
-              </div>
-            </div>
-            
-            {/* Precio flotante - optimizado para mobile */}
-            <div className="absolute -bottom-8 lg:bottom-8 right-20 transform translate-x-1/2 bg-white px-3 py-2 md:px-5 md:py-3 rounded-xl md:rounded-2xl shadow-xl md:shadow-2xl border border-brand-coral/20 z-30">
-              <div className="flex items-end justify-center">
-                <div className="text-lg md:text-3xl font-bold text-brand-coral">${priceMXN} MXN</div>
-                <div className="text-xs md:text-sm text-gray-500 ml-2 mb-1">≈ ${priceUSD} USD</div>
-              </div>
-              <div className="text-xs md:text-sm text-gray-500 mt-1 flex items-center justify-center">
-                <Clock className="w-2 h-2 md:w-2 md:h-2 mr-1 md:mr-1.5 text-brand-purple" />
-                <span className="hidden sm:inline">Oferta por tiempo limitado</span>
-                <span className="sm:hidden">Oferta limitada</span>
-              </div>
-            </div>
-          </div>
+          {/* Contenedor de imagen optimizado para iPad */}
+        <div className="relative rounded-3xl mb-6 lg:mb-0 shadow-2xl border-[3px] md:border-[5px] border-white bg-white w-full h-full max-w-[500px] lg:max-w-none mx-auto ">
+  <div className="relative w-full h-full" style={{ paddingBottom: 'min(120%, 133%)' }}>
+    <img 
+      src="imagenes/ecombo.jpeg" 
+      alt="Guía Definitiva de Límites Saludables" 
+      className="absolute top-0 left-0 w-full h-full object-cover rounded-3xl"
+    />
+    
+    {/* Overlays */}
+    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/15 to-transparent rounded-3xl"></div>
+    <div className="absolute inset-0 bg-gradient-to-br from-brand-purple/20 to-brand-coral/15 mix-blend-overlay rounded-3xl"></div>
+
+    {/* Etiquetas */}
+    <div className="absolute top-3 left-3 z-20">
+      <div className="bg-brand-teal text-white text-xs lg:text-lg font-bold px-3 py-1 rounded-full shadow-lg flex items-center">
+        <ShieldCheck className="w-4 h-4 mr-1" />
+        RESULTADOS REALES
+      </div>
+    </div>
+
+    <div className="absolute top-3 right-3 z-20">
+      <div className="bg-brand-coral text-white text-xs lg:text-lg font-bold px-3 py-1 rounded-full shadow-lg flex items-center">
+        <Clock className="w-4 h-4 mr-1" />
+        OFERTA LIMITADA
+      </div>
+    </div>
+
+    {/* Título inferior (solo en desktop) */}
+    <div className="hidden lg:block absolute bottom-0 left-0 right-0 p-4 text-white bg-gradient-to-t from-black/70 via-black/50 to-transparent rounded-b-3xl">
+      <div className="text-2xl font-bold tracking-tight">COMBO DEFINITIVO</div>
+    </div>
+  </div>
+
+  {/* Precio flotante */}
+  <div className="absolute -bottom-8 lg:bottom-8 right-1/2 lg:-right-8 translate-x-1/2 lg:translate-x-0 bg-white px-4 py-3 rounded-xl shadow-xl border border-brand-coral/20 z-30">
+    <div className="flex items-end justify-center">
+      <div className="text-lg lg:text-2xl font-bold text-brand-coral">${priceMXN} MXN</div>
+      <div className="text-xs lg:text-base text-gray-500 ml-2 mb-1">≈ ${priceUSD} USD</div>
+    </div>
+    <div className="text-xs lg:text-base text-gray-500 mt-1 flex items-center justify-center">
+      <Clock className="w-2 h-2 mr-1 text-brand-purple" />
+      <span className="hidden sm:inline">Oferta por tiempo limitado</span>
+      <span className="sm:hidden">Oferta limitada</span>
+    </div>
+  </div>
+</div>
+
 
           {/* Contenido compacto - optimizado para mobile */}
           <div className="space-y-4 md:space-y-6 relative">
@@ -197,12 +200,14 @@ const PricingGuide = () => {
             </div>
 
             {/* CTA compacto con nuevo texto */}
-            <button className="w-full mt-4 md:mt-6 py-3 md:py-4 px-4 md:px-6 bg-gradient-to-r from-brand-coral to-brand-purple text-white font-bold rounded-lg md:rounded-xl shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5 active:scale-95">
+            <Link to={'https://www.familiayformacion.com/tienda/p/combo-completo-lmites-en-la-adolescencia'}>
+            <Button className="w-full mt-4 md:mt-6 py-3 md:py-4 px-4 md:px-6 bg-gradient-to-r from-brand-coral to-brand-purple text-white font-bold rounded-lg md:rounded-xl shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5 active:scale-95">
               <div className="flex items-center justify-center">
                 <span className="text-sm md:text-base">Sí, quiero empezar a educar con firmeza y conexión</span>
                 <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2 md:ml-3" />
               </div>
-            </button>
+            </Button>
+            </Link>
           </div>
         </div>
       </section>
