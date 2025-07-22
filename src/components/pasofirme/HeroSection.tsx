@@ -166,7 +166,7 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
           {/* Destacado con fondo más opaco */}
           <div className="bg-white/30 rounded-xl p-2 md:p-4 mb-8 inline-block shadow-xl backdrop-blur-lg border border-white">
             <p className="text-white font-semibold text-sm md:text-base">
-             💻 Disponible en modalidad online 🌍 accedé desde cualquier lugar.
+             💻 Disponible en modalidad online |🌍 Accedé desde cualquier lugar.
             </p>
           </div>
 
