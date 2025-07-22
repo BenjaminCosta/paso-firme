@@ -131,7 +131,7 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
 
       {/* Contenido principal - alineado a la izquierda */}
       <div className="container mx-auto h-full flex flex-col justify-center items-start text-left px-4 pt-20 relative z-30">
-        <div className="max-w-4xl animate-fade-in ml-0 md:ml-8 lg:ml-16">
+        <div className="maanimate-fade-in ml-0 md:ml-8 lg:ml-16">
           {/* Título o logo responsive */}
 <div className="mb-6">
   {/* Logo solo visible en mobile */}
@@ -144,7 +144,7 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
   {/* Título visible en pantallas md o mayores */}
   <h1 className="hidden md:block text-7xl font-bold text-white leading-tight [text-shadow:_0_3px_12px_rgba(0,0,0,0.8)]">
     Paso Firme{" "}
-    <span className="italic font-light font-pacifico [text-shadow:_0_4px_15px_rgba(0,0,0,0.9)]">
+    <span className="italic font-x-w-4xl light font-pacifico [text-shadow:_0_4px_15px_rgba(0,0,0,0.9)]">
       a Secundaria
     </span>
   </h1>
@@ -152,7 +152,7 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
 
 
 
-
+<div className="max-w-3xl">
 
           {/* Subtítulos con texto más grande y sombra más marcada */}
           <p
@@ -166,7 +166,7 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
           {/* Destacado con fondo más opaco */}
           <div className="bg-white/30 rounded-xl p-2 md:p-4 mb-8 inline-block shadow-xl backdrop-blur-lg border border-white">
             <p className="text-white font-semibold text-sm md:text-base">
-              📍 Presencial en Monterrey, México | 🌐 Online desde cualquier parte del mundo
+             💻 Disponible en modalidad online 🌍 accedé desde cualquier lugar.
             </p>
           </div>
 
@@ -180,6 +180,7 @@ const HeroSection = ({ onScrollToSection }: HeroSectionProps) => {
             <span className="absolute inset-0 bg-gradient-to-r from-[#c0bb48] to-[#885fae] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
           </Button>
         </div>
+      </div>
       </div>
 
       {/* Efectos de iluminación suaves */}
