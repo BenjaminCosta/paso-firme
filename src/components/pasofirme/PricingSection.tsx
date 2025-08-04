@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { InfoBlock } from "../InfoBlock";
 import useSheetData from "@/hooks/useSheetData";
+import { toast } from "sonner";
 
 const PricingSection = () => {
   const { data, loading, error } = useSheetData();
@@ -31,6 +32,19 @@ const PricingSection = () => {
     cp: "CP 66259",
     ciudad: "San Pedro Garza García, NL.",
     mapsUrl: "https://maps.app.goo.gl/gRCSJz7wKRsN9CNp7?g_st=com.google.maps.preview.copy",
+  };
+
+  const handleCupoLleno = () => {
+    toast.info("Gracias por su interés. CUPO LLENO. Nos vemos el próximo año", {
+      duration: 5000,
+      style: {
+        background: 'var(--brand-purple)',
+        color: 'white',
+        border: 'none',
+        fontSize: '16px',
+        padding: '16px',
+      }
+    });
   };
 
   return (
@@ -59,7 +73,7 @@ const PricingSection = () => {
           </p>
         </div>
 
-        <div className="grid  gap-6 md:gap-8">
+        <div className="grid gap-6 md:gap-8">
           {/*ORIGINAL PRESENCIAL Y ONLINE: <div className="grid md:grid-cols-2 gap-6 md:gap-8"></div>*/}
          
           {/* Presencial */}
@@ -189,7 +203,7 @@ const PricingSection = () => {
                   <div className="mt-auto">
                     <div className="bg-gradient-to-r from-brand-purple/5 to-brand-purple/10 p-4 sm:p-5 rounded-xl mb-4 sm:mb-6 border border-brand-purple/10 relative">
                       <div className="absolute -top-2.5 -right-2.5 bg-red-500 text-white text-xxs sm:text-xs font-bold px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-full animate-bounce">
-                        ¡APROVECHA!
+                        CUPO LLENO
                       </div>
                       <div className="flex flex-col sm:flex-row sm:items-end gap-1 sm:gap-2">
                         <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brand-purple">
@@ -203,12 +217,25 @@ const PricingSection = () => {
                         Precio <span className="font-bold text-brand-coral">Final</span>
                       </p>
                     </div>
-                    <Link to={'https://www.familiayformacion.com/tienda/p/paso-firme-a-secundaria-virtual'}>
-                      <Button className="w-full py-4 sm:py-5 bg-gradient-to-r from-brand-purple to-brand-purple-dark hover:from-brand-purple-dark hover:to-brand-purple text-white font-bold shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2">
-                        <span className="text-sm sm:text-base">Reservar ahora</span>
-                        <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
-                      </Button>
-                    </Link>
+
+                    {/* Sección de cupo lleno agregada */}
+                    <div className="mb-4 p-4 bg-brand-purple/5 rounded-lg border border-brand-purple/20 text-center">
+                      <p className="text-sm font-medium text-brand-purple">
+                        <span className="font-bold">¡CUPO COMPLETO!</span> Todos los espacios han sido ocupados.
+                      </p>
+                      <p className="text-xs text-gray-600 mt-1">
+                        Gracias por su interés. Los esperamos en la próxima edición.
+                      </p>
+                    </div>
+
+                    <Button 
+                      onClick={handleCupoLleno}
+                      className="w-full py-4 sm:py-5 bg-gradient-to-r from-brand-purple/60 to-brand-purple-dark/60 hover:from-brand-purple/50 hover:to-brand-purple-dark/50 text-white font-bold shadow-lg cursor-not-allowed flex items-center justify-center gap-2"
+                      disabled
+                    >
+                      <span className="text-sm sm:text-base">Cupo completado</span>
+                      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                    </Button>
                   </div>
                 </CardContent>
               </Card>
