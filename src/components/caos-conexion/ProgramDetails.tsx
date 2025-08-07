@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Calendar, Brain, Headphones, Users, Download, MessageSquare, ArrowRight } from "lucide-react";
+import { Calendar, Brain, Headphones, Users, Download, MessageSquare, ArrowRight, Zap, AlertTriangle } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 interface HeroSectionProps {
   onScrollToSection: (id: string) => void;
@@ -7,6 +8,7 @@ interface HeroSectionProps {
 
 const ProgramDetails = ({ onScrollToSection }: HeroSectionProps) => {
   return (
+    <div className="space-y-16">
     <section className="relative py-20 sm:py-28 overflow-hidden bg-gradient-to-br from-white to-gray-50">
       {/* Efectos de fondo modernos */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
@@ -114,6 +116,92 @@ const ProgramDetails = ({ onScrollToSection }: HeroSectionProps) => {
       <div className="absolute top-0 left-0 w-72 sm:w-96 h-72 sm:h-96 rounded-full bg-brand-teal/5 -translate-x-1/2 -translate-y-1/2 z-0"></div>
       <div className="absolute bottom-0 right-0 w-72 sm:w-96 h-72 sm:h-96 rounded-full bg-brand-coral/5 translate-x-1/2 translate-y-1/2 z-0"></div>
     </section>
+      <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-br from-white to-brand-beige/10">
+  {/* Fondo con imagen y degradado mejorado */}
+  <div className="absolute inset-0 overflow-hidden z-0">
+    <div 
+      className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1648221350871-e3ae3c8d0f58?w=1600&auto=format&fit=crop&q=85&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fGZhbWlseSUyMHByb2JsZW1zJTIwYWRvbGVzY2VudHxlbnwwfDB8MHx8fDI%3D')] bg-cover bg-center opacity-90"
+    />
+    <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/50 to-transparent" />
+  </div>
+
+  <div className="container mx-auto px-4 sm:px-6 max-w-6xl relative z-10">
+    <div className="flex flex-col lg:flex-row items-center gap-8">
+      
+      {/* Contenido principal compacto */}
+      <div className="lg:w-1/2 space-y-6 backdrop-blur-sm bg-white/50 p-8 rounded-2xl border border-white/20 shadow-lg">
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-white text-brand-coral rounded-full text-lg font-semibold border border-white shadow-sm">
+          <AlertTriangle className="w-5 h-5" />
+          ¡Última oportunidad!
+        </div>
+
+        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+          <span className="text-brand-coral text-5xl">No</span> esperes más
+        </h2>
+
+        <ul className="space-y-3 text-lg font-semibold text-gray-800">
+          <li className="flex items-start gap-3">
+            <span className="text-brand-coral text-2xl mt-1">•</span>
+            <span>Evita que tu hijo se cierre emocionalmente</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="text-brand-coral text-2xl mt-1">•</span>
+            <span>Deja de agotarte sin herramientas claras</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="text-brand-coral text-2xl mt-1">•</span>
+            <span>Transforma por completo la relación</span>
+          </li>
+        </ul>
+
+        <div className="grid grid-cols-2 gap-3 pt-4">
+          <div className="flex items-center gap-2 text-lg font-medium text-gray-700 bg-white/80 p-2 rounded-lg">
+            <Zap className="w-4 h-4 text-brand-teal" />
+            Últimos lugares
+          </div>
+          <div className="flex items-center gap-2 text-lg font-medium text-gray-700 bg-white/80 p-2 rounded-lg">
+            <MessageSquare className="w-4 h-4 text-brand-coral" />
+            Comienza hoy
+          </div>
+        </div>
+      </div>
+
+      {/* Tarjeta CTA con glassmorphism */}
+      <div className="lg:w-1/2 mt-6 lg:mt-0">
+        <div className="relative group">
+          <div className="absolute -inset-1 bg-gradient-to-r from-brand-teal/40 to-brand-coral/30 rounded-2xl blur opacity-80 group-hover:opacity-100 transition duration-500"></div>
+          <div className="relative bg-white/80 backdrop-blur-md p-8 rounded-xl border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300">
+            <h3 className="text-2xl font-bold text-gray-900 mb-3">
+              Recupera lo más valioso:
+            </h3>
+            <p className="font-dancing text-3xl text-brand-coral mb-5">
+              Tu Conexión Familiar
+            </p>
+
+            <Link to="https://www.familiayformacion.com/tienda/p/soy-capaz-habilidades-para-la-vida-adolescente-ebwrr">
+            <Button 
+              className="w-full py-5 bg-gradient-to-r from-brand-teal to-brand-coral hover:from-brand-teal/90 hover:to-brand-coral/90 text-white font-bold text-lg shadow-md hover:shadow-lg transition-all group"
+              size="lg"
+            >
+              <span className="flex items-center justify-center gap-2">
+                <Zap className="w-5 h-5" /> 
+                <span>Iniciar transformación</span>
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+              </span>
+            </Button>
+            </Link>
+
+            <p className="text-xs text-center text-gray-500 mt-4">
+              Cupos limitados • Inscripción abierta
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
   );
 };
 

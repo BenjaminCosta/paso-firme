@@ -1,109 +1,145 @@
-import { Quote, ArrowRight } from "lucide-react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { ArrowRight, PlayCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useState, useRef } from "react";
 
 const Testimonials3 = () => {
   const testimonials = [
-    {
-      quote: "Llevaba meses sin saber cómo acercarme a mi hija. Gracias a este programa, por fin puedo hablar con ella sin que terminemos en discusión.",
-      author: "Mamá de adolescente de 14 años",
-      highlight: "acercarme a mi hija"
+    { 
+      type: "video",
+      src: "/videos/vid1.mp4",
+      poster: "/imagenes/vid1-poster.png" // Add poster images for better loading
     },
-    {
-      quote: "Entendí que no tengo que controlarlo todo. Aprendí a ver a mi hijo con otros ojos y eso lo cambió todo.",
-      author: "Papá de adolescente de 16 años",
-      highlight: "ver a mi hijo con otros ojos"
+    { 
+      type: "image",
+      src: "/imagenes/msj2.jpeg"
     },
-    {
-      quote: "No es exageración decir que este programa salvó mi relación con mi hija.",
-      author: "Mamá de 3 hijos",
-      highlight: "salvó mi relación"
+    { 
+      type: "video",
+      src: "/videos/vid2.mp4",
+      poster: "/imagenes/vid2-poster.png"
+    },
+    { 
+      type: "image",
+      src: "/imagenes/msj3.jpeg"
+    },
+    { 
+      type: "video",
+      src: "/videos/vid3.mp4",
+      poster: "/imagenes/vid3-poster.png"
+    },
+    { 
+      type: "image",
+      src: "/imagenes/msj4.jpeg"
     }
   ];
 
+  const [playingVideo, setPlayingVideo] = useState<number | null>(null);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+
+  const handleVideoClick = (index: number) => {
+    if (playingVideo === index) {
+      // Pause if clicking the currently playing video
+      videoRefs.current[index]?.pause();
+      setPlayingVideo(null);
+    } else {
+      // Pause any currently playing video
+      if (playingVideo !== null) {
+        videoRefs.current[playingVideo]?.pause();
+      }
+      
+      // Play the new video
+      videoRefs.current[index]?.play();
+      setPlayingVideo(index);
+    }
+  };
+
   return (
-    <section className="relative py-28 px-6 overflow-hidden">
-      {/* Fondo con imagen y overlay */}
+    <section className="relative py-12 md:py-16 px-4 sm:px-6 bg-gray-50 overflow-hidden">
+      {/* Background with image and overlay */}
       <div
-        className="absolute inset-0 z-0 md:bg-fixed"
+        className="absolute inset-0 z-0 bg-fixed bg-cover bg-center"
         style={{
           backgroundImage: `url('/imagenes/testimonials.avif')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
         }}
       ></div>
 
-      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-brand-teal/5 to-white/30 z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-brand-teal/5 to-white/30 z-0"></div>
 
-
-      {/* Efectos decorativos */}
+      {/* Decorative effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-0 w-64 h-64 rounded-full bg-brand-teal/10 blur-[100px]" />
         <div className="absolute bottom-0 right-0 w-64 h-64 rounded-full bg-brand-coral/10 blur-[100px]" />
       </div>
-
-      <div className="max-w-7xl mx-auto relative z-10">
-        {/* Encabezado con texto claro */}
-        <div className="text-center mb-20">
-          <span className="inline-flex items-center gap-2 px-5 py-2 bg-brand-teal/10 backdrop-blur-sm rounded-full text-brand-teal text-sm font-bold border border-white/20 mb-6">
-            Tranformacion Familiar
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-beige mb-4">
-            <span className="font-dancing text-brand-coral text-5xl md:text-6xl">Reseñas</span> de padres
+      
+      <div className="max-w-6xl mx-auto relative z-10">
+        {/* Compact header */}
+        <div className="text-center mb-8 md:mb-10">
+          <h2 className="text-4xl md:text-5xl font-bold text-white">
+            <span className="relative inline-block">
+              HISTORIAS REALES
+              <span className="absolute bottom-0 left-0 w-full h-1 bg-brand-coral"></span>
+            </span>
           </h2>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            Historias reales de transformación familiar
+          <p className="text-gray-200 mt-3 max-w-2xl mx-auto">
+            Lo que dicen padres como tú sobre el programa
           </p>
         </div>
 
-        {/* Carousel de testimonios */}
-        <div className="px-4 md:px-8 lg:px-12">
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full"
-          >
-            <CarouselContent className="-ml-4">
-              {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                  <div className="group relative h-full p-1">
-                    <div className="bg-white/90 backdrop-blur-sm rounded-xl p-8 h-full flex flex-col border border-white/30 hover:border-brand-teal/50 transition-all duration-300 shadow-xl hover:shadow-2xl">
-                      <div className="absolute top-6 right-6 w-10 h-10 rounded-full bg-brand-coral/20 flex items-center justify-center">
-                        <Quote className="w-5 h-5 text-brand-coral" />
-                      </div>
-                      <p 
-                        className="text-gray-800 text-lg mb-6 pr-4"
-                        dangerouslySetInnerHTML={{
-                          __html: `"${testimonial.quote.replace(
-                            testimonial.highlight, 
-                            `<strong class="text-brand-teal font-medium">${testimonial.highlight}</strong>`
-                          )}"`
-                        }}
-                      />
-                      <p className="mt-auto text-sm font-medium text-gray-600">
-                        — {testimonial.author}
-                      </p>
+        {/* Ultra compact gallery */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
+          {testimonials.map((item, index) => (
+            <div 
+              key={index}
+              className={`bg-white/90 backdrop-blur-sm p-2 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all ${
+                item.type === 'video' ? 'flex flex-col' : ''
+              }`}
+            >
+              {item.type === 'video' ? (
+                <div 
+                  className="relative aspect-square mb-3 rounded-lg overflow-hidden cursor-pointer"
+                  onClick={() => handleVideoClick(index)}
+                >
+                  <video 
+                    ref={el => videoRefs.current[index] = el}
+                    src={item.src}
+                    poster={item.poster}
+                    className="w-full h-full object-cover rounded-lg"
+                    muted
+                    loop
+                    playsInline
+                    webkit-playsinline="true" // For iOS Safari
+                    preload="metadata" // Better performance
+                  />
+                  {playingVideo !== index && (
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                      <PlayCircle className="w-12 h-12 text-white/90 hover:text-white transition-colors" />
                     </div>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            {/* Controles del carrusel */}
-            <div className="mt-10 flex justify-center gap-4">
-              <CarouselPrevious className="relative left-0 transform-none -translate-y-0 bg-white/80 hover:bg-brand-teal hover:text-white border border-white/30" />
-              <CarouselNext className="relative right-0 transform-none -translate-y-0 bg-white/80 hover:bg-brand-teal hover:text-white border border-white/30" />
+                  )}
+                </div>
+              ) : (
+                <div className="aspect-[5/7] flex items-center justify-center p-2 bg-gray-50">
+  <img
+    src={item.src}
+    alt="Testimonio"
+    className="w-full h-full object-contain rounded-lg"
+    loading="lazy"
+  />
+</div>
+              )}
             </div>
-          </Carousel>
+          ))}
         </div>
 
-
+        {/* Minimalist CTA */}
+        <div className="text-center mt-10">
+          <Button 
+            className="bg-gradient-to-r from-brand-teal to-brand-coral text-white font-semibold py-3 px-6 text-base shadow-sm hover:shadow-md transition-all hover:opacity-90"
+            size="sm"
+          >
+            Ver más testimonios
+            <ArrowRight className="w-4 h-4 ml-2" />
+          </Button>
+        </div>
       </div>
     </section>
   );

@@ -10,6 +10,7 @@ import Pricing3 from "@/components/caos-conexion/Pricing3";
 import { DynamicHead } from "@/components/DynamicHead";
 import Facilitator3 from "@/components/caos-conexion/Facilitator3";
 import Testimonials3 from "@/components/caos-conexion/Testimonials3";
+import BonusSection from "@/components/caos-conexion/BonusSection";
 
 
 
@@ -25,15 +26,17 @@ const CaosConexion = () => {
   return (
     <>
     <DynamicHead taller="conexion" />
-    <div className="min-h-screen font-poppins text-text-dark">
+    <div className="min-h-screen overflow-x-hidden font-poppins text-text-dark">
       <Nav3 />
       <Hero3 onScrollToSection={scrollToSection} />
+      <Pricing3 />
       <Intro3 onScrollToSection={scrollToSection}/>
-      <ProgramSection onScrollToSection={scrollToSection} />
       <Testimonials3 />
+      <BonusSection />
+      <ProgramSection onScrollToSection={scrollToSection} />
       <Facilitator3 onScrollToSection={scrollToSection} />
       <ProgramDetails onScrollToSection={scrollToSection}/>
-      <Pricing3 />
+      
       <Footer />
     </div>
     </>

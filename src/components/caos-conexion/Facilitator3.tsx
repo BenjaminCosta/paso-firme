@@ -34,11 +34,7 @@ const Facilitator3 = ({ onScrollToSection }: HeroSectionProps) => {
               </h1>
               
               <div className="h-1.5 w-24 bg-gradient-to-r from-brand-teal to-brand-coral rounded-full" />
-              
-              <p className="text-xl text-gray-600">
-                Transformando relaciones familiares a través de la{" "}
-                <span className="font-medium text-brand-teal">educación emocional</span>
-              </p>
+            
             </div>
 
             {/* Contenido principal */}
@@ -61,6 +57,12 @@ const Facilitator3 = ({ onScrollToSection }: HeroSectionProps) => {
                     <span className="text-brand-coral">▹</span>
                     <span>Especialista en <strong>neurociencia adolescente</strong> y <strong>disciplina positiva</strong></span>
                   </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-brand-coral">▹</span>
+                    <span>+500 <strong>Padres</strong> Reconectaron con Sus Hijos con su Coaching</span>
+                  </li>
+                  
+
                 </ul>
               </div>
 
