@@ -164,6 +164,54 @@ const Pricing3 = () => {
       <p className="text-sm text-gray-500 mt-2">(Precio de Lanzamiento)</p>
     </div>
   </div>
+  {/* Barra de urgencia mejorada */}
+  <div
+    role="note"
+    aria-live="polite"
+    className="group mt-4 relative rounded-2xl"
+  >
+    {/* Borde gradiente animado */}
+    <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-red-400 via-red-500 to-rose-500 opacity-70 group-hover:opacity-100 blur-[1px] transition-opacity duration-500" />
+    {/* Contenido */}
+    <div className="relative overflow-hidden rounded-[calc(theme(borderRadius.2xl)-1px)] bg-white/90 backdrop-blur-sm border border-red-100/70">
+      {/* Glows y patrón */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute -top-6 -left-8 w-40 h-40 bg-red-200/30 rounded-full blur-2xl" />
+        <div className="absolute -bottom-8 -right-10 w-52 h-52 bg-rose-300/20 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(244,63,94,0.12),transparent_60%)]" />
+        <div className="absolute inset-0 opacity-20 bg-[repeating-linear-gradient(135deg,rgba(255,0,0,0.05)_0_8px,transparent_8px_16px)] mix-blend-multiply" />
+      </div>
+      <div className="relative px-4 sm:px-5 py-3 flex flex-col sm:flex-row sm:items-start gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <div className="p-2 rounded-xl bg-gradient-to-br from-red-100 to-rose-100 text-red-600 shadow-inner ring-1 ring-red-300/40">
+            <AlertTriangle className="w-5 h-5 animate-pulse" />
+          </div>
+          <div>
+            <p className="text-[11px] font-semibold tracking-[0.12em] text-red-600/90 mb-0.5">
+              OFERTA LIMITADA
+            </p>
+            <p className="text-sm leading-snug text-red-700 font-medium">
+              Única semana con este <span className="font-bold underline decoration-red-400/60 decoration-2 underline-offset-2">precio especial</span>, aprovechá esta oportunidad.
+            </p>
+          </div>
+        </div>
+        <div className="flex-1" />
+        {/* Lado derecho (badge) */}
+        <div className="flex sm:flex-col items-end sm:items-center justify-between sm:justify-start gap-2 sm:gap-1 self-stretch">
+          <div className="px-2.5 py-1 rounded-lg bg-gradient-to-r from-red-500 to-rose-500 text-white text-[10px] font-bold tracking-wide shadow-lg shadow-red-500/25 animate-pulse">
+            AHORA
+          </div>
+          <div className="hidden sm:block text-[10px] font-medium text-red-500/80 tracking-wide">
+            No se repite
+          </div>
+        </div>
+      </div>
+      {/* Línea inferior animada */}
+      <div className="absolute bottom-0 left-0 h-0.5 w-full overflow-hidden">
+        <div className="h-full w-full bg-gradient-to-r from-red-400 via-rose-400 to-red-400 animate-[shimmer_2.8s_linear_infinite] [background-size:200%_100%]" />
+      </div>
+    </div>
+  </div>
 </div>
 
             <div className="flex flex-col gap-5 w-full mt-auto">
