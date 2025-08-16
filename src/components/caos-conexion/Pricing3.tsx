@@ -18,7 +18,7 @@ import { Link } from "react-router-dom";
 const Pricing3 = () => {
   const { data, loading, error } = useSheetData4();
   
-  const exchangeRate = 0.06;
+  const exchangeRate = 0.055;
 
   const item = data[0];
 
