@@ -10,6 +10,7 @@ import SoyCapaz from "./pages/Soycapaz"; // ✅ nueva landing
 import NotFound from "./pages/NotFound";
 import CaosConexion from "./pages/Caosconexion";
 import Ebook from "./pages/productos/Ebook";
+import PubertadAdolescencia from "./pages/pubertad-adolescencia";
 
 const queryClient = new QueryClient();
 
@@ -27,7 +28,10 @@ const App = () => {
     host.startsWith("caos-conexion") || path.startsWith("/caos-conexion");  
   
     const isEbook =
-    host.startsWith("ebook-adolescencia") || path.startsWith("/ebook-adolescencia");  
+    host.startsWith("ebook-adolescencia") || path.startsWith("/ebook-adolescencia");
+    
+    const isPubertad =
+    host.startsWith("pubertad-adolescencia") || path.startsWith("/pubertad-adolescencia");
 
   return (
     <HelmetProvider>
@@ -43,8 +47,10 @@ const App = () => {
               <Route path="*" element={<SoyCapaz />} />
             ) : isCaosConexion ? (
               <Route path="*" element={<CaosConexion />} />
-            ) :  isEbook ? (
+            ) : isEbook ? (
               <Route path="*" element={<Ebook />} />
+            ) : isPubertad ? (
+              <Route path="*" element={<PubertadAdolescencia />} />
             ) : ( 
               
               <>
@@ -53,6 +59,7 @@ const App = () => {
                 <Route path="/conexion" element={<CaosConexion />} />
                 <Route path="/soy-capaz" element={<SoyCapaz />} />
                 <Route path="/ebook-adolescencia" element={<Ebook />} />
+                <Route path="/pubertad-adolescencia" element={<PubertadAdolescencia />} />
                 <Route path="*" element={<NotFound />} />
               </>
             )}
