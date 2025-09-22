@@ -11,17 +11,9 @@ const Hero = ({ onScrollToSection }: HeroSectionProps) => {
 
   const carouselImages = [
     {
-      url: 'https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&q=80',
-      alt: 'Adolescentes en etapa de desarrollo'
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1518101645466-7795885ff8f8?auto=format&fit=crop&q=80',
+      url: 'https://images.unsplash.com/photo-1654613698275-b0930ef9570f?auto=format&fit=crop&q=100&w=4000',
       alt: 'Preadolescentes en ambiente escolar'
     },
-    {
-      url: 'https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&q=80',
-      alt: 'Jóvenes en etapa de cambio'
-    }
   ];
 
   const rightSideImage = '/imagenes/facilitadora3.jpeg';
@@ -59,7 +51,7 @@ const Hero = ({ onScrollToSection }: HeroSectionProps) => {
               {/* Overlay negro más oscuro para mejor contraste */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-black/20" />
               {/* Overlay con degradado usando la nueva paleta */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-brand-teal/40 to-brand-coral/35" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-brand-purple/50 via-brand-coral/30 to-brand-teal/20" />
             </div>
           ))}
         </div>
@@ -77,7 +69,26 @@ const Hero = ({ onScrollToSection }: HeroSectionProps) => {
           />
           
           {/* Segundo overlay de color más pronunciado */}
-          <div className="absolute inset-0 bg-gradient-to-br from-brand-teal/15 via-brand-coral/10 to-brand-beige/15" />
+          <div className="absolute inset-0 bg-gradient-to-br from-brand-purple/40 via-brand-coral/20 to-brand-teal/10" />
+          
+          {/* Información de la facilitadora */}
+          <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/90 via-black/60 to-transparent backdrop-blur-sm">
+            <div className="text-white text-center max-w-md mx-auto">
+              <div className="inline-block bg-white/10 backdrop-blur-md border border-white/20 text-brand-beige text-xs font-semibold px-4 py-1 rounded-full mb-3">
+                ESPECIALISTA CERTIFICADA
+              </div>
+              <h3 className="text-3xl font-dancing mb-3">Olivia Rodríguez</h3>
+              <div className="h-px w-16 mx-auto bg-gradient-to-r from-transparent via-brand-coral to-transparent mb-3" />
+              <div className="space-y-1">
+                <p className="text-white/95 text-sm">
+                  <span className="text-brand-coral">+1 millón</span> de familias impactadas mundialmente
+                </p>
+                <p className="text-white/90 text-sm font-medium">
+                  Especialista en Neurociencia Adolescente y Disciplina Positiva
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -131,13 +142,13 @@ const Hero = ({ onScrollToSection }: HeroSectionProps) => {
             <Button
               onClick={() => onScrollToSection('inscribirme')}
               size="lg"
-              className="relative overflow-hidden bg-gradient-to-r from-brand-teal to-brand-coral text-white px-10 py-6 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-3xl group"
+              className="relative overflow-hidden bg-brand-coral text-white px-10 py-6 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-3xl group"
             >
               <span className="relative z-10 flex items-center">
                 ¡Quiero Inscribirme!
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </span>
-              <span className="absolute inset-0 bg-gradient-to-r from-brand-coral to-brand-teal opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <span className="absolute inset-0 bg-brand-coral/90 transition-opacity duration-500" />
             </Button>
             <Button
               onClick={() => onScrollToSection('detalles')}
@@ -151,8 +162,9 @@ const Hero = ({ onScrollToSection }: HeroSectionProps) => {
       </div>
 
       {/* Efectos de iluminación suaves */}
-      <div className="absolute top-1/4 -left-20 w-64 h-64 rounded-full bg-brand-teal/40 blur-3xl z-0" />
-      <div className="absolute bottom-1/4 -right-20 w-64 h-64 rounded-full bg-brand-coral/40 blur-3xl z-0" />
+      <div className="absolute top-1/4 -left-20 w-64 h-64 rounded-full bg-brand-purple/30 blur-3xl z-0" />
+      <div className="absolute bottom-1/4 -right-20 w-64 h-64 rounded-full bg-brand-coral/30 blur-3xl z-0" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-brand-purple/20 blur-3xl z-0" />
     </section>
   );
 };
