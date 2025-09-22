@@ -13,7 +13,7 @@ const Who = ({ onScrollToSection }: WhoProps) => {
         <img
           src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&q=80"
           alt=""
-          className="w-full h-full object-cover opacity-10"
+          className="w-full h-full object-cover opacity-30"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white" />
       </div>

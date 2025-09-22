@@ -23,6 +23,10 @@ const metaData = {
     title: "Límites en la Adolescencia | Guía práctica y emocional para padres",
     description: "Una guía firme y clara para poner límites sin gritar, sin ceder y sin romper la conexión con tu hijo adolescente. Incluye PDF, audio y hoja imprimible.",
   },
+  pubertad: {
+    title: "Pubertad y Adolescencia Sin Miedo | Taller para Padres",
+    description: "Lo que toda mamá o papá necesita saber antes de que la relación se fracture. Una guía para acompañar con claridad, conexión y sin gritos durante la pubertad y adolescencia de tus hijos.",
+  },
 };
 
 export const DynamicHead = ({ taller = "pasofirme" }: { taller?: string }) => {

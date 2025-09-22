@@ -22,7 +22,7 @@ const PubertadAdolescencia = () => {
 
   return (
     <>
-      <DynamicHead taller="pubertad-adolescencia" />
+      <DynamicHead taller="pubertad" />
       <div className="min-h-screen font-poppins text-text-dark overflow-x-hidden">
         <Navbar4 />
         <main>

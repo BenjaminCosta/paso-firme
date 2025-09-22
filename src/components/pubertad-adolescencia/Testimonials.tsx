@@ -1,21 +1,61 @@
+import { ArrowRight, PlayCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Quote } from "lucide-react";
+import { useState, useRef } from "react";
 
 interface TestimonialsProps {
   onScrollToSection: (id: string) => void;
 }
 
 const Testimonials = ({ onScrollToSection }: TestimonialsProps) => {
-  // Placeholder for future testimonial
-  const testimonial = {
-    quote: "[Espacio reservado para testimonio futuro]",
-    author: "Próximamente",
-    role: "Participante del taller"
+  const testimonials = [
+    { 
+      type: "video",
+      src: "/videos/vid1.mp4",
+      poster: "/imagenes/vid1-poster.png"
+    },
+    { 
+      type: "image",
+      src: "/imagenes/msj2.jpeg"
+    },
+    { 
+      type: "video",
+      src: "/videos/vid2.mp4",
+      poster: "/imagenes/vid2-poster.png"
+    },
+    { 
+      type: "image",
+      src: "/imagenes/msj3.jpeg"
+    },
+    { 
+      type: "video",
+      src: "/videos/vid3.mp4",
+      poster: "/imagenes/vid3-poster.png"
+    },
+    { 
+      type: "image",
+      src: "/imagenes/msj4.jpeg"
+    }
+  ];
+
+  const [playingVideo, setPlayingVideo] = useState<number | null>(null);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+
+  const handleVideoClick = (index: number) => {
+    if (playingVideo === index) {
+      videoRefs.current[index]?.pause();
+      setPlayingVideo(null);
+    } else {
+      if (playingVideo !== null) {
+        videoRefs.current[playingVideo]?.pause();
+      }
+      videoRefs.current[index]?.play();
+      setPlayingVideo(index);
+    }
   };
 
   return (
     <section className="py-24 bg-gradient-to-b from-white via-brand-purple/5 to-white relative overflow-hidden">
-      {/* Background Effects */}
+      {/* Background Effects del diseño original */}
       <div className="absolute inset-0">
         <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-brand-purple/10 to-brand-coral/10 rounded-full blur-[120px] animate-pulse" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-brand-coral/10 to-brand-purple/10 rounded-full blur-[120px] animate-pulse" />
@@ -23,9 +63,9 @@ const Testimonials = ({ onScrollToSection }: TestimonialsProps) => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-5xl mx-auto">
-          {/* Section Header */}
-          <div className="text-center mb-20">
+        <div className="max-w-6xl mx-auto">
+          {/* Section Header con el estilo original */}
+          <div className="text-center mb-16">
             <span className="inline-block bg-gradient-to-r from-brand-purple/20 to-brand-coral/20 text-brand-purple text-sm font-semibold px-6 py-2 rounded-full mb-4 backdrop-blur-sm border border-brand-purple/10">
               Testimonios
             </span>
@@ -37,35 +77,50 @@ const Testimonials = ({ onScrollToSection }: TestimonialsProps) => {
             </p>
           </div>
 
-          {/* Testimonial Card */}
-          <div className="group bg-white/80 backdrop-blur-md p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border border-brand-purple/10 hover:border-brand-purple/30 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-brand-purple/5 to-brand-coral/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            
-            {/* Decorative Elements */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-brand-purple/10 to-transparent rounded-full blur-2xl transform translate-x-16 -translate-y-16" />
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-brand-coral/10 to-transparent rounded-full blur-2xl transform -translate-x-16 translate-y-16" />
-            
-            <div className="relative flex items-start gap-6">
-              <div className="p-4 bg-gradient-to-br from-brand-purple/10 to-brand-coral/10 rounded-2xl group-hover:scale-110 transition-transform duration-500">
-                <Quote className="w-8 h-8 text-brand-purple" />
+          {/* Galería de testimonios con el estilo de Testimonials3 */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {testimonials.map((item, index) => (
+              <div 
+                key={index}
+                className="group bg-white/80 backdrop-blur-md p-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 border border-brand-purple/10 hover:border-brand-purple/30 overflow-hidden"
+              >
+                {item.type === 'video' ? (
+                  <div 
+                    className="relative aspect-square rounded-lg overflow-hidden cursor-pointer"
+                    onClick={() => handleVideoClick(index)}
+                  >
+                    <video 
+                      ref={el => videoRefs.current[index] = el}
+                      src={item.src}
+                      poster={item.poster}
+                      className="w-full h-full object-cover rounded-lg"
+                      muted
+                      loop
+                      playsInline
+                      webkit-playsinline="true"
+                      preload="metadata"
+                    />
+                    {playingVideo !== index && (
+                      <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
+                        <PlayCircle className="w-12 h-12 text-white/90 group-hover:text-white transition-colors" />
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <div className="aspect-[5/7] bg-gray-50/50 p-2 rounded-lg group-hover:bg-gray-50/70 transition-colors">
+                    <img
+                      src={item.src}
+                      alt="Testimonio"
+                      className="w-full h-full object-contain rounded-lg"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
               </div>
-              <div className="flex-1">
-                <p className="text-xl text-gray-600 italic mb-6 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
-                  {testimonial.quote}
-                </p>
-                <div className="border-t border-gray-100 pt-4">
-                  <p className="font-semibold text-lg text-gray-900 group-hover:text-brand-purple transition-colors duration-300">
-                    {testimonial.author}
-                  </p>
-                  <p className="text-gray-500 group-hover:text-gray-600 transition-colors duration-300">
-                    {testimonial.role}
-                  </p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
 
-          {/* CTA Section */}
+          {/* CTA Section con el estilo original */}
           <div className="text-center mt-16">
             <Button
               onClick={() => onScrollToSection('inscribirme')}
