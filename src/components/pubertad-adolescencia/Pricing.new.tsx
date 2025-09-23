@@ -138,8 +138,8 @@ const Pricing = () => {
                       </div>
 
                       <div className="flex items-start gap-5">
-                        <div className="p-2.5 bg-brand-pink/10 rounded-xl border border-brand-pink/20 shadow-sm">
-                          <Video className="w-6 h-6 text-brand-pink" />
+                        <div className="p-2.5 bg-brand-teal/10 rounded-xl border border-brand-teal/20 shadow-sm">
+                          <Video className="w-6 h-6 text-brand-teal" />
                         </div>
                         <div>
                           <h4 className="font-semibold text-gray-900 text-lg">Duración</h4>

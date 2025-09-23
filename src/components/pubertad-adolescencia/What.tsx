@@ -118,28 +118,28 @@ const What = ({ onScrollToSection }: WhatProps) => {
             </div>
 
             {/* Herramientas */}
-            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-3xl border border-brand-pink/20 transition-all duration-300 hover:shadow-xl hover:bg-white/90 flex flex-col min-h-[400px]">
+            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-3xl border border-brand-teal/20 transition-all duration-300 hover:shadow-xl hover:bg-white/90 flex flex-col min-h-[400px]">
               <div className="absolute inset-0 rounded-3xl -z-10">
-                <div className="absolute inset-0 bg-gradient-to-br from-brand-pink/10 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-br from-brand-teal/10 to-transparent" />
               </div>
-              <div className="p-4 bg-brand-pink/10 rounded-xl border border-brand-pink/20 w-fit mb-6 group-hover:bg-brand-pink/15 transition-colors">
-                <Heart className="w-8 h-8 text-brand-blue" />
+              <div className="p-4 bg-brand-teal/10 rounded-xl border border-brand-teal/20 w-fit mb-6 group-hover:bg-brand-teal/15 transition-colors">
+                <Heart className="w-8 h-8 text-brand-teal" />
               </div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                 Acompañar y Guiar
               </h3>
               <ul className="space-y-4 grow">
                 <li className="flex items-start gap-3 text-gray-700">
-                  <span className="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-brand-blue" />
+                  <span className="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-brand-teal" />
                   <p>
-                    Tener <span className="font-bold">herramientas reales</span> para acompañarlos sin 
+                    Tener <span className="font-bold">herramientas reales</span> para acompañarlos sin
                     <span className="font-bold"> gritos</span> ni <span className="font-bold">desconexión</span>
                   </p>
                 </li>
                 <li className="flex items-start gap-3 text-gray-700">
-                  <span className="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-brand-blue" />
+                  <span className="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-brand-teal" />
                   <p>
-                    Crear un <span className="font-bold">espacio seguro</span> para el 
+                    Crear un <span className="font-bold">espacio seguro</span> para el
                     <span className="font-bold"> desarrollo emocional</span>
                   </p>
                 </li>

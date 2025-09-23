@@ -142,16 +142,16 @@ const Pricing = () => {
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-16">
-            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
+            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-brand-red/30">
               <Calendar className="w-5 h-5 text-brand-red" />
               <span className="text-gray-700">{workshopDate}</span>
             </div>
-            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
-              <Clock className="w-5 h-5 text-brand-red" />
+            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-brand-blue/30">
+              <Clock className="w-5 h-5 text-brand-blue" />
               <span className="text-gray-700">{workshopTime}</span>
             </div>
-            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
-              <Video className="w-5 h-5 text-brand-red" />
+            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-brand-teal/30">
+              <Video className="w-5 h-5 text-brand-teal" />
               <span className="text-gray-700">{workshopDuration}</span>
             </div>
           </div>

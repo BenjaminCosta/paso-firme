@@ -186,21 +186,21 @@ const Outcomes = ({ onScrollToSection }: OutcomesProps) => {
                 </div>
 
                 {/* Card 3 */}
-                <div className="group relative bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-brand-pink/20 hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-brand-pink/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="group relative bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-brand-teal/20 hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-brand-teal/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="flex gap-4 relative">
-                    <div className="flex-shrink-0 p-3 bg-brand-pink/10 rounded-xl border border-brand-pink/20 transition-colors group-hover:bg-brand-pink/15">
-                      <Shield className="w-6 h-6 text-brand-red" />
+                    <div className="flex-shrink-0 p-3 bg-brand-teal/10 rounded-xl border border-brand-teal/20 transition-colors group-hover:bg-brand-teal/15">
+                      <Shield className="w-6 h-6 text-brand-teal" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-3">Acompañamiento Equilibrado</h3>
                       <ul className="space-y-3 text-gray-600">
                         <li className="flex items-start gap-3 group/item hover:text-gray-900 transition-colors">
-                          <span className="block w-1.5 h-1.5 mt-2 rounded-full bg-brand-red/50 group-hover/item:bg-brand-red transition-colors" />
+                          <span className="block w-1.5 h-1.5 mt-2 rounded-full bg-brand-teal/50 group-hover/item:bg-brand-teal transition-colors" />
                           <span>Saber cuándo intervenir y cuándo soltar</span>
                         </li>
                         <li className="flex items-start gap-3 group/item hover:text-gray-900 transition-colors">
-                          <span className="block w-1.5 h-1.5 mt-2 rounded-full bg-brand-red/50 group-hover/item:bg-brand-red transition-colors" />
+                          <span className="block w-1.5 h-1.5 mt-2 rounded-full bg-brand-teal/50 group-hover/item:bg-brand-teal transition-colors" />
                           <span>Acompañar sin sobreproteger, pero sin desaparecer</span>
                         </li>
                       </ul>

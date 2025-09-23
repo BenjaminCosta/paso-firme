@@ -54,15 +54,15 @@ const CTA = ({ onScrollToSection }: CTAProps) => {
 
           {/* Trust Badges con diseño mejorado */}
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-brand-pink/30 hover:bg-brand-pink/15 transition-colors">
+            <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-brand-red/30 hover:bg-brand-red/15 transition-colors">
               <p className="font-semibold text-lg mb-2">Contenido Validado</p>
               <p className="text-white/80">Por especialistas en desarrollo</p>
             </div>
-            <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-brand-pink/30 hover:bg-brand-pink/15 transition-colors">
+            <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-brand-blue/30 hover:bg-brand-blue/15 transition-colors">
               <p className="font-semibold text-lg mb-2">Enfoque Práctico</p>
               <p className="text-white/80">Herramientas aplicables</p>
             </div>
-            <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-brand-pink/30 hover:bg-brand-pink/15 transition-colors">
+            <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-brand-teal/30 hover:bg-brand-teal/15 transition-colors">
               <p className="font-semibold text-lg mb-2">Comunidad de Apoyo</p>
               <p className="text-white/80">Acompañamiento continuo</p>
             </div>
