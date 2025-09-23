@@ -75,6 +75,12 @@ export default {
 				"brand-coral": "#e97052",
 				"brand-beige": "#e3d8cc",
 				"brand-grey" : "#4F4F4F",
+				// Nueva paleta
+				"brand-red": "#7C3942",
+				"brand-blue": "#2F4858",
+				"brand-pink": "#f6c8c7",
+				"brand-gray": "#54585c",
+				"brand-sand": "#f6efe6",
 				"text-dark": "#333333",
 			},
 			borderRadius: {
