@@ -20,16 +20,16 @@ const Who = ({ onScrollToSection }: WhoProps) => {
       
       {/* Decorative Elements */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-teal/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-coral/10 rounded-full blur-[120px]" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-96 bg-brand-purple/5 rounded-full blur-[150px]" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-blue/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-pink/10 rounded-full blur-[120px]" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-96 bg-brand-red/5 rounded-full blur-[150px]" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <span className="inline-flex items-center bg-brand-teal/10 text-brand-teal text-sm font-semibold px-6 py-2 rounded-full mb-3 backdrop-blur-sm border border-brand-teal/20">
+            <span className="inline-flex items-center bg-brand-blue/10 text-brand-blue text-sm font-semibold px-6 py-2 rounded-full mb-3 backdrop-blur-sm border border-brand-blue/20">
               <Target className="w-4 h-4 mr-2" />
               Audiencia
             </span>
@@ -56,11 +56,11 @@ const Who = ({ onScrollToSection }: WhoProps) => {
               </div>
               
               {/* Content */}
-              <div className="relative bg-white/60 backdrop-blur-sm p-8 rounded-2xl border border-brand-coral/20 transition-all duration-300 hover:shadow-lg hover:bg-white/80 h-full">
+              <div className="relative bg-white/60 backdrop-blur-sm p-8 rounded-2xl border border-brand-pink/20 transition-all duration-300 hover:shadow-lg hover:bg-white/80 h-full">
                 <div className="flex flex-col h-full">
                   <div className="flex items-start gap-6 mb-6">
-                    <div className="p-4 bg-brand-coral/10 rounded-xl border border-brand-coral/20">
-                      <Target className="w-8 h-8 text-brand-coral" />
+                    <div className="p-4 bg-brand-pink/10 rounded-xl border border-brand-pink/20">
+                      <Target className="w-8 h-8 text-brand-red" />
                     </div>
                     <div>
                       <h3 className="text-2xl font-semibold text-gray-900">
@@ -71,15 +71,15 @@ const Who = ({ onScrollToSection }: WhoProps) => {
                   <div className="flex-grow">
                     <ul className="space-y-6 text-gray-700">
                       <li className="flex items-start gap-2">
-                        <span className="text-brand-coral flex-shrink-0">✔️</span>
+                        <span className="text-brand-red flex-shrink-0">✔️</span>
                         <span>Apenas empieza a preguntar sobre el cuerpo y la privacidad</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-brand-coral flex-shrink-0">✔️</span>
+                        <span className="text-brand-red flex-shrink-0">✔️</span>
                         <span>Quieres prevenir rupturas antes de que sea tarde</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-brand-coral flex-shrink-0">✔️</span>
+                        <span className="text-brand-red flex-shrink-0">✔️</span>
                         <span>Buscas una guía realista que no juzgue, sino que acompañe</span>
                       </li>
                     </ul>
@@ -101,11 +101,11 @@ const Who = ({ onScrollToSection }: WhoProps) => {
               </div>
               
               {/* Content */}
-              <div className="relative bg-white/60 backdrop-blur-sm p-8 rounded-2xl border border-brand-teal/20 transition-all duration-300 hover:shadow-lg hover:bg-white/80 h-full">
+              <div className="relative bg-white/60 backdrop-blur-sm p-8 rounded-2xl border border-brand-blue/20 transition-all duration-300 hover:shadow-lg hover:bg-white/80 h-full">
                 <div className="flex flex-col h-full">
                   <div className="flex items-start gap-6 mb-6">
-                    <div className="p-4 bg-brand-teal/10 rounded-xl border border-brand-teal/20">
-                      <Users className="w-8 h-8 text-brand-teal" />
+                    <div className="p-4 bg-brand-blue/10 rounded-xl border border-brand-blue/20">
+                      <Users className="w-8 h-8 text-brand-blue" />
                     </div>
                     <div>
                       <h3 className="text-2xl font-semibold text-gray-900">
@@ -116,15 +116,15 @@ const Who = ({ onScrollToSection }: WhoProps) => {
                   <div className="flex-grow">
                     <ul className="space-y-6 text-gray-700">
                       <li className="flex items-start gap-2">
-                        <span className="text-brand-teal flex-shrink-0">✔️</span>
+                        <span className="text-brand-blue flex-shrink-0">✔️</span>
                         <span>Ya comenzó a contestar y tener cambios emocionales bruscos</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-brand-teal flex-shrink-0">✔️</span>
+                        <span className="text-brand-blue flex-shrink-0">✔️</span>
                         <span>Sientes que lo estás perdiendo poco a poco</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-brand-teal flex-shrink-0">✔️</span>
+                        <span className="text-brand-blue flex-shrink-0">✔️</span>
                         <span>Necesitas reconectar y fortalecer el vínculo</span>
                       </li>
                     </ul>
@@ -136,7 +136,7 @@ const Who = ({ onScrollToSection }: WhoProps) => {
 
           {/* Mensaje Final */}
           <div className="text-center mb-12">
-            <div className="inline-block bg-gradient-to-r from-brand-purple/10 to-brand-coral/10 backdrop-blur-sm p-6 rounded-2xl border border-brand-purple/20">
+            <div className="inline-block bg-gradient-to-r from-brand-red/10 to-brand-pink/10 backdrop-blur-sm p-6 rounded-2xl border border-brand-red/20">
               <p className="text-xl text-gray-800">
                 Si estás en cualquier punto del camino entre la pubertad y la adolescencia…
                 <span className="font-semibold block mt-2">este taller es para ti.</span>
@@ -147,12 +147,12 @@ const Who = ({ onScrollToSection }: WhoProps) => {
           {/* CTA Section */}
           <div className="text-center relative">
             <div className="absolute inset-0 -z-10">
-              <div className="absolute inset-0 bg-gradient-to-r from-brand-purple/5 via-brand-coral/5 to-brand-teal/5 rounded-3xl blur-xl" />
+              <div className="absolute inset-0 bg-gradient-to-r from-brand-red/5 via-brand-pink/5 to-brand-blue/5 rounded-3xl blur-xl" />
             </div>
             <Button
               onClick={() => onScrollToSection('inscribirme')}
               size="lg"
-              className="bg-brand-purple hover:bg-brand-purple/90 text-white px-8 py-6 text-lg rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl group"
+              className="bg-brand-red hover:bg-brand-red/90 text-white px-8 py-6 text-lg rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl group"
             >
               Reservar Mi Lugar
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
