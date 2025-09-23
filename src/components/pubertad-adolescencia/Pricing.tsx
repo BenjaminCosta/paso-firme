@@ -126,13 +126,13 @@ const Pricing = () => {
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-brand-red to-brand-blue text-white rounded-full text-sm md:text-base font-bold mb-6 shadow-lg">
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-blue text-white rounded-full text-sm md:text-base font-bold mb-6 shadow-lg">
             <Sparkles className="w-4 h-4" />
             <span>TALLER ESPECIAL PARA PADRES</span>
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-brand-red to-brand-blue bg-clip-text text-transparent">
+            <span className=" text-brand-blue">
               Pubertad y Adolescencia
             </span>
           </h1>
@@ -167,7 +167,7 @@ const Pricing = () => {
             </div>
 
             <div className="relative">
-              <h2 className="text-3xl font-bold bg-gradient-to-r from-brand-red via-brand-blue to-brand-pink bg-clip-text text-transparent mb-8">
+              <h2 className="text-3xl font-bold  text-brand-blue mb-8">
                 ¿Qué aprenderás en este taller?
               </h2>
               
@@ -258,7 +258,7 @@ const Pricing = () => {
 
           {/* Sección de precio y CTA */}
           <div className="flex flex-col">
-            <div className="bg-gradient-to-br from-brand-red to-brand-blue text-white rounded-2xl p-8 shadow-xl mb-6 flex-grow">
+            <div className="bg-gradient-to-br from-brand-blue to-brand-blue/80 text-white rounded-2xl p-8 shadow-xl mb-6 flex-grow">
               <div className="flex justify-between items-start mb-6">
                 <div>
                   <h2 className="text-2xl font-bold mb-2">Taller Completo</h2>
@@ -296,7 +296,7 @@ const Pricing = () => {
               </div>
 
               <Link to="https://www.familiayformacion.com/tienda/p/pubertad-adolescencia">
-                <Button className="w-full py-6 bg-white text-brand-red hover:bg-brand-pink/20 font-bold text-lg shadow-lg">
+                <Button className="w-full py-6 bg-white text-brand-blue hover:bg-brand-pink/20 font-bold text-lg shadow-lg">
                   <span>RESERVAR MI LUGAR AHORA</span>
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
