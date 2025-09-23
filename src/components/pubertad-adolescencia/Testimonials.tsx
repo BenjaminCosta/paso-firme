@@ -54,22 +54,22 @@ const Testimonials = ({ onScrollToSection }: TestimonialsProps) => {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white via-brand-purple/5 to-white relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-b from-white via-brand-red/5 to-white relative overflow-hidden">
       {/* Background Effects del diseño original */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-brand-purple/10 to-brand-coral/10 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-brand-coral/10 to-brand-purple/10 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,_var(--tw-gradient-stops))] from-brand-purple/5 via-transparent to-transparent" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-brand-blue/10 to-brand-pink/10 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-brand-pink/10 to-brand-blue/10 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,_var(--tw-gradient-stops))] from-brand-red/5 via-transparent to-transparent" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Section Header con el estilo original */}
           <div className="text-center mb-16">
-            <span className="inline-block bg-gradient-to-r from-brand-purple/20 to-brand-coral/20 text-brand-purple text-sm font-semibold px-6 py-2 rounded-full mb-4 backdrop-blur-sm border border-brand-purple/10">
+            <span className="inline-block bg-gradient-to-r from-brand-blue/20 to-brand-red/20 text-brand-blue text-sm font-semibold px-6 py-2 rounded-full mb-4 backdrop-blur-sm border border-brand-blue/10">
               Testimonios
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-brand-purple to-gray-900 bg-clip-text text-transparent mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-brand-red to-gray-900 bg-clip-text text-transparent mb-6">
               Experiencias Transformadoras
             </h2>
             <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
@@ -82,7 +82,7 @@ const Testimonials = ({ onScrollToSection }: TestimonialsProps) => {
             {testimonials.map((item, index) => (
               <div 
                 key={index}
-                className="group bg-white/80 backdrop-blur-md p-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 border border-brand-purple/10 hover:border-brand-purple/30 overflow-hidden"
+                className="group bg-white/80 backdrop-blur-md p-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 border border-brand-blue/10 hover:border-brand-blue/30 overflow-hidden"
               >
                 {item.type === 'video' ? (
                   <div 
@@ -125,7 +125,7 @@ const Testimonials = ({ onScrollToSection }: TestimonialsProps) => {
             <Button
               onClick={() => onScrollToSection('inscribirme')}
               size="lg"
-              className="bg-gradient-to-r from-brand-purple to-brand-purple/90 hover:from-brand-purple/90 hover:to-brand-purple text-white text-lg px-8 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="bg-gradient-to-r from-brand-red to-brand-blue hover:from-brand-red/90 hover:to-brand-blue/90 text-white text-lg px-8 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               Sé Parte de Estas Historias
             </Button>

@@ -26,7 +26,7 @@ export default function Navbar4() {
     <nav
       className={`fixed top-0 left-0 w-full flex justify-between items-center py-3 px-3 sm:px-12 z-50 transition-all duration-500 ${
         isScrolling
-          ? 'bg-white/10 backdrop-blur-lg shadow-lg border-b border-white/10'
+          ? 'bg-brand-blue/20 backdrop-blur-lg shadow-lg border-b border-brand-blue/30'
           : 'bg-transparent'
       }`}
     >
@@ -43,7 +43,7 @@ export default function Navbar4() {
           alt="Logo Izquierdo"
           className={`select-none transition-all duration-500 ${
             isScrolling ? 'h-16 md:h-20' : 'h-20 md:h-24'
-          } ${isHovered ? 'drop-shadow-[0_0_15px_rgba(16,185,129,0.4)]' : ''}`}
+          } ${isHovered ? 'drop-shadow-[0_0_15px_rgba(47,72,88,0.4)]' : ''}`}
         />
       </a>
 
@@ -59,7 +59,7 @@ export default function Navbar4() {
           alt="Logo Derecho"
           className={`select-none transition-all duration-500 ${
             isScrolling ? 'h-16 md:h-20' : 'h-20 md:h-24'
-          } ${isHovered ? 'drop-shadow-[0_0_15px_rgba(168,85,247,0.4)]' : ''}`}
+          } ${isHovered ? 'drop-shadow-[0_0_15px_rgba(124,57,66,0.4)]' : ''}`}
         />
       </a>
     </nav>

@@ -74,27 +74,27 @@ const Pricing = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50 py-12 md:py-24 px-4 relative overflow-hidden [&_*]:transition-all [&_*]:duration-300">
+    <div className="min-h-screen bg-gradient-to-br from-brand-pink/20 via-white to-brand-blue/10 py-12 md:py-24 px-4 relative overflow-hidden [&_*]:transition-all [&_*]:duration-300">
       {/* Elementos decorativos modernos */}
       <div className="absolute inset-0">
         {/* Gradientes principales con mezcla de colores */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_0%_0%,rgba(139,92,246,0.15),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_100%_100%,rgba(45,212,191,0.1),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.05),transparent_70%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_0%_0%,rgba(47,72,88,0.15),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_100%_100%,rgba(124,57,66,0.12),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(246,200,199,0.1),transparent_70%)]" />
         </div>
         
         {/* Formas flotantes con gradientes */}
-        <div className="absolute top-0 left-0 w-[45rem] h-[45rem] bg-gradient-to-br from-purple-200/20 via-brand-teal/10 to-indigo-200/20 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl animate-float-slow" />
-        <div className="absolute bottom-0 right-0 w-[40rem] h-[40rem] bg-gradient-to-tl from-brand-teal/20 via-purple-300/20 to-indigo-300/20 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl animate-float-delay-slow" />
+        <div className="absolute top-0 left-0 w-[45rem] h-[45rem] bg-gradient-to-br from-brand-blue/20 via-brand-pink/15 to-brand-red/20 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl animate-float-slow" />
+        <div className="absolute bottom-0 right-0 w-[40rem] h-[40rem] bg-gradient-to-tl from-brand-red/20 via-brand-pink/15 to-brand-blue/20 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl animate-float-delay-slow" />
         
         {/* Patrones de puntos modernos */}
         <div className="absolute inset-0 opacity-30">
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              radial-gradient(circle at 15px 15px, rgba(139,92,246,0.1) 2px, transparent 0),
-              radial-gradient(circle at 35px 35px, rgba(45,212,191,0.1) 2px, transparent 0),
-              radial-gradient(circle at 25px 25px, rgba(99,102,241,0.1) 1px, transparent 0)
+              radial-gradient(circle at 15px 15px, rgba(47,72,88,0.12) 2px, transparent 0),
+              radial-gradient(circle at 35px 35px, rgba(124,57,66,0.12) 2px, transparent 0),
+              radial-gradient(circle at 25px 25px, rgba(246,200,199,0.12) 1px, transparent 0)
             `,
             backgroundSize: '50px 50px'
           }} />
@@ -103,22 +103,22 @@ const Pricing = () => {
         {/* Elementos decorativos animados */}
         <div className="absolute inset-0 overflow-hidden">
           {/* Formas geométricas con rotación */}
-          <div className="absolute top-1/4 left-1/4 w-32 h-32 border-2 border-purple-300/30 rounded-xl rotate-45 animate-spin-slow" />
-          <div className="absolute bottom-1/4 right-1/4 w-24 h-24 border-2 border-brand-teal/20 rounded-full animate-reverse-spin-slow" />
-          <div className="absolute top-2/3 left-1/3 w-40 h-40 border border-indigo-300/30 rounded-lg -rotate-12 animate-float-rotate" />
+          <div className="absolute top-1/4 left-1/4 w-32 h-32 border-2 border-brand-red/30 rounded-xl rotate-45 animate-spin-slow" />
+          <div className="absolute bottom-1/4 right-1/4 w-24 h-24 border-2 border-brand-blue/20 rounded-full animate-reverse-spin-slow" />
+          <div className="absolute top-2/3 left-1/3 w-40 h-40 border border-brand-blue/30 rounded-lg -rotate-12 animate-float-rotate" />
           
           {/* Elementos de diseño adicionales */}
-          <div className="absolute top-1/2 right-1/4 w-20 h-20 bg-gradient-to-br from-purple-200/10 to-brand-teal/10 rounded-lg rotate-12 animate-float-rotate" />
-          <div className="absolute bottom-1/3 left-1/4 w-16 h-16 bg-gradient-to-tl from-brand-teal/10 to-purple-200/10 rounded-xl -rotate-12 animate-float-rotate-reverse" />
+          <div className="absolute top-1/2 right-1/4 w-20 h-20 bg-gradient-to-br from-brand-blue/10 to-brand-red/10 rounded-lg rotate-12 animate-float-rotate" />
+          <div className="absolute bottom-1/3 left-1/4 w-16 h-16 bg-gradient-to-tl from-brand-red/10 to-brand-pink/10 rounded-xl -rotate-12 animate-float-rotate-reverse" />
           
           {/* Círculos pulsantes */}
-          <div className="absolute top-1/3 right-1/3 w-12 h-12 border border-purple-200/30 rounded-full animate-ping-slow" />
-          <div className="absolute bottom-2/3 left-2/3 w-8 h-8 border border-brand-teal/20 rounded-full animate-ping-slow [animation-delay:1s]" />
+          <div className="absolute top-1/3 right-1/3 w-12 h-12 border border-brand-red/30 rounded-full animate-ping-slow" />
+          <div className="absolute bottom-2/3 left-2/3 w-8 h-8 border border-brand-blue/20 rounded-full animate-ping-slow [animation-delay:1s]" />
           
           {/* Líneas decorativas con gradiente */}
           <div className="absolute inset-0">
-            <div className="absolute top-0 left-0 w-full h-1/2 bg-[linear-gradient(45deg,transparent_45%,rgba(139,92,246,0.03)_50%,transparent_55%)] animate-pulse" />
-            <div className="absolute bottom-0 right-0 w-full h-1/2 bg-[linear-gradient(-45deg,transparent_45%,rgba(45,212,191,0.03)_50%,transparent_55%)] animate-pulse" />
+            <div className="absolute top-0 left-0 w-full h-1/2 bg-[linear-gradient(45deg,transparent_45%,rgba(47,72,88,0.05)_50%,transparent_55%)] animate-pulse" />
+            <div className="absolute bottom-0 right-0 w-full h-1/2 bg-[linear-gradient(-45deg,transparent_45%,rgba(124,57,66,0.05)_50%,transparent_55%)] animate-pulse" />
           </div>
         </div>
       </div>
@@ -126,13 +126,13 @@ const Pricing = () => {
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-brand-purple to-purple-700 text-white rounded-full text-sm md:text-base font-bold mb-6 shadow-lg">
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-brand-red to-brand-blue text-white rounded-full text-sm md:text-base font-bold mb-6 shadow-lg">
             <Sparkles className="w-4 h-4" />
             <span>TALLER ESPECIAL PARA PADRES</span>
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-brand-purple to-purple-700 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-brand-red to-brand-blue bg-clip-text text-transparent">
               Pubertad y Adolescencia
             </span>
           </h1>
@@ -143,15 +143,15 @@ const Pricing = () => {
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-16">
             <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
-              <Calendar className="w-5 h-5 text-brand-purple" />
+              <Calendar className="w-5 h-5 text-brand-red" />
               <span className="text-gray-700">{workshopDate}</span>
             </div>
             <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
-              <Clock className="w-5 h-5 text-brand-purple" />
+              <Clock className="w-5 h-5 text-brand-red" />
               <span className="text-gray-700">{workshopTime}</span>
             </div>
             <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
-              <Video className="w-5 h-5 text-brand-purple" />
+              <Video className="w-5 h-5 text-brand-red" />
               <span className="text-gray-700">{workshopDuration}</span>
             </div>
           </div>
@@ -162,12 +162,12 @@ const Pricing = () => {
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl relative overflow-hidden">
             {/* Elementos decorativos de fondo */}
             <div className="absolute inset-0 pointer-events-none">
-              <div className="absolute right-0 top-0 w-64 h-64 bg-brand-teal/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
-              <div className="absolute left-0 bottom-0 w-96 h-96 bg-purple-200/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl" />
+              <div className="absolute right-0 top-0 w-64 h-64 bg-brand-blue/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
+              <div className="absolute left-0 bottom-0 w-96 h-96 bg-brand-pink/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl" />
             </div>
 
             <div className="relative">
-              <h2 className="text-3xl font-bold bg-gradient-to-r from-brand-purple via-brand-teal to-purple-600 bg-clip-text text-transparent mb-8">
+              <h2 className="text-3xl font-bold bg-gradient-to-r from-brand-red via-brand-blue to-brand-pink bg-clip-text text-transparent mb-8">
                 ¿Qué aprenderás en este taller?
               </h2>
               
@@ -181,8 +181,8 @@ const Pricing = () => {
                     {/* Card Background con efectos */}
                     <div className={`absolute -inset-0.5 rounded-lg transition-all duration-500 ${
                       activeFeature === index
-                        ? 'bg-gradient-to-br from-brand-purple via-brand-teal to-purple-500 opacity-50 blur-[1px]'
-                        : 'bg-gradient-to-br from-transparent to-transparent group-hover:from-brand-purple/30 group-hover:via-brand-teal/30 group-hover:to-purple-500/30 opacity-0 group-hover:opacity-100 blur-[1px]'
+                        ? 'bg-gradient-to-br from-brand-red via-brand-blue to-brand-pink opacity-50 blur-[1px]'
+                        : 'bg-gradient-to-br from-transparent to-transparent group-hover:from-brand-red/30 group-hover:via-brand-blue/30 group-hover:to-brand-pink/30 opacity-0 group-hover:opacity-100 blur-[1px]'
                     }`} />
                     
                     {/* Card Content */}
@@ -195,13 +195,13 @@ const Pricing = () => {
                         {/* Icono con efectos */}
                         <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
                           activeFeature === index
-                            ? 'bg-gradient-to-br from-brand-purple/20 via-brand-teal/20 to-purple-500/20'
-                            : 'bg-purple-100/50 group-hover:bg-gradient-to-br group-hover:from-brand-purple/10 group-hover:via-brand-teal/10 group-hover:to-purple-500/10'
+                            ? 'bg-gradient-to-br from-brand-red/20 via-brand-blue/20 to-brand-pink/20'
+                            : 'bg-brand-pink/40 group-hover:bg-gradient-to-br group-hover:from-brand-red/10 group-hover:via-brand-blue/10 group-hover:to-brand-pink/10'
                         }`}>
                           <feature.icon className={`w-5 h-5 transition-all duration-300 ${
                             activeFeature === index
-                              ? 'text-brand-purple transform scale-110'
-                              : 'text-gray-600 group-hover:text-brand-teal group-hover:scale-105'
+                              ? 'text-brand-red transform scale-110'
+                              : 'text-gray-600 group-hover:text-brand-blue group-hover:scale-105'
                           }`} />
                         </div>
 
@@ -209,8 +209,8 @@ const Pricing = () => {
                         <div>
                           <h3 className={`font-semibold transition-all duration-300 ${
                             activeFeature === index
-                              ? 'text-brand-purple'
-                              : 'text-gray-800 group-hover:text-brand-teal'
+                              ? 'text-brand-red'
+                              : 'text-gray-800 group-hover:text-brand-blue'
                           }`}>
                             {feature.title}
                           </h3>
@@ -227,8 +227,8 @@ const Pricing = () => {
                       {/* Decorative dot */}
                       <div className={`absolute top-3 right-3 w-1.5 h-1.5 rounded-full transition-all duration-300 ${
                         activeFeature === index
-                          ? 'bg-brand-purple/70 scale-125'
-                          : 'bg-gray-300 group-hover:bg-brand-teal/50 group-hover:scale-110'
+                          ? 'bg-brand-red/70 scale-125'
+                          : 'bg-gray-300 group-hover:bg-brand-blue/50 group-hover:scale-110'
                       }`} />
                     </div>
                   </div>
@@ -236,18 +236,18 @@ const Pricing = () => {
               </div>
 
               <div className="mt-10 relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-brand-purple/20 via-brand-teal/10 to-purple-300/20 opacity-30 rounded-2xl blur-xl" />
-                <div className="relative bg-white/60 backdrop-blur-sm p-6 rounded-2xl border border-purple-200/50">
+                <div className="absolute inset-0 bg-gradient-to-r from-brand-red/20 via-brand-blue/10 to-brand-pink/20 opacity-30 rounded-2xl blur-xl" />
+                <div className="relative bg-white/60 backdrop-blur-sm p-6 rounded-2xl border border-brand-pink/40">
                   <div className="flex items-start gap-4">
-                    <div className="p-2.5 bg-gradient-to-br from-brand-purple/10 to-brand-teal/10 rounded-xl">
-                      <Users className="w-6 h-6 text-brand-purple" />
+                    <div className="p-2.5 bg-gradient-to-br from-brand-red/10 to-brand-blue/10 rounded-xl">
+                      <Users className="w-6 h-6 text-brand-red" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-lg bg-gradient-to-r from-brand-purple to-brand-teal bg-clip-text text-transparent mb-2">
+                      <h3 className="font-bold text-lg bg-gradient-to-r from-brand-red to-brand-blue bg-clip-text text-transparent mb-2">
                         Beneficio exclusivo
                       </h3>
                       <p className="text-gray-700">
-                        Acceso a <span className="text-brand-purple font-semibold">comunidad privada</span> donde podrás compartir experiencias y hacer preguntas directamente a Olivia.
+                        Acceso a <span className="text-brand-red font-semibold">comunidad privada</span> donde podrás compartir experiencias y hacer preguntas directamente a Olivia.
                       </p>
                     </div>
                   </div>
@@ -258,7 +258,7 @@ const Pricing = () => {
 
           {/* Sección de precio y CTA */}
           <div className="flex flex-col">
-            <div className="bg-gradient-to-br from-brand-purple to-purple-700 text-white rounded-2xl p-8 shadow-xl mb-6 flex-grow">
+            <div className="bg-gradient-to-br from-brand-red to-brand-blue text-white rounded-2xl p-8 shadow-xl mb-6 flex-grow">
               <div className="flex justify-between items-start mb-6">
                 <div>
                   <h2 className="text-2xl font-bold mb-2">Taller Completo</h2>
@@ -296,7 +296,7 @@ const Pricing = () => {
               </div>
 
               <Link to="https://www.familiayformacion.com/tienda/p/pubertad-adolescencia">
-                <Button className="w-full py-6 bg-white text-brand-purple hover:bg-gray-100 font-bold text-lg shadow-lg">
+                <Button className="w-full py-6 bg-white text-brand-red hover:bg-brand-pink/20 font-bold text-lg shadow-lg">
                   <span>RESERVAR MI LUGAR AHORA</span>
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
@@ -306,10 +306,10 @@ const Pricing = () => {
             {/* Zoom preview mejorado */}
             <div className="relative group rounded-2xl overflow-hidden">
               {/* Efectos de fondo */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-brand-purple via-brand-teal to-purple-500 rounded-2xl opacity-75 group-hover:opacity-100 blur-sm transition-all duration-300" />
+              <div className="absolute -inset-1 bg-gradient-to-r from-brand-red via-brand-blue to-brand-pink rounded-2xl opacity-75 group-hover:opacity-100 blur-sm transition-all duration-300" />
               <div className="relative rounded-xl overflow-hidden">
                 {/* Overlay gradiente */}
-                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/90 via-purple-900/50 to-transparent opacity-80 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/90 via-brand-red/70 to-transparent opacity-80 transition-opacity duration-300" />
                 
                 <img
                   src="/imagenes/zoom.png"
