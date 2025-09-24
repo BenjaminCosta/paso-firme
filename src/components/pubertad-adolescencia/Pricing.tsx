@@ -325,7 +325,7 @@ const Pricing = () => {
                       <span className="text-white font-medium text-sm">Sesión en vivo</span>
                     </div>
                     <h4 className="text-white text-xl font-bold mb-2">
-                      Sesiones interactivas con Olivia
+                      Sesión interactivas con Olivia
                     </h4>
                     <p className="text-white/90 text-sm">
                       Participa, pregunta y aprende en tiempo real

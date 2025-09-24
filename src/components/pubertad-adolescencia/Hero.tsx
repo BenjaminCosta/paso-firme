@@ -130,7 +130,7 @@ const Hero = ({ onScrollToSection }: HeroSectionProps) => {
         <div className="w-8 h-0.5 bg-gradient-to-r from-brand-blue/50 to-transparent"></div>
       </div>
 
-      <p className="text-brand-pink text-lg md:text-1xl leading-tight font-semibold text-center md:text-left bg-gradient-to-r from-brand-pink via-brand-red to-brand-blue bg-clip-text text-transparent">
+      <p className="text-brand-pink text-lg md:text-1xl leading-tight font-semibold text-center md:text-left bg-brand-pink  bg-clip-text text-transparent">
         Una guía para acompañar con claridad, conexión y sin gritos.
       </p>
     </div>

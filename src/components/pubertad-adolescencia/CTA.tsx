@@ -64,7 +64,7 @@ const CTA = ({ onScrollToSection }: CTAProps) => {
             </div>
             <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-brand-teal/30 hover:bg-brand-teal/15 transition-colors">
               <p className="font-semibold text-lg mb-2">Comunidad de Apoyo</p>
-              <p className="text-white/80">Acompañamiento continuo</p>
+              <p className="text-white/80">Crecemos y aprendemos en familia</p>
             </div>
           </div>
         </div>

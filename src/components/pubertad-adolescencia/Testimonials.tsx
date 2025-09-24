@@ -1,70 +1,81 @@
-import { ArrowRight, PlayCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState, useRef } from "react";
+
+interface TestimonialItem {
+  src: string;
+  alt: string;
+}
+
+interface TestimonialCardProps {
+  item: TestimonialItem;
+}
+
+const TestimonialCard = ({ item }: TestimonialCardProps) => {
+  return (
+    <div className="group relative bg-gradient-to-br from-white/80 to-white/90 backdrop-blur-md rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden p-4 h-full border border-brand-blue/5 hover:border-brand-blue/10">
+      {/* Bordes decorativos */}
+      <div className="absolute inset-0 bg-gradient-to-br from-brand-blue/5 to-brand-pink/5 rounded-2xl opacity-50" />
+      
+      <div className="relative aspect-[3/2] overflow-hidden rounded-xl h-full bg-gradient-to-br from-white/80 to-white/90">
+        {/* Imagen */}
+        <img
+          src={item.src}
+          alt={item.alt}
+          className="w-full h-full object-contain hover:scale-105 transition-transform duration-700"
+          loading="lazy"
+        />
+        
+        {/* Overlay con gradiente suave */}
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-pink/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        
+        {/* Marco decorativo en hover */}
+        <div className="absolute inset-0 border border-brand-blue/0 group-hover:border-brand-blue/20 rounded-xl transition-all duration-300" />
+      </div>
+    </div>
+  );
+};
 
 interface TestimonialsProps {
   onScrollToSection: (id: string) => void;
 }
 
 const Testimonials = ({ onScrollToSection }: TestimonialsProps) => {
-  const testimonials = [
-    { 
-      type: "video",
-      src: "/videos/vid1.mp4",
-      poster: "/imagenes/vid1-poster.png"
+  const testimonials: TestimonialItem[] = [
+    {
+      src: "/imagenes/msj1b.jpeg",
+      alt: "Testimonio de transformación familiar"
     },
-    { 
-      type: "image",
-      src: "/imagenes/msj2.jpeg"
+    {
+      src: "/imagenes/msj2b.jpeg",
+      alt: "Historia de reconexión padre e hijo"
     },
-    { 
-      type: "video",
-      src: "/videos/vid2.mp4",
-      poster: "/imagenes/vid2-poster.png"
+    {
+      src: "/imagenes/msj3b.jpeg",
+      alt: "Experiencia de cambio positivo"
     },
-    { 
-      type: "image",
-      src: "/imagenes/msj3.jpeg"
+    {
+      src: "/imagenes/msj4b.jpeg",
+      alt: "Resultado transformador del taller"
     },
-    { 
-      type: "video",
-      src: "/videos/vid3.mp4",
-      poster: "/imagenes/vid3-poster.png"
-    },
-    { 
-      type: "image",
-      src: "/imagenes/msj4.jpeg"
+    {
+      src: "/imagenes/msj5b.jpeg",
+      alt: "Testimonio de éxito familiar"
     }
   ];
 
-  const [playingVideo, setPlayingVideo] = useState<number | null>(null);
-  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
-
-  const handleVideoClick = (index: number) => {
-    if (playingVideo === index) {
-      videoRefs.current[index]?.pause();
-      setPlayingVideo(null);
-    } else {
-      if (playingVideo !== null) {
-        videoRefs.current[playingVideo]?.pause();
-      }
-      videoRefs.current[index]?.play();
-      setPlayingVideo(index);
-    }
-  };
-
   return (
     <section className="py-24 bg-gradient-to-b from-white via-brand-red/5 to-white relative overflow-hidden">
-      {/* Background Effects del diseño original */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-brand-blue/10 to-brand-pink/10 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-brand-pink/10 to-brand-blue/10 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,_var(--tw-gradient-stops))] from-brand-red/5 via-transparent to-transparent" />
+      {/* Elementos decorativos de fondo */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Círculos decorativos */}
+        <div className="absolute top-0 right-1/4 w-[800px] h-[800px] bg-brand-pink/5 rounded-full blur-[180px] animate-pulse-slow" />
+        <div className="absolute bottom-0 left-1/4 w-[800px] h-[800px] bg-brand-blue/5 rounded-full blur-[180px] animate-pulse-slow" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[1200px] bg-brand-blue/3 rounded-full blur-[200px] animate-pulse-slow opacity-50" />
+        <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(circle_at_1px_1px,_black_1px,_transparent_0)] bg-[length:48px_48px]" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-6xl mx-auto">
-          {/* Section Header con el estilo original */}
+        <div className="max-w-7xl mx-auto">
+          {/* Section Header */}
           <div className="text-center mb-16">
             <span className="inline-block bg-gradient-to-r from-brand-blue/20 to-brand-red/20 text-brand-blue text-sm font-semibold px-6 py-2 rounded-full mb-4 backdrop-blur-sm border border-brand-blue/10">
               Testimonios
@@ -77,50 +88,19 @@ const Testimonials = ({ onScrollToSection }: TestimonialsProps) => {
             </p>
           </div>
 
-          {/* Galería de testimonios con el estilo de Testimonials3 */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {/* Galería de testimonios moderna */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {testimonials.map((item, index) => (
               <div 
-                key={index}
-                className="group bg-white/80 backdrop-blur-md p-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 border border-brand-blue/10 hover:border-brand-blue/30 overflow-hidden"
+                key={index} 
+                className="group h-full"
               >
-                {item.type === 'video' ? (
-                  <div 
-                    className="relative aspect-square rounded-lg overflow-hidden cursor-pointer"
-                    onClick={() => handleVideoClick(index)}
-                  >
-                    <video 
-                      ref={el => videoRefs.current[index] = el}
-                      src={item.src}
-                      poster={item.poster}
-                      className="w-full h-full object-cover rounded-lg"
-                      muted
-                      loop
-                      playsInline
-                      webkit-playsinline="true"
-                      preload="metadata"
-                    />
-                    {playingVideo !== index && (
-                      <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
-                        <PlayCircle className="w-12 h-12 text-white/90 group-hover:text-white transition-colors" />
-                      </div>
-                    )}
-                  </div>
-                ) : (
-                  <div className="aspect-[5/7] bg-gray-50/50 p-2 rounded-lg group-hover:bg-gray-50/70 transition-colors">
-                    <img
-                      src={item.src}
-                      alt="Testimonio"
-                      className="w-full h-full object-contain rounded-lg"
-                      loading="lazy"
-                    />
-                  </div>
-                )}
+                <TestimonialCard item={item} />
               </div>
             ))}
           </div>
 
-          {/* CTA Section con el estilo original */}
+          {/* CTA Section */}
           <div className="text-center mt-16">
             <Button
               onClick={() => onScrollToSection('inscribirme')}
