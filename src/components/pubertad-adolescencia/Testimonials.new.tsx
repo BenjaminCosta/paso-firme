@@ -31,6 +31,13 @@ const TestimonialCard = ({ item }: TestimonialCardProps) => {
         {/* Marco decorativo con gradiente */}
         <div className="absolute inset-0 bg-gradient-to-br from-brand-red/5 via-transparent to-brand-blue/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         <div className="absolute inset-0 border-t border-l border-brand-red/10 border-b border-r border-brand-blue/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        
+        {/* Icono de quote en hover con gradiente */}
+        <div className="absolute top-4 left-4 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+          <div className="p-2 rounded-full bg-gradient-to-br from-white/80 to-white/60 backdrop-blur-sm">
+            <Quote className="w-6 h-6 text-brand-red" />
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -96,9 +103,9 @@ const Testimonials = ({ onScrollToSection }: TestimonialsProps) => {
       {/* Fondo con imagen y gradientes */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1548878582-59ec94281735?auto=format&fit=crop&q=100&w=4000"
+          src="https://images.unsplash.com/photo-1548878582-59ec94281735?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dq=80"
           alt="Familia con adolescentes compartiendo momento"
-          className="w-full h-full object-cover opacity-25"
+          className="w-full h-full object-cover opacity-5"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-transparent to-white/95" />
         <div className="absolute inset-0 bg-gradient-to-tr from-brand-red/5 via-transparent to-brand-blue/5" />
@@ -112,10 +119,29 @@ const Testimonials = ({ onScrollToSection }: TestimonialsProps) => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-gradient-to-r from-brand-red/3 via-brand-blue/3 to-brand-red/3 rounded-full blur-[150px] animate-pulse-slow" />
         
         {/* Formas geométricas con gradientes */}
-        <div className="absolute top-[15%] right-[10%] w-40 h-40 bg-gradient-to-br from-brand-red/5 to-brand-blue/5 rounded-lg rotate-45 " />
-        <div className="absolute bottom-[25%] left-[8%] w-32 h-32 bg-gradient-to-tr from-brand-blue/5 to-brand-red/5 rounded-full" />
-        <div className="absolute top-[40%] left-[15%] w-24 h-24 bg-gradient-to-bl from-brand-red/5 via-brand-blue/3 to-transparent rounded-lg rotate-12" />
-        <div className="absolute bottom-[35%] right-[12%] w-28 h-28 bg-gradient-to-tl from-brand-blue/5 via-brand-red/3 to-transparent rounded-full" />
+        <div className="absolute top-[15%] right-[10%] w-40 h-40 bg-gradient-to-br from-brand-red/5 to-brand-blue/5 rounded-lg rotate-45 animate-spin-slow" />
+        <div className="absolute bottom-[25%] left-[8%] w-32 h-32 bg-gradient-to-tr from-brand-blue/5 to-brand-red/5 rounded-full animate-reverse-spin-slow" />
+        <div className="absolute top-[40%] left-[15%] w-24 h-24 bg-gradient-to-bl from-brand-red/5 via-brand-blue/3 to-transparent rounded-lg rotate-12 animate-spin-slow" />
+        <div className="absolute bottom-[35%] right-[12%] w-28 h-28 bg-gradient-to-tl from-brand-blue/5 via-brand-red/3 to-transparent rounded-full animate-reverse-spin-slow" />
+        
+        {/* Partículas con gradientes */}
+        {[...Array(15)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute rounded-full animate-float"
+            style={{
+              width: `${Math.random() * 3 + 2}px`,
+              height: `${Math.random() * 3 + 2}px`,
+              background: Math.random() > 0.5 
+                ? `linear-gradient(to right, rgba(var(--brand-red-rgb), ${Math.random() * 0.3}), rgba(var(--brand-blue-rgb), ${Math.random() * 0.3}))`
+                : `linear-gradient(to right, rgba(var(--brand-blue-rgb), ${Math.random() * 0.3}), rgba(var(--brand-red-rgb), ${Math.random() * 0.3}))`,
+              top: `${10 + Math.random() * 80}%`,
+              left: `${5 + Math.random() * 90}%`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${6 + Math.random() * 8}s`
+            }}
+          />
+        ))}
         
         {/* Líneas decorativas con gradientes */}
         <div className="absolute top-[30%] left-0 w-32 h-px bg-gradient-to-r from-transparent via-brand-red/30 to-brand-blue/30" />
@@ -203,6 +229,34 @@ const Testimonials = ({ onScrollToSection }: TestimonialsProps) => {
         </div>
       </div>
 
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        @keyframes float-slow {
+          0%, 100% { transform: translateY(0px) scale(1); }
+          50% { transform: translateY(-30px) scale(1.05); }
+        }
+        @keyframes spin-slow {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        @keyframes reverse-spin-slow {
+          from { transform: rotate(360deg); }
+          to { transform: rotate(0deg); }
+        }
+        @keyframes pulse-slow {
+          0%, 100% { opacity: 0.5; transform: scale(1); }
+          50% { opacity: 0.8; transform: scale(1.02); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-float-slow { animation: float-slow 8s ease-in-out infinite; }
+        .animate-float-slow-delayed { animation: float-slow 10s ease-in-out infinite; animation-delay: 2s; }
+        .animate-spin-slow { animation: spin-slow 20s linear infinite; }
+        .animate-reverse-spin-slow { animation: reverse-spin-slow 25s linear infinite; }
+        .animate-pulse-slow { animation: pulse-slow 6s ease-in-out infinite; }
+      `}</style>
     </section>
   );
 };
