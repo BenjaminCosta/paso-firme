@@ -90,7 +90,7 @@ const Outcomes = ({ onScrollToSection }: OutcomesProps) => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-40" />
                 <div className="absolute inset-0 bg-gradient-to-r from-brand-pink/30 to-transparent opacity-0 mix-blend-overlay transition-opacity duration-300 group-hover:opacity-100" />
                 <img
-                  src="https://images.unsplash.com/photo-1571442463800-1337d7af9d2f?auto=format&fit=crop&q=80"
+                  src="https://images.unsplash.com/photo-1758525861781-bea6e7d79334?auto=format&fit=crop&q=100&w=4000"
                   alt="Adolescente pensativo"
                   className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                 />
@@ -102,7 +102,7 @@ const Outcomes = ({ onScrollToSection }: OutcomesProps) => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-40" />
                 <div className="absolute inset-0 bg-gradient-to-r from-brand-red/30 to-transparent opacity-0 mix-blend-overlay transition-opacity duration-300 group-hover:opacity-100" />
                 <img
-                  src="https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&q=80"
+                  src="https://images.unsplash.com/photo-1541580621-47abd5e3da8b?auto=format&fit=crop&q=100&w=4000"
                   alt="Padre e hija conversando"
                   className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                 />
@@ -114,7 +114,7 @@ const Outcomes = ({ onScrollToSection }: OutcomesProps) => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-40" />
                 <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/30 to-transparent opacity-0 mix-blend-overlay transition-opacity duration-300 group-hover:opacity-100" />
                 <img
-                  src="https://images.unsplash.com/photo-1535295972055-1c762f4483e5?auto=format&fit=crop&q=80"
+                  src="https://images.unsplash.com/photo-1607062294260-e5b054f2c96b?auto=format&fit=crop&q=100&w=4000"
                   alt="Adolescentes estudiando juntos"
                   className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                 />

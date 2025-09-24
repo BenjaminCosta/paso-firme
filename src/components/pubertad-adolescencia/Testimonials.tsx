@@ -30,7 +30,7 @@ const TestimonialCard = ({ item }: TestimonialCardProps) => {
         
         {/* Marco decorativo con gradiente */}
         <div className="absolute inset-0 bg-gradient-to-br from-brand-red/5 via-transparent to-brand-blue/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-        <div className="absolute inset-0 border-t border-l border-brand-red/10 border-b border-r border-brand-blue/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div className="absolute inset-0 border-t border-l border-brand-red/10 border-b border-rrounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       </div>
     </div>
   );
