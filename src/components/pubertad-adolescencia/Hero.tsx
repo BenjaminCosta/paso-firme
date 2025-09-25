@@ -140,7 +140,7 @@ const Hero = ({ onScrollToSection }: HeroSectionProps) => {
           {/* Botones CTA */}
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
-              onClick={() => onScrollToSection('inscribirme')}
+              onClick={() => window.open('https://www.familiayformacion.com/tienda/p/pubertad-adolescencia', '_blank')}
               size="lg"
               className="relative overflow-hidden bg-brand-red text-white px-10 py-6 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-3xl group"
             >

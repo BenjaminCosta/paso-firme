@@ -44,7 +44,7 @@ const CTA = ({ onScrollToSection }: CTAProps) => {
 
           {/* CTA Button con diseño mejorado */}
           <Button
-            onClick={() => onScrollToSection('inscribirme')}
+            onClick={() => window.open('https://www.familiayformacion.com/tienda/p/pubertad-adolescencia', '_blank')}
             size="lg"
             className="bg-white text-brand-red hover:bg-white/90 group px-8 py-6 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
           >

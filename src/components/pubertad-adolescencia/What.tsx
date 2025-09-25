@@ -146,21 +146,6 @@ const What = ({ onScrollToSection }: WhatProps) => {
               </ul>
             </div>
           </div>
-
-          {/* CTA Section */}
-          <div className="text-center relative">
-            <div className="absolute inset-x-0 -top-10 -bottom-10 -z-10">
-              <div className="absolute inset-0 bg-gradient-to-r from-brand-pink/5 via-brand-red/5 to-brand-blue/5 rounded-3xl blur-xl" />
-            </div>
-            <Button
-              onClick={() => onScrollToSection('inscribirme')}
-              size="lg"
-              className="bg-white border-2 border-brand-red text-brand-red px-8 py-6 text-lg rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl group hover:bg-brand-red hover:text-white"
-            >
-              ¡Quiero Participar!
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </div>
         </div>
       </div>
     </section>

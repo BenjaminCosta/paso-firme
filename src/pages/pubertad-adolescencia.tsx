@@ -7,6 +7,7 @@ import {
   What,
   Outcomes,
   Testimonials,
+  Modules,
   Pricing,
   CTA
 } from "@/components/pubertad-adolescencia";
@@ -33,6 +34,7 @@ const PubertadAdolescencia = () => {
           <What onScrollToSection={scrollToSection} />
           <Outcomes onScrollToSection={scrollToSection} />
           <Testimonials onScrollToSection={scrollToSection} />
+          <Modules onScrollToSection={scrollToSection} />
           <CTA onScrollToSection={scrollToSection} />
         </main>
         <Footer />

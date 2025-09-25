@@ -189,7 +189,7 @@ const Testimonials = ({ onScrollToSection }: TestimonialsProps) => {
           {/* CTA Section con gradiente */}
           <div className="text-center mt-20">
             <Button
-              onClick={() => onScrollToSection('inscribirme')}
+              onClick={() => window.open('https://www.familiayformacion.com/tienda/p/pubertad-adolescencia', '_blank')}
               size="lg"
               className="bg-gradient-to-r from-brand-red to-brand-red hover:from-brand-red/90 hover:to-brand-red/90 text-white text-lg px-10 py-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 font-semibold group"
             >

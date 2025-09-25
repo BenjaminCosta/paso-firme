@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Brain, Heart, ArrowRight, Target, MessageCircle, Shield, Trophy } from "lucide-react";
+import { Brain, Heart, ArrowRight, Target, MessageCircle, Shield, Trophy, BookOpen, CheckCircle, Lightbulb, MapPin } from "lucide-react";
 
 interface OutcomesProps {
   onScrollToSection: (id: string) => void;
@@ -217,7 +217,7 @@ const Outcomes = ({ onScrollToSection }: OutcomesProps) => {
               <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/5 via-brand-red/5 to-brand-pink/5 rounded-3xl blur-xl" />
             </div>
             <Button
-              onClick={() => onScrollToSection('inscribirme')}
+              onClick={() => window.open('https://www.familiayformacion.com/tienda/p/pubertad-adolescencia', '_blank')}
               size="lg"
               className="bg-brand-blue hover:bg-brand-blue/90 text-white px-8 py-6 text-lg rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl group"
             >
