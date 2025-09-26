@@ -8,13 +8,13 @@ const Modules = ({ onScrollToSection }: ModulesProps) => {
       day: "MÓDULO 1",
       title: "¿Y si el cambio no empieza en tu hijo, sino en ti?",
       objective: "Claves del cerebro adolescente que te hacen decir: 'Ahora todo tiene sentido'",
-      bgImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      bgImage: "https://images.unsplash.com/photo-1537913088049-4f3f455e4837?auto=format&fit=crop&q=100&w=4000"
     },
     {
       day: "MÓDULO 2",
       title: "El problema no es contigo, el problema es su cerebro.",
       objective: "Maneras de acompañarlo sin sentir que tienes que gritar, rendirte o desaparecer",
-      bgImage: "https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      bgImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D "
     },
     {
       day: "MÓDULO 3",
@@ -26,7 +26,7 @@ const Modules = ({ onScrollToSection }: ModulesProps) => {
       day: "MÓDULO 4",
       title: "No eres la misma mamá/papá que hace un año… y eso puede ser lo mejor que te pasó.",
       objective: "Un mapa claro para dejar de tomarte todo personal… y empezar a actuar donde sí puedes transformar",
-      bgImage: "https://images.unsplash.com/photo-1609220136736-443140cffec6?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      bgImage: "https://images.unsplash.com/photo-1533900634839-91e7a120a88a?auto=format&fit=crop&q=100&w=4000"
     }
   ];
 

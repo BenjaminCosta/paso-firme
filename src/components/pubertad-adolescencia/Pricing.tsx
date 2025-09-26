@@ -24,9 +24,9 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const Pricing = () => {
-  const workshopDate = "27 de Septiembre, 2023";
-  const workshopTime = "7:00 PM (Hora CDMX)";
-  const workshopDuration = "90 minutos";
+  const workshopDate = "8 de Noviembre, 2025";
+  const workshopTime = "10:00 AM (Hora CDMX)";
+  const workshopDuration = "100 minutos";
   const [activeFeature, setActiveFeature] = useState(0);
 
   const features = [
@@ -265,7 +265,7 @@ const Pricing = () => {
                   <p className="opacity-90">Precio de lanzamiento exclusivo</p>
                 </div>
                 <div className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">
-                  ÚLTIMAS 16 PLAZAS
+                  ÚLTIMOS 10 LUGARES
                 </div>
               </div>
 

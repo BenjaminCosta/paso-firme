@@ -114,7 +114,7 @@ const Outcomes = ({ onScrollToSection }: OutcomesProps) => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-40" />
                 <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/30 to-transparent opacity-0 mix-blend-overlay transition-opacity duration-300 group-hover:opacity-100" />
                 <img
-                  src="https://images.unsplash.com/photo-1607062294260-e5b054f2c96b?auto=format&fit=crop&q=100&w=4000"
+                  src="https://images.unsplash.com/photo-1696403325525-cfb43cca0d65?auto=format&fit=crop&q=100&w=4000"
                   alt="Adolescentes estudiando juntos"
                   className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                 />
