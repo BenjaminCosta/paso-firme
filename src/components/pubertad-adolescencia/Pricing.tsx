@@ -30,37 +30,38 @@ const Pricing = () => {
   const [activeFeature, setActiveFeature] = useState(0);
 
   const features = [
-    {
-      icon: Video,
-      title: "Taller en vivo",
-      description: "90 minutos por Zoom con Olivia"
-    },
-    {
-      icon: Download,
-      title: "Grabación",
-      description: "Disponible por 7 días después del taller"
-    },
-    {
-      icon: BookOpen,
-      title: "Guía descargable",
-      description: "Frases, ideas clave y recordatorios visuales"
-    },
-    {
-      icon: Shield,
-      title: "Herramientas prácticas",
-      description: "Aplicables desde el primer día"
-    },
-    {
-      icon: Users,
-      title: "Comunidad de apoyo",
-      description: "Padres que también están aprendiendo"
-    },
-    {
-      icon: Brain,
-      title: "Contenido respaldado",
-      description: "Por neurociencia y educación emocional"
-    }
-  ];
+  {
+    icon: Video,
+    title: "Taller en vivo",
+    description: "100 minutos online con Olivia, en un espacio cercano y participativo"
+  },
+  {
+    icon: Users,
+    title: "Sesiones interactivas",
+    description: "Participa, pregunta y aprende en tiempo real"
+  },
+  {
+    icon: BookOpen,
+    title: "Material digital",
+    description: "Frases, ideas clave y recordatorios visuales"
+  },
+  {
+    icon: Shield,
+    title: "Herramientas prácticas",
+    description: "Aplicables desde el primer día"
+  },
+  {
+    icon: HelpCircle,
+    title: "Sesión de preguntas",
+    description: "Resuelve tus dudas con Olivia al final"
+  },
+  {
+    icon: Brain,
+    title: "Contenido respaldado",
+    description: "Por neurociencia y educación emocional"
+  }
+];
+
 
   // Definición de keyframes para animaciones
   const floatAnimation = {
@@ -240,14 +241,14 @@ const Pricing = () => {
                 <div className="relative bg-white/60 backdrop-blur-sm p-6 rounded-2xl border border-brand-pink/40">
                   <div className="flex items-start gap-4">
                     <div className="p-2.5 bg-gradient-to-br from-brand-red/10 to-brand-blue/10 rounded-xl">
-                      <Users className="w-6 h-6 text-brand-red" />
+                      <HelpCircle className="w-6 h-6 text-brand-red" />
                     </div>
                     <div>
                       <h3 className="font-bold text-lg bg-gradient-to-r from-brand-red to-brand-blue bg-clip-text text-transparent mb-2">
-                        Beneficio exclusivo
+                        Atención personalizada
                       </h3>
                       <p className="text-gray-700">
-                        Acceso a <span className="text-brand-red font-semibold">comunidad privada</span> donde podrás compartir experiencias y hacer preguntas directamente a Olivia.
+                        Al finalizar el taller, tendrás <span className="text-brand-red font-semibold">tiempo exclusivo para hacer preguntas</span> y recibir respuestas directas de Olivia.
                       </p>
                     </div>
                   </div>
@@ -283,7 +284,7 @@ const Pricing = () => {
               <div className="mb-8">
                 <div className="flex items-center gap-2 mb-4">
                   <HeartHandshake className="w-5 h-5" />
-                  <span>Incluye todos los materiales y acceso a la comunidad</span>
+                  <span>Incluye todos los materiales y sesión de preguntas personalizada</span>
                 </div>
                 
                 <div className="bg-white/10 p-4 rounded-xl mb-4">
