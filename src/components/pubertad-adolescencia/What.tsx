@@ -49,7 +49,7 @@ const What = ({ onScrollToSection }: WhatProps) => {
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               ¿Qué es el Taller de
-              <span className="text-brand-red"> Pubertad y Adolescencia</span>?
+              <span className="text-brand-red"> Pubertad y Adolescencia Sin Miedo?</span>
             </h2>
             <p className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto">
               Un espacio seguro y formativo para entender y navegar los cambios físicos y emocionales
