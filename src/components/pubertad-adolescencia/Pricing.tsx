@@ -271,15 +271,16 @@ const Pricing = () => {
               </div>
 
               <div className="mb-8">
-                <div className="flex items-end gap-2 mb-2">
-                  <span className="text-5xl font-bold">$690</span>
-                  <span className="text-xl opacity-90 mb-1">MXN</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="line-through opacity-70">$890 MXN</span>
-                  <span className="bg-white/20 px-2 py-1 rounded text-xs">AHORRA 23%</span>
-                </div>
-              </div>
+  <div className="flex items-end gap-2 mb-2">
+    <span className="text-5xl font-bold">$690</span>
+    <span className="text-xl opacity-90 mb-1">MXN</span>
+    <span className="text-lg opacity-80 mb-1">(≈ $40 USD)</span>
+  </div>
+  <div className="flex items-center gap-2">
+    <span className="line-through opacity-70">$890 MXN (≈ $50 USD)</span>
+    <span className="bg-white/20 px-2 py-1 rounded text-xs">AHORRA 23%</span>
+  </div>
+</div>
 
               <div className="mb-8">
                 <div className="flex items-center gap-2 mb-4">

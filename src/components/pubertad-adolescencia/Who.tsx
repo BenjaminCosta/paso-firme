@@ -66,7 +66,7 @@ const Who = ({ onScrollToSection }: WhoProps) => {
                         Etapa Inicial de Pubertad y Adolescencia
                       </h3>
                       <p className="text-lg md:text-xl text-brand-red font-semibold mt-2">
-                        8 a 16 años
+                        8 a 14 años
                       </p>
                     </div>
                   </div>
@@ -120,8 +120,7 @@ const Who = ({ onScrollToSection }: WhoProps) => {
 
                 {/* Decorative accents mejorados */}
                 <div className="absolute top-0 left-0 w-full h-1.5 md:h-2 bg-gradient-to-r from-brand-red via-brand-pink to-brand-blue rounded-t-xl md:rounded-t-2xl"></div>
-                <div className="absolute -top-2 md:-top-3 left-1/2 transform -translate-x-1/2 w-16 md:w-20 h-4 md:h-6 bg-gradient-to-r from-brand-red to-brand-pink rounded-full blur-md opacity-70"></div>
-                
+              
                 {/* Línea separadora sutil - solo desktop */}
                 <div className="absolute left-1/2 transform -translate-x-px top-28 md:top-32 bottom-16 md:bottom-20 w-px bg-gradient-to-b from-transparent via-brand-red/30 to-transparent hidden md:block"></div>
               </div>
