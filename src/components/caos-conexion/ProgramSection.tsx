@@ -1,93 +1,96 @@
 import { Button } from "@/components/ui/button";
-import { Check, Heart, MessageSquare, Shield, Eye, HandHeart, ArrowRight } from "lucide-react";
+import { Check, Heart, MessageSquare, Shield, Eye, HandHeart, ArrowRight, Calendar, Clock, X } from "lucide-react";
+import { useEffect, useState } from "react";
 
 interface HeroSectionProps {
   onScrollToSection: (id: string) => void;
 }
 
 const ProgramSection = ({ onScrollToSection }: HeroSectionProps) => {
+  const [showBanner, setShowBanner] = useState(false);
+  const [bannerClosed, setBannerClosed] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300 && !bannerClosed) {
+        setShowBanner(true);
+      } else {
+        setShowBanner(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [bannerClosed]);
+
   return (
-    <section className="relative py-20 overflow-hidden bg-white">
+    <section className="relative py-20 overflow-hidden bg-gradient-to-br from-brand-sand via-white to-brand-pink/10">
       {/* Fondo con textura y gradiente mejorado */}
       <div className="absolute inset-0 z-0">
         <div 
-          className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1558478551-1a378f63328e?ixlib=rb-4.1.0&auto=format&fit=crop&w=1800&q=85')] bg-cover bg-center opacity-20"
+          className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1558478551-1a378f63328e?ixlib=rb-4.1.0&auto=format&fit=crop&w=1800&q=85')] bg-cover bg-center opacity-10"
           style={{
             maskImage: 'linear-gradient(rgba(0,0,0,0.9) 30%, transparent 100%)',
           }}
         />
       </div>
 
+      {/* Formas geométricas decorativas */}
+      <div className="absolute top-20 left-10 w-16 h-16 border-2 border-brand-pink/20 rounded-lg rotate-12 z-0 hidden sm:block"></div>
+      <div className="absolute bottom-40 right-20 w-20 h-20 bg-brand-blue/5 rounded-full z-0 hidden sm:block"></div>
+      <div className="absolute top-1/3 right-10 w-24 h-24 border-2 border-brand-red/10 rounded-full z-0 hidden md:block"></div>
+      <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-brand-pink/10 rotate-45 z-0 hidden lg:block"></div>
+
       {/* Contenido principal */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
-          {/* Encabezado elegante mejorado */}
+          {/* Encabezado nuevo */}
           <div className="text-center mb-16">
-            <span className="inline-block bg-brand-teal/10 text-brand-teal text-xs font-medium tracking-widest px-4 py-2 rounded-full mb-6 border border-brand-teal/20 backdrop-blur-sm">
-              PROGRAMA PREMIUM
+            <span className="inline-block bg-brand-pink/30 text-brand-red text-xs font-bold tracking-widest px-4 py-2 rounded-full mb-6 border border-brand-red/20 backdrop-blur-sm uppercase">
+              Comienza tu Transformación
             </span>
-            <h2 className="text-5xl md:text-6xl font-light text-gray-900 mb-6 leading-tight">
-              Del <span className="font-dancing text-brand-coral text-6xl font-bold">Caos</span> a la{" "}
-              <span className="font-medium bg-clip-text text-transparent bg-gradient-to-r from-brand-teal to-brand-coral">Conexión</span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-blue mb-6 leading-tight">
+              Comenzamos cada lunes.{" "}
+              <span className="font-dancing text-brand-red text-5xl md:text-6xl lg:text-7xl">Este puede ser tu inicio.</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-brand-teal to-brand-coral mx-auto mb-6 rounded-full"></div>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Transforma tu relación familiar en <span className="font-dancing text-2xl text-brand-coral font-bold">10 semanas</span> con nuestro método probado
-            </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-brand-red to-brand-blue mx-auto mb-8 rounded-full"></div>
           </div>
 
-          {/* Contenido del programa - Diseño elegante mejorado */}
-          <div className="grid lg:grid-cols-2 gap-8 mb-20">
-            {/* Tarjeta de beneficios - Estilo moderno premium */}
-            <div className="bg-white rounded-2xl p-1 border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
-              <div className="absolute -top-10 -left-10 w-32 h-32 rounded-full bg-brand-teal/10 blur-xl z-0"></div>
-              <div className="relative bg-white/80 backdrop-blur-sm p-8 z-10">
-                <h3 className="text-2xl font-light text-gray-900 mb-8 flex items-center gap-3">
-                  <div className="p-3 rounded-lg bg-gradient-to-br from-brand-teal/10 to-brand-coral/5 border border-brand-teal/20">
-                    <HandHeart className="text-brand-teal" size={24} />
-                  </div>
-                  <span>Resultados <span className="font-dancing text-brand-coral text-3xl font-bold">garantizados</span></span>
-                </h3>
-                
-                <ul className="space-y-4">
-                  <BenefitItem 
-                    icon={<Check className="text-white" size={16} />} 
-                    text="Reconectar emocionalmente con tu adolescente" 
-                    bgColor="bg-brand-teal"
-                  />
-                  <BenefitItem 
-                    icon={<Check className="text-white" size={16} />} 
-                    text="Restablecer la confianza mutua y diálogo" 
-                    bgColor="bg-brand-coral"
-                  />
-                  <BenefitItem 
-                    icon={<Check className="text-white" size={16} />} 
-                    text="Límites saludables que fortalecen el vínculo" 
-                    bgColor="bg-brand-teal"
-                  />
-                  <BenefitItem 
-                    icon={<Check className="text-white" size={16} />} 
-                    text="Comprensión profunda de su comportamiento" 
-                    bgColor="bg-brand-coral"
-                  />
-                  <BenefitItem 
-                    icon={<Check className="text-white" size={16} />} 
-                    text="Acompañamiento equilibrado sin controlar" 
-                    bgColor="bg-brand-teal"
-                  />
-                  <BenefitItem 
-                    icon={<Check className="text-white" size={16} />} 
-                    text="Reparación de la relación dañada" 
-                    bgColor="bg-brand-coral"
-                  />
-                </ul>
+          {/* Grid: Contenido a la izquierda, Imagen a la derecha */}
+          <div className="grid lg:grid-cols-2 gap-8 mb-16 items-stretch">
+            {/* Contenido a la izquierda con formas geométricas */}
+            <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 sm:p-10 shadow-xl border border-brand-pink/30 overflow-hidden min-h-[500px] flex items-center">
+              {/* Formas geométricas de fondo sutiles */}
+              <div className="absolute top-10 right-10 w-20 h-20 border-2 border-brand-pink/15 rounded-lg rotate-12 z-0"></div>
+              <div className="absolute bottom-12 left-8 w-16 h-16 bg-brand-blue/5 rounded-full z-0"></div>
+              <div className="absolute top-1/2 right-1/4 w-12 h-12 border-2 border-brand-red/10 rotate-45 z-0"></div>
+              <div className="absolute bottom-20 right-12 w-24 h-24 bg-gradient-to-br from-brand-red/5 to-brand-pink/5 rounded-full z-0"></div>
+              <div className="absolute top-16 left-12 w-10 h-10 border border-brand-blue/10 rounded-full z-0"></div>
+              
+              <div className="space-y-6 relative z-10">
+                <p className="text-2xl md:text-3xl text-brand-gray font-bold leading-relaxed">
+                  Cada semana arranca un nuevo grupo.
+                </p>
+                <p className="text-lg md:text-xl text-brand-gray leading-relaxed">
+                  Si hoy dices basta de caos, este próximo lunes ya puedes estar dentro del programa.
+                </p>
+                <p className="text-2xl md:text-3xl text-brand-blue font-bold leading-relaxed">
+                  Da el paso que tu familia necesita.
+                </p>
+
+                {/* Animación de flecha discreta */}
+                <div className="flex items-center justify-center gap-2 pt-4">
+                  <ArrowRight className="text-brand-red animate-pulse" size={28} />
+                  <ArrowRight className="text-brand-blue animate-pulse delay-150" size={28} />
+                  <ArrowRight className="text-brand-red animate-pulse delay-300" size={28} />
+                </div>
               </div>
             </div>
 
-            {/* Tarjeta con imagen - Estilo galería premium */}
-            <div className="relative group h-full min-h-[500px]">
-              <div className="absolute inset-0 bg-gradient-to-br from-brand-teal/10 to-brand-coral/10 rounded-2xl transform rotate-1 group-hover:rotate-0 transition-transform duration-500 z-0"></div>
-              <div className="relative h-full rounded-2xl overflow-hidden border border-white/30 shadow-lg z-10">
+            {/* Imagen a la derecha */}
+            <div className="relative group min-h-[500px]">
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-red/10 to-brand-blue/10 rounded-2xl transform rotate-1 group-hover:rotate-0 transition-transform duration-500 z-0"></div>
+              <div className="relative h-full rounded-2xl overflow-hidden border border-brand-pink/30 shadow-xl z-10">
                 <div 
                   className="absolute inset-0 bg-cover bg-center transition-all duration-700 group-hover:scale-105"
                   style={{
@@ -95,16 +98,16 @@ const ProgramSection = ({ onScrollToSection }: HeroSectionProps) => {
                   }}
                   
                 >
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-brand-teal/20 to-brand-teal/60"></div>
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-brand-blue/20 to-brand-blue/60"></div>
                   
                 </div>
                 
                 
                 {/* Mensaje flotante premium */}
                 <div className="absolute bottom-8 left-8 right-8">
-                  <div className="bg-white/50 backdrop-blur-md rounded-xl p-6 shadow-lg border border-white/30 transform transition-all duration-500 group-hover:-translate-y-3">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Un proceso <span className="font-dancing text-brand-coral text-2xl font-bold">Transformador</span></h3>
-                    <p className="text-gray-600 font-semibold">
+                  <div className="bg-white/50 backdrop-blur-md rounded-xl p-6 shadow-lg border border-brand-pink/30 transform transition-all duration-500 group-hover:-translate-y-3">
+                    <h3 className="text-xl font-semibold text-brand-blue mb-2">Un proceso <span className="font-dancing text-brand-red text-2xl font-bold">Transformador</span></h3>
+                    <p className="text-brand-gray font-semibold">
                       Sin conflictos, sin culpas, con herramientas prácticas y apoyo constante.
                     </p>
                   </div>
@@ -113,34 +116,76 @@ const ProgramSection = ({ onScrollToSection }: HeroSectionProps) => {
             </div>
           </div>
 
-          {/* CTA Elegante mejorado */}
+          {/* CTA mejorado con nueva paleta */}
           <div className="text-center">
-           {/* Versión IDÉNTICA al original pero con ajustes mobile-only */}
-<div className="text-center mt-12 sm:mt-16 px-4 sm:px-0">
+           <div className="text-center mt-12 sm:mt-16 px-4 sm:px-0">
   <Button
     size="lg"
-    className="relative overflow-hidden bg-gradient-to-r from-brand-teal to-brand-coral text-white px-8 sm:px-14 py-5 sm:py-6 text-base sm:text-lg font-medium tracking-wide rounded-full transition-all duration-300 hover:shadow-xl group mx-auto max-w-[90vw] sm:max-w-none"
+    className="relative overflow-hidden bg-white text-brand-blue border-2 border-brand-red px-10 sm:px-16 py-6 sm:py-7 text-xl sm:text-2xl font-bold tracking-wide rounded-full transition-all duration-300 hover:bg-brand-red hover:text-white hover:shadow-xl group mx-auto max-w-[90vw] sm:max-w-none"
     onClick={() => onScrollToSection('pricing')}
   >
     <span className="relative z-10 flex items-center justify-center gap-3 whitespace-nowrap">
-      Iniciar mi transformación familiar
-      <ArrowRight className="transition-all duration-300 group-hover:translate-x-2" size={20} />
+      EMPIEZO HOY
+      <ArrowRight className="transition-all duration-300 group-hover:translate-x-2" size={24} />
     </span>
-    <span className="absolute inset-0 bg-gradient-to-r from-brand-coral to-brand-teal opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
   </Button>
 </div>
             
-            <p className="mt-6 text-gray-500 text-sm flex items-center justify-center gap-2">
-              <span className="inline-flex w-3 h-3 rounded-full bg-gradient-to-r from-brand-teal to-brand-coral animate-pulse"></span>
+            <p className="mt-6 text-brand-gray text-sm flex items-center justify-center gap-2">
+              <span className="inline-flex w-3 h-3 rounded-full bg-gradient-to-r from-brand-red to-brand-blue animate-pulse"></span>
               Plazas limitadas • Inscripciones abiertas
             </p>
           </div>
         </div>
       </div>
 
-      {/* Elementos decorativos modernos */}
-      <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-brand-teal/10 blur-[80px] -translate-x-1/3 translate-y-1/3 z-0"></div>
-      <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-brand-coral/10 blur-[80px] translate-x-1/3 -translate-y-1/3 z-0"></div>
+      {/* Elementos decorativos modernos con nueva paleta */}
+      <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-brand-red/5 blur-3xl -translate-x-1/3 translate-y-1/3 z-0"></div>
+      <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-brand-blue/5 blur-3xl translate-x-1/3 -translate-y-1/3 z-0"></div>
+
+      {/* Banner móvil flotante con botón X - Se oculta al tocar */}
+      <div 
+        className={`fixed bottom-0 left-0 right-0 z-50 md:hidden transform transition-all duration-500 ${
+          showBanner ? 'translate-y-0' : 'translate-y-full'
+        }`}
+        onClick={() => setBannerClosed(true)}
+      >
+        <div className="bg-gradient-to-r from-brand-red to-brand-blue text-white py-3 px-4 shadow-2xl">
+          <div className="flex items-center justify-between gap-3">
+            <div className="flex items-center gap-2 flex-1">
+              <span className="text-2xl">👋</span>
+              <p className="text-sm font-semibold">
+                Nuevos grupos comienzan el lunes · Reserva tu lugar hoy
+              </p>
+            </div>
+            <div className="flex items-center gap-2 flex-shrink-0">
+              <Button
+                size="sm"
+                className="bg-white text-brand-blue hover:bg-brand-sand font-bold text-xs px-4 py-2 rounded-full shadow-lg"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onScrollToSection('pricing');
+                  setBannerClosed(true);
+                  
+                }}
+              >
+                Reservar
+              </Button>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setBannerClosed(true);
+                  setShowBanner(false); 
+                }}
+                className="w-8 h-8 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 transition-colors"
+                aria-label="Cerrar banner"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

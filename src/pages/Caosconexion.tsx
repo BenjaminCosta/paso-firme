@@ -11,6 +11,7 @@ import { DynamicHead } from "@/components/DynamicHead";
 import Facilitator3 from "@/components/caos-conexion/Facilitator3";
 import Testimonials3 from "@/components/caos-conexion/Testimonials3";
 import BonusSection from "@/components/caos-conexion/BonusSection";
+import LeadMagnetBanner from "@/components/caos-conexion/LeadMagnetBanner";
 
 
 
@@ -34,10 +35,16 @@ const CaosConexion = () => {
       <Testimonials3 />
       <BonusSection />
       <ProgramSection onScrollToSection={scrollToSection} />
-      <Facilitator3 onScrollToSection={scrollToSection} />
       <ProgramDetails onScrollToSection={scrollToSection}/>
       
       <Footer />
+
+      {/* Lead Magnet Banner */}
+      <LeadMagnetBanner
+        heroId="hero"
+        webhookUrl="https://script.google.com/macros/s/AKfycbwCefbkFMeQiNE__RY1TzEQSLimerv3kbf7G9hol49rgr6gldst9F4eK_Wbj1BW4iuX/exec"
+        cooldownDays={7}
+      />
     </div>
     </>
   );

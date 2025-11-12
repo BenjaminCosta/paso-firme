@@ -54,34 +54,43 @@ const Testimonials3 = () => {
   };
 
   return (
-    <section className="relative py-12 md:py-16 px-4 sm:px-6 bg-gray-50 overflow-hidden">
+    <section className="relative py-12 md:py-16 px-4 sm:px-6 bg-gradient-to-br from-brand-sand via-white to-brand-pink/10 overflow-hidden">
       {/* Background with image and overlay */}
       <div
-        className="absolute inset-0 z-0 bg-fixed bg-cover bg-center"
+        className="absolute inset-0 z-0 bg-fixed bg-cover bg-center opacity-20"
         style={{
           backgroundImage: `url('/imagenes/testimonials.avif')`,
         }}
       ></div>
 
-      <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-brand-teal/5 to-white/30 z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-brand-sand/30 via-white/20 to-brand-pink/10 z-0"></div>
 
-      {/* Decorative effects */}
+      {/* Formas geométricas decorativas modernas */}
+      <div className="absolute top-20 left-10 w-16 h-16 border-2 border-brand-pink/20 rounded-lg rotate-12 z-0 hidden sm:block"></div>
+      <div className="absolute bottom-40 right-20 w-20 h-20 bg-brand-blue/5 rounded-full z-0 hidden sm:block"></div>
+      <div className="absolute top-1/3 right-10 w-24 h-24 border-2 border-brand-red/10 rounded-full z-0 hidden md:block"></div>
+      <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-brand-pink/10 rotate-45 z-0 hidden lg:block"></div>
+
+      {/* Decorative effects with blur */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-0 w-64 h-64 rounded-full bg-brand-teal/10 blur-[100px]" />
-        <div className="absolute bottom-0 right-0 w-64 h-64 rounded-full bg-brand-coral/10 blur-[100px]" />
+        <div className="absolute top-0 left-0 w-64 h-64 rounded-full bg-brand-red/5 blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-64 h-64 rounded-full bg-brand-blue/5 blur-3xl" />
       </div>
       
       <div className="max-w-6xl mx-auto relative z-10">
-        {/* Compact header */}
-        <div className="text-center mb-8 md:mb-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-white">
-            <span className="relative inline-block">
-              HISTORIAS REALES
-              <span className="absolute bottom-0 left-0 w-full h-1 bg-brand-coral"></span>
-            </span>
+        {/* Header mejorado */}
+        <div className="text-center mb-8 md:mb-12">
+          <span className="inline-block bg-brand-pink/30 text-brand-red text-xs sm:text-sm font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-4 sm:mb-6">
+            Testimonios Reales
+          </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-brand-blue mb-4 leading-tight">
+            Más de{" "}
+            <span className="font-dancing text-brand-red text-4xl sm:text-5xl md:text-6xl">1 000 familias</span>{" "}
+            ya viven con más calma, respeto y conexión.
           </h2>
-          <p className="text-gray-200 mt-3 max-w-2xl mx-auto">
-            Lo que dicen padres como tú sobre el programa
+          <div className="w-20 sm:w-32 h-1 bg-gradient-to-r from-brand-red to-brand-blue mx-auto mb-6"></div>
+          <p className="text-lg sm:text-xl text-brand-gray max-w-3xl mx-auto leading-relaxed">
+            Estas son algunas de las historias reales de mamás y papás que decidieron transformar su relación con sus hijos.
           </p>
         </div>
 
@@ -90,7 +99,7 @@ const Testimonials3 = () => {
           {testimonials.map((item, index) => (
             <div 
               key={index}
-              className={`bg-white/90 backdrop-blur-sm p-2 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all ${
+              className={`bg-white/90 backdrop-blur-sm p-2 rounded-lg shadow-lg border border-brand-pink/20 hover:shadow-xl hover:border-brand-red/30 transition-all ${
                 item.type === 'video' ? 'flex flex-col' : ''
               }`}
             >
@@ -112,12 +121,12 @@ const Testimonials3 = () => {
                   />
                   {playingVideo !== index && (
                     <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                      <PlayCircle className="w-12 h-12 text-white/90 hover:text-white transition-colors" />
+                      <PlayCircle className="w-12 h-12 text-white/90 hover:text-white transition-colors drop-shadow-lg" />
                     </div>
                   )}
                 </div>
               ) : (
-                <div className="aspect-[5/7] flex items-center justify-center p-2 bg-gray-50">
+                <div className="aspect-[5/7] flex items-center justify-center p-2 bg-brand-sand/30">
   <img
     src={item.src}
     alt="Testimonio"
@@ -130,14 +139,14 @@ const Testimonials3 = () => {
           ))}
         </div>
 
-        {/* Minimalist CTA */}
+        {/* CTA mejorado */}
         <div className="text-center mt-10">
           <Button 
-            className="bg-gradient-to-r from-brand-teal to-brand-coral text-white font-semibold py-3 px-6 text-base shadow-sm hover:shadow-md transition-all hover:opacity-90"
-            size="sm"
+            className="bg-white text-brand-blue border-2 border-brand-red font-bold py-4 px-8 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-brand-red hover:text-white rounded-full group"
+            size="lg"
           >
             Ver más testimonios
-            <ArrowRight className="w-4 h-4 ml-2" />
+            <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
           </Button>
         </div>
       </div>
