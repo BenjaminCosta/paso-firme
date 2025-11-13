@@ -153,29 +153,60 @@ export const Pricing = () => {
 
               <div className="mt-6 bg-gradient-to-br from-brand-purple/5 to-brand-teal/5 p-5 rounded-xl border-2 border-brand-purple/20 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('https://assets-global.website-files.com/5f3c19f18169b62a0d0bf387/60d33bfd5ac758259b8b5e6f_pattern-1.svg')] opacity-10"></div>
+                
+                {/* Badge de El Buen Fin */}
+                <div className="absolute -top-1 -right-1 bg-gradient-to-r from-red-600 to-orange-500 text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg rotate-12 ">
+                  🎉 EL BUEN FIN
+                </div>
+
                 <div className="relative text-center">
                   <p className="text-sm text-gray-500 mb-1">Inversión única</p>
-                  <div className="flex justify-center items-baseline gap-2">
-                    <p className="text-4xl font-bold text-brand-purple drop-shadow-md">
-                      {event?.precio || ""}
-                    </p>
+                  
+                  {/* Precio original tachado */}
+                  <div className="flex justify-center items-center gap-3 mb-2">
+                    <div className="relative">
+                      <p className="text-2xl font-bold text-gray-400 line-through">
+                        $900
+                      </p>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-full h-0.5 bg-red-500 rotate-[-15deg]"></div>
+                      </div>
+                    </div>
+                    <span className="bg-red-100 text-red-700 text-xs font-bold px-2 py-1 rounded-md">
+                      -17%
+                    </span>
+                  </div>
 
+                  {/* Precio con descuento */}
+                  <div className="flex justify-center items-baseline gap-2 mb-2">
+                    <p className="text-5xl font-bold bg-gradient-to-r from-brand-purple to-brand-teal bg-clip-text text-transparent drop-shadow-md">
+                      {event?.precio || "$750"}
+                    </p>
                     <span className="text-lg text-gray-600">MXN</span>
                   </div>
-                  <p className="text-xs text-gray-500 mt-1">
-                 {event?.precio ? (
-  <div className="text-sm text-gray-500 mb-1">
-    (~${(parseFloat(event.precio) * exchangeRate).toFixed(0)} USD)
-  </div>
-) : (
-  <div className="text-sm text-gray-400">Precio no disponible</div>
-)}
 
+                  <p className="text-xs text-gray-500 mt-1">
+                    {event?.precio ? (
+                      <div className="text-sm text-gray-500 mb-1">
+                        (~${(parseFloat(event.precio) * exchangeRate).toFixed(0)} USD)
+                      </div>
+                    ) : (
+                      <div className="text-sm text-gray-400">Precio no disponible</div>
+                    )}
                   </p>
-                  <div className="flex justify-center mt-2">
-                    <span className="bg-brand-teal/20 text-brand-teal text-xs font-medium px-2 py-0.5 rounded-full">
-                      🔥 Oferta exclusiva
+
+                  {/* Badge de oferta limitada */}
+                  <div className="flex justify-center gap-2 mt-3">
+                    <span className="bg-gradient-to-r from-red-600 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                      🔥 Solo por El Buen Fin
                     </span>
+                  </div>
+
+                  {/* Contador o fecha límite */}
+                  <div className="mt-3 pt-3 border-t border-gray-200">
+                    <p className="text-xs text-gray-600 font-semibold">
+                      ⏰ Oferta válida hasta agotar lugares
+                    </p>
                   </div>
                 </div>
               </div>
