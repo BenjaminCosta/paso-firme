@@ -146,7 +146,7 @@ const Intro3 = ({ onScrollToSection }: HeroSectionProps) => {
             <Button
               size="lg"
               className="relative overflow-hidden bg-white text-brand-red px-8 sm:px-14 py-8 sm:py-6 text-lg sm:text-xl font-bold rounded-full transition-all duration-300 hover:scale-[1.03] hover:bg-brand-red hover:text-white shadow-lg hover:shadow-xl border-2 border-brand-red group"
-              onClick={() => onScrollToSection('pricing')}
+              onClick={() => onScrollToSection('planes')}
             >
               <span className="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
                 <span className="sm:inline-block">Quiero estas herramientas</span>

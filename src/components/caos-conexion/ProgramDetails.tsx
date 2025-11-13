@@ -1,13 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Calendar, Brain, Headphones, Users, Download, MessageSquare, ArrowRight, Zap, AlertTriangle, ChevronDown } from "lucide-react";
+import { MessageSquare, ArrowRight } from "lucide-react";
 import { Link } from 'react-router-dom';
-import { useState } from "react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 
 interface HeroSectionProps {
   onScrollToSection: (id: string) => void;
@@ -21,7 +14,7 @@ const ProgramDetails = ({ onScrollToSection }: HeroSectionProps) => {
       {/* Efectos de fondo modernos con background-attachment fixed */}
       <div className="absolute inset-0 overflow-hidden opacity-30">
         <div
-          className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1546387903-6d82d96ccca6?ixlib=rb-4.1.0&auto=format&fit=crop&w=1800&q=85')] bg-cover bg-center bg-fixed mix-blend-overlay"
+          className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1546387903-6d82d96ccca6?ixlib=rb-4.1.0&auto=format&fit=crop&w=1800&q=85')] bg-cover bg-center mix-blend-overlay"
         ></div>
         <div className="absolute inset-0 bg-gradient-to-br from-brand-red/10 via-brand-pink/5 to-brand-blue/10 bg-fixed"></div>
       </div>
@@ -46,45 +39,49 @@ const ProgramDetails = ({ onScrollToSection }: HeroSectionProps) => {
             <div className="w-20 sm:w-32 h-1 bg-gradient-to-r from-brand-red to-brand-blue mx-auto mb-6 sm:mb-8"></div>
           </div>
 
-          {/* Acordeón de preguntas */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 sm:p-10 shadow-xl border border-brand-pink/30">
-            <Accordion type="single" collapsible className="space-y-4">
-              <AccordionItem value="item-1" className="border-b border-brand-pink/20">
-                <AccordionTrigger className="text-left text-lg sm:text-xl font-bold text-brand-blue hover:text-brand-red transition-colors py-4">
-                  ¿Necesito mucho tiempo a la semana?
-                </AccordionTrigger>
-                <AccordionContent className="text-base sm:text-lg text-brand-gray leading-relaxed pt-2 pb-4">
-                  Solo una hora a la semana. Las herramientas son aplicables en la vida diaria.
-                </AccordionContent>
-              </AccordionItem>
+          {/* Preguntas y respuestas siempre visibles */}
+          <div className="bg-white/90 rounded-2xl p-6 sm:p-10 shadow-xl border border-brand-pink/30 space-y-8">
+            
+            {/* Pregunta 1 */}
+            <div className="border-b border-brand-pink/20 pb-6">
+              <h3 className="text-lg sm:text-xl font-bold text-brand-blue mb-3">
+                ¿Necesito mucho tiempo a la semana?
+              </h3>
+              <p className="text-base sm:text-lg text-brand-gray leading-relaxed">
+                Solo una hora a la semana. Las herramientas son aplicables en la vida diaria.
+              </p>
+            </div>
 
-              <AccordionItem value="item-2" className="border-b border-brand-pink/20">
-                <AccordionTrigger className="text-left text-lg sm:text-xl font-bold text-brand-blue hover:text-brand-red transition-colors py-4">
-                  ¿Qué pasa si no puedo conectarme a las sesiones en vivo?
-                </AccordionTrigger>
-                <AccordionContent className="text-base sm:text-lg text-brand-gray leading-relaxed pt-2 pb-4">
-                  Todas las sesiones quedan grabadas. Puedes verlas cuando quieras.
-                </AccordionContent>
-              </AccordionItem>
+            {/* Pregunta 2 */}
+            <div className="border-b border-brand-pink/20 pb-6">
+              <h3 className="text-lg sm:text-xl font-bold text-brand-blue mb-3">
+                ¿Qué pasa si no puedo conectarme a las sesiones en vivo?
+              </h3>
+              <p className="text-base sm:text-lg text-brand-gray leading-relaxed">
+                Todas las sesiones quedan grabadas. Puedes verlas cuando quieras.
+              </p>
+            </div>
 
-              <AccordionItem value="item-3" className="border-b border-brand-pink/20">
-                <AccordionTrigger className="text-left text-lg sm:text-xl font-bold text-brand-blue hover:text-brand-red transition-colors py-4">
-                  ¿Funciona si soy mamá o papá soltero?
-                </AccordionTrigger>
-                <AccordionContent className="text-base sm:text-lg text-brand-gray leading-relaxed pt-2 pb-4">
-                  Sí. Las estrategias se adaptan a cualquier tipo de familia.
-                </AccordionContent>
-              </AccordionItem>
+            {/* Pregunta 3 */}
+            <div className="border-b border-brand-pink/20 pb-6">
+              <h3 className="text-lg sm:text-xl font-bold text-brand-blue mb-3">
+                ¿Funciona si soy mamá o papá soltero?
+              </h3>
+              <p className="text-base sm:text-lg text-brand-gray leading-relaxed">
+                Sí. Las estrategias se adaptan a cualquier tipo de familia.
+              </p>
+            </div>
 
-              <AccordionItem value="item-4" className="border-b-0">
-                <AccordionTrigger className="text-left text-lg sm:text-xl font-bold text-brand-blue hover:text-brand-red transition-colors py-4">
-                  ¿Y si mi relación con mi hijo está muy dañada?
-                </AccordionTrigger>
-                <AccordionContent className="text-base sm:text-lg text-brand-gray leading-relaxed pt-2 pb-4">
-                  Precisamente este programa está hecho para eso. No necesitas que él cambie; aprenderás cómo reconectar desde ti.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
+            {/* Pregunta 4 */}
+            <div>
+              <h3 className="text-lg sm:text-xl font-bold text-brand-blue mb-3">
+                ¿Y si mi relación con mi hijo está muy dañada?
+              </h3>
+              <p className="text-base sm:text-lg text-brand-gray leading-relaxed">
+                Precisamente este programa está hecho para eso. No necesitas que él cambie; aprenderás cómo reconectar desde ti.
+              </p>
+            </div>
+
           </div>
         </div>
       </div>
@@ -144,16 +141,19 @@ const ProgramDetails = ({ onScrollToSection }: HeroSectionProps) => {
 
         {/* Botón CTA grande - Mejorado para mobile */}
         <div className="text-center space-y-4">
-          <Button 
-            className="w-full sm:w-auto px-6 sm:px-10 md:px-16 py-5 sm:py-6 md:py-7 bg-white text-brand-blue border-2 border-brand-blue font-bold text-base sm:text-lg md:text-2xl shadow-lg hover:shadow-2xl transition-all duration-300 rounded-full hover:bg-brand-blue hover:text-white group"
-            size="lg"
-            onClick={() => onScrollToSection('pricing')}
-          >
-            <span className="flex items-center justify-center gap-2 sm:gap-3">
-              <span className="leading-tight">QUIERO RECUPERAR LA CONEXIÓN AHORA</span>
-              <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 transition-transform group-hover:translate-x-2 flex-shrink-0" />
-            </span>
-          </Button>
+            <Button
+              size="lg"
+              className="relative overflow-hidden bg-white text-brand-blue px-8 sm:px-14 py-8 sm:py-6 text-lg sm:text-xl font-bold rounded-full transition-all duration-300 hover:scale-[1.03] hover:bg-brand-blue hover:text-white shadow-lg hover:shadow-xl border-2 border-brand-blue group"
+              onClick={() => onScrollToSection('planes')}
+            >
+              <span className="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-1">
+                <span className="sm:inline-block">QUIERO RECUPERAR LA</span>
+                <span className="flex items-center gap-2 sm:gap-3">CONEXIÓN AHORA
+                  <ArrowRight className="transition-transform duration-300 group-hover:translate-x-2" size={22} />
+                </span>
+              </span>
+            </Button>
+   
 
           {/* Microcopy */}
           <p className="text-sm sm:text-base text-brand-gray/80 font-medium px-4">

@@ -114,6 +114,7 @@ const Hero3 = ({ onScrollToSection }: HeroSectionProps) => {
                 onClick={handleVideoToggle}
                 playsInline
                 muted
+                loop
               >
                 <source src="/videos/caos-conexion2.mp4" type="video/mp4" />
                 <track
@@ -187,7 +188,7 @@ const Hero3 = ({ onScrollToSection }: HeroSectionProps) => {
             <Button
               size="lg"
               className="relative overflow-hidden bg-gradient-to-r from-brand-red to-brand-blue text-white px-9 md:px-11 py-6 md:py-7 text-lg md:text-xl font-bold rounded-full transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-3xl group w-full md:w-auto"
-              onClick={() => onScrollToSection('pricing')}
+              onClick={() => onScrollToSection('planes')}
             >
               <span className="relative z-10">QUIERO RECUPERAR LA CONEXIÓN</span>
               <span className="absolute inset-0 bg-gradient-to-r from-brand-blue to-brand-red opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>

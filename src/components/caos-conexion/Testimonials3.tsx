@@ -2,7 +2,11 @@ import { ArrowRight, PlayCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useRef } from "react";
 
-const Testimonials3 = () => {
+interface HeroSectionProps {
+  onScrollToSection: (id: string) => void;
+}
+
+const Testimonials3 = ({ onScrollToSection }: HeroSectionProps) => {
   const testimonials = [
     { 
       type: "video",
@@ -141,13 +145,14 @@ const Testimonials3 = () => {
 
         {/* CTA mejorado */}
         <div className="text-center mt-10">
-          <Button 
-            className="bg-white text-brand-blue border-2 border-brand-red font-bold py-4 px-8 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-brand-red hover:text-white rounded-full group"
-            size="lg"
-          >
-            Ver más testimonios
-            <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
-          </Button>
+            <Button 
+              className="bg-white text-brand-blue border-2 border-brand-red font-bold py-4 px-8 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-brand-red hover:text-white rounded-full group"
+              size="lg"
+              onClick={() => onScrollToSection('planes')}
+            >
+              Ver más testimonios
+              <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+            </Button>
         </div>
       </div>
     </section>

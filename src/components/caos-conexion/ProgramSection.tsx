@@ -119,16 +119,16 @@ const ProgramSection = ({ onScrollToSection }: HeroSectionProps) => {
           {/* CTA mejorado con nueva paleta */}
           <div className="text-center">
            <div className="text-center mt-12 sm:mt-16 px-4 sm:px-0">
-  <Button
-    size="lg"
-    className="relative overflow-hidden bg-white text-brand-blue border-2 border-brand-red px-10 sm:px-16 py-6 sm:py-7 text-xl sm:text-2xl font-bold tracking-wide rounded-full transition-all duration-300 hover:bg-brand-red hover:text-white hover:shadow-xl group mx-auto max-w-[90vw] sm:max-w-none"
-    onClick={() => onScrollToSection('pricing')}
-  >
-    <span className="relative z-10 flex items-center justify-center gap-3 whitespace-nowrap">
-      EMPIEZO HOY
-      <ArrowRight className="transition-all duration-300 group-hover:translate-x-2" size={24} />
-    </span>
-  </Button>
+    <Button
+      size="lg"
+      className="relative overflow-hidden bg-white text-brand-blue border-2 border-brand-red px-10 sm:px-16 py-6 sm:py-7 text-xl sm:text-2xl font-bold tracking-wide rounded-full transition-all duration-300 hover:bg-brand-red hover:text-white hover:shadow-xl group mx-auto max-w-[90vw] sm:max-w-none"
+      onClick={() => onScrollToSection('planes')}
+    >
+      <span className="relative z-10 flex items-center justify-center gap-3 whitespace-nowrap">
+        EMPIEZO HOY
+        <ArrowRight className="transition-all duration-300 group-hover:translate-x-2" size={24} />
+      </span>
+    </Button>
 </div>
             
             <p className="mt-6 text-brand-gray text-sm flex items-center justify-center gap-2">
@@ -164,9 +164,7 @@ const ProgramSection = ({ onScrollToSection }: HeroSectionProps) => {
                 className="bg-white text-brand-blue hover:bg-brand-sand font-bold text-xs px-4 py-2 rounded-full shadow-lg"
                 onClick={(e) => {
                   e.stopPropagation();
-                  onScrollToSection('pricing');
-                  setBannerClosed(true);
-                  
+                  onScrollToSection('planes');
                 }}
               >
                 Reservar

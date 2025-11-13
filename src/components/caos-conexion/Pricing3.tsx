@@ -152,7 +152,7 @@ const Pricing3 = () => {
           </div>
 
           {/* Sección de planes */}
-          <div className="mb-12">
+          <div id="planes" className="mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-brand-blue text-center mb-4">
               Elige la forma que mejor{" "}
               <span className="text-brand-red">se adapta a ti</span>
@@ -212,7 +212,7 @@ const Pricing3 = () => {
                 </div>
 
                 <div className="mt-auto">
-                  <Link to="https://www.familiayformacion.com/tienda/p/soy-capaz-habilidades-para-la-vida-adolescente-ebwrr" className="block">
+                  <Link to="https://www.familiayformacion.com/tienda/p/caos-conexion-standard" className="block">
                     <Button className="w-full py-5 sm:py-6 bg-gradient-to-r from-brand-blue to-brand-blue/90 hover:from-brand-blue/90 hover:to-brand-blue text-white font-bold text-base sm:text-lg shadow-xl hover:shadow-2xl transition-all flex items-center justify-center gap-2 sm:gap-3 group rounded-lg">
                       <span className="text-center leading-tight">QUIERO LA VERSIÓN STANDARD</span>
                       <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1 flex-shrink-0" />
@@ -275,7 +275,7 @@ const Pricing3 = () => {
                 </div>
 
                 <div className="mt-auto">
-                  <Link to="https://www.familiayformacion.com/tienda/p/soy-capaz-habilidades-para-la-vida-adolescente-ebwrr" className="block">
+                  <Link to="https://www.familiayformacion.com/tienda/p/caos-conexion-premium" className="block">
                     <Button className="w-full py-5 sm:py-6 bg-gradient-to-r from-brand-red to-brand-blue hover:from-brand-red/90 hover:to-brand-blue/90 text-white font-bold text-base sm:text-lg shadow-xl hover:shadow-2xl transition-all flex items-center justify-center gap-2 sm:gap-3 group rounded-lg">
                       <span className="text-center leading-tight">QUIERO LA VERSIÓN PREMIUM</span>
                       <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1 flex-shrink-0" />
