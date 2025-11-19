@@ -47,7 +47,7 @@ const CaosConexion = () => {
       {/* Lead Magnet Banner */}
       <LeadMagnetBanner
         heroId="hero"
-        webhookUrl="https://script.google.com/macros/s/AKfycbwCefbkFMeQiNE__RY1TzEQSLimerv3kbf7G9hol49rgr6gldst9F4eK_Wbj1BW4iuX/exec"
+        webhookUrl="https://script.google.com/macros/s/AKfycbzQtMl_4cSxdAMUekQd4Eax0K1nx7gj599rMmxS1T8GYzsRa4jE0xEx17JjK6bkfb6I/exec"
         cooldownDays={1}
       />
     </div>
