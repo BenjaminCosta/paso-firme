@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { MessageSquare, ArrowRight } from "lucide-react";
+import { MessageSquare, ArrowRight, Award } from "lucide-react";
 import { Link } from 'react-router-dom';
 
 interface HeroSectionProps {
@@ -106,20 +106,22 @@ const ProgramDetails = ({ onScrollToSection }: HeroSectionProps) => {
   <div className="absolute bottom-40 left-20 w-16 h-16 bg-brand-pink/20 rounded-full z-0 hidden sm:block"></div>
   <div className="absolute top-1/3 left-10 w-24 h-24 bg-gradient-to-br from-brand-red/5 to-brand-pink/10 rounded-lg rotate-12 z-0 hidden lg:block"></div>
 
-  <div className="container mx-auto px-4 sm:px-6 max-w-5xl relative z-10">
-    <div className="flex flex-col items-center">
-      
-      {/* Contenido principal mejorado */}
-      <div className="w-full space-y-8 backdrop-blur-sm bg-white/30 p-8 sm:p-12 rounded-3xl border border-brand-pink/30 shadow-2xl">
+  <div className="container mx-auto px-4 sm:px-6 max-w-6xl relative z-10">
+    
+      {/* Grid de dos columnas */}
+      <div className="grid lg:grid-cols-2 gap-8 items-center mb-12">
         
-        {/* Texto principal */}
-        <div className="text-center space-y-6">
+        {/* Columna izquierda - Contenido */}
+        <div className="space-y-6 sm:space-y-8 order-1">
+          
+          {/* Badge superior */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-pink/40 text-brand-red rounded-full text-sm sm:text-base font-bold border border-brand-red/20 shadow-sm">
             <MessageSquare className="w-5 h-5" />
             Mensaje de Oli Rodríguez
           </div>
 
-          <div className="max-w-3xl mx-auto space-y-5">
+          {/* Texto principal */}
+          <div className="space-y-5">
             <p className="text-lg sm:text-xl text-brand-gray leading-relaxed">
               Soy <span className="font-bold text-brand-red">Oli Rodríguez</span>, asesora familiar y coach de adolescentes.
             </p>
@@ -130,40 +132,66 @@ const ProgramDetails = ({ onScrollToSection }: HeroSectionProps) => {
               No puedo prometerte que los gritos desaparecerán mañana, pero sí puedo prometerte que tendrás las herramientas para crear el cambio que tu familia necesita.
             </p>
           </div>
+
         </div>
 
-        {/* Divisor decorativo */}
-        <div className="flex items-center justify-center gap-3">
-          <div className="h-px w-20 bg-gradient-to-r from-transparent to-brand-red/30"></div>
-          <div className="w-2 h-2 rounded-full bg-brand-red"></div>
-          <div className="h-px w-20 bg-gradient-to-l from-transparent to-brand-blue/30"></div>
+        {/* Columna derecha - Imagen */}
+        <div className="relative group order-2 flex items-center">
+          <div className="absolute inset-0 bg-gradient-to-br from-brand-red/10 to-brand-blue/10 rounded-2xl transform rotate-1 group-hover:rotate-0 transition-transform duration-500 z-0"></div>
+          <div className="relative rounded-2xl overflow-hidden border border-brand-pink/30 shadow-2xl z-10 w-full">
+            <img 
+              src="/imagenes/facilitadora4.jpeg" 
+              alt="Oli Rodríguez - Asesora familiar"
+              className="w-full h-[350px] sm:h-[380px] object-cover object-center transition-all duration-700 group-hover:scale-105"
+            />
+            {/* Gradient overlay mejorado */}
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/80 via-brand-blue/20 to-transparent"></div>
+            
+            {/* Badge con glassmorphism mejorado */}
+            <div className="absolute bottom-6 left-6 right-6">
+              <div className="relative overflow-hidden rounded-xl shadow-2xl border border-white/30">
+                {/* Fondo con glassmorphism */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-white/80 to-white/70 backdrop-blur-xl"></div>
+                {/* Overlay de gradiente sutil */}
+                <div className="absolute inset-0 bg-gradient-to-br from-brand-pink/20 via-transparent to-brand-blue/20"></div>
+                
+                <div className="relative p-4">
+                  <p className="text-brand-blue font-bold text-sm sm:text-base flex items-center gap-2">
+                    <Award className="w-5 h-5 text-brand-blue flex-shrink-0" />
+                    Más de 10 años transformando familias
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-        {/* Botón CTA grande - Mejorado para mobile */}
-        <div className="text-center space-y-4">
-            <Button
-              size="lg"
-              className="relative overflow-hidden bg-white text-brand-blue px-8 sm:px-14 py-8 sm:py-6 text-lg sm:text-xl font-bold rounded-full transition-all duration-300 hover:scale-[1.03] hover:bg-brand-blue hover:text-white shadow-lg hover:shadow-xl border-2 border-brand-blue group"
-              onClick={() => onScrollToSection('planes')}
-            >
-              <span className="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-1">
-                <span className="sm:inline-block">QUIERO RECUPERAR LA</span>
-                <span className="flex items-center gap-2 sm:gap-3">CONEXIÓN AHORA
-                  <ArrowRight className="transition-transform duration-300 group-hover:translate-x-2" size={22} />
-                </span>
-              </span>
-            </Button>
-   
-
-          {/* Microcopy */}
-          <p className="text-sm sm:text-base text-brand-gray/80 font-medium px-4">
-            <span className="font-dancing text-brand-red text-lg sm:text-xl">Miles de familias ya lo lograron.</span>{" "}
-            Tú también puedes hacerlo, paso a paso.
-          </p>
-        </div>
-
+      
       </div>
-    </div>
+
+      {/* Botón CTA y microcopy - Centrados debajo de las columnas */}
+      
+      <div className="text-center space-y-4 max-w-2xl mx-auto">
+        <Button
+          size="lg"
+          className="relative overflow-hidden bg-white text-brand-blue px-8 sm:px-14 py-6 sm:py-7 text-lg sm:text-xl font-bold rounded-full transition-all duration-300 hover:scale-[1.03] hover:bg-brand-blue hover:text-white shadow-lg hover:shadow-xl border-2 border-brand-blue group w-full sm:w-auto"
+          onClick={() => onScrollToSection('planes')}
+        >
+          <span className="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-1">
+            <span>QUIERO RECUPERAR LA CONEXIÓN</span>
+            <span className="flex items-center gap-2">
+              AHORA
+              <ArrowRight className="transition-transform duration-300 group-hover:translate-x-2" size={22} />
+            </span>
+          </span>
+        </Button>
+
+        {/* Microcopy */}
+        <p className="text-sm sm:text-base text-brand-gray/80 font-medium">
+          <span className="font-dancing text-brand-red text-lg sm:text-xl">Miles de familias ya lo lograron.</span>{" "}
+          Tú también puedes hacerlo, paso a paso.
+        </p>
+      </div>
+
   </div>
 
   {/* Elementos decorativos con blur */}
