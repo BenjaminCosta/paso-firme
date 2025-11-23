@@ -157,10 +157,34 @@ const Pricing3 = () => {
               Elige la forma que mejor{" "}
               <span className="text-brand-red">se adapta a ti</span>
             </h2>
-            <p className="text-lg md:text-xl text-brand-gray text-center max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-brand-gray text-center max-w-3xl mx-auto mb-8">
               Ambas versiones transforman tu relación.<br />
               La diferencia está en <span className="font-bold text-brand-blue">cuánto acompañamiento directo</span> deseas de mí.
             </p>
+
+            {/* Banner de promoción fin de año */}
+            <div className="max-w-2xl mx-auto mb-8">
+              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-red-600/10 via-orange-500/10 to-red-600/10 border-2 border-red-600/20 p-6 backdrop-blur-sm">
+                {/* Patrón de fondo sutil */}
+                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDMiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-50"></div>
+                
+                <div className="relative text-center">
+                  <div className="flex items-center justify-center gap-3 mb-2">
+                    <div className="w-12 h-px bg-gradient-to-r from-transparent via-red-600/30 to-transparent"></div>
+                    <span className="text-red-600 text-sm font-semibold tracking-wider">🎄</span>
+                    <div className="w-12 h-px bg-gradient-to-r from-transparent via-red-600/30 to-transparent"></div>
+                  </div>
+                  
+                  <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-red-700 via-red-600 to-orange-600 bg-clip-text text-transparent mb-2">
+                    Promoción especial por fin de año
+                  </h3>
+                  
+                  <p className="text-sm md:text-base text-brand-gray font-medium">
+                    Ahorra hasta <span className="font-bold text-red-600">40%</span> en ambos planes
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Grid de planes */}
@@ -168,6 +192,7 @@ const Pricing3 = () => {
             
             {/* Plan Standard */}
             <Card className="relative bg-white border-2 border-brand-blue/30 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden flex flex-col h-full">
+
               <CardContent className="p-6 sm:p-8 flex flex-col h-full">
                 <div className="mb-6">
                   <div className="inline-block p-3 bg-brand-blue/10 rounded-2xl mb-4">
@@ -181,12 +206,24 @@ const Pricing3 = () => {
                   </p>
                 </div>
 
+                {/* Precios con descuento */}
                 <div className="mb-6">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="relative">
+                      <span className="text-2xl font-bold text-brand-gray line-through opacity-60">$250</span>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-full h-0.5 bg-red-500 rotate-[-12deg]"></div>
+                      </div>
+                    </div>
+                    <span className="bg-red-100 text-red-700 text-xs font-bold px-2 py-1 rounded-md">
+                      -40%
+                    </span>
+                  </div>
                   <div className="flex items-baseline gap-2 mb-2">
-                    <span className="text-4xl sm:text-5xl font-bold text-brand-blue">$170</span>
+                    <span className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-brand-blue to-blue-600 bg-clip-text text-transparent">$150</span>
                     <span className="text-lg sm:text-xl text-brand-gray">USD</span>
                   </div>
-                  <p className="text-sm text-brand-gray">Pago único</p>
+                  <p className="text-sm text-brand-gray">Pago único · Oferta especial fin de año</p>
                 </div>
 
                 <div className="space-y-4 mb-8 flex-grow">
@@ -225,7 +262,7 @@ const Pricing3 = () => {
             {/* Plan Premium */}
             <Card className="relative bg-white border-2 border-brand-red shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden flex flex-col h-full">
               {/* Badge "Más elegido" */}
-              <div className="absolute top-4 right-4 bg-gradient-to-r from-brand-red to-brand-blue text-white text-xs font-bold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full flex items-center gap-1 sm:gap-2 shadow-lg">
+              <div className="absolute top-4 right-4 bg-gradient-to-r from-brand-red to-brand-blue text-white text-xs font-bold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full flex items-center gap-1 sm:gap-2 shadow-lg z-10">
                 <Crown className="w-3 h-3 sm:w-4 sm:h-4" />
                 <span className="hidden sm:inline">MÁS ELEGIDO</span>
                 <span className="sm:hidden">TOP</span>
@@ -244,12 +281,24 @@ const Pricing3 = () => {
                   </p>
                 </div>
 
+                {/* Precios con descuento */}
                 <div className="mb-6">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="relative">
+                      <span className="text-2xl font-bold text-brand-gray line-through opacity-60">$350</span>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-full h-0.5 bg-red-500 rotate-[-12deg]"></div>
+                      </div>
+                    </div>
+                    <span className="bg-red-100 text-red-700 text-xs font-bold px-2 py-1 rounded-md">
+                      -37%
+                    </span>
+                  </div>
                   <div className="flex items-baseline gap-2 mb-2">
-                    <span className="text-4xl sm:text-5xl font-bold text-brand-red">$250</span>
+                    <span className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-brand-red to-red-600 bg-clip-text text-transparent">$220</span>
                     <span className="text-lg sm:text-xl text-brand-gray">USD</span>
                   </div>
-                  <p className="text-sm text-brand-gray">Pago único</p>
+                  <p className="text-sm text-brand-gray">Pago único · Oferta especial fin de año</p>
                 </div>
 
                 <div className="space-y-4 mb-8 flex-grow">
