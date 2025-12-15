@@ -32,7 +32,7 @@ const ProgramDetails = ({ onScrollToSection }: HeroSectionProps) => {
             <span className="inline-block bg-brand-pink/30 text-brand-red text-xs sm:text-sm font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-4 sm:mb-6">
               Preguntas Frecuentes
             </span>
-            <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-brand-blue mb-4 sm:mb-6 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-brand-blue mb-4 sm:mb-6 leading-tight">
               Preguntas que otros padres{" "}
               <span className="font-dancing text-brand-red">también tuvieron</span>
             </h2>
@@ -45,40 +45,59 @@ const ProgramDetails = ({ onScrollToSection }: HeroSectionProps) => {
             {/* Pregunta 1 */}
             <div className="border-b border-brand-pink/20 pb-6">
               <h3 className="text-lg sm:text-xl font-bold text-brand-blue mb-3">
-                ¿Necesito mucho tiempo a la semana?
+                ¿Y si mi hijo no me escucha o no quiere hablar conmigo?
               </h3>
               <p className="text-base sm:text-lg text-brand-gray leading-relaxed">
-                Solo una hora a la semana. Las herramientas son aplicables en la vida diaria.
+                Es lo más común.<br />
+                Tu hijo no te ignora por falta de amor, sino porque está en modo defensa.<br />
+                Cuando tú recuperas tu calma, él empieza a escucharte y a acercarse sin obligarlo.
               </p>
             </div>
 
             {/* Pregunta 2 */}
             <div className="border-b border-brand-pink/20 pb-6">
               <h3 className="text-lg sm:text-xl font-bold text-brand-blue mb-3">
-                ¿Qué pasa si no puedo conectarme a las sesiones en vivo?
+                ¿Necesito mucho tiempo a la semana?
               </h3>
               <p className="text-base sm:text-lg text-brand-gray leading-relaxed">
-                Todas las sesiones quedan grabadas. Puedes verlas cuando quieras.
+                No, solo 1 hora a la semana. Las herramientas son aplicables en la vida diaria.
               </p>
             </div>
 
             {/* Pregunta 3 */}
             <div className="border-b border-brand-pink/20 pb-6">
               <h3 className="text-lg sm:text-xl font-bold text-brand-blue mb-3">
-                ¿Funciona si soy mamá o papá soltero?
+                ¿Sirve si ya probé de todo y nada funcionó?
               </h3>
               <p className="text-base sm:text-lg text-brand-gray leading-relaxed">
-                Sí. Las estrategias se adaptan a cualquier tipo de familia.
+                Sí.<br />
+                Probaste hablar, repetir, castigar, tener paciencia o gritar.<br />
+                Pero nunca te enseñaron a regular tus emociones.<br />
+                Ahí es donde realmente cambia la forma en que tu hijo responde.
               </p>
             </div>
 
             {/* Pregunta 4 */}
-            <div>
+            <div className="border-b border-brand-pink/20 pb-6">
               <h3 className="text-lg sm:text-xl font-bold text-brand-blue mb-3">
-                ¿Y si mi relación con mi hijo está muy dañada?
+                ¿Necesito que mi hijo participe?
               </h3>
               <p className="text-base sm:text-lg text-brand-gray leading-relaxed">
-                Precisamente este programa está hecho para eso. No necesitas que él cambie; aprenderás cómo reconectar desde ti.
+                No.<br />
+                El trabajo es contigo.<br />
+                Cuando tú cambias la forma de comunicarte, tu hijo cambia la forma de responderte.
+              </p>
+            </div>
+
+            {/* Pregunta 5 */}
+            <div>
+              <h3 className="text-lg sm:text-xl font-bold text-brand-blue mb-3">
+                ¿Cuándo empiezo a ver cambios?
+              </h3>
+              <p className="text-base sm:text-lg text-brand-gray leading-relaxed">
+                Las primeras mejoras suelen verse en 1–2 semanas:<br />
+                Menos peleas, más escucha y un ambiente más tranquilo.<br />
+                El proceso completo profundiza esos cambios durante las 10 semanas.
               </p>
             </div>
 
@@ -106,89 +125,96 @@ const ProgramDetails = ({ onScrollToSection }: HeroSectionProps) => {
   <div className="absolute bottom-40 left-20 w-16 h-16 bg-brand-pink/20 rounded-full z-0 hidden sm:block"></div>
   <div className="absolute top-1/3 left-10 w-24 h-24 bg-gradient-to-br from-brand-red/5 to-brand-pink/10 rounded-lg rotate-12 z-0 hidden lg:block"></div>
 
-  <div className="container mx-auto px-4 sm:px-6 max-w-6xl relative z-10">
+  <div className="container mx-auto px-4 sm:px-6 max-w-5xl relative z-10">
     
-      {/* Grid de dos columnas */}
-      <div className="grid lg:grid-cols-2 gap-8 items-center mb-12">
-        
-        {/* Columna izquierda - Contenido */}
-        <div className="space-y-6 sm:space-y-8 order-1">
+      {/* Imagen redonda tipo biografía - Centrada arriba */}
+      <div className="flex flex-col items-center mb-8 sm:mb-10">
+        <div className="relative group">
+          {/* Anillo decorativo */}
+          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-brand-red/20 to-brand-blue/20 transform scale-105 group-hover:scale-110 transition-transform duration-500"></div>
           
-          {/* Badge superior */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-pink/40 text-brand-red rounded-full text-sm sm:text-base font-bold border border-brand-red/20 shadow-sm">
-            <MessageSquare className="w-5 h-5" />
-            Mensaje de Oli Rodríguez
-          </div>
-
-          {/* Texto principal */}
-          <div className="space-y-5">
-            <p className="text-lg sm:text-xl text-brand-gray leading-relaxed">
-              Soy <span className="font-bold text-brand-red">Oli Rodríguez</span>, asesora familiar y coach de adolescentes.
-            </p>
-            <p className="text-lg sm:text-xl text-brand-gray leading-relaxed">
-              He acompañado a <span className="font-bold text-brand-blue">miles de familias</span> a transformar su relación con sus hijos.
-            </p>
-            <p className="text-xl sm:text-2xl font-semibold text-brand-blue leading-relaxed">
-              No puedo prometerte que los gritos desaparecerán mañana, pero sí puedo prometerte que tendrás las herramientas para crear el cambio que tu familia necesita.
-            </p>
-          </div>
-
-        </div>
-
-        {/* Columna derecha - Imagen */}
-        <div className="relative group order-2 flex items-center">
-          <div className="absolute inset-0 bg-gradient-to-br from-brand-red/10 to-brand-blue/10 rounded-2xl transform rotate-1 group-hover:rotate-0 transition-transform duration-500 z-0"></div>
-          <div className="relative rounded-2xl overflow-hidden border border-brand-pink/30 shadow-2xl z-10 w-full">
+          {/* Imagen redonda */}
+          <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-white shadow-2xl">
             <img 
               src="/imagenes/facilitadora4.jpeg" 
               alt="Oli Rodríguez - Asesora familiar"
-              className="w-full h-[350px] sm:h-[380px] object-cover object-center transition-all duration-700 group-hover:scale-105"
+              className="w-full h-full object-cover object-center transition-all duration-700 group-hover:scale-110"
             />
-            {/* Gradient overlay mejorado */}
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/80 via-brand-blue/20 to-transparent"></div>
-            
-            {/* Badge con glassmorphism mejorado */}
-            <div className="absolute bottom-6 left-6 right-6">
-              <div className="relative overflow-hidden rounded-xl shadow-2xl border border-white/30">
-                {/* Fondo con glassmorphism */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-white/80 to-white/70 backdrop-blur-xl"></div>
-                {/* Overlay de gradiente sutil */}
-                <div className="absolute inset-0 bg-gradient-to-br from-brand-pink/20 via-transparent to-brand-blue/20"></div>
-                
-                <div className="relative p-4">
-                  <p className="text-brand-blue font-bold text-sm sm:text-base flex items-center gap-2">
-                    <Award className="w-5 h-5 text-brand-blue flex-shrink-0" />
-                    Más de 10 años transformando familias
-                  </p>
-                </div>
-              </div>
-            </div>
+          </div>
+          
+          {/* Badge pequeño sobre la imagen */}
+          <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-white px-3 py-1 rounded-full shadow-lg border-2 border-brand-pink/30">
+            <p className="text-brand-blue font-bold text-xs flex items-center gap-1 whitespace-nowrap">
+              <Award className="w-3 h-3 text-brand-blue" />
+              +10 años
+            </p>
           </div>
         </div>
-      
+        
+        {/* Badge superior */}
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-pink/40 text-brand-red rounded-full text-sm sm:text-base font-bold border border-brand-red/20 shadow-sm mt-6">
+          <MessageSquare className="w-5 h-5" />
+          Soy Oli Rodríguez
+        </div>
       </div>
 
-      {/* Botón CTA y microcopy - Centrados debajo de las columnas */}
-      
+      {/* Todo el texto junto y uniforme */}
+      <div className="space-y-4 mb-12 backdrop:blur-sm bg-white/50 p-6 sm:p-10 rounded-2xl shadow-xl border border-brand-pink/30">
+        <h3 className="text-2xl sm:text-3xl font-bold text-brand-blue leading-tight text-center">
+          Asesora Familiar y Coach de Adolescentes
+        </h3>
+        
+        <p className="text-base sm:text-lg text-text-dark leading-relaxed">
+          Ayudo a madres y padres a <span className="font-bold text-brand-red">recuperar la calma y la conexión</span> con sus hijos, sin gritar y sin perder autoridad para que vuelvan a escucharte, respetarte y hablar contigo sin peleas.
+        </p>
+        
+        <p className="text-base sm:text-lg text-text-dark  leading-relaxed">
+          Conozco el cansancio, la culpa, la frustración, el miedo a estar fallando. Pero también conozco <span className="font-bold text-brand-blue">el alivio que se siente</span> cuando entiendes que no estás haciendo todo mal, solo necesitas otras herramientas.
+        </p>
+
+        <p className="text-base sm:text-lg text-text-dark leading-relaxed">
+          Las mamás y papás conectan conmigo porque no los juzgo, no los idealizo, los acompaño como adultos que quieren hacerlo mejor sin perderse a sí mismos en este proceso.
+        </p>
+
+        <p className="text-base sm:text-lg text-text-dark leading-relaxed">
+          Mi adolescencia fue tranquila por fuera, pero muy intensa por dentro. Crecí siendo una joven sensible y observadora, acostumbrada a adaptarme y a no dar problemas. Mis padres me amaban y estuvieron presentes, pero en casa casi no hablábamos de emociones. Aprendí a resolver sola lo que sentía y recién de adulta entendí cuánto marca eso.
+        </p>
+
+        <p className="text-base sm:text-lg text-text-dark leading-relaxed italic border-l-4 border-brand-pink pl-4 bg-brand-pink/5 py-3 rounded-r-lg">
+          "Lo que más me transformó fue descubrir que amar no siempre alcanza si no sabemos acompañar emocionalmente. Eso me llevó a dedicarme a ayudar a madres y adolescentes: porque lo que muchas familias necesitan no es más teoría, sino herramientas reales para escucharse, regularse y volver a encontrarse."
+        </p>
+
+        <p className="text-base sm:text-lg text-text-dark leading-relaxed">
+          Convertirme en mamá también me mostró algo clave: no importa cuánto sepas, si por dentro estás cansada, frustrada o desbordada, la conexión se rompe. Cuando aprendí a regularme, recuperar mi calma y responder desde la claridad, mi relación con mis hijos cambió. <span className="font-bold text-brand-blue">Ese es el corazón de todo lo que enseño hoy.</span>
+        </p>
+
+        <p className="text-xl sm:text-2xl font-bold text-brand-red leading-relaxed text-center pt-4">
+          Hoy decidí canalizar todo este aprendizaje en mi Programa "Del Caos a la Conexión"
+        </p>
+      </div>
+
+      {/* Botón CTA - Centrado */}
       <div className="text-center space-y-4 max-w-2xl mx-auto">
-        <Button
-          size="lg"
-          className="relative overflow-hidden bg-white text-brand-blue px-8 sm:px-14 py-6 sm:py-7 text-lg sm:text-xl font-bold rounded-full transition-all duration-300 hover:scale-[1.03] hover:bg-brand-blue hover:text-white shadow-lg hover:shadow-xl border-2 border-brand-blue group w-full sm:w-auto"
-          onClick={() => onScrollToSection('planes')}
+        <a 
+          href="https://wa.me/5215552106494?text=Hola%20Olivia!%20Quiero%20ingresar%20a%20tu%20Programa%20Del%20Caos%20a%20la%20Conexi%C3%B3n%2C%20vengo%20de%20tu%20p%C3%A1gina%2C%20mi%20nombre%20es…"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <span className="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-1">
-            <span>QUIERO RECUPERAR LA CONEXIÓN</span>
-            <span className="flex items-center gap-2">
-              AHORA
+          <Button
+            size="lg"
+            className="relative overflow-hidden bg-gradient-to-r from-brand-red to-brand-blue text-white px-10 sm:px-16 py-6 sm:py-7 text-lg sm:text-xl font-bold rounded-full transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-3xl group w-full sm:w-auto"
+          >
+            <span className="relative z-10 flex items-center justify-center gap-2">
+              QUIERO ACCEDER
               <ArrowRight className="transition-transform duration-300 group-hover:translate-x-2" size={22} />
             </span>
-          </span>
-        </Button>
+          </Button>
+        </a>
 
         {/* Microcopy */}
         <p className="text-sm sm:text-base text-brand-gray/80 font-medium">
-          <span className="font-dancing text-brand-red text-lg sm:text-xl">Miles de familias ya lo lograron.</span>{" "}
-          Tú también puedes hacerlo, paso a paso.
+          <span className="font-dancing text-brand-red text-lg sm:text-xl">Comienza hoy tu transformación.</span>{" "}
+          Acceso inmediato al programa completo.
         </p>
       </div>
 

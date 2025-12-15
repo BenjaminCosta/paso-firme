@@ -41,7 +41,7 @@ const Intro3 = ({ onScrollToSection }: HeroSectionProps) => {
             </span>
             
             {/* Encabezado principal grande */}
-            <h2 className="text-3xl sm:text-4xl md:text-5xl text-brand-blue font-bold mb-4 leading-tight sm:leading-snug">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-brand-blue font-bold mb-4 leading-tight sm:leading-snug">
               Si en casa hay gritos, silencios o{" "}
               <span className="bg-gradient-to-r from-brand-red to-brand-blue bg-clip-text text-transparent">
                 faltas de respeto…
@@ -143,19 +143,24 @@ const Intro3 = ({ onScrollToSection }: HeroSectionProps) => {
 
           {/* CTA */}
           <div className="text-center mt-12 sm:mt-16 px-4 sm:px-0">
-            <Button
-              size="lg"
-              className="relative overflow-hidden bg-white text-brand-red px-8 sm:px-14 py-8 sm:py-6 text-lg sm:text-xl font-bold rounded-full transition-all duration-300 hover:scale-[1.03] hover:bg-brand-red hover:text-white shadow-lg hover:shadow-xl border-2 border-brand-red group"
-              onClick={() => onScrollToSection('planes')}
+            <a 
+              href="https://wa.me/5215552106494?text=Hola%20Olivia!%20Quiero%20ingresar%20a%20tu%20Programa%20Del%20Caos%20a%20la%20Conexi%C3%B3n%2C%20vengo%20de%20tu%20p%C3%A1gina%2C%20mi%20nombre%20es…"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <span className="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
-                <span className="sm:inline-block">Quiero estas herramientas</span>
-                <span className="flex items-center gap-2 sm:gap-3">
-                  para mi familia
-                  <ArrowRight className="transition-transform duration-300 group-hover:translate-x-2" size={22} />
+              <Button
+                size="lg"
+                className="relative overflow-hidden bg-white text-brand-red px-8 sm:px-14 py-8 sm:py-6 text-lg sm:text-xl font-bold rounded-full transition-all duration-300 hover:scale-[1.03] hover:bg-brand-red hover:text-white shadow-lg hover:shadow-xl border-2 border-brand-red group"
+              >
+                <span className="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
+                  <span className="sm:inline-block">Quiero estas herramientas</span>
+                  <span className="flex items-center gap-2 sm:gap-3">
+                    para mi familia
+                    <ArrowRight className="transition-transform duration-300 group-hover:translate-x-2" size={22} />
+                  </span>
                 </span>
-              </span>
-            </Button>
+              </Button>
+            </a>
           </div>
         </div>
       </div>

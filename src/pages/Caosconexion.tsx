@@ -36,9 +36,9 @@ const CaosConexion = () => {
     <div className="min-h-screen overflow-x-hidden font-poppins text-text-dark">
       <Nav3 />
       <Hero3 onScrollToSection={scrollToSection} />
+      <Testimonials3 onScrollToSection={scrollToSection} />
       <Pricing3 />
       <Intro3 onScrollToSection={scrollToSection}/>
-      <Testimonials3 onScrollToSection={scrollToSection} />
       <ProgramSection onScrollToSection={scrollToSection} />
       <ProgramDetails onScrollToSection={scrollToSection}/>
       

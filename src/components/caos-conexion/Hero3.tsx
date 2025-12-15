@@ -93,14 +93,13 @@ const Hero3 = ({ onScrollToSection }: HeroSectionProps) => {
           {/* Título principal - Reducido */}
           <div className="space-y-3 md:space-y-4">
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-brand-blue leading-tight px-4">
-              Tu hijo no cambió.<br />
-              <span className="text-brand-red">Cambió la forma en que lo miras…</span>
+              Recupera la Calma y la Conexión con tu Hijo,<br />
+              <span className="text-brand-red">SIN Gritar y SIN Perder Autoridad.</span>
             </h1>
             
             {/* Texto descriptivo - Reducido */}
             <p className="text-base md:text-lg lg:text-xl text-brand-gray leading-relaxed max-w-3xl mx-auto px-4">
-              En <span className="font-bold text-brand-red">10 semanas</span> aprenderás cómo volver a tener <span className="font-bold text-brand-blue">respeto, calma y conexión</span> en casa,
-              tanto si hoy hay conflictos, como si solo quieres fortalecer una relación sana.
+              En menos de <span className="font-bold text-brand-red">10 semanas</span> con mi Método <span className="font-bold text-brand-blue">'CALMA'</span> vas a lograr que tu hijo te escuche, te haga caso y hable contigo sin gritos ni peleas, para que vuelva la calma, el respeto, la buena comunicación y una convivencia más sana en casa.
             </p>
           </div>
 
@@ -185,28 +184,33 @@ const Hero3 = ({ onScrollToSection }: HeroSectionProps) => {
 
           {/* Botón principal - 10% más grande */}
           <div className="space-y-3 md:space-y-4 px-4">
-            <Button
-              size="lg"
-              className="relative overflow-hidden bg-gradient-to-r from-brand-red to-brand-blue text-white px-9 md:px-11 py-6 md:py-7 text-lg md:text-xl font-bold rounded-full transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-3xl group w-full md:w-auto"
-              onClick={() => onScrollToSection('planes')}
+            <a 
+              href="https://wa.me/5215552106494?text=Hola%20Olivia!%20Quiero%20ingresar%20a%20tu%20Programa%20Del%20Caos%20a%20la%20Conexi%C3%B3n%2C%20vengo%20de%20tu%20p%C3%A1gina%2C%20mi%20nombre%20es…"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <span className="relative z-10">QUIERO RECUPERAR LA CONEXIÓN</span>
-              <span className="absolute inset-0 bg-gradient-to-r from-brand-blue to-brand-red opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-            </Button>
+              <Button
+                size="lg"
+                className="relative overflow-hidden bg-gradient-to-r from-brand-red to-brand-blue text-white px-9 md:px-11 py-6 md:py-7 text-lg md:text-xl font-bold rounded-full transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-3xl group w-full md:w-auto"
+              >
+                <span className="relative z-10">QUIERO RECUPERAR LA CONEXIÓN</span>
+                <span className="absolute inset-0 bg-gradient-to-r from-brand-blue to-brand-red opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+              </Button>
+            </a>
 
             {/* Microcopy bajo el botón */}
             <div className="flex flex-wrap justify-center gap-3 md:gap-4 text-brand-gray text-xs md:text-sm">
               <span className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-red"></span>
-                Comenzamos cada lunes
+                100% online y flexible
               </span>
               <span className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-red"></span>
-                100% online
+                Empiezas cuando quieras
               </span>
               <span className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-red"></span>
-                Acceso inmediato
+                Acceso inmediato + acompañamiento
               </span>
             </div>
           </div>

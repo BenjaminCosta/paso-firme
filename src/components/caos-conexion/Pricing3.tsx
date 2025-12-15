@@ -44,297 +44,126 @@ const Pricing3 = () => {
           
           {/* Sección: Lo que recibirás */}
           <div className="text-center mb-16 md:mb-20">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-blue mb-6">
-              Lo que recibirás durante estas{" "}
-              <span className="text-brand-red">10 semanas</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-brand-blue mb-6">
+              ¿Qué vas a encontrar en{" "}
+              <span className="text-brand-red">el programa?</span>
             </h2>
             <p className="text-lg md:text-xl text-brand-gray max-w-4xl mx-auto leading-relaxed">
-              Cada semana trabajas herramientas prácticas, basadas en{" "}
+              Accede a las únicas y mejores herramientas prácticas basadas en{" "}
               <span className="font-bold text-brand-red">neuroeducación</span> y{" "}
-              <span className="font-bold text-brand-blue">comunicación consciente</span>, para mejorar la relación con tu hijo; tanto si hay caos como si quieres fortalecer lo que ya funciona.
+              <span className="font-bold text-brand-blue">comunicación consciente</span> para dejar de pelear, hablar sin gritar y volver a conectar con tu hijo, incluso si hoy sientes que en casa todo es un caos.
             </p>
           </div>
 
-          {/* Grid de beneficios con imágenes */}
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 mb-16 md:mb-20 max-w-5xl mx-auto items-stretch">
+          {/* Grid de beneficios con layout en dos columnas */}
+          <div className="space-y-8 md:space-y-10 mb-16 md:mb-20 max-w-5xl mx-auto">
             
-            {/* Lista de beneficios */}
-            <div className="space-y-6 flex flex-col">
-              <div className="bg-white rounded-2xl p-6 shadow-lg border border-brand-pink/20 hover:shadow-xl transition-shadow">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-brand-blue/10 rounded-xl">
-                    <Play className="w-6 h-6 text-brand-blue" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-brand-blue text-lg mb-1">
-                      10 clases grabadas
-                    </h3>
-                    <p className="text-brand-gray text-sm">
-                      Una por semana, para avanzar a tu ritmo
-                    </p>
+            {/* Beneficio 1: Clases Grabadas - CON IMAGEN */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-xl border border-brand-pink/30 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+              <div className="grid md:grid-cols-2 gap-6 items-center">
+                {/* Columna izquierda: Imagen */}
+                <div className="order-2 md:order-1">
+                  <div className="relative rounded-xl overflow-hidden shadow-lg border border-brand-blue/20">
+                    <img 
+                      src="/imagenes/zoom.png" 
+                      alt="Clases grabadas en Zoom"
+                      className="w-full h-48 md:h-56 object-cover"
+                    />
                   </div>
                 </div>
-              </div>
-
-              <div className="bg-white rounded-2xl p-6 shadow-lg border border-brand-pink/20 hover:shadow-xl transition-shadow">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-brand-red/10 rounded-xl">
-                    <MessageSquare className="w-6 h-6 text-brand-red" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-brand-red text-lg mb-1">
-                      Grupo de acompañamiento
-                    </h3>
-                    <p className="text-brand-gray text-sm">
-                      Comunidad privada de apoyo mutuo
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-2xl p-6 shadow-lg border border-brand-pink/20 hover:shadow-xl transition-shadow">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-brand-blue/10 rounded-xl">
-                    <Brain className="w-6 h-6 text-brand-blue" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-brand-blue text-lg mb-1">
-                      Estrategias basadas en ciencia
-                    </h3>
-                    <p className="text-brand-gray text-sm">
-                      Neurociencia, psicología y comunicación afectiva
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-2xl p-6 shadow-lg border border-brand-pink/20 hover:shadow-xl transition-shadow">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-brand-red/10 rounded-xl">
-                    <Globe className="w-6 h-6 text-brand-red" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-brand-red text-lg mb-1">
-                      Acceso desde cualquier país
-                    </h3>
-                    <p className="text-brand-gray text-sm">
-                      Disponible 24/7, cuando lo necesites
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-2xl p-6 shadow-lg border border-brand-pink/20 hover:shadow-xl transition-shadow">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-brand-blue/10 rounded-xl">
-                    <TrendingUp className="w-6 h-6 text-brand-blue" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-brand-blue text-lg mb-1">
-                      Resultados visibles
-                    </h3>
-                    <p className="text-brand-gray text-sm">
-                      Desde las primeras semanas de aplicación
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Mockup de dispositivos - Ocupa toda la altura */}
-            <div className="bg-white rounded-2xl p-4 shadow-lg border border-brand-pink/20 flex items-center">
-              <img 
-                src="/imagenes/mockup-caos.png" 
-                alt="Programa en múltiples dispositivos"
-                className="w-full h-full object-contain rounded-xl"
-              />
-            </div>
-          </div>
-
-          {/* Sección de planes */}
-          <div id="planes" className="mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-brand-blue text-center mb-4">
-              Elige la forma que mejor{" "}
-              <span className="text-brand-red">se adapta a ti</span>
-            </h2>
-            <p className="text-lg md:text-xl text-brand-gray text-center max-w-3xl mx-auto mb-8">
-              Ambas versiones transforman tu relación.<br />
-              La diferencia está en <span className="font-bold text-brand-blue">cuánto acompañamiento directo</span> deseas de mí.
-            </p>
-
-            {/* Banner de promoción fin de año */}
-            <div className="max-w-2xl mx-auto mb-8">
-              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-red-600/10 via-orange-500/10 to-red-600/10 border-2 border-red-600/20 p-6 backdrop-blur-sm">
-                {/* Patrón de fondo sutil */}
-                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDMiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-50"></div>
                 
-                <div className="relative text-center">
-                  <div className="flex items-center justify-center gap-3 mb-2">
-                    <div className="w-12 h-px bg-gradient-to-r from-transparent via-red-600/30 to-transparent"></div>
-                    <span className="text-red-600 text-sm font-semibold tracking-wider">🎄</span>
-                    <div className="w-12 h-px bg-gradient-to-r from-transparent via-red-600/30 to-transparent"></div>
-                  </div>
-                  
-                  <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-red-700 via-red-600 to-orange-600 bg-clip-text text-transparent mb-2">
-                    Promoción especial por fin de año
+                {/* Columna derecha: Texto */}
+                <div className="order-1 md:order-2 flex flex-col justify-center">
+                  <span className="inline-block bg-brand-blue/5 text-brand-blue text-[10px] md:text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full mb-3 w-fit border border-brand-blue/20">
+                    Aprende a tu ritmo
+                  </span>
+                  <h3 className="text-2xl md:text-3xl font-bold text-brand-blue mb-3">
+                    10 Clases Grabadas
                   </h3>
-                  
-                  <p className="text-sm md:text-base text-brand-gray font-medium">
-                    Ahorra hasta <span className="font-bold text-red-600">40%</span> en ambos planes
+                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    Clases grabadas para avanzar a tu ritmo, una por semana durante 10 semanas.
                   </p>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Grid de planes */}
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            
-            {/* Plan Standard */}
-            <Card className="relative bg-white border-2 border-brand-blue/30 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden flex flex-col h-full">
-
-              <CardContent className="p-6 sm:p-8 flex flex-col h-full">
-                <div className="mb-6">
-                  <div className="inline-block p-3 bg-brand-blue/10 rounded-2xl mb-4">
-                    <Video className="w-8 sm:w-10 h-8 sm:h-10 text-brand-blue" />
+            {/* Beneficio 2: Grupo de Acompañamiento - CON ICONO */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-xl border border-brand-pink/30 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+              <div className="grid md:grid-cols-2 gap-6 items-center">
+                {/* Columna izquierda: Placeholder con icono */}
+                <div className="order-2 md:order-1">
+                  <div className="relative rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-brand-red/10 to-brand-pink/20 border border-brand-red/20 flex items-center justify-center h-48 md:h-56">
+                    <Users className="w-20 h-20 md:w-24 md:h-24 text-brand-red opacity-80" />
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-brand-blue mb-2">
-                    Plan Standard
+                </div>
+                
+                {/* Columna derecha: Texto */}
+                <div className="order-1 md:order-2 flex flex-col justify-center">
+                  <span className="inline-block bg-brand-red/5 text-brand-red text-[10px] md:text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full mb-3 w-fit border border-brand-red/20">
+                    No estás sola
+                  </span>
+                  <h3 className="text-2xl md:text-3xl font-bold text-brand-red mb-3">
+                    Grupo de Acompañamiento
                   </h3>
-                  <p className="text-brand-gray text-sm leading-relaxed">
-                    Ideal si quieres avanzar a tu ritmo con estructura clara y sin depender de horarios.
+                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    Espacio de acompañamiento para conectar con otras madres y padres que están viviendo tu mismo proceso.
                   </p>
                 </div>
-
-                {/* Precios con descuento */}
-                <div className="mb-6">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="relative">
-                      <span className="text-2xl font-bold text-brand-gray line-through opacity-60">$250</span>
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-full h-0.5 bg-red-500 rotate-[-12deg]"></div>
-                      </div>
-                    </div>
-                    <span className="bg-red-100 text-red-700 text-xs font-bold px-2 py-1 rounded-md">
-                      -40%
-                    </span>
-                  </div>
-                  <div className="flex items-baseline gap-2 mb-2">
-                    <span className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-brand-blue to-blue-600 bg-clip-text text-transparent">$150</span>
-                    <span className="text-lg sm:text-xl text-brand-gray">USD</span>
-                  </div>
-                  <p className="text-sm text-brand-gray">Pago único · Oferta especial fin de año</p>
-                </div>
-
-                <div className="space-y-4 mb-8 flex-grow">
-                  <h4 className="font-bold text-brand-blue text-base sm:text-lg">Incluye:</h4>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-brand-blue mt-0.5 flex-shrink-0" />
-                    <span className="text-brand-gray text-sm">
-                      10 clases grabadas (una por semana)
-                    </span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-brand-blue mt-0.5 flex-shrink-0" />
-                    <span className="text-brand-gray text-sm">
-                      Disponibilidad a los contenidos durante 10 semanas
-                    </span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-brand-blue mt-0.5 flex-shrink-0" />
-                    <span className="text-brand-gray text-sm">
-                      Acceso inmediato desde cualquier dispositivo
-                    </span>
-                  </div>
-                </div>
-
-                <div className="mt-auto">
-                  <Link to="https://www.familiayformacion.com/tienda/p/caos-conexion-standard" className="block">
-                    <Button className="w-full py-5 sm:py-6 bg-gradient-to-r from-brand-blue to-brand-blue/90 hover:from-brand-blue/90 hover:to-brand-blue text-white font-bold text-base sm:text-lg shadow-xl hover:shadow-2xl transition-all flex items-center justify-center gap-2 sm:gap-3 group rounded-lg">
-                      <span className="text-center leading-tight">QUIERO LA VERSIÓN STANDARD</span>
-                      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1 flex-shrink-0" />
-                    </Button>
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Plan Premium */}
-            <Card className="relative bg-white border-2 border-brand-red shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden flex flex-col h-full">
-              {/* Badge "Más elegido" */}
-              <div className="absolute top-4 right-4 bg-gradient-to-r from-brand-red to-brand-blue text-white text-xs font-bold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full flex items-center gap-1 sm:gap-2 shadow-lg z-10">
-                <Crown className="w-3 h-3 sm:w-4 sm:h-4" />
-                <span className="hidden sm:inline">MÁS ELEGIDO</span>
-                <span className="sm:hidden">TOP</span>
               </div>
+            </div>
 
-              <CardContent className="p-6 sm:p-8 flex flex-col h-full">
-                <div className="mb-6">
-                  <div className="inline-block p-3 bg-brand-red/10 rounded-2xl mb-4">
-                    <Users className="w-8 sm:w-10 h-8 sm:h-10 text-brand-red" />
+            {/* Beneficio 3: Estrategias basadas en Ciencia - SIN IMAGEN (con icono) */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-xl border border-brand-pink/30 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+              <div className="grid md:grid-cols-2 gap-6 items-center">
+                {/* Columna izquierda: Placeholder con icono */}
+                <div className="order-2 md:order-1">
+                  <div className="relative rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-brand-blue/10 to-brand-blue/5 border border-brand-blue/20 flex items-center justify-center h-48 md:h-56">
+                    <Brain className="w-20 h-20 md:w-24 md:h-24 text-brand-blue opacity-80" />
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-brand-red mb-2">
-                    Plan Premium
+                </div>
+                
+                {/* Columna derecha: Texto */}
+                <div className="order-1 md:order-2 flex flex-col justify-center">
+                  <span className="inline-block bg-brand-blue/5 text-brand-blue text-[10px] md:text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full mb-3 w-fit border border-brand-blue/20">
+                    Respaldado por expertos
+                  </span>
+                  <h3 className="text-2xl md:text-3xl font-bold text-brand-blue mb-3">
+                    Estrategias basadas en Ciencia
                   </h3>
-                  <p className="text-brand-gray text-sm leading-relaxed">
-                    Ideal si quieres apoyo personalizado, resolver dudas en tiempo real y avanzar de la mano conmigo.
+                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    Psicología, neurociencia y comunicación efectiva aplicadas a la crianza.
                   </p>
                 </div>
+              </div>
+            </div>
 
-                {/* Precios con descuento */}
-                <div className="mb-6">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="relative">
-                      <span className="text-2xl font-bold text-brand-gray line-through opacity-60">$350</span>
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-full h-0.5 bg-red-500 rotate-[-12deg]"></div>
-                      </div>
-                    </div>
-                    <span className="bg-red-100 text-red-700 text-xs font-bold px-2 py-1 rounded-md">
-                      -37%
-                    </span>
-                  </div>
-                  <div className="flex items-baseline gap-2 mb-2">
-                    <span className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-brand-red to-red-600 bg-clip-text text-transparent">$220</span>
-                    <span className="text-lg sm:text-xl text-brand-gray">USD</span>
-                  </div>
-                  <p className="text-sm text-brand-gray">Pago único · Oferta especial fin de año</p>
-                </div>
-
-                <div className="space-y-4 mb-8 flex-grow">
-                  <h4 className="font-bold text-brand-red text-base sm:text-lg">Incluye todo lo anterior, más:</h4>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-brand-red mt-0.5 flex-shrink-0" />
-                    <span className="text-brand-gray text-sm">
-                      <strong>Sesiones semanales por Zoom</strong> con Oli
-                    </span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-brand-red mt-0.5 flex-shrink-0" />
-                    <span className="text-brand-gray text-sm">
-                      <strong>Chat de WhatsApp Premium</strong> con Oli (respuestas semanales)
-                    </span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-brand-red mt-0.5 flex-shrink-0" />
-                    <span className="text-brand-gray text-sm">
-                      <strong>Comunidad Premium</strong> con familias que están viviendo el mismo proceso
-                    </span>
+            {/* Beneficio 4: Acceso desde cualquier País - SIN IMAGEN (con icono) */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-xl border border-brand-pink/30 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+              <div className="grid md:grid-cols-2 gap-6 items-center">
+                {/* Columna izquierda: Placeholder con icono */}
+                <div className="order-2 md:order-1">
+                  <div className="relative rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-brand-red/10 to-brand-pink/20 border border-brand-red/20 flex items-center justify-center h-48 md:h-56">
+                    <Globe className="w-20 h-20 md:w-24 md:h-24 text-brand-red opacity-80" />
                   </div>
                 </div>
-
-                <div className="mt-auto">
-                  <Link to="https://www.familiayformacion.com/tienda/p/caos-conexion-premium" className="block">
-                    <Button className="w-full py-5 sm:py-6 bg-gradient-to-r from-brand-red to-brand-blue hover:from-brand-red/90 hover:to-brand-blue/90 text-white font-bold text-base sm:text-lg shadow-xl hover:shadow-2xl transition-all flex items-center justify-center gap-2 sm:gap-3 group rounded-lg">
-                      <span className="text-center leading-tight">QUIERO LA VERSIÓN PREMIUM</span>
-                      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1 flex-shrink-0" />
-                    </Button>
-                  </Link>
+                
+                {/* Columna derecha: Texto */}
+                <div className="order-1 md:order-2 flex flex-col justify-center">
+                  <span className="inline-block bg-brand-red/5 text-brand-red text-[10px] md:text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full mb-3 w-fit border border-brand-red/20">
+                    100% Flexible
+                  </span>
+                  <h3 className="text-2xl md:text-3xl font-bold text-brand-red mb-3">
+                    Acceso desde cualquier País
+                  </h3>
+                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    Acceso disponible 24/7 desde cualquier lugar del mundo, cuando lo necesites.
+                  </p>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
           </div>
+
         </div>
       </section>
     </div>

@@ -49,7 +49,7 @@ const ProgramSection = ({ onScrollToSection }: HeroSectionProps) => {
             <span className="inline-block bg-brand-pink/30 text-brand-red text-xs font-bold tracking-widest px-4 py-2 rounded-full mb-6 border border-brand-red/20 backdrop-blur-sm uppercase">
               Comienza tu Transformación
             </span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-blue mb-6 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-brand-blue mb-6 leading-tight">
               Comenzamos cada lunes.{" "}
               <span className="font-dancing text-brand-red text-5xl md:text-6xl lg:text-7xl">Este puede ser tu inicio.</span>
             </h2>
@@ -119,17 +119,22 @@ const ProgramSection = ({ onScrollToSection }: HeroSectionProps) => {
           {/* CTA mejorado con nueva paleta */}
           <div className="text-center">
            <div className="text-center mt-12 sm:mt-16 px-4 sm:px-0">
-    <Button
-      size="lg"
-      className="relative overflow-hidden bg-white text-brand-blue border-2 border-brand-red px-10 sm:px-16 py-6 sm:py-7 text-xl sm:text-2xl font-bold tracking-wide rounded-full transition-all duration-300 hover:bg-brand-red hover:text-white hover:shadow-xl group mx-auto max-w-[90vw] sm:max-w-none"
-      onClick={() => onScrollToSection('planes')}
-    >
-      <span className="relative z-10 flex items-center justify-center gap-3 whitespace-nowrap">
-        EMPIEZO HOY
-        <ArrowRight className="transition-all duration-300 group-hover:translate-x-2" size={24} />
-      </span>
-    </Button>
-</div>
+            <a 
+              href="https://wa.me/5215552106494?text=Hola%20Olivia!%20Quiero%20ingresar%20a%20tu%20Programa%20Del%20Caos%20a%20la%20Conexi%C3%B3n%2C%20vengo%20de%20tu%20p%C3%A1gina%2C%20mi%20nombre%20es…"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                size="lg"
+                className="relative overflow-hidden bg-white text-brand-blue border-2 border-brand-red px-10 sm:px-16 py-6 sm:py-7 text-xl sm:text-2xl font-bold tracking-wide rounded-full transition-all duration-300 hover:bg-brand-red hover:text-white hover:shadow-xl group mx-auto max-w-[90vw] sm:max-w-none"
+              >
+                <span className="relative z-10 flex items-center justify-center gap-3 whitespace-nowrap">
+                  EMPIEZO HOY
+                  <ArrowRight className="transition-all duration-300 group-hover:translate-x-2" size={24} />
+                </span>
+              </Button>
+            </a>
+          </div>
             
             <p className="mt-6 text-brand-gray text-sm flex items-center justify-center gap-2">
               <span className="inline-flex w-3 h-3 rounded-full bg-gradient-to-r from-brand-red to-brand-blue animate-pulse"></span>
