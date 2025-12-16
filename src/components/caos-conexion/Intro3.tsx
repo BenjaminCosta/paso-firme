@@ -60,7 +60,7 @@ const Intro3 = ({ onScrollToSection }: HeroSectionProps) => {
           {/* Texto descriptivo */}
           <div className="bg-white rounded-2xl p-8 sm:p-10 shadow-lg mb-12 sm:mb-16 border border-brand-pink/30">
             <p className="text-lg sm:text-xl text-brand-gray leading-relaxed text-center mb-6">
-              En <span className="font-bold text-brand-red">Del Caos a la Conexión</span> acompaño a mamás y papás que quieren mejorar la relación con su hijo adolescente.
+              En <span className="font-bold text-brand-red">Mi Programa Del Caos a la Conexión</span> acompaño a mamás y papás que quieren mejorar la relación con su hijo adolescente.
             </p>
             <p className="text-base sm:text-lg text-brand-gray leading-relaxed text-center mb-4">
               Algunos llegan cuando ya hay distancia o discusiones.
