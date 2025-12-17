@@ -1,61 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { useState, useRef, useEffect } from "react";
-import { Play, Pause, Volume2, VolumeX } from "lucide-react";
+import { useState } from "react";
 
 interface HeroSectionProps {
   onScrollToSection: (id: string) => void;
 }
 
 const Hero3 = ({ onScrollToSection }: HeroSectionProps) => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [progress, setProgress] = useState(0);
-  const [isMuted, setIsMuted] = useState(true);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
   const backgroundImage = '';
-
-  // Autoplay cuando el componente se monta
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play().then(() => {
-        setIsPlaying(true);
-      }).catch((error) => {
-        console.log("Autoplay prevented:", error);
-      });
-    }
-  }, []);
-
-  // Actualizar barra de progreso
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const updateProgress = () => {
-      const progress = (video.currentTime / video.duration) * 100;
-      setProgress(progress);
-    };
-
-    video.addEventListener('timeupdate', updateProgress);
-    return () => video.removeEventListener('timeupdate', updateProgress);
-  }, []);
-
-  const handleVideoToggle = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
-
-  const handleMuteToggle = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !isMuted;
-      setIsMuted(!isMuted);
-    }
-  };
 
   return (
     <section id="hero" className="relative min-h-screen md:min-h-[900px] overflow-hidden">
@@ -103,82 +54,19 @@ const Hero3 = ({ onScrollToSection }: HeroSectionProps) => {
             </p>
           </div>
 
-          {/* Video de Oli - Más grande y centrado debajo del título */}
+          {/* Video de YouTube - Embed responsive */}
           <div className="max-w-3xl mx-auto px-4">
             <div className="relative rounded-xl md:rounded-2xl overflow-hidden shadow-2xl bg-black/20 backdrop-blur-sm border border-white/20">
-              <video
-                ref={videoRef}
-                className="w-full aspect-video"
-                poster="/videos/caos-conexion2.mp4"
-                onClick={handleVideoToggle}
-                playsInline
-                muted
-                loop
-              >
-                <source src="/videos/caos-conexion2.mp4" type="video/mp4" />
-                <track
-                  kind="subtitles"
-                  src="/videos/caos-conexion-subtitles.vtt"
-                  srcLang="es"
-                  label="Español"
-                  default
-                />
-                Tu navegador no soporta el elemento de video.
-              </video>
-              
-              {/* Overlay de play/pause */}
-              {!isPlaying && (
-                <div 
-                  className="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer transition-opacity hover:bg-black/40"
-                  onClick={handleVideoToggle}
-                >
-                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center shadow-xl hover:scale-110 transition-transform">
-                    <Play className="w-8 h-8 md:w-10 md:h-10 text-brand-red ml-1" fill="currentColor" />
-                  </div>
-                </div>
-              )}
-
-              {/* Controles cuando está reproduciendo */}
-              {isPlaying && (
-                <>
-                  {/* Botón de pausa */}
-                  <button
-                    onClick={handleVideoToggle}
-                    className="absolute bottom-3 right-3 md:bottom-4 md:right-4 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-20"
-                  >
-                    <Pause className="w-5 h-5 md:w-6 md:h-6 text-brand-red" fill="currentColor" />
-                  </button>
-
-                  {/* Botón de audio */}
-                  <button
-                    onClick={handleMuteToggle}
-                    className="absolute bottom-3 right-16 md:bottom-4 md:right-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-20"
-                  >
-                    {isMuted ? (
-                      <VolumeX className="w-5 h-5 md:w-6 md:h-6 text-brand-gray" />
-                    ) : (
-                      <Volume2 className="w-5 h-5 md:w-6 md:h-6 text-brand-red" />
-                    )}
-                  </button>
-                </>
-              )}
-
-              {/* Barra de progreso (no interactiva) */}
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20 z-10">
-                <div 
-                  className="h-full bg-gradient-to-r from-brand-red to-brand-blue transition-all duration-200"
-                  style={{ width: `${progress}%` }}
+              <div className="relative w-full aspect-video">
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src="https://www.youtube.com/embed/cL5_THnt0VY?autoplay=1&mute=1&loop=1&playlist=cL5_THnt0VY&controls=1&rel=0&modestbranding=1"
+                  title="Video de introducción - Del Caos a la Conexión"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
                 />
               </div>
-
-              {/* Miniatura sugerida */}
-              {!isPlaying && (
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-4 md:p-6 pb-6 md:pb-8">
-                  <p className="text-white text-sm md:text-base lg:text-lg font-semibold text-center">
-                    ¿Tu hijo adolescente ya no te escucha? Empieza aquí.
-                  </p>
-                </div>
-              )}
             </div>
           </div>
 
