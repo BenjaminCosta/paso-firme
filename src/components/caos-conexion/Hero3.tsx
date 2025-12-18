@@ -1,12 +1,63 @@
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import { Volume2, VolumeX } from "lucide-react";
+import Player from "@vimeo/player";
 
 interface HeroSectionProps {
   onScrollToSection: (id: string) => void;
 }
 
 const Hero3 = ({ onScrollToSection }: HeroSectionProps) => {
+  const [isMuted, setIsMuted] = useState(true);
+  const [progress, setProgress] = useState(0);
+  const [showPoster, setShowPoster] = useState(true);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+  const playerRef = useRef<Player | null>(null);
+
   const backgroundImage = '';
+
+  // Inicializar Vimeo Player
+  useEffect(() => {
+    if (iframeRef.current) {
+      const player = new Player(iframeRef.current);
+      playerRef.current = player;
+
+      // Escuchar evento de reproducción para ocultar poster
+      player.on('playing', () => {
+        setShowPoster(false);
+      });
+
+      // Actualizar barra de progreso
+      player.on('timeupdate', (data) => {
+        setShowPoster(false);
+        const progress = (data.seconds / data.duration) * 100;
+        setProgress(progress);
+      });
+
+      return () => {
+        player.destroy();
+      };
+    }
+  }, []);
+
+  // Toggle mute/unmute
+  const handleMuteToggle = async () => {
+    if (playerRef.current) {
+      try {
+        if (isMuted) {
+          await playerRef.current.setMuted(false);
+          await playerRef.current.setVolume(1);
+          setIsMuted(false);
+        } else {
+          await playerRef.current.setMuted(true);
+          await playerRef.current.setVolume(0);
+          setIsMuted(true);
+        }
+      } catch (error) {
+        console.error('Error toggling mute:', error);
+      }
+    }
+  };
 
   return (
     <section id="hero" className="relative min-h-screen md:min-h-[900px] overflow-hidden">
@@ -54,18 +105,57 @@ const Hero3 = ({ onScrollToSection }: HeroSectionProps) => {
             </p>
           </div>
 
-          {/* Video de YouTube - Embed responsive */}
+          {/* Video de Vimeo - Background con controles custom */}
           <div className="max-w-3xl mx-auto px-4">
             <div className="relative rounded-xl md:rounded-2xl overflow-hidden shadow-2xl bg-black/20 backdrop-blur-sm border border-white/20">
               <div className="relative w-full aspect-video">
+                {/* Poster image - se oculta cuando el video empieza */}
+                {showPoster && (
+                  <div className="absolute inset-0 z-20 bg-black">
+                    <img 
+                      src="/imagenes/facilitadora2 copy.jpg" 
+                      alt="Video preview"
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        // Fallback a .webp si .jpg no existe
+                        e.currentTarget.src = "/imagenes/facilitadora2 copy.webp";
+                      }}
+                    />
+                  </div>
+                )}
+
+                {/* Iframe de Vimeo - sin interacción */}
                 <iframe
-                  className="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/cL5_THnt0VY?autoplay=1&mute=1&loop=1&playlist=cL5_THnt0VY&controls=1&rel=0&modestbranding=1"
+                  ref={iframeRef}
+                  className="absolute inset-0 w-full h-full pointer-events-none"
+                  src="https://player.vimeo.com/video/1147753752?autoplay=1&loop=1&muted=1&autopause=0&background=1&controls=0&title=0&byline=0&portrait=0"
                   title="Video de introducción - Del Caos a la Conexión"
                   frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
+                  allow="autoplay; fullscreen; picture-in-picture"
                 />
+
+                {/* Overlay con controles custom */}
+                <div className="absolute inset-0 pointer-events-none">
+                  {/* Botón de audio - arriba a la derecha */}
+                  <button
+                    onClick={handleMuteToggle}
+                    className="absolute top-3 right-3 md:top-4 md:right-4 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-30 pointer-events-auto"
+                  >
+                    {isMuted ? (
+                      <VolumeX className="w-5 h-5 md:w-6 md:h-6 text-brand-gray" />
+                    ) : (
+                      <Volume2 className="w-5 h-5 md:w-6 md:h-6 text-brand-red" />
+                    )}
+                  </button>
+
+                  {/* Barra de progreso - solo lectura */}
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20 z-10 pointer-events-none">
+                    <div 
+                      className="h-full bg-gradient-to-r from-brand-red to-brand-blue transition-all duration-200"
+                      style={{ width: `${progress}%` }}
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
